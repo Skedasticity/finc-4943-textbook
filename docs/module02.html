@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Discounted Cash Flows and Annuities – Fundamentals of Business Finance</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./module03.html" rel="next">
+<link href="./module01.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./module02.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discounted Cash Flows and Annuities</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of Business Finance</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of Business Finance</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Time Value of Money (TVM)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module02.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discounted Cash Flows and Annuities</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bond Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stock Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Risk and Return</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#moving-beyond-lump-sums" id="toc-moving-beyond-lump-sums" class="nav-link active" data-scroll-target="#moving-beyond-lump-sums"><span class="header-section-number">3.1</span> Moving Beyond Lump Sums</a></li>
+  <li><a href="#defining-annuities" id="toc-defining-annuities" class="nav-link" data-scroll-target="#defining-annuities"><span class="header-section-number">3.2</span> Defining Annuities</a>
+  <ul class="collapse">
+  <li><a href="#the-two-types-of-annuities" id="toc-the-two-types-of-annuities" class="nav-link" data-scroll-target="#the-two-types-of-annuities"><span class="header-section-number">3.2.1</span> The Two Types of Annuities</a></li>
+  <li><a href="#mathematical-intuition" id="toc-mathematical-intuition" class="nav-link" data-scroll-target="#mathematical-intuition"><span class="header-section-number">3.2.2</span> Mathematical Intuition</a></li>
+  </ul></li>
+  <li><a href="#perpetuities-the-forever-cash-flow" id="toc-perpetuities-the-forever-cash-flow" class="nav-link" data-scroll-target="#perpetuities-the-forever-cash-flow"><span class="header-section-number">3.3</span> Perpetuities: The “Forever” Cash Flow</a>
+  <ul class="collapse">
+  <li><a href="#growing-perpetuity" id="toc-growing-perpetuity" class="nav-link" data-scroll-target="#growing-perpetuity"><span class="header-section-number">3.3.1</span> Growing Perpetuity</a></li>
+  </ul></li>
+  <li><a href="#excel-functions-for-annuities" id="toc-excel-functions-for-annuities" class="nav-link" data-scroll-target="#excel-functions-for-annuities"><span class="header-section-number">3.4</span> Excel Functions for Annuities</a>
+  <ul class="collapse">
+  <li><a href="#the-five-variables" id="toc-the-five-variables" class="nav-link" data-scroll-target="#the-five-variables"><span class="header-section-number">3.4.1</span> The Five Variables</a></li>
+  <li><a href="#essential-excel-functions" id="toc-essential-excel-functions" class="nav-link" data-scroll-target="#essential-excel-functions"><span class="header-section-number">3.4.2</span> Essential Excel Functions</a></li>
+  </ul></li>
+  <li><a href="#loan-amortization" id="toc-loan-amortization" class="nav-link" data-scroll-target="#loan-amortization"><span class="header-section-number">3.5</span> Loan Amortization</a>
+  <ul class="collapse">
+  <li><a href="#the-mechanics" id="toc-the-mechanics" class="nav-link" data-scroll-target="#the-mechanics"><span class="header-section-number">3.5.1</span> The Mechanics</a></li>
+  <li><a href="#excel-implementation" id="toc-excel-implementation" class="nav-link" data-scroll-target="#excel-implementation"><span class="header-section-number">3.5.2</span> Excel Implementation</a></li>
+  </ul></li>
+  <li><a href="#uneven-cash-flows-and-net-present-value-npv" id="toc-uneven-cash-flows-and-net-present-value-npv" class="nav-link" data-scroll-target="#uneven-cash-flows-and-net-present-value-npv"><span class="header-section-number">3.6</span> Uneven Cash Flows and Net Present Value (NPV)</a>
+  <ul class="collapse">
+  <li><a href="#excel-function" id="toc-excel-function" class="nav-link" data-scroll-target="#excel-function"><span class="header-section-number">3.6.1</span> Excel Function</a></li>
+  </ul></li>
+  <li><a href="#common-pitfalls-to-avoid" id="toc-common-pitfalls-to-avoid" class="nav-link" data-scroll-target="#common-pitfalls-to-avoid"><span class="header-section-number">3.7</span> Common Pitfalls to Avoid</a>
+  <ul class="collapse">
+  <li><a href="#rateperiod-mismatch" id="toc-rateperiod-mismatch" class="nav-link" data-scroll-target="#rateperiod-mismatch"><span class="header-section-number">3.7.1</span> 1. Rate/Period Mismatch</a></li>
+  <li><a href="#annuity-due-toggle" id="toc-annuity-due-toggle" class="nav-link" data-scroll-target="#annuity-due-toggle"><span class="header-section-number">3.7.2</span> 2. Annuity Due Toggle</a></li>
+  <li><a href="#npv-time-zero-error" id="toc-npv-time-zero-error" class="nav-link" data-scroll-target="#npv-time-zero-error"><span class="header-section-number">3.7.3</span> 3. NPV Time Zero Error</a></li>
+  <li><a href="#perpetuity-growth-constraint" id="toc-perpetuity-growth-constraint" class="nav-link" data-scroll-target="#perpetuity-growth-constraint"><span class="header-section-number">3.7.4</span> 4. Perpetuity Growth Constraint</a></li>
+  <li><a href="#sign-convention-errors" id="toc-sign-convention-errors" class="nav-link" data-scroll-target="#sign-convention-errors"><span class="header-section-number">3.7.5</span> 5. Sign Convention Errors</a></li>
+  </ul></li>
+  <li><a href="#connecting-to-future-modules" id="toc-connecting-to-future-modules" class="nav-link" data-scroll-target="#connecting-to-future-modules"><span class="header-section-number">3.8</span> Connecting to Future Modules</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discounted Cash Flows and Annuities</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="moving-beyond-lump-sums" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="moving-beyond-lump-sums"><span class="header-section-number">3.1</span> Moving Beyond Lump Sums</h2>
+<p>In Module 1, we focused on <strong>lump sums</strong>—single cash flows occurring at a specific point in time. However, most financial decisions involve multiple cash flows. Whether analyzing a business’s monthly revenue, a series of car payments, or retirement savings contributions, you are dealing with <strong>Discounted Cash Flows (DCF)</strong>.</p>
+<p>The core principle remains unchanged: to compare or aggregate cash flows occurring at different times, you must move them to the same point in time (usually the present) using a discount rate.</p>
+<blockquote class="blockquote">
+<p><strong>In Practice: The “Valuation” Mindset</strong></p>
+<p>In finance, the value of <em>any</em> financial asset—a stock, a bond, or an entire company—is simply the present value of all the cash it is expected to generate in the future. If you can forecast the cash flows and choose an appropriate discount rate, you can calculate the “fair” price of anything. This is why DCF analysis is the foundation of investment banking, private equity, and corporate finance.</p>
+</blockquote>
+<hr>
+</section>
+<section id="defining-annuities" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="defining-annuities"><span class="header-section-number">3.2</span> Defining Annuities</h2>
+<p>An <strong>annuity</strong> is a series of equal payments occurring at fixed intervals for a specified number of periods. Annuities simplify valuation because the equal payment structure allows us to use closed-form formulas rather than valuing each cash flow individually.</p>
+<section id="the-two-types-of-annuities" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="the-two-types-of-annuities"><span class="header-section-number">3.2.1</span> The Two Types of Annuities</h3>
+<ol type="1">
+<li><p><strong>Ordinary Annuity:</strong> Payments occur at the <strong>end</strong> of each period. This is the default assumption in finance (e.g., most corporate bond interest payments, mortgage payments).</p></li>
+<li><p><strong>Annuity Due:</strong> Payments occur at the <strong>beginning</strong> of each period (e.g., rent payments, lease payments, insurance premiums).</p></li>
+</ol>
+</section>
+<section id="mathematical-intuition" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="mathematical-intuition"><span class="header-section-number">3.2.2</span> Mathematical Intuition</h3>
+<p>The Present Value of an annuity is the sum of the present values of each individual payment. Rather than discounting each payment separately, we use a formula that captures this sum efficiently.</p>
+<p><strong>Ordinary Annuity Formula:</strong></p>
+<p><span class="math display">\[PV = PMT \times \left[ \frac{1 - (1 + r)^{-n}}{r} \right]\]</span></p>
+<p>Where: - <span class="math inline">\(PMT\)</span> = the payment amount per period - <span class="math inline">\(r\)</span> = the discount rate per period - <span class="math inline">\(n\)</span> = the number of periods</p>
+<p><strong>Future Value of an Ordinary Annuity:</strong></p>
+<p><span class="math display">\[FV = PMT \times \left[ \frac{(1 + r)^{n} - 1}{r} \right]\]</span></p>
+<p><strong>Annuity Due Adjustment:</strong></p>
+<p>Because payments occur one period earlier, an Annuity Due is worth more than an Ordinary Annuity:</p>
+<p><span class="math display">\[PV_{due} = PV_{ordinary} \times (1 + r)\]</span></p>
+<p><span class="math display">\[FV_{due} = FV_{ordinary} \times (1 + r)\]</span></p>
+<blockquote class="blockquote">
+<p><strong>In Practice: Why Timing Matters</strong></p>
+<p>Consider rent versus a car loan. Rent is typically an <strong>Annuity Due</strong> (you pay at the start of the month to secure housing for that month). A car loan is typically an <strong>Ordinary Annuity</strong> (you drive for a month, then make the payment at month’s end). Because money has time value, an Annuity Due is always worth more than an identical Ordinary Annuity—you receive (or pay) the money sooner, which means one less period of discounting.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="perpetuities-the-forever-cash-flow" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="perpetuities-the-forever-cash-flow"><span class="header-section-number">3.3</span> Perpetuities: The “Forever” Cash Flow</h2>
+<p>A <strong>perpetuity</strong> is an annuity that continues forever. While “forever” sounds theoretical, it is a vital concept for valuing preferred stocks, real estate with stable rental income, and established companies with predictable cash flows.</p>
+<p><strong>The Formula:</strong></p>
+<p><span class="math display">\[PV = \frac{PMT}{r}\]</span></p>
+<p>This elegant formula emerges from the ordinary annuity formula as <span class="math inline">\(n \to \infty\)</span>. The <span class="math inline">\((1 + r)^{-n}\)</span> term approaches zero, leaving us with <span class="math inline">\(\frac{PMT}{r}\)</span>.</p>
+<section id="growing-perpetuity" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="growing-perpetuity"><span class="header-section-number">3.3.1</span> Growing Perpetuity</h3>
+<p>When cash flows grow at a constant rate <span class="math inline">\(g\)</span> forever, we use the <strong>Growing Perpetuity Formula</strong>:</p>
+<p><span class="math display">\[PV = \frac{PMT}{r - g}\]</span></p>
+<p><strong>Critical constraint:</strong> <span class="math inline">\(g &lt; r\)</span>. If the growth rate equals or exceeds the discount rate, the formula breaks down, reflecting the economic reality that no entity can grow faster than the economy indefinitely.</p>
+<blockquote class="blockquote">
+<p><strong>In Practice: Real-World Perpetuities</strong></p>
+<p>The most famous example is the <strong>British Consol</strong>, a bond issued by the UK government that has no maturity date and pays interest forever. In corporate finance, we use the perpetuity formula to calculate the “Terminal Value” of a company—the value of all cash flows beyond a 5 or 10-year forecast horizon. For example, if a company is expected to generate $10 million in free cash flow annually starting in Year 6, and your discount rate is 10%, the present value of all those future cash flows is <span class="math inline">\(\frac{10,000,000}{0.10} = \$100,000,000\)</span> (as of Year 5), which you then discount back to today.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="excel-functions-for-annuities" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="excel-functions-for-annuities"><span class="header-section-number">3.4</span> Excel Functions for Annuities</h2>
+<p>In Module 1, we used <code>=PV()</code> and <code>=FV()</code> for lump sums. In Module 2, we introduce the <code>PMT</code> (payment) argument to handle annuities.</p>
+<section id="the-five-variables" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="the-five-variables"><span class="header-section-number">3.4.1</span> The Five Variables</h3>
+<p>Most DCF problems involve five variables. If you know any four, Excel can solve for the fifth:</p>
+<ol type="1">
+<li><strong>Rate (<span class="math inline">\(r\)</span>):</strong> The interest rate per period</li>
+<li><strong>Nper (<span class="math inline">\(n\)</span>):</strong> The total number of payment periods</li>
+<li><strong>PV:</strong> The present value (current worth)</li>
+<li><strong>FV:</strong> The future value (value at the end)</li>
+<li><strong>PMT:</strong> The constant payment made each period</li>
+</ol>
+</section>
+<section id="essential-excel-functions" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="essential-excel-functions"><span class="header-section-number">3.4.2</span> Essential Excel Functions</h3>
+<p><strong>To find the payment:</strong></p>
+<pre><code>=PMT(rate, nper, pv, [fv], [type])</code></pre>
+<p><strong>To find the number of periods:</strong></p>
+<pre><code>=NPER(rate, pmt, pv, [fv], [type])</code></pre>
+<p><strong>To find the interest rate:</strong></p>
+<pre><code>=RATE(nper, pmt, pv, [fv], [type])</code></pre>
+<p><strong>To find the present value:</strong></p>
+<pre><code>=PV(rate, nper, pmt, [fv], [type])</code></pre>
+<p><strong>To find the future value:</strong></p>
+<pre><code>=FV(rate, nper, pmt, [pv], [type])</code></pre>
+<p><strong>Note on [type]:</strong> - Use <code>0</code> (or omit) for an <strong>Ordinary Annuity</strong> (payments at end of period) - Use <code>1</code> for an <strong>Annuity Due</strong> (payments at beginning of period)</p>
+<blockquote class="blockquote">
+<p><strong>In Practice: The Sign Convention (Again!)</strong></p>
+<p>Excel treats these as cash inflows and outflows. If you are calculating the payment for a $30,000 car loan at 6% annual interest for 5 years, the PV is <span class="math inline">\(+30,000\)</span> (money coming to you from the lender), and the resulting PMT will be negative (money leaving your pocket each month). The formula would be: <code>=PMT(0.06/12, 5*12, 30000, 0, 0)</code>. If you enter both PV and PMT as positive, Excel will return an error or nonsensical result because it violates the cash flow direction logic.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="loan-amortization" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="loan-amortization"><span class="header-section-number">3.5</span> Loan Amortization</h2>
+<p>A loan amortization schedule breaks down each payment into its <strong>principal</strong> and <strong>interest</strong> components. This is critical for understanding how loans work and for tax purposes (interest is often tax-deductible).</p>
+<section id="the-mechanics" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="the-mechanics"><span class="header-section-number">3.5.1</span> The Mechanics</h3>
+<p>Each payment is constant (assuming a fixed-rate loan), but the composition changes: - <strong>Interest portion</strong> = Outstanding balance × Periodic interest rate - <strong>Principal portion</strong> = Total payment − Interest portion - <strong>New balance</strong> = Previous balance − Principal portion</p>
+<p>Over time, the interest portion decreases and the principal portion increases, because you owe less with each payment.</p>
+</section>
+<section id="excel-implementation" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="excel-implementation"><span class="header-section-number">3.5.2</span> Excel Implementation</h3>
+<p>You can build an amortization schedule using: - <code>=PMT()</code> to calculate the constant payment - <code>=IPMT(rate, per, nper, pv)</code> to calculate interest for a specific period - <code>=PPMT(rate, per, nper, pv)</code> to calculate principal for a specific period</p>
+<blockquote class="blockquote">
+<p><strong>In Practice: The True Cost of Borrowing</strong></p>
+<p>Consider a $300,000 mortgage at 4% annual interest for 30 years. Your monthly payment is $1,432.25. Over 30 years, you will pay $515,609 total—meaning you paid $215,609 in interest alone. Understanding amortization helps you see why making extra principal payments early in the loan dramatically reduces total interest paid, because you’re reducing the balance on which future interest is calculated.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="uneven-cash-flows-and-net-present-value-npv" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="uneven-cash-flows-and-net-present-value-npv"><span class="header-section-number">3.6</span> Uneven Cash Flows and Net Present Value (NPV)</h2>
+<p>Not all cash flows are equal. When payments vary from period to period, we cannot use the simple annuity formulas. Instead, we use the <strong>Net Present Value (NPV)</strong> approach, which sums the present value of each individual cash flow.</p>
+<p><strong>Mathematical Formula:</strong></p>
+<p><span class="math display">\[NPV = \sum_{t=0}^{n} \frac{CF_t}{(1 + r)^t}\]</span></p>
+<p>Where <span class="math inline">\(CF_t\)</span> is the cash flow in period <span class="math inline">\(t\)</span>.</p>
+<section id="excel-function" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="excel-function"><span class="header-section-number">3.6.1</span> Excel Function</h3>
+<pre><code>=NPV(rate, value1, [value2], ...)</code></pre>
+<p><strong>Crucial Warning:</strong> The Excel <code>=NPV()</code> function assumes the first value in your range occurs at the <strong>end of Period 1</strong>, not at Time 0. If you have a cash flow at <strong>Time 0</strong> (today)—such as an initial investment—you must exclude it from the NPV function and add it separately:</p>
+<pre><code>=Initial_Investment + NPV(rate, future_cash_flows)</code></pre>
+<p>Since initial investments are typically cash outflows, they are negative:</p>
+<pre><code>=-100000 + NPV(0.10, C2:C6)</code></pre>
+<blockquote class="blockquote">
+<p><strong>In Practice: Capital Budgeting Decisions</strong></p>
+<p>Suppose you’re evaluating a project that requires a $500,000 investment today and will generate cash flows of $150,000, $200,000, $180,000, $120,000, and $100,000 over the next five years. If your required return is 12%, the NPV is:</p>
+<p><code>=-500000 + NPV(0.12, {150000, 200000, 180000, 120000, 100000})</code> = $48,610</p>
+<p>A positive NPV means the project creates value and should be accepted. A negative NPV means it destroys value and should be rejected. This is the foundation of corporate investment decisions.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="common-pitfalls-to-avoid" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="common-pitfalls-to-avoid"><span class="header-section-number">3.7</span> Common Pitfalls to Avoid</h2>
+<section id="rateperiod-mismatch" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="rateperiod-mismatch"><span class="header-section-number">3.7.1</span> 1. Rate/Period Mismatch</h3>
+<p><strong>The most common error in DCF analysis.</strong> If payments are monthly, your rate <strong>must</strong> be monthly and your periods <strong>must</strong> be in months.</p>
+<ul>
+<li>Annual rate of 12% with monthly payments → Use <span class="math inline">\(r = 0.12/12 = 0.01\)</span> and <span class="math inline">\(n = years \times 12\)</span></li>
+<li>Quarterly payments → Use <span class="math inline">\(r = annual\ rate / 4\)</span> and <span class="math inline">\(n = years \times 4\)</span></li>
+</ul>
+</section>
+<section id="annuity-due-toggle" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="annuity-due-toggle"><span class="header-section-number">3.7.2</span> 2. Annuity Due Toggle</h3>
+<p>Forgetting to change the <code>[type]</code> argument to <code>1</code> in Excel when payments occur at the beginning of the period. This is especially common with rent and lease problems.</p>
+</section>
+<section id="npv-time-zero-error" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="npv-time-zero-error"><span class="header-section-number">3.7.3</span> 3. NPV Time Zero Error</h3>
+<p>Using <code>=NPV()</code> for all cash flows including the initial investment. Remember: Excel’s NPV function assumes the first cash flow is at the end of Period 1.</p>
+</section>
+<section id="perpetuity-growth-constraint" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="perpetuity-growth-constraint"><span class="header-section-number">3.7.4</span> 4. Perpetuity Growth Constraint</h3>
+<p>When using the Growing Perpetuity formula <span class="math inline">\(PV = \frac{PMT}{r - g}\)</span>, the growth rate <span class="math inline">\(g\)</span> must be less than the discount rate <span class="math inline">\(r\)</span>. If <span class="math inline">\(g \geq r\)</span>, the formula produces nonsensical results (negative or infinite values).</p>
+</section>
+<section id="sign-convention-errors" class="level3" data-number="3.7.5">
+<h3 data-number="3.7.5" class="anchored" data-anchor-id="sign-convention-errors"><span class="header-section-number">3.7.5</span> 5. Sign Convention Errors</h3>
+<p>Mixing up cash inflows and outflows. Be consistent: money you receive is positive, money you pay is negative (or vice versa, as long as you’re consistent).</p>
+<hr>
+</section>
+</section>
+<section id="connecting-to-future-modules" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="connecting-to-future-modules"><span class="header-section-number">3.8</span> Connecting to Future Modules</h2>
+<p>In this module, we have mastered how to value streams of cash flows using annuities, perpetuities, and NPV for uneven cash flows.</p>
+<ul>
+<li><p>In <strong>Bond Valuation</strong>, we will apply these DCF techniques to value government and corporate debt. A bond is simply an annuity (coupon payments) plus a lump sum (par value at maturity).</p></li>
+<li><p>In <strong>Stock Valuation</strong>, we will use perpetuities and growing perpetuities to determine the intrinsic value of equity using dividend discount models.</p></li>
+<li><p>In <strong>Risk and Return</strong>, we will finally learn how to determine the “correct” discount rate (<span class="math inline">\(r\)</span>) to use in all these calculations based on the risk of the investment.</p></li>
+</ul>
+<p>The DCF framework you’ve learned here is the foundation of all valuation in finance. Master these mechanics now, and the rest of the course will build naturally on this foundation.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./module01.html" class="pagination-link" aria-label="The Time Value of Money (TVM)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Time Value of Money (TVM)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./module03.html" class="pagination-link" aria-label="Bond Valuation">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bond Valuation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Discounted Cash Flows and Annuities"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Moving Beyond Lump Sums</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>In Module 1, we focused on **lump sums**—single cash flows occurring at a specific point in time. However, most financial decisions involve multiple cash flows. Whether analyzing a business's monthly revenue, a series of car payments, or retirement savings contributions, you are dealing with **Discounted Cash Flows (DCF)**.</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>The core principle remains unchanged: to compare or aggregate cash flows occurring at different times, you must move them to the same point in time (usually the present) using a discount rate.</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **In Practice: The "Valuation" Mindset**</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; In finance, the value of *any* financial asset—a stock, a bond, or an entire company—is simply the present value of all the cash it is expected to generate in the future. If you can forecast the cash flows and choose an appropriate discount rate, you can calculate the "fair" price of anything. This is why DCF analysis is the foundation of investment banking, private equity, and corporate finance.</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Defining Annuities</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>An **annuity** is a series of equal payments occurring at fixed intervals for a specified number of periods. Annuities simplify valuation because the equal payment structure allows us to use closed-form formulas rather than valuing each cash flow individually.</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Two Types of Annuities</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Ordinary Annuity:** Payments occur at the **end** of each period. This is the default assumption in finance (e.g., most corporate bond interest payments, mortgage payments).</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Annuity Due:** Payments occur at the **beginning** of each period (e.g., rent payments, lease payments, insurance premiums).</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mathematical Intuition</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>The Present Value of an annuity is the sum of the present values of each individual payment. Rather than discounting each payment separately, we use a formula that captures this sum efficiently.</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>**Ordinary Annuity Formula:**</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>$$PV = PMT \times \left<span class="co">[</span><span class="ot"> \frac{1 - (1 + r)^{-n}}{r} \right</span><span class="co">]</span>$$</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$PMT$ = the payment amount per period</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$r$ = the discount rate per period</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$n$ = the number of periods</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>**Future Value of an Ordinary Annuity:**</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>$$FV = PMT \times \left<span class="co">[</span><span class="ot"> \frac{(1 + r)^{n} - 1}{r} \right</span><span class="co">]</span>$$</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>**Annuity Due Adjustment:**</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>Because payments occur one period earlier, an Annuity Due is worth more than an Ordinary Annuity:</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>$$PV_{due} = PV_{ordinary} \times (1 + r)$$</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>$$FV_{due} = FV_{ordinary} \times (1 + r)$$</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **In Practice: Why Timing Matters**</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Consider rent versus a car loan. Rent is typically an **Annuity Due** (you pay at the start of the month to secure housing for that month). A car loan is typically an **Ordinary Annuity** (you drive for a month, then make the payment at month's end). Because money has time value, an Annuity Due is always worth more than an identical Ordinary Annuity—you receive (or pay) the money sooner, which means one less period of discounting.</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Perpetuities: The "Forever" Cash Flow</span></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>A **perpetuity** is an annuity that continues forever. While "forever" sounds theoretical, it is a vital concept for valuing preferred stocks, real estate with stable rental income, and established companies with predictable cash flows.</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>**The Formula:**</span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>$$PV = \frac{PMT}{r}$$</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>This elegant formula emerges from the ordinary annuity formula as $n \to \infty$. The $(1 + r)^{-n}$ term approaches zero, leaving us with $\frac{PMT}{r}$.</span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### Growing Perpetuity</span></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>When cash flows grow at a constant rate $g$ forever, we use the **Growing Perpetuity Formula**:</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>$$PV = \frac{PMT}{r - g}$$</span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>**Critical constraint:** $g &lt; r$. If the growth rate equals or exceeds the discount rate, the formula breaks down, reflecting the economic reality that no entity can grow faster than the economy indefinitely.</span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **In Practice: Real-World Perpetuities**</span></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The most famous example is the **British Consol**, a bond issued by the UK government that has no maturity date and pays interest forever. In corporate finance, we use the perpetuity formula to calculate the "Terminal Value" of a company—the value of all cash flows beyond a 5 or 10-year forecast horizon. For example, if a company is expected to generate $10 million in free cash flow annually starting in Year 6, and your discount rate is 10%, the present value of all those future cash flows is $\frac{10,000,000}{0.10} = \$100,000,000$ (as of Year 5), which you then discount back to today.</span></span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## Excel Functions for Annuities</span></span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>In Module 1, we used <span class="in">`=PV()`</span> and <span class="in">`=FV()`</span> for lump sums. In Module 2, we introduce the <span class="in">`PMT`</span> (payment) argument to handle annuities.</span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Five Variables</span></span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>Most DCF problems involve five variables. If you know any four, Excel can solve for the fifth:</span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Rate ($r$):** The interest rate per period</span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Nper ($n$):** The total number of payment periods</span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**PV:** The present value (current worth)</span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**FV:** The future value (value at the end)</span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**PMT:** The constant payment made each period</span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### Essential Excel Functions</span></span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a>**To find the payment:**</span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a><span class="in">=PMT(rate, nper, pv, [fv], [type])</span></span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>**To find the number of periods:**</span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a><span class="in">=NPER(rate, pmt, pv, [fv], [type])</span></span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a>**To find the interest rate:**</span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a><span class="in">=RATE(nper, pmt, pv, [fv], [type])</span></span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>**To find the present value:**</span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a><span class="in">=PV(rate, nper, pmt, [fv], [type])</span></span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>**To find the future value:**</span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a><span class="in">=FV(rate, nper, pmt, [pv], [type])</span></span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>**Note on [type]:**</span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`0`</span> (or omit) for an **Ordinary Annuity** (payments at end of period)</span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`1`</span> for an **Annuity Due** (payments at beginning of period)</span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **In Practice: The Sign Convention (Again!)**</span></span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Excel treats these as cash inflows and outflows. If you are calculating the payment for a $30,000 car loan at 6% annual interest for 5 years, the PV is $+30,000$ (money coming to you from the lender), and the resulting PMT will be negative (money leaving your pocket each month). The formula would be: </span><span class="in">`=PMT(0.06/12, 5*12, 30000, 0, 0)`</span><span class="at">. If you enter both PV and PMT as positive, Excel will return an error or nonsensical result because it violates the cash flow direction logic.</span></span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## Loan Amortization</span></span>
+<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a>A loan amortization schedule breaks down each payment into its **principal** and **interest** components. This is critical for understanding how loans work and for tax purposes (interest is often tax-deductible).</span>
+<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Mechanics</span></span>
+<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a>Each payment is constant (assuming a fixed-rate loan), but the composition changes:</span>
+<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Interest portion** = Outstanding balance × Periodic interest rate</span>
+<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Principal portion** = Total payment − Interest portion</span>
+<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**New balance** = Previous balance − Principal portion</span>
+<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a>Over time, the interest portion decreases and the principal portion increases, because you owe less with each payment.</span>
+<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a><span class="fu">### Excel Implementation</span></span>
+<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-148"><a href="#cb9-148" aria-hidden="true" tabindex="-1"></a>You can build an amortization schedule using:</span>
+<span id="cb9-149"><a href="#cb9-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`=PMT()`</span> to calculate the constant payment</span>
+<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`=IPMT(rate, per, nper, pv)`</span> to calculate interest for a specific period</span>
+<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`=PPMT(rate, per, nper, pv)`</span> to calculate principal for a specific period</span>
+<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **In Practice: The True Cost of Borrowing**</span></span>
+<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Consider a $300,000 mortgage at 4% annual interest for 30 years. Your monthly payment is $1,432.25. Over 30 years, you will pay $515,609 total—meaning you paid $215,609 in interest alone. Understanding amortization helps you see why making extra principal payments early in the loan dramatically reduces total interest paid, because you're reducing the balance on which future interest is calculated.</span></span>
+<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## Uneven Cash Flows and Net Present Value (NPV)</span></span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a>Not all cash flows are equal. When payments vary from period to period, we cannot use the simple annuity formulas. Instead, we use the **Net Present Value (NPV)** approach, which sums the present value of each individual cash flow.</span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a>**Mathematical Formula:**</span>
+<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a>$$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1 + r)^t}$$</span>
+<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a>Where $CF_t$ is the cash flow in period $t$.</span>
+<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a><span class="fu">### Excel Function</span></span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a><span class="in">=NPV(rate, value1, [value2], ...)</span></span>
+<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a>**Crucial Warning:** The Excel `=NPV()` function assumes the first value in your range occurs at the **end of Period 1**, not at Time 0. If you have a cash flow at **Time 0** (today)—such as an initial investment—you must exclude it from the NPV function and add it separately:</span>
+<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a><span class="in">=Initial_Investment + NPV(rate, future_cash_flows)</span></span>
+<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a>Since initial investments are typically cash outflows, they are negative:</span>
+<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a><span class="in">=-100000 + NPV(0.10, C2:C6)</span></span>
+<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-186"><a href="#cb9-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-187"><a href="#cb9-187" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **In Practice: Capital Budgeting Decisions**</span></span>
+<span id="cb9-188"><a href="#cb9-188" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-189"><a href="#cb9-189" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Suppose you're evaluating a project that requires a $500,000 investment today and will generate cash flows of $150,000, $200,000, $180,000, $120,000, and $100,000 over the next five years. If your required return is 12%, the NPV is:</span></span>
+<span id="cb9-190"><a href="#cb9-190" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-191"><a href="#cb9-191" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="in">`=-500000 + NPV(0.12, {150000, 200000, 180000, 120000, 100000})`</span><span class="at"> = $48,610</span></span>
+<span id="cb9-192"><a href="#cb9-192" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-193"><a href="#cb9-193" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; A positive NPV means the project creates value and should be accepted. A negative NPV means it destroys value and should be rejected. This is the foundation of corporate investment decisions.</span></span>
+<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## Common Pitfalls to Avoid</span></span>
+<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Rate/Period Mismatch</span></span>
+<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a>**The most common error in DCF analysis.** If payments are monthly, your rate **must** be monthly and your periods **must** be in months.</span>
+<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Annual rate of 12% with monthly payments → Use $r = 0.12/12 = 0.01$ and $n = years \times 12$</span>
+<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarterly payments → Use $r = annual\ rate / 4$ and $n = years \times 4$</span>
+<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Annuity Due Toggle</span></span>
+<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a>Forgetting to change the <span class="in">`[type]`</span> argument to <span class="in">`1`</span> in Excel when payments occur at the beginning of the period. This is especially common with rent and lease problems.</span>
+<span id="cb9-209"><a href="#cb9-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-210"><a href="#cb9-210" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. NPV Time Zero Error</span></span>
+<span id="cb9-211"><a href="#cb9-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-212"><a href="#cb9-212" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`=NPV()`</span> for all cash flows including the initial investment. Remember: Excel's NPV function assumes the first cash flow is at the end of Period 1.</span>
+<span id="cb9-213"><a href="#cb9-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-214"><a href="#cb9-214" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Perpetuity Growth Constraint</span></span>
+<span id="cb9-215"><a href="#cb9-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-216"><a href="#cb9-216" aria-hidden="true" tabindex="-1"></a>When using the Growing Perpetuity formula $PV = \frac{PMT}{r - g}$, the growth rate $g$ must be less than the discount rate $r$. If $g \geq r$, the formula produces nonsensical results (negative or infinite values).</span>
+<span id="cb9-217"><a href="#cb9-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-218"><a href="#cb9-218" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. Sign Convention Errors</span></span>
+<span id="cb9-219"><a href="#cb9-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-220"><a href="#cb9-220" aria-hidden="true" tabindex="-1"></a>Mixing up cash inflows and outflows. Be consistent: money you receive is positive, money you pay is negative (or vice versa, as long as you're consistent).</span>
+<span id="cb9-221"><a href="#cb9-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-222"><a href="#cb9-222" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-223"><a href="#cb9-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-224"><a href="#cb9-224" aria-hidden="true" tabindex="-1"></a><span class="fu">## Connecting to Future Modules</span></span>
+<span id="cb9-225"><a href="#cb9-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-226"><a href="#cb9-226" aria-hidden="true" tabindex="-1"></a>In this module, we have mastered how to value streams of cash flows using annuities, perpetuities, and NPV for uneven cash flows.</span>
+<span id="cb9-227"><a href="#cb9-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-228"><a href="#cb9-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In **Bond Valuation**, we will apply these DCF techniques to value government and corporate debt. A bond is simply an annuity (coupon payments) plus a lump sum (par value at maturity).</span>
+<span id="cb9-229"><a href="#cb9-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-230"><a href="#cb9-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In **Stock Valuation**, we will use perpetuities and growing perpetuities to determine the intrinsic value of equity using dividend discount models.</span>
+<span id="cb9-231"><a href="#cb9-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In **Risk and Return**, we will finally learn how to determine the "correct" discount rate ($r$) to use in all these calculations based on the risk of the investment.</span>
+<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a>The DCF framework you've learned here is the foundation of all valuation in finance. Master these mechanics now, and the rest of the course will build naturally on this foundation.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

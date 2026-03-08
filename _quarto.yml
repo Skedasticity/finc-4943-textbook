@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Fundamentals of Business Finance"
+  subtitle: "FINC 4943"
+  author: "William McCumber"
+  date: today
+  chapters:
+    - index.qmd
+    - module01.qmd
+    - module02.qmd
+    - module03.qmd
+    - module04.qmd
+    - module05.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    link-external-newwindow: true

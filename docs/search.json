@@ -1,0 +1,852 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fundamentals of Business Finance",
+    "section": "",
+    "text": "1 Welcome\nThis textbook introduces you to fundamental concepts and equations necessary to understand business finance at a graduate level.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fundamentals of Business Finance</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "Fundamentals of Business Finance",
+    "section": "1.1 Course Overview",
+    "text": "1.1 Course Overview\nThis course covers five key modules in financial theory and analysis, providing both theoretical foundations and practical applications.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fundamentals of Business Finance</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use-this-textbook",
+    "href": "index.html#how-to-use-this-textbook",
+    "title": "Fundamentals of Business Finance",
+    "section": "1.2 How to Use This Textbook",
+    "text": "1.2 How to Use This Textbook\nEach module contains:\n\nCore concepts and theory\nPractical examples in Excel\nApplications to real-world financial problems",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fundamentals of Business Finance</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#modules",
+    "href": "index.html#modules",
+    "title": "Fundamentals of Business Finance",
+    "section": "1.3 Modules",
+    "text": "1.3 Modules\nThe textbook is organized into five modules, each building on previous concepts to develop your financial modeling skills.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Fundamentals of Business Finance</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html",
+    "href": "module01.html",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "",
+    "text": "2.1 The Core Intuition: Why Time Matters\nWelcome to the first module of Business Finance Foundations! In this module, we will explore one of the most fundamental concepts in finance: the Time Value of Money (TVM). Understanding TVM is crucial because it underpins virtually every financial decision you’ll make, from personal savings to corporate investment analysis.\nIf I offered you $1,000 today or $1,000 one year from today, which would you choose?\nAlmost everyone instinctively chooses the money today. But why? In finance, this isn’t just a preference; it’s a fundamental principle called the Time Value of Money (TVM).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#the-core-intuition-why-time-matters",
+    "href": "module01.html#the-core-intuition-why-time-matters",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "",
+    "text": "2.1.1 The Three Pillars of TVM\n1. Opportunity Cost: The “Earning Power” of Money\nFormal Definition: Opportunity cost represents the return you forgo by not having money available to invest today.\nIn practice: If you have $1,000 today, you could invest it in a savings account, bonds, or stocks and earn a return. By waiting a year to receive that $1,000, you lose the opportunity to grow that money during the waiting period.\nExample: If you could earn 5% in a savings account, having $1,000 today means you’d have $1,050 in one year. Waiting to receive $1,000 next year costs you that $50 in potential earnings.\nReal-World Application: This is why lottery winners often choose lump-sum payments over annuities, and why companies evaluate projects based on their opportunity cost of capital.\n\n2. Inflation: The “Purchasing Power” Erosion\nFormal Definition: Inflation is the general increase in prices over time, which reduces the real purchasing power of money.\nIn practice: A dollar today buys more groceries, gas, or coffee than a dollar will next year because prices tend to rise over time.\nExample: If inflation is 3% annually: - A $100 grocery basket today will cost $103 next year - Your $100 next year will only buy what $97.09 buys today - Over 10 years, that $100 will only have the purchasing power of about $74.41 in today’s terms\nHistorical Context: The U.S. has experienced average annual inflation of about 3% over the past century. During the 1970s, inflation reached double digits, dramatically illustrating how quickly purchasing power can erode.\n\n3. Risk (Uncertainty): The “Will I Actually Get Paid?” Factor\nFormal Definition: Risk represents the probability that promised future cash flows may not materialize as expected.\nIn practice: There’s always some chance that the person or company promising to pay you in the future might not be able to deliver. They could go bankrupt, default, or circumstances could change. Money in your hand today has zero “default risk.”\nExample: Would you rather have $1,000 today from a friend, or a promise that your friend will pay you $1,000 in 5 years? Even if you trust your friend, a lot can happen in 5 years—job loss, relocation, financial hardship. The promise carries risk.\nFinancial Markets Application: This is why U.S. Treasury bonds (backed by the government) pay lower interest rates than corporate bonds—Treasuries have virtually no default risk, while corporations might fail.\n\n\n\n2.1.2 Understanding the Discount Rate (Interest Rate)\nThe interest rate we use in TVM calculations isn’t arbitrary—it reflects these three components:\nDiscount Rate = Risk-Free Rate + Inflation Premium + Risk Premium\n\nRisk-Free Rate: The “pure” time value of money—what you’d earn with zero risk (typically approximated by U.S. Treasury securities, currently around 2-4%)\nInflation Premium: Compensation for expected loss of purchasing power (historically ~2-3% in the U.S.)\nRisk Premium: Extra return demanded for bearing uncertainty (varies widely: 1-2% for high-quality corporate bonds, 5-8% for stocks, 10%+ for venture capital)\n\nExample: If you’re evaluating a corporate bond investment: - Risk-free rate: 3% (what Treasury bonds pay) - Expected inflation: 2% - Corporate risk premium: 2% - Total discount rate: 7%\nThis is why riskier investments require higher returns—investors demand compensation for bearing additional uncertainty.\n\nDeep Dive: The Risk-Free Rate\nIn theory, the risk-free rate represents the return on an investment with zero default risk and zero reinvestment risk. In practice, we use short-term U.S. Treasury bills as a proxy because: - The U.S. government can print money to pay debts (no default risk) - Treasury bills mature in less than one year (minimal interest rate risk)\nHowever, even Treasuries aren’t perfectly “risk-free”—they still carry inflation risk and the theoretical possibility of government default.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#the-magic-of-compounding",
+    "href": "module01.html#the-magic-of-compounding",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.2 The “Magic” of Compounding",
+    "text": "2.2 The “Magic” of Compounding\nCompounding is the process where your money earns interest, and then that interest earns interest. This creates exponential growth rather than linear growth.\n\n2.2.1 Simple Example\nImagine you invest $100 at a 10% annual interest rate:\n\nYear 1: You earn $10 in interest. Your total is $110.\nYear 2: You don’t just earn interest on your original $100; you earn 10% on the full $110. You earn $11 in interest. Your total is $121.\nYear 3: You earn 10% on $121 = $12.10. Your total is $133.10.\n\nNotice how the interest earned each year increases. That extra $1 in Year 2 and $2.10 in Year 3 is the result of compounding—earning interest on your interest.\n\n\n2.2.2 The Power of Time\nThis “interest on interest” effect is what allows small savings to grow into large sums over long periods. Consider this dramatic example:\n$10,000 invested at 8% annual interest: - After 10 years: $21,589 - After 20 years: $46,610 - After 30 years: $100,627 - After 40 years: $217,245\nNotice that the growth accelerates over time. The fourth decade adds more than $116,000, while the first decade only adds about $11,500. This is the exponential nature of compounding.\n\nHistorical Example: Manhattan Island\nThe famous story of Manhattan being purchased for $24 in 1626 illustrates compounding’s power. If that $24 had been invested at 8% annual return, it would be worth over $200 trillion today—far more than Manhattan’s actual value. While this is a simplified example (finding 8% returns for 400 years is impossible), it demonstrates why starting early matters so much.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#future-value-fv-vs.-present-value-pv",
+    "href": "module01.html#future-value-fv-vs.-present-value-pv",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.3 Future Value (FV) vs. Present Value (PV)",
+    "text": "2.3 Future Value (FV) vs. Present Value (PV)\nIn this module, we focus on two primary directions of calculation:\n\nFuture Value (FV): Moving money forward in time. “If I save $X today, what will it be worth in the future?”\nPresent Value (PV): Moving money backward in time (often called Discounting). “If I need $X in the future, what is it worth to me today?”\n\n\n2.3.1 The Basic Variables and Notation\nTo solve any TVM problem, we work with these four core variables. We’ll use consistent notation throughout this course:\n\nPV (Present Value): The current value of money; what a sum is worth today\nFV (Future Value): The value of money at a specific point in the future\nr (Interest Rate): The percentage rate of return per period (also called discount rate). In Excel, this parameter is called rate.\nn (Number of Periods): How long the money is invested or borrowed. In Excel, this parameter is called nper.\n\nKey Principle: If you know any three of these variables, you can solve for the fourth. This is the foundation of all TVM calculations.\n\n\n2.3.2 Visual Timeline\n        PV                                    FV\n         |------------------------------------&gt;|\n       Today    n periods at rate r        Future\n    \n    Compounding: Move PV forward to find FV\n    Discounting: Move FV backward to find PV",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#simple-vs.-compound-interest",
+    "href": "module01.html#simple-vs.-compound-interest",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.4 Simple vs. Compound Interest",
+    "text": "2.4 Simple vs. Compound Interest\n\n2.4.1 Simple Interest\nDefinition: Interest is calculated only on the original principal amount. Interest earned in previous periods does not earn additional interest.\nFormula: \\[\\text{Simple Interest} = \\text{Principal} \\times \\text{Rate} \\times \\text{Time}\\]\nExample: $1,000 at 10% simple interest for 5 years: - Year 1: Earn $100 (total: $1,100) - Year 2: Earn $100 (total: $1,200) - Year 3: Earn $100 (total: $1,300) - Year 4: Earn $100 (total: $1,400) - Year 5: Earn $100 (total: $1,500)\nTotal interest earned: $500\n\n\n\n2.4.2 Compound Interest\nDefinition: Interest is calculated on the principal plus all accumulated interest from previous periods. This creates “interest on interest.”\nFormula: \\[FV = PV \\times (1 + r)^n\\]\nExample: $1,000 at 10% compound interest for 5 years: - Year 1: Earn $100 on $1,000 (total: $1,100) - Year 2: Earn $110 on $1,100 (total: $1,210) - Year 3: Earn $121 on $1,210 (total: $1,331) - Year 4: Earn $133.10 on $1,331 (total: $1,464.10) - Year 5: Earn $146.41 on $1,464.10 (total: $1,610.51)\nTotal interest earned: $610.51\nThe Difference: Compound interest earned $110.51 more than simple interest over just 5 years. Over longer periods, this difference becomes enormous.\n\n\n2.4.3 Which One is Used in Modern Finance?\nCompound interest is the standard in virtually all modern financial applications, including: - Savings accounts and CDs - Bonds and loans - Stock market returns - Retirement accounts - Mortgage calculations\nSimple interest is rarely used except in very short-term loans or specific legal contexts.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#the-impact-of-compounding-frequency",
+    "href": "module01.html#the-impact-of-compounding-frequency",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.5 The Impact of Compounding Frequency",
+    "text": "2.5 The Impact of Compounding Frequency\n\n2.5.1 How Often Interest is Calculated Matters\nFormal Definition: Compounding frequency refers to how many times per year interest is calculated and added to the principal.\nIn practice: The more frequently interest is calculated and added to your account, the more “interest on interest” you earn, even if the stated annual rate is the same.\n\n\n2.5.2 Common Compounding Frequencies\nHere’s how $1,000 grows at 6% annual interest for 1 year under different compounding frequencies:\n\n\n\nFrequency\nTimes per Year (m)\nFormula\nFuture Value\n\n\n\n\nAnnual\n1\n\\(1,000 × (1.06)^1\\)\n$1,060.00\n\n\nSemi-annual\n2\n\\(1,000 × (1.03)^2\\)\n$1,060.90\n\n\nQuarterly\n4\n\\(1,000 × (1.015)^4\\)\n$1,061.36\n\n\nMonthly\n12\n\\(1,000 × (1.005)^12\\)\n$1,061.68\n\n\nDaily\n365\n\\(1,000 × (1 + 0.06/365)^365\\)\n$1,061.83\n\n\nContinuous\n∞\n\\(1,000 × e^{0.06}\\)\n$1,061.84\n\n\n\nKey Insight: Notice that going from annual to monthly compounding adds $1.68, but going from monthly to daily only adds $0.15. The benefit of more frequent compounding diminishes as frequency increases. There’s a mathematical limit (continuous compounding) beyond which you can’t go.\n\n\n2.5.3 Excel Adjustment for Different Frequencies\nWhen compounding is not annual, you must adjust both the rate and the number of periods:\nMonthly compounding example: - Annual rate: 6% → Monthly rate: 6%/12 = 0.5% = 0.005 - Years: 5 → Months: 5 × 12 = 60\nExcel formula:\n=FV(0.06/12, 5*12, 0, -1000)\nResult: $1,348.85 (compared to $1,338.23 with annual compounding)\n\n\n2.5.4 APR vs. APY: What Banks Don’t Always Make Clear\nAPR (Annual Percentage Rate): The stated annual rate before accounting for compounding frequency. This is the “nominal” rate.\nAPY (Annual Percentage Yield): The effective annual rate after accounting for compounding frequency. This is what you actually earn.\nFormula: \\[APY = \\left(1 + \\frac{APR}{m}\\right)^m - 1\\]\nWhere m = number of compounding periods per year\nExample: - 6% APR compounded monthly - APY = (1 + 0.06/12)^12 - 1 = (1.005)^12 - 1 = 0.06168 = 6.168%\nWhy This Matters: When comparing savings accounts or credit cards, always compare APY, not APR. A 5.9% APR compounded daily might be better than a 6.0% APR compounded annually.\nAPY Comparison Table:\n\n\n\nAPR\nAnnual\nQuarterly\nMonthly\nDaily\n\n\n\n\n5%\n5.000%\n5.095%\n5.116%\n5.127%\n\n\n6%\n6.000%\n6.136%\n6.168%\n6.183%\n\n\n7%\n7.000%\n7.186%\n7.229%\n7.250%\n\n\n\n\nConsumer Protection Note: The Truth in Lending Act requires lenders to disclose APY precisely because APR alone can be misleading. When shopping for savings accounts, always ask for the APY. When comparing credit cards, the APR matters less than your payment behavior, but APY shows the true cost if you carry a balance.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#the-mathematical-foundation",
+    "href": "module01.html#the-mathematical-foundation",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.6 The Mathematical Foundation",
+    "text": "2.6 The Mathematical Foundation\n\n2.6.1 Future Value Formula\nThe fundamental formula for calculating future value with compound interest is:\n\\[FV = PV \\times (1 + r)^n\\]\nWhere: - \\(FV\\) = Future Value - \\(PV\\) = Present Value - \\(r\\) = Interest rate per period (as a decimal) - \\(n\\) = Number of periods\nExample: What will $5,000 be worth in 10 years at 7% annual interest?\n\\[FV = 5,000 \\times (1.07)^{10} = 5,000 \\times 1.96715 = \\$9,835.76\\]\n\n\n\n2.6.2 Present Value Formula\nTo find present value (discounting), we rearrange the future value formula:\n\\[PV = \\frac{FV}{(1 + r)^n}\\]\nThis can also be written as:\n\\[PV = FV \\times (1 + r)^{-n}\\]\nExample: What is the present value of $10,000 to be received in 8 years if the discount rate is 6%?\n\\[PV = \\frac{10,000}{(1.06)^8} = \\frac{10,000}{1.59385} = \\$6,274.12\\]\nInterpretation: You should be willing to pay $6,274.12 today for the right to receive $10,000 in 8 years, assuming a 6% discount rate.\n\n\n\n2.6.3 The Relationship Between PV and FV\nThese formulas are inverses of each other: - Compounding (FV): Multiply by \\((1 + r)^n\\) - Discounting (PV): Divide by \\((1 + r)^n\\) (or multiply by \\((1 + r)^{-n}\\))\nKey Insight: When interest rates are positive, PV is always less than FV. The higher the interest rate or the longer the time period, the greater the difference between PV and FV.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#financial-mental-models-the-rule-of-72",
+    "href": "module01.html#financial-mental-models-the-rule-of-72",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.7 Financial Mental Models: The Rule of 72",
+    "text": "2.7 Financial Mental Models: The Rule of 72\n\n2.7.1 Quick Estimation Tool\nThe Rule of 72 is a mental math shortcut used by financial professionals to estimate how long it takes for an investment to double at a given interest rate.\nThe Formula: \\[\\text{Years to Double} \\approx \\frac{72}{\\text{Interest Rate (as whole number)}}\\]\nExamples: - At 6% interest: 72 ÷ 6 = 12 years to double - At 8% interest: 72 ÷ 8 = 9 years to double - At 9% interest: 72 ÷ 9 = 8 years to double - At 12% interest: 72 ÷ 12 = 6 years to double\n\n\n2.7.2 Verification\nLet’s verify the 8% example: \\[FV = PV \\times (1.08)^9 = 1 \\times 1.999 \\approx 2.0\\]\nThe Rule of 72 predicted 9 years, and the actual calculation shows 1.999—remarkably accurate!\n\n\n2.7.3 Why It Works (The Math Behind It)\nThe Rule of 72 is a linear approximation of the logarithmic formula for doubling time:\n\\[n = \\frac{\\ln(2)}{\\ln(1 + r)} \\approx \\frac{0.693}{r}\\]\nWhen r is expressed as a percentage, 0.693 × 100 ≈ 69.3, but 72 is used because it has more divisors (1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72), making mental math easier.\nAccuracy: The Rule of 72 is remarkably accurate for interest rates between 6% and 10%. For rates outside this range, small errors accumulate, but it remains useful for quick estimates.\n\n\n2.7.4 Reverse Application\nYou can also use the Rule of 72 in reverse: “If I want to double my money in 6 years, what return do I need?”\n\\[\\text{Required Rate} = \\frac{72}{\\text{Years}} = \\frac{72}{6} = 12\\%\\]\n\n\n2.7.5 Related Rules\n\nDeep Dive: Related Rules\n\nRule of 115: Estimates when money triples (115 ÷ rate)\n\nAt 8%: 115 ÷ 8 ≈ 14.4 years to triple\n\nRule of 144: Estimates when money quadruples (144 ÷ rate)\n\nAt 8%: 144 ÷ 8 = 18 years to quadruple\n\n\nThese are all linear approximations of exponential growth—handy for quick boardroom calculations when you don’t have a calculator.\n\n\n\n2.7.6 Practical Applications\nRetirement Planning: “I have $100,000 in my 401(k) at age 40. If it grows at 9% annually, how much will I have at 64?” - 24 years ÷ 8 years per doubling (72÷9) = 3 doublings - $100,000 → $200,000 → $400,000 → $800,000 - Quick estimate: ~$800,000 (actual: $806,862)\nInflation Impact: “If inflation is 3%, how long until my purchasing power is cut in half?” - 72 ÷ 3 = 24 years - A dollar today will have the purchasing power of 50 cents in 24 years",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#moving-to-excel",
+    "href": "module01.html#moving-to-excel",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.8 Moving to Excel",
+    "text": "2.8 Moving to Excel\nWhile formulas are important for understanding the logic, in the business world, we use Excel to handle calculations efficiently and accurately. Excel simplifies these calculations into built-in financial functions.\n\n2.8.1 Core Excel TVM Functions\n\n=FV(rate, nper, pmt, [pv], [type]) — Calculate future value\n=PV(rate, nper, pmt, [fv], [type]) — Calculate present value\n=RATE(nper, pmt, pv, [fv], [type]) — Calculate interest rate\n=NPER(rate, pmt, pv, [fv], [type]) — Calculate number of periods\n\n\n\n2.8.2 Important Excel Conventions and Defaults\n1. Cash Flow Sign Convention\nExcel uses a cash flow perspective where: - Negative numbers represent cash outflows (money leaving your pocket—investments, payments) - Positive numbers represent cash inflows (money coming to you—returns, receipts)\nExample: If you invest $1,000 today at 5% for 10 years:\n=FV(0.05, 10, 0, -1000)\nThe -1000 represents money leaving your pocket today. The result will be positive (approximately $1,629), representing money coming back to you in the future.\n2. Interest Rates as Decimals\nAlways enter interest rates as decimals: - 5% = 0.05 - 7.5% = 0.075 - 12% = 0.12\n3. Period Consistency\nEnsure your interest rate period matches your time period: - Annual rate (6%) with annual periods (10 years) ✓ - Monthly rate (0.5%) with monthly periods (120 months) ✓ - Annual rate (6%) with monthly periods (120 months) ✗ WRONG\n4. The [type] Parameter\nThe [type] parameter specifies when payments occur: - type = 0 (or omitted): End of period (default) - type = 1: Beginning of period (annuity due)\nFor single lump-sum problems in this module, omit [type]; Excel defaults to end-of-period (type = 0). In Module 2 when we cover annuities, we’ll explicitly use type = 1 for annuity due situations (like rent payments made at the beginning of each month).\n\n\n2.8.3 Excel Function Examples\nExample 1: Future Value You invest $2,000 today at 4% for 5 years. What will you have?\n=FV(0.04, 5, 0, -2000)\nResult: $2,433.31\n\nExample 2: Present Value You need $25,000 in 10 years. How much must you invest today at 7%?\n=PV(0.07, 10, 0, -25000)\nResult: $12,715.64\n\nExample 3: Interest Rate You invested $5,000 and it grew to $8,000 in 7 years. What was your annual return?\n=RATE(7, 0, -5000, 8000)\nResult: 0.0701 or 7.01%\n\nExample 4: Number of Periods How long will it take $10,000 to grow to $20,000 at 6%?\n=NPER(0.06, 0, -10000, 20000)\nResult: 11.90 years\nVerification with Rule of 72: 72 ÷ 6 = 12 years (very close!)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#preview-lump-sums-vs.-annuities",
+    "href": "module01.html#preview-lump-sums-vs.-annuities",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.9 Preview: Lump Sums vs. Annuities",
+    "text": "2.9 Preview: Lump Sums vs. Annuities\nIn this module, we’ve focused exclusively on lump sum problems—single amounts of money at specific points in time.\nLump Sum Examples: - Investing $5,000 today in a savings account - Receiving a $10,000 inheritance in 3 years - A bond’s final principal payment at maturity - Winning a lottery prize paid as a single amount\n\n2.9.1 What’s Coming in Module 2\nIn Module 2: Discounted Cash Flows, we’ll extend these concepts to annuities—regular, repeated payments over time.\nAnnuity Examples: - Monthly car payments ($350/month for 60 months) - Annual retirement account contributions ($6,000/year for 30 years) - Quarterly bond interest payments ($30/quarter for 10 years) - Mortgage payments ($1,500/month for 360 months)\nThe Connection: Annuities are just multiple lump sums strung together. Everything you’ve learned about PV and FV applies—we’ll just add the PMT (payment) parameter to our Excel functions.\nSneak Preview of Excel Functions for Annuities: - =PV(rate, nper, pmt, [fv]) — We’ll use the PMT parameter to find present value of payment streams - =PMT(rate, nper, pv, [fv]) — Solves for the payment amount (e.g., “What’s my monthly car payment?”) - =FV(rate, nper, pmt, [pv]) — Future value of regular payments (e.g., “How much will my retirement account be worth?”)\nDon’t worry about mastering these now—just know that the TVM foundation you’re building in Module 1 applies to all future modules. Once you understand how to move a single dollar through time, moving multiple dollars through time is just an extension of the same logic.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#key-takeaways",
+    "href": "module01.html#key-takeaways",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.10 Key Takeaways",
+    "text": "2.10 Key Takeaways\nBy the end of this module, you should understand:\n✓ The three pillars of TVM: Money today is worth more than money tomorrow due to opportunity cost, inflation, and risk\n✓ Compounding creates exponential growth: “Interest on interest” is what allows small savings to grow into large sums over long periods\n✓ FV moves forward; PV discounts backward: These are inverse operations along the time continuum\n✓ The four core variables: PV, FV, r (rate), and n (periods)—know three, solve for the fourth\n✓ Excel functions streamline TVM work: Master FV, PV, RATE, and NPER with proper sign conventions\n✓ Compounding frequency matters: APY (effective rate) differs from APR (nominal rate) when compounding is more frequent than annual\n✓ The Rule of 72: A powerful mental shortcut for estimating doubling time (Years ≈ 72 ÷ Rate)\n✓ Discount rates reflect risk: Higher risk requires higher returns; the discount rate = risk-free rate + inflation premium + risk premium\n✓ Time is your most valuable asset: Starting early with small amounts beats starting late with large amounts due to the exponential nature of compounding",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#common-misconceptions-and-pitfalls",
+    "href": "module01.html#common-misconceptions-and-pitfalls",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.11 Common Misconceptions and Pitfalls",
+    "text": "2.11 Common Misconceptions and Pitfalls\n\n2.11.1 Misconception 1: “Compound interest is only slightly better than simple interest”\nReality: Over long periods, the difference is enormous. For $10,000 at 8% over 30 years: - Simple interest: $34,000 - Compound interest: $100,627 - Difference: $66,627 (nearly 3x the original investment!)\n\n\n2.11.2 Misconception 2: “I can wait a few years to start saving for retirement”\nReality: Due to compounding, delaying even 5 years can cost you hundreds of thousands of dollars. The Rule of 72 shows why: each doubling period you miss is exponentially costly.\n\n\n2.11.3 Misconception 3: “A higher APR is always worse for borrowers”\nReality: You must compare APY, not APR. A 5.9% APR compounded daily might cost more than a 6.0% APR compounded annually.\n\n\n2.11.4 Misconception 4: “Present value and future value are just different names for the same thing”\nReality: They move in opposite directions. PV discounts future money to today; FV compounds present money to the future. They’re mathematical inverses.\n\n\n2.11.5 Misconception 5: “The Rule of 72 is just a rough guess”\nReality: For rates between 6-10%, the Rule of 72 is accurate to within a few months. It’s based on solid logarithmic mathematics, just simplified for mental calculation.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module01.html#connecting-to-future-modules",
+    "href": "module01.html#connecting-to-future-modules",
+    "title": "2  The Time Value of Money (TVM)",
+    "section": "2.12 Connecting to Future Modules",
+    "text": "2.12 Connecting to Future Modules\nThe TVM concepts you’ve mastered in in this module are the foundation for everything that follows:\nDiscounted Cash Flows - Extends lump sums to annuities (regular payments) - Introduces perpetuities (payments that continue forever) - Applies TVM to loan amortization and retirement planning\nBond Valuation - Bonds are just a series of annuity payments (coupons) plus a lump sum (principal) - Bond prices move inversely with interest rates—now you understand why\nStock Valuation - Dividend discount models are PV calculations applied to uncertain future cash flows - The Gordon Growth Model is a perpetuity formula with growth\nRisk and Return - Understanding how to measure investment risk using variance and standard deviation - Learning how the risk premium component of discount rates is determined - Applying the Capital Asset Pricing Model (CAPM) to estimate required returns based on systematic risk\nEverything in finance is about moving cash flows through time. Master this, and you’ve mastered the language of finance.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Time Value of Money (TVM)</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html",
+    "href": "module02.html",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "",
+    "text": "3.1 Moving Beyond Lump Sums\nIn Module 1, we focused on lump sums—single cash flows occurring at a specific point in time. However, most financial decisions involve multiple cash flows. Whether analyzing a business’s monthly revenue, a series of car payments, or retirement savings contributions, you are dealing with Discounted Cash Flows (DCF).\nThe core principle remains unchanged: to compare or aggregate cash flows occurring at different times, you must move them to the same point in time (usually the present) using a discount rate.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#moving-beyond-lump-sums",
+    "href": "module02.html#moving-beyond-lump-sums",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "",
+    "text": "In Practice: The “Valuation” Mindset\nIn finance, the value of any financial asset—a stock, a bond, or an entire company—is simply the present value of all the cash it is expected to generate in the future. If you can forecast the cash flows and choose an appropriate discount rate, you can calculate the “fair” price of anything. This is why DCF analysis is the foundation of investment banking, private equity, and corporate finance.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#defining-annuities",
+    "href": "module02.html#defining-annuities",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.2 Defining Annuities",
+    "text": "3.2 Defining Annuities\nAn annuity is a series of equal payments occurring at fixed intervals for a specified number of periods. Annuities simplify valuation because the equal payment structure allows us to use closed-form formulas rather than valuing each cash flow individually.\n\n3.2.1 The Two Types of Annuities\n\nOrdinary Annuity: Payments occur at the end of each period. This is the default assumption in finance (e.g., most corporate bond interest payments, mortgage payments).\nAnnuity Due: Payments occur at the beginning of each period (e.g., rent payments, lease payments, insurance premiums).\n\n\n\n3.2.2 Mathematical Intuition\nThe Present Value of an annuity is the sum of the present values of each individual payment. Rather than discounting each payment separately, we use a formula that captures this sum efficiently.\nOrdinary Annuity Formula:\n\\[PV = PMT \\times \\left[ \\frac{1 - (1 + r)^{-n}}{r} \\right]\\]\nWhere: - \\(PMT\\) = the payment amount per period - \\(r\\) = the discount rate per period - \\(n\\) = the number of periods\nFuture Value of an Ordinary Annuity:\n\\[FV = PMT \\times \\left[ \\frac{(1 + r)^{n} - 1}{r} \\right]\\]\nAnnuity Due Adjustment:\nBecause payments occur one period earlier, an Annuity Due is worth more than an Ordinary Annuity:\n\\[PV_{due} = PV_{ordinary} \\times (1 + r)\\]\n\\[FV_{due} = FV_{ordinary} \\times (1 + r)\\]\n\nIn Practice: Why Timing Matters\nConsider rent versus a car loan. Rent is typically an Annuity Due (you pay at the start of the month to secure housing for that month). A car loan is typically an Ordinary Annuity (you drive for a month, then make the payment at month’s end). Because money has time value, an Annuity Due is always worth more than an identical Ordinary Annuity—you receive (or pay) the money sooner, which means one less period of discounting.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#perpetuities-the-forever-cash-flow",
+    "href": "module02.html#perpetuities-the-forever-cash-flow",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.3 Perpetuities: The “Forever” Cash Flow",
+    "text": "3.3 Perpetuities: The “Forever” Cash Flow\nA perpetuity is an annuity that continues forever. While “forever” sounds theoretical, it is a vital concept for valuing preferred stocks, real estate with stable rental income, and established companies with predictable cash flows.\nThe Formula:\n\\[PV = \\frac{PMT}{r}\\]\nThis elegant formula emerges from the ordinary annuity formula as \\(n \\to \\infty\\). The \\((1 + r)^{-n}\\) term approaches zero, leaving us with \\(\\frac{PMT}{r}\\).\n\n3.3.1 Growing Perpetuity\nWhen cash flows grow at a constant rate \\(g\\) forever, we use the Growing Perpetuity Formula:\n\\[PV = \\frac{PMT}{r - g}\\]\nCritical constraint: \\(g &lt; r\\). If the growth rate equals or exceeds the discount rate, the formula breaks down, reflecting the economic reality that no entity can grow faster than the economy indefinitely.\n\nIn Practice: Real-World Perpetuities\nThe most famous example is the British Consol, a bond issued by the UK government that has no maturity date and pays interest forever. In corporate finance, we use the perpetuity formula to calculate the “Terminal Value” of a company—the value of all cash flows beyond a 5 or 10-year forecast horizon. For example, if a company is expected to generate $10 million in free cash flow annually starting in Year 6, and your discount rate is 10%, the present value of all those future cash flows is \\(\\frac{10,000,000}{0.10} = \\$100,000,000\\) (as of Year 5), which you then discount back to today.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#excel-functions-for-annuities",
+    "href": "module02.html#excel-functions-for-annuities",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.4 Excel Functions for Annuities",
+    "text": "3.4 Excel Functions for Annuities\nIn Module 1, we used =PV() and =FV() for lump sums. In Module 2, we introduce the PMT (payment) argument to handle annuities.\n\n3.4.1 The Five Variables\nMost DCF problems involve five variables. If you know any four, Excel can solve for the fifth:\n\nRate (\\(r\\)): The interest rate per period\nNper (\\(n\\)): The total number of payment periods\nPV: The present value (current worth)\nFV: The future value (value at the end)\nPMT: The constant payment made each period\n\n\n\n3.4.2 Essential Excel Functions\nTo find the payment:\n=PMT(rate, nper, pv, [fv], [type])\nTo find the number of periods:\n=NPER(rate, pmt, pv, [fv], [type])\nTo find the interest rate:\n=RATE(nper, pmt, pv, [fv], [type])\nTo find the present value:\n=PV(rate, nper, pmt, [fv], [type])\nTo find the future value:\n=FV(rate, nper, pmt, [pv], [type])\nNote on [type]: - Use 0 (or omit) for an Ordinary Annuity (payments at end of period) - Use 1 for an Annuity Due (payments at beginning of period)\n\nIn Practice: The Sign Convention (Again!)\nExcel treats these as cash inflows and outflows. If you are calculating the payment for a $30,000 car loan at 6% annual interest for 5 years, the PV is \\(+30,000\\) (money coming to you from the lender), and the resulting PMT will be negative (money leaving your pocket each month). The formula would be: =PMT(0.06/12, 5*12, 30000, 0, 0). If you enter both PV and PMT as positive, Excel will return an error or nonsensical result because it violates the cash flow direction logic.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#loan-amortization",
+    "href": "module02.html#loan-amortization",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.5 Loan Amortization",
+    "text": "3.5 Loan Amortization\nA loan amortization schedule breaks down each payment into its principal and interest components. This is critical for understanding how loans work and for tax purposes (interest is often tax-deductible).\n\n3.5.1 The Mechanics\nEach payment is constant (assuming a fixed-rate loan), but the composition changes: - Interest portion = Outstanding balance × Periodic interest rate - Principal portion = Total payment − Interest portion - New balance = Previous balance − Principal portion\nOver time, the interest portion decreases and the principal portion increases, because you owe less with each payment.\n\n\n3.5.2 Excel Implementation\nYou can build an amortization schedule using: - =PMT() to calculate the constant payment - =IPMT(rate, per, nper, pv) to calculate interest for a specific period - =PPMT(rate, per, nper, pv) to calculate principal for a specific period\n\nIn Practice: The True Cost of Borrowing\nConsider a $300,000 mortgage at 4% annual interest for 30 years. Your monthly payment is $1,432.25. Over 30 years, you will pay $515,609 total—meaning you paid $215,609 in interest alone. Understanding amortization helps you see why making extra principal payments early in the loan dramatically reduces total interest paid, because you’re reducing the balance on which future interest is calculated.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#uneven-cash-flows-and-net-present-value-npv",
+    "href": "module02.html#uneven-cash-flows-and-net-present-value-npv",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.6 Uneven Cash Flows and Net Present Value (NPV)",
+    "text": "3.6 Uneven Cash Flows and Net Present Value (NPV)\nNot all cash flows are equal. When payments vary from period to period, we cannot use the simple annuity formulas. Instead, we use the Net Present Value (NPV) approach, which sums the present value of each individual cash flow.\nMathematical Formula:\n\\[NPV = \\sum_{t=0}^{n} \\frac{CF_t}{(1 + r)^t}\\]\nWhere \\(CF_t\\) is the cash flow in period \\(t\\).\n\n3.6.1 Excel Function\n=NPV(rate, value1, [value2], ...)\nCrucial Warning: The Excel =NPV() function assumes the first value in your range occurs at the end of Period 1, not at Time 0. If you have a cash flow at Time 0 (today)—such as an initial investment—you must exclude it from the NPV function and add it separately:\n=Initial_Investment + NPV(rate, future_cash_flows)\nSince initial investments are typically cash outflows, they are negative:\n=-100000 + NPV(0.10, C2:C6)\n\nIn Practice: Capital Budgeting Decisions\nSuppose you’re evaluating a project that requires a $500,000 investment today and will generate cash flows of $150,000, $200,000, $180,000, $120,000, and $100,000 over the next five years. If your required return is 12%, the NPV is:\n=-500000 + NPV(0.12, {150000, 200000, 180000, 120000, 100000}) = $48,610\nA positive NPV means the project creates value and should be accepted. A negative NPV means it destroys value and should be rejected. This is the foundation of corporate investment decisions.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#common-pitfalls-to-avoid",
+    "href": "module02.html#common-pitfalls-to-avoid",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.7 Common Pitfalls to Avoid",
+    "text": "3.7 Common Pitfalls to Avoid\n\n3.7.1 1. Rate/Period Mismatch\nThe most common error in DCF analysis. If payments are monthly, your rate must be monthly and your periods must be in months.\n\nAnnual rate of 12% with monthly payments → Use \\(r = 0.12/12 = 0.01\\) and \\(n = years \\times 12\\)\nQuarterly payments → Use \\(r = annual\\ rate / 4\\) and \\(n = years \\times 4\\)\n\n\n\n3.7.2 2. Annuity Due Toggle\nForgetting to change the [type] argument to 1 in Excel when payments occur at the beginning of the period. This is especially common with rent and lease problems.\n\n\n3.7.3 3. NPV Time Zero Error\nUsing =NPV() for all cash flows including the initial investment. Remember: Excel’s NPV function assumes the first cash flow is at the end of Period 1.\n\n\n3.7.4 4. Perpetuity Growth Constraint\nWhen using the Growing Perpetuity formula \\(PV = \\frac{PMT}{r - g}\\), the growth rate \\(g\\) must be less than the discount rate \\(r\\). If \\(g \\geq r\\), the formula produces nonsensical results (negative or infinite values).\n\n\n3.7.5 5. Sign Convention Errors\nMixing up cash inflows and outflows. Be consistent: money you receive is positive, money you pay is negative (or vice versa, as long as you’re consistent).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module02.html#connecting-to-future-modules",
+    "href": "module02.html#connecting-to-future-modules",
+    "title": "3  Discounted Cash Flows and Annuities",
+    "section": "3.8 Connecting to Future Modules",
+    "text": "3.8 Connecting to Future Modules\nIn this module, we have mastered how to value streams of cash flows using annuities, perpetuities, and NPV for uneven cash flows.\n\nIn Bond Valuation, we will apply these DCF techniques to value government and corporate debt. A bond is simply an annuity (coupon payments) plus a lump sum (par value at maturity).\nIn Stock Valuation, we will use perpetuities and growing perpetuities to determine the intrinsic value of equity using dividend discount models.\nIn Risk and Return, we will finally learn how to determine the “correct” discount rate (\\(r\\)) to use in all these calculations based on the risk of the investment.\n\nThe DCF framework you’ve learned here is the foundation of all valuation in finance. Master these mechanics now, and the rest of the course will build naturally on this foundation.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Discounted Cash Flows and Annuities</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html",
+    "href": "module03.html",
+    "title": "4  Bond Valuation",
+    "section": "",
+    "text": "4.1 Module Overview\nNow that you understand how to value single cash flows and streams of cash flows like annuities, you’re ready to apply these skills to one of the most important financial instruments: bonds.\nA bond is essentially a loan you make to a borrower (a corporation or government). In return, the borrower promises to: 1. Pay you regular interest payments (called coupons) 2. Return your principal (called par value or face value) at maturity\nWhy bonds matter: Bonds are the foundation of corporate finance and investment management. Companies issue bonds to raise capital, investors buy bonds for steady income, and bond prices signal market expectations about interest rates and economic conditions. Understanding bond valuation is essential for capital budgeting, cost of capital calculations, and portfolio management.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#bond-basics-the-mechanics",
+    "href": "module03.html#bond-basics-the-mechanics",
+    "title": "4  Bond Valuation",
+    "section": "4.2 Bond Basics: The Mechanics",
+    "text": "4.2 Bond Basics: The Mechanics\n\n4.2.1 What Is a Bond?\nThink of a bond as an IOU with specific terms:\n\nPar Value (Face Value): The amount the bond will pay at maturity (typically $1,000)\nCoupon Rate: The annual interest rate stated on the bond\nCoupon Payment: The dollar amount of interest paid periodically (usually semi-annually)\nMaturity Date: When the bond expires and par value is repaid\nYield to Maturity (YTM): The market’s required return on the bond (the discount rate)\n\n\n\n4.2.2 Example Bond\nConsider a 5-year, 6% annual coupon bond with a $1,000 par value:\n\nPar Value: $1,000\nCoupon Rate: 6% per year\nAnnual Coupon Payment: $1,000 × 0.06 = $60\nMaturity: 5 years\nCash Flows: You receive $60 at the end of each year for 5 years, plus $1,000 at year 5",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#the-bond-valuation-formula",
+    "href": "module03.html#the-bond-valuation-formula",
+    "title": "4  Bond Valuation",
+    "section": "4.3 The Bond Valuation Formula",
+    "text": "4.3 The Bond Valuation Formula\nA bond is simply a combination of two cash flow patterns you already know:\n\nAn annuity (the coupon payments)\nA lump sum (the par value at maturity)\n\n\n4.3.1 The Formula\n\\[\\text{Bond Price} = \\text{PV of Coupons} + \\text{PV of Par Value}\\]\n\\[P = C \\times \\left[\\frac{1-(1+r)^{-n}}{r}\\right] + \\frac{F}{(1+r)^n}\\]\nWhere: - \\(P\\) = Bond price (present value) - \\(C\\) = Coupon payment per period - \\(r\\) = Yield to maturity (YTM) per period (market interest rate) - \\(n\\) = Number of periods until maturity - \\(F\\) = Face (par) value\n\n\n4.3.2 Worked Example\nGiven: - Par value = $1,000 - Coupon rate = 6% (annual) - Maturity = 5 years - Market YTM = 8%\nStep 1: Calculate annual coupon payment \\[C = \\$1,000 \\times 0.06 = \\$60\\]\nStep 2: Calculate PV of coupon payments (annuity) \\[PV_{\\text{coupons}} = \\$60 \\times \\left[\\frac{1-(1.08)^{-5}}{0.08}\\right] = \\$60 \\times 3.9927 = \\$239.56\\]\nStep 3: Calculate PV of par value (lump sum) \\[PV_{\\text{par}} = \\frac{\\$1,000}{(1.08)^5} = \\frac{\\$1,000}{1.4693} = \\$680.58\\]\nStep 4: Add them together \\[\\text{Bond Price} = \\$239.56 + \\$680.58 = \\$920.14\\]\nInterpretation: This bond is selling at a discount (below par value) because the market YTM (8%) is higher than the coupon rate (6%). Investors demand a higher return than the bond’s coupon provides, so the price must fall to make up the difference.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#the-inverse-relationship-interest-rates-and-bond-prices",
+    "href": "module03.html#the-inverse-relationship-interest-rates-and-bond-prices",
+    "title": "4  Bond Valuation",
+    "section": "4.4 The Inverse Relationship: Interest Rates and Bond Prices",
+    "text": "4.4 The Inverse Relationship: Interest Rates and Bond Prices\n\n4.4.1 The Golden Rule of Bonds\nWhen market interest rates rise, bond prices fall. When market interest rates fall, bond prices rise.\nThis is the most important concept in bond valuation.\n\n\n4.4.2 Why This Happens\nImagine you own a bond paying 6% when market rates are 6%—your bond is worth par value ($1,000). Now suppose market rates jump to 8%:\n\nNew bonds issued today pay 8%\nYour bond still only pays 6%\nNo one will pay $1,000 for your 6% bond when they can buy a new 8% bond for $1,000\nYour bond’s price must fall to make its total return competitive with the 8% market rate\n\nIn practice: This is why bond investors fear rising interest rates. If you bought a 30-year Treasury bond in 2020 when rates were 1.5%, and rates rose to 4.5% by 2023, your bond’s market value dropped significantly—even though the bond itself is perfectly safe and will still pay you back at maturity.\n\n\n4.4.3 Three Pricing Scenarios\n\n\n\nRelationship\nBond Price\nTerm\n\n\n\n\nCoupon Rate &gt; YTM\nPrice &gt; Par\nPremium Bond\n\n\nCoupon Rate = YTM\nPrice = Par\nPar Bond\n\n\nCoupon Rate &lt; YTM\nPrice &lt; Par\nDiscount Bond",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#semi-annual-coupon-bonds",
+    "href": "module03.html#semi-annual-coupon-bonds",
+    "title": "4  Bond Valuation",
+    "section": "4.5 Semi-Annual Coupon Bonds",
+    "text": "4.5 Semi-Annual Coupon Bonds\nMost bonds in the real world pay interest semi-annually (twice per year), not annually. This requires adjusting our formula.\n\n4.5.1 Adjustments Needed\n\nDivide the annual coupon payment by 2 to get the semi-annual payment\nDivide the annual YTM by 2 to get the semi-annual rate\nMultiply the years to maturity by 2 to get the number of semi-annual periods\n\n\n\n4.5.2 Example: Semi-Annual Bond\nGiven: - Par value = $1,000 - Annual coupon rate = 6% - Maturity = 5 years - Annual YTM = 8%\nAdjustments: - Semi-annual coupon = ($1,000 × 0.06) ÷ 2 = $30 - Semi-annual YTM = 0.08 ÷ 2 = 0.04 - Number of periods = 5 × 2 = 10\nFormula: \\[P = \\$30 \\times \\left[\\frac{1-(1.04)^{-10}}{0.04}\\right] + \\frac{\\$1,000}{(1.04)^{10}}\\]\n\\[P = \\$30 \\times 8.1109 + \\$675.56 = \\$243.33 + \\$675.56 = \\$918.89\\]\nNote: The semi-annual bond price ($918.89) is slightly lower than the annual bond price ($920.14) because compounding happens more frequently.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#yield-to-maturity-ytm",
+    "href": "module03.html#yield-to-maturity-ytm",
+    "title": "4  Bond Valuation",
+    "section": "4.6 Yield to Maturity (YTM)",
+    "text": "4.6 Yield to Maturity (YTM)\n\n4.6.1 What Is YTM?\nYield to Maturity is the total return you’ll earn if you: 1. Buy the bond at its current market price 2. Hold it until maturity 3. Reinvest all coupon payments at the YTM rate\nYTM is the discount rate that makes the present value of all bond cash flows equal to the current bond price.\n\n\n4.6.2 Why YTM Matters\n\nYTM is the bond’s true rate of return\nIt allows you to compare bonds with different coupons, maturities, and prices\nIt’s the market’s assessment of the bond’s risk and return\n\n\n\n4.6.3 Calculating YTM\nUnlike calculating bond price (where we know YTM and solve for price), calculating YTM requires solving for the rate when we know the price. This requires trial and error or Excel.\nFormula (cannot be solved algebraically): \\[\\text{Current Price} = \\sum_{t=1}^{n} \\frac{C}{(1+YTM)^t} + \\frac{F}{(1+YTM)^n}\\]\nIn practice: Bond traders and portfolio managers constantly monitor YTM because it reflects changing market conditions. If a company’s credit quality deteriorates, its bond YTM will rise (and price will fall) as investors demand higher returns for increased risk.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#current-yield-vs.-yield-to-maturity",
+    "href": "module03.html#current-yield-vs.-yield-to-maturity",
+    "title": "4  Bond Valuation",
+    "section": "4.7 Current Yield vs. Yield to Maturity",
+    "text": "4.7 Current Yield vs. Yield to Maturity\n\n4.7.1 Current Yield\nCurrent Yield is a simpler measure that only considers the annual coupon income relative to the current price:\n\\[\\text{Current Yield} = \\frac{\\text{Annual Coupon Payment}}{\\text{Current Bond Price}}\\]\n\n\n4.7.2 Example\nFor our bond priced at $920.14 with a \\(60 annual coupon:\\)\\(\\text{Current Yield} = \\frac{\\$60}{\\$920.14} = 0.0652 = 6.52\\%\\)$\n\n\n4.7.3 Current Yield vs. YTM\n\nCurrent Yield only measures coupon income (ignores capital gain/loss at maturity)\nYTM measures total return (coupon income + capital gain/loss)\nFor discount bonds: YTM &gt; Current Yield &gt; Coupon Rate\nFor premium bonds: Coupon Rate &gt; Current Yield &gt; YTM\nFor par bonds: All three are equal",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#types-of-bonds-corporate-bonds",
+    "href": "module03.html#types-of-bonds-corporate-bonds",
+    "title": "4  Bond Valuation",
+    "section": "4.8 Types of Bonds: Corporate Bonds",
+    "text": "4.8 Types of Bonds: Corporate Bonds\n\n4.8.1 What Are Corporate Bonds?\nCorporate bonds are debt securities issued by companies to raise capital for operations, expansion, or acquisitions. When you buy a corporate bond, you’re lending money to the company.\n\n\n4.8.2 Key Features\n\nDefault Risk: Unlike government bonds, corporations can go bankrupt and fail to repay\nCredit Ratings: Agencies like Standard & Poor’s (S&P) and Moody’s rate corporate bonds based on default risk\nHigher Yields: Corporate bonds pay higher interest rates than government bonds to compensate for default risk\n\n\n\n4.8.3 Credit Rating Scale\n\n\n\nS&P Rating\nMoody’s Rating\nCategory\nRisk Level\n\n\n\n\nAAA\nAaa\nInvestment Grade\nHighest Quality\n\n\nAA\nAa\nInvestment Grade\nHigh Quality\n\n\nA\nA\nInvestment Grade\nUpper-Medium Grade\n\n\nBBB\nBaa\nInvestment Grade\nMedium Grade\n\n\nBB\nBa\nSpeculative (Junk)\nSpeculative\n\n\nB\nB\nSpeculative (Junk)\nHighly Speculative\n\n\nCCC\nCaa\nSpeculative (Junk)\nSubstantial Risk\n\n\nD\nD\nDefault\nIn Default\n\n\n\n\n\n4.8.4 Investment Grade vs. Junk Bonds\n\nInvestment Grade (BBB-/Baa3 or higher): Lower risk, lower yields, suitable for conservative investors\nJunk Bonds (Below BBB-/Baa3): Higher risk, higher yields, also called “high-yield bonds”\n\n\n\n4.8.5 Bond Seniority\nCorporate bonds have different priority levels in case of bankruptcy:\n\nSenior Secured Bonds: Backed by specific collateral (highest priority)\nSenior Unsecured Bonds: Not backed by collateral but have priority over subordinated debt\nSubordinated Bonds: Lower priority, higher risk, higher yield\n\nIn practice: During the 2008 financial crisis, many corporate bonds were downgraded from investment grade to junk status. Lehman Brothers’ bonds, once rated A, became worthless when the firm collapsed. This demonstrates why credit risk matters—even bonds from major corporations can default.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#types-of-bonds-government-bonds-treasuries",
+    "href": "module03.html#types-of-bonds-government-bonds-treasuries",
+    "title": "4  Bond Valuation",
+    "section": "4.9 Types of Bonds: Government Bonds (Treasuries)",
+    "text": "4.9 Types of Bonds: Government Bonds (Treasuries)\n\n4.9.1 What Are Treasury Securities?\nU.S. Treasury securities are debt obligations issued by the federal government. They are considered the safest investments in the world because they’re backed by the full faith and credit of the U.S. government.\n\n\n4.9.2 Types of Treasuries\n\n4.9.2.1 1. Treasury Bills (T-Bills)\n\nMaturity: Less than 1 year (4, 8, 13, 26, or 52 weeks)\nStructure: Sold at a discount, no coupon payments\nExample: Buy a $1,000 T-Bill for $980, receive $1,000 at maturity\n\n\n\n4.9.2.2 2. Treasury Notes (T-Notes)\n\nMaturity: 2, 3, 5, 7, or 10 years\nStructure: Pay semi-annual coupon interest\nMost Popular: The 10-year Treasury note is the benchmark for mortgage rates and corporate bonds\n\n\n\n4.9.2.3 3. Treasury Bonds (T-Bonds)\n\nMaturity: 20 or 30 years\nStructure: Pay semi-annual coupon interest\nUse: Long-term savings, pension funds, insurance companies\n\n\n\n\n4.9.3 Why Treasuries Matter\n\nRisk-Free Rate: Treasury yields represent the “risk-free rate” used in financial models\nBenchmark: All other bonds are priced relative to Treasuries\nEconomic Indicator: Treasury yields signal market expectations about inflation and economic growth\n\n\n\n4.9.4 The Yield Curve\nThe yield curve plots Treasury yields against maturity:\n\nNormal Curve: Longer maturities have higher yields (upward sloping)\nInverted Curve: Shorter maturities have higher yields (downward sloping)—often predicts recession\nFlat Curve: Similar yields across maturities—signals economic uncertainty\n\nIn practice: The 10-year Treasury yield is watched obsessively by financial markets. When it rises, mortgage rates increase, corporate borrowing becomes more expensive, and stock valuations often fall. When it falls, it signals investors are seeking safety or expecting economic weakness.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#types-of-bonds-municipal-bonds",
+    "href": "module03.html#types-of-bonds-municipal-bonds",
+    "title": "4  Bond Valuation",
+    "section": "4.10 Types of Bonds: Municipal Bonds",
+    "text": "4.10 Types of Bonds: Municipal Bonds\n\n4.10.1 What Are Municipal Bonds?\nMunicipal bonds (munis) are issued by state and local governments to finance public projects like schools, highways, water systems, and hospitals.\n\n\n4.10.2 The Tax Advantage\nThe key feature of municipal bonds is tax-exempt interest:\n\nInterest income is exempt from federal income tax\nOften exempt from state and local taxes if you live in the issuing state\nThis makes munis attractive to high-income investors in high tax brackets\n\n\n\n4.10.3 Types of Municipal Bonds\n\n4.10.3.1 1. General Obligation Bonds (GO Bonds)\n\nBacked by the full taxing power of the issuing government\nConsidered safer\nLower yields\n\n\n\n4.10.3.2 2. Revenue Bonds\n\nBacked by revenue from a specific project (toll road, airport, water system)\nHigher risk than GO bonds\nHigher yields\n\n\n\n\n4.10.4 Taxable Equivalent Yield\nTo compare municipal bonds to taxable bonds, calculate the taxable equivalent yield:\n\\[\\text{Taxable Equivalent Yield} = \\frac{\\text{Tax-Free Yield}}{1 - \\text{Tax Rate}}\\]\n\n\n4.10.5 Example\nYou’re in the 35% federal tax bracket and considering: - A municipal bond yielding 4% (tax-free) - A corporate bond yielding 6% (taxable)\nCalculate taxable equivalent yield: \\[\\text{TEY} = \\frac{0.04}{1 - 0.35} = \\frac{0.04}{0.65} = 0.0615 = 6.15\\%\\]\nInterpretation: The 4% muni bond is equivalent to a 6.15% taxable bond. Since the corporate bond only yields 6%, the muni bond is the better choice for this investor.\n\n\n4.10.6 Who Should Buy Munis?\n\nHigh tax bracket investors: The tax benefit is most valuable\nLow tax bracket investors: Taxable bonds often provide better after-tax returns\nTax-deferred accounts (IRAs, 401(k)s): Never buy munis here—you lose the tax advantage\n\nIn practice: After the 2017 Tax Cuts and Jobs Act lowered federal tax rates, municipal bonds became less attractive to some investors because the tax benefit decreased. This shows how tax policy directly impacts bond markets.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#excel-functions-for-bond-valuation",
+    "href": "module03.html#excel-functions-for-bond-valuation",
+    "title": "4  Bond Valuation",
+    "section": "4.11 Excel Functions for Bond Valuation",
+    "text": "4.11 Excel Functions for Bond Valuation\nExcel provides powerful built-in functions for bond calculations.\n\n4.11.1 Function 1: =PV() for Bond Pricing\nSyntax:\n=PV(rate, nper, pmt, [fv], [type])\nExample: Price a 5-year, 6% annual coupon bond with $1,000 par value when YTM = 8%\n=PV(0.08, 5, 60, 1000, 0)\nResult: -$920.14 (negative because it’s a cash outflow)\nNote: Always enter PMT and FV with the same sign (both positive or both negative) and PV will have the opposite sign.\n\n\n\n4.11.2 Function 2: =PRICE() for Bond Pricing\nSyntax:\n=PRICE(settlement, maturity, rate, yld, redemption, frequency, [basis])\nParameters: - settlement = Purchase date - maturity = Maturity date - rate = Annual coupon rate - yld = Annual yield to maturity - redemption = Redemption value per $100 face value (usually 100) - frequency = Coupon payments per year (1 = annual, 2 = semi-annual) - basis = Day count convention (usually 0 or omitted)\nExample: Price a bond purchased on 1/15/2026, maturing 1/15/2031, 6% coupon, 8% YTM, semi-annual payments\n=PRICE(DATE(2026,1,15), DATE(2031,1,15), 0.06, 0.08, 100, 2)\nResult: 92.014 (meaning $920.14 per $1,000 face value)\n\n\n\n4.11.3 Function 3: =YIELD() for YTM Calculation\nSyntax:\n=YIELD(settlement, maturity, rate, pr, redemption, frequency, [basis])\nExample: Calculate YTM for a bond purchased at $920.14, 6% coupon, 5 years to maturity, semi-annual payments\n=YIELD(DATE(2026,1,15), DATE(2031,1,15), 0.06, 92.014, 100, 2)\nResult: 0.08 or 8%\n\n\n\n4.11.4 Function 4: =RATE() for YTM (Alternative Method)\nSyntax:\n=RATE(nper, pmt, pv, [fv], [type])\nExample: Calculate YTM for a bond priced at $920.14, paying $60 annually for 5 years, $1,000 par value\n=RATE(5, 60, -920.14, 1000)\nResult: 0.08 or 8%\nNote: For semi-annual bonds, multiply the result by 2 to get the annual YTM.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#bond-pricing-relationships-key-principles",
+    "href": "module03.html#bond-pricing-relationships-key-principles",
+    "title": "4  Bond Valuation",
+    "section": "4.12 Bond Pricing Relationships: Key Principles",
+    "text": "4.12 Bond Pricing Relationships: Key Principles\n\n4.12.1 Principle 1: Inverse Price-Yield Relationship\n\nWhen YTM ↑, bond price ↓\nWhen YTM ↓, bond price ↑\n\n\n\n4.12.2 Principle 2: Longer Maturity = Greater Price Sensitivity\n\nA 30-year bond’s price changes more than a 5-year bond’s price for the same change in YTM\nThis is called interest rate risk or duration risk\n\n\n\n4.12.3 Principle 3: Lower Coupon = Greater Price Sensitivity\n\nZero-coupon bonds are most sensitive to interest rate changes\nHigh-coupon bonds are less sensitive\n\n\n\n4.12.4 Principle 4: Price Converges to Par at Maturity\n\nAs maturity approaches, bond price moves toward par value\nAt maturity, price = par value (regardless of coupon rate)\n\nIn practice: This is why bond portfolio managers carefully match bond durations to their investment horizons. A pension fund with liabilities 20 years out will buy long-term bonds, while a money market fund needing liquidity will stick to short-term bonds.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#real-world-applications",
+    "href": "module03.html#real-world-applications",
+    "title": "4  Bond Valuation",
+    "section": "4.13 Real-World Applications",
+    "text": "4.13 Real-World Applications\n\n4.13.1 Application 1: Corporate Borrowing Decisions\nWhen a company decides to issue bonds, it must consider: - Credit rating: Better ratings = lower interest costs - Maturity: Longer maturity = more interest rate risk but locked-in rates - Coupon structure: Fixed vs. floating rate\nExample: In 2020, Apple issued $8.5 billion in bonds at historically low rates (some as low as 0.75%) to take advantage of the low-interest-rate environment, even though Apple has massive cash reserves.\n\n\n4.13.2 Application 2: Investment Portfolio Construction\nInvestors use bonds for: - Income generation: Steady coupon payments - Capital preservation: Less volatile than stocks - Diversification: Bonds often rise when stocks fall\nExample: A retiree might hold 60% stocks and 40% bonds, with the bonds providing stable income and reducing overall portfolio volatility.\n\n\n4.13.3 Application 3: Economic Forecasting\nBond markets signal economic expectations: - Rising Treasury yields: Expectations of economic growth and/or inflation - Falling Treasury yields: Expectations of economic slowdown or deflation - Widening credit spreads: Increasing concern about corporate defaults\nExample: In March 2020, Treasury yields plummeted as investors fled to safety during the COVID-19 pandemic, while corporate bond spreads widened dramatically as default risk increased.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#wrap-up",
+    "href": "module03.html#wrap-up",
+    "title": "4  Bond Valuation",
+    "section": "4.14 Wrap-Up",
+    "text": "4.14 Wrap-Up\n\n4.14.1 What You’ve Learned\n✓ Bonds are combinations of annuities (coupons) and lump sums (par value)\n✓ Bond prices and interest rates move in opposite directions\n✓ YTM is the true measure of a bond’s return\n✓ Corporate bonds carry default risk and are rated by credit agencies\n✓ Treasury securities are risk-free and serve as market benchmarks\n✓ Municipal bonds offer tax advantages for high-income investors\n✓ Excel provides powerful functions for bond valuation\n\n\n4.14.2 Looking Ahead: Stock Valuation\nIn the next module, we’ll apply these valuation principles to stocks. Unlike bonds with fixed cash flows, stocks have uncertain dividends and no maturity date. You’ll learn:\n\nHow to value stocks using dividend discount models\nThe difference between preferred and common stock\nWhy P/E ratios matter\nHow growth expectations affect stock prices\n\n\n\n4.14.3 Connection to Risk and Return\nUnderstanding bond valuation is essential for Module 5, where we’ll explore:\n\nHow bond yields reflect risk premiums\nThe relationship between bond duration and interest rate risk\nWhy diversification between stocks and bonds reduces portfolio risk\nHow to construct efficient portfolios using the risk-return tradeoff",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#key-formulas-summary",
+    "href": "module03.html#key-formulas-summary",
+    "title": "4  Bond Valuation",
+    "section": "4.15 Key Formulas Summary",
+    "text": "4.15 Key Formulas Summary\nBond Price (Annual Coupons): \\[P = C \\times \\left[\\frac{1-(1+r)^{-n}}{r}\\right] + \\frac{F}{(1+r)^n}\\]\nCurrent Yield: \\[\\text{Current Yield} = \\frac{\\text{Annual Coupon Payment}}{\\text{Current Bond Price}}\\]\nTaxable Equivalent Yield: \\[\\text{TEY} = \\frac{\\text{Tax-Free Yield}}{1 - \\text{Tax Rate}}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module03.html#practice-recommendations",
+    "href": "module03.html#practice-recommendations",
+    "title": "4  Bond Valuation",
+    "section": "4.16 Practice Recommendations",
+    "text": "4.16 Practice Recommendations\nBefore moving to the Concept Check questions and Excel problems:\n\nVerify your understanding: Can you explain why bond prices fall when interest rates rise?\nPractice the mechanics: Work through the bond pricing example by hand\nMaster Excel functions: Try =PV() and =PRICE() with different inputs\nApply to real bonds: Look up current Treasury yields at treasurydirect.gov\nCompare bond types: Calculate taxable equivalent yields for your tax bracket\n\nRemember: Bond valuation is a foundational skill for corporate finance, investment analysis, and portfolio management. The time you invest in mastering these concepts will pay dividends throughout your MBA program and career. I could have said “coupons” instead of dividends, but that would have been a terrible dad joke.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bond Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html",
+    "href": "module04.html",
+    "title": "5  Stock Valuation",
+    "section": "",
+    "text": "5.1 Module Overview\nIn the previous module we valued bonds—debt instruments with contractually promised cash flows. In Module 4, we shift to equity securities (stocks)—ownership claims with uncertain future cash flows and no maturity date.\nKey Difference: Bondholders have a legal claim to fixed payments. Stockholders have a residual claim on whatever is left after all other obligations are met. This uncertainty makes stock valuation both more challenging and more interesting.\nWhat You’ll Learn:\nConnection to Previous Modules:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#module-overview",
+    "href": "module04.html#module-overview",
+    "title": "5  Stock Valuation",
+    "section": "",
+    "text": "The fundamental characteristics of common and preferred stock\nHow to value stocks using the Dividend Discount Model (DDM)\nThe Gordon Growth Model for constant-growth stocks\nMulti-stage growth models for high-growth companies\nRelative valuation using P/E ratios and multiples\nExcel techniques for stock valuation\n\n\n\nDiscounted Cash Flows: Stock valuation is DCF applied to uncertain equity cash flows\nBonds: Preferred stock behaves like a perpetual bond\nRisk & Return: We’ll learn how to calculate the required return (\\(R\\)) using CAPM",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#what-is-common-stock",
+    "href": "module04.html#what-is-common-stock",
+    "title": "5  Stock Valuation",
+    "section": "6.1 What Is Common Stock?",
+    "text": "6.1 What Is Common Stock?\nCommon stock represents residual ownership in a corporation. When you buy a share of Apple or Tesla, you become a part-owner of that company.\nKey Rights and Features:\n\nVoting Rights: Elect the board of directors (typically 1 vote per share)\nResidual Claim: Last in line during bankruptcy (after employees, suppliers, bondholders)\nDividends: Discretionary payments—management decides whether and how much to pay\nCapital Gains: Profit from selling the stock at a higher price than you paid\nLimited Liability: You can only lose your investment, not more",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#stockholders-vs.-bondholders",
+    "href": "module04.html#stockholders-vs.-bondholders",
+    "title": "5  Stock Valuation",
+    "section": "6.2 Stockholders vs. Bondholders",
+    "text": "6.2 Stockholders vs. Bondholders\n\n\n\nFeature\nBondholders\nStockholders\n\n\n\n\nClaim Type\nFixed contractual claim\nResidual claim\n\n\nPayment Priority\nPaid first\nPaid last\n\n\nMaturity\nFixed maturity date\nNo maturity (perpetual)\n\n\nReturn\nInterest (coupon)\nDividends + Capital Gains\n\n\nRisk\nLower risk\nHigher risk\n\n\nVoting Rights\nNone\nYes\n\n\n\n\n\n\n\n\n\nNoteThe Risk-Return Tradeoff\n\n\n\nBecause stockholders bear more risk than bondholders, they demand higher expected returns. Historically, stocks have returned ~10% annually while bonds have returned ~5-6%. This “equity risk premium” compensates investors for the uncertainty of stock ownership.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#the-fundamental-principle",
+    "href": "module04.html#the-fundamental-principle",
+    "title": "5  Stock Valuation",
+    "section": "7.1 The Fundamental Principle",
+    "text": "7.1 The Fundamental Principle\nThe value of any financial asset equals the present value of its expected future cash flows. For stocks, those cash flows are dividends.\nIf you hold a stock forever, the only cash you receive are dividend payments. Therefore:\n\\[P_0 = \\sum_{t=1}^{\\infty} \\frac{D_t}{(1+R)^t}\\]\nWhere:\n\n\\(P_0\\) = Stock price today\n\\(D_t\\) = Dividend expected at time \\(t\\)\n\\(R\\) = Required rate of return (discount rate)\n\nThe Challenge: Unlike bonds with known coupon payments, we must forecast future dividends, which are uncertain and discretionary.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#zero-growth-model-preferred-stock",
+    "href": "module04.html#zero-growth-model-preferred-stock",
+    "title": "5  Stock Valuation",
+    "section": "7.2 Zero-Growth Model (Preferred Stock)",
+    "text": "7.2 Zero-Growth Model (Preferred Stock)\nThe simplest case: dividends remain constant forever. This applies to preferred stock, which pays a fixed dividend like a perpetual bond.\n\\[P_0 = \\frac{D}{R}\\]\nExample: A preferred stock pays a \\(\\$5\\) annual dividend. If your required return is 8%, what is the stock worth?\n\\[P_0 = \\frac{\\$5}{0.08} = \\$62.50\\]\n\n\n\n\n\n\nTipIn Practice: Preferred Stock\n\n\n\nPreferred stock is a hybrid security—it has characteristics of both bonds (fixed payments) and stocks (no maturity, dividends can be suspended). Companies like banks and utilities issue preferred stock to raise capital without diluting common shareholders’ voting rights.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#the-formula",
+    "href": "module04.html#the-formula",
+    "title": "5  Stock Valuation",
+    "section": "8.1 The Formula",
+    "text": "8.1 The Formula\nFor companies that pay dividends growing at a constant rate (\\(g\\)) forever:\n\\[P_0 = \\frac{D_1}{R - g}\\]\nWhere:\n\n\\(D_1\\) = Dividend expected next year\n\\(R\\) = Required rate of return\n\\(g\\) = Constant growth rate of dividends\n\nCritical Assumptions:\n\n\\(R &gt; g\\) (required return must exceed growth rate, or the formula breaks)\nGrowth rate is constant forever\nThe company pays dividends",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#example-valuing-a-mature-dividend-stock",
+    "href": "module04.html#example-valuing-a-mature-dividend-stock",
+    "title": "5  Stock Valuation",
+    "section": "8.2 Example: Valuing a Mature Dividend Stock",
+    "text": "8.2 Example: Valuing a Mature Dividend Stock\nApple Inc. (AAPL) currently pays an annual dividend of \\(\\$0.96\\) per share. Analysts expect Apple’s dividends to grow at 5% per year indefinitely. If your required return is 10%, what is Apple’s stock worth?\nGiven:\n\n\\(D_0 = \\$0.96\\) (current dividend)\n\\(g = 5\\% = 0.05\\)\n\\(R = 10\\% = 0.10\\)\n\nStep 1: Calculate next year’s dividend:\n\\[D_1 = D_0 \\times (1 + g) = \\$0.96 \\times 1.05 = \\$1.008\\]\nStep 2: Apply the Gordon Growth Model:\n\\[P_0 = \\frac{D_1}{R - g} = \\frac{\\$1.008}{0.10 - 0.05} = \\frac{\\$1.008}{0.05} = \\$20.16\\]\nInterpretation: Based on this model, Apple’s intrinsic value is \\(\\$20.16\\) per share. If Apple trades at \\(\\$180\\) in the market, either:\n\nOur assumptions are wrong (growth rate too low, required return too high), or\nThe market is pricing in factors beyond just dividends (like share buybacks and future growth)\n\n\n\n\n\n\n\nImportantIn the News: Apple’s Capital Return Strategy\n\n\n\nApple is one of the world’s largest dividend payers, returning over \\(\\$100\\) billion annually to shareholders through dividends and buybacks. While Apple’s dividend yield is modest (~0.5%), the company’s massive cash flow generation makes it a favorite among income-focused investors. The Gordon Growth Model works well for Apple because it’s a mature company with stable, predictable cash flows.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#solving-for-required-return",
+    "href": "module04.html#solving-for-required-return",
+    "title": "5  Stock Valuation",
+    "section": "8.3 Solving for Required Return",
+    "text": "8.3 Solving for Required Return\nWe can rearrange the Gordon Growth Model to solve for the required return:\n\\[R = \\frac{D_1}{P_0} + g\\]\nThis shows that the required return has two components:\n\nDividend Yield: \\(\\frac{D_1}{P_0}\\) (current income)\nCapital Gains Yield: \\(g\\) (expected price appreciation)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#the-problem-with-constant-growth",
+    "href": "module04.html#the-problem-with-constant-growth",
+    "title": "5  Stock Valuation",
+    "section": "9.1 The Problem with Constant Growth",
+    "text": "9.1 The Problem with Constant Growth\nMost exciting stocks don’t grow at a constant rate forever. High-growth companies like Nvidia (NVDA) or Tesla (TSLA) experience periods of rapid expansion before eventually maturing.\nMulti-Stage Growth Model: Combines a period of high growth with eventual transition to stable, mature growth.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#the-three-step-process",
+    "href": "module04.html#the-three-step-process",
+    "title": "5  Stock Valuation",
+    "section": "9.2 The Three-Step Process",
+    "text": "9.2 The Three-Step Process\n\nForecast dividends during the high-growth period (typically 3-5 years)\nCalculate the terminal value at the end of high growth using the Gordon Growth Model\nDiscount everything back to today using the required return",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#example-two-stage-growth-model",
+    "href": "module04.html#example-two-stage-growth-model",
+    "title": "5  Stock Valuation",
+    "section": "9.3 Example: Two-Stage Growth Model",
+    "text": "9.3 Example: Two-Stage Growth Model\nScenario: A tech company just paid a \\(\\$2.00\\) dividend. For the next 3 years, dividends will grow at 20% per year. After year 3, growth will slow to 5% forever. Your required return is 12%. What is the stock worth?\nGiven:\n\n\\(D_0 = \\$2.00\\)\nHigh growth rate: \\(g_1 = 20\\%\\) for 3 years\nStable growth rate: \\(g_2 = 5\\%\\) forever after year 3\n\\(R = 12\\%\\)\n\nStep 1: Forecast dividends during high-growth period:\n\\[D_1 = \\$2.00 \\times 1.20 = \\$2.40\\] \\[D_2 = \\$2.40 \\times 1.20 = \\$2.88\\] \\[D_3 = \\$2.88 \\times 1.20 = \\$3.456\\]\nStep 2: Calculate the terminal value at \\(t=3\\):\nFirst, find \\(D_4\\) (first dividend in stable growth phase):\n\\[D_4 = D_3 \\times (1 + g_2) = \\$3.456 \\times 1.05 = \\$3.629\\]\nThen apply Gordon Growth Model at \\(t=3\\):\n\\[P_3 = \\frac{D_4}{R - g_2} = \\frac{\\$3.629}{0.12 - 0.05} = \\frac{\\$3.629}{0.07} = \\$51.84\\]\nStep 3: Discount all cash flows to present:\n\\[P_0 = \\frac{D_1}{(1+R)^1} + \\frac{D_2}{(1+R)^2} + \\frac{D_3}{(1+R)^3} + \\frac{P_3}{(1+R)^3}\\]\n\\[P_0 = \\frac{\\$2.40}{1.12} + \\frac{\\$2.88}{1.12^2} + \\frac{\\$3.456}{1.12^3} + \\frac{\\$51.84}{1.12^3}\\]\n\\[P_0 = \\$2.14 + \\$2.30 + \\$2.46 + \\$36.89 = \\$43.79\\]\nAnswer: The stock is worth \\(\\$43.79\\) today.\n\n\n\n\n\n\nImportantIn the News: Nvidia (NVDA) and the AI Boom\n\n\n\nNvidia is the poster child for multi-stage growth. In 2023-2024, NVDA experienced explosive growth (revenue up 200%+) driven by AI chip demand. Analysts use multi-stage models to value Nvidia:\n\nStage 1 (2024-2027): 30-50% annual growth as AI infrastructure buildout continues\nStage 2 (2028-2032): 15-20% growth as market matures\nStage 3 (2033+): 5-7% stable growth matching GDP\n\nIf you used a constant growth model for Nvidia, you’d either: 1. Undervalue it (using mature growth rate), or 2. Get a nonsensical result (using 30% growth forever violates \\(R &gt; g\\))\nThis is why Wall Street analysts use sophisticated multi-stage models for high-growth tech stocks.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#problem-1-many-companies-dont-pay-dividends",
+    "href": "module04.html#problem-1-many-companies-dont-pay-dividends",
+    "title": "5  Stock Valuation",
+    "section": "10.1 Problem 1: Many Companies Don’t Pay Dividends",
+    "text": "10.1 Problem 1: Many Companies Don’t Pay Dividends\nExample: Amazon (AMZN) has never paid a dividend. Does that mean Amazon is worthless? Of course not!\nSolution: For non-dividend-paying stocks, we use:\n\nFree Cash Flow (FCF) models: Value the company based on cash available to all investors\nRelative valuation: Compare to similar companies using multiples",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#problem-2-share-buybacks",
+    "href": "module04.html#problem-2-share-buybacks",
+    "title": "5  Stock Valuation",
+    "section": "10.2 Problem 2: Share Buybacks",
+    "text": "10.2 Problem 2: Share Buybacks\nMany companies return cash to shareholders through share repurchases rather than dividends.\nExample: Meta (META) announced a \\(\\$50\\) billion buyback program in 2024. Buybacks reduce shares outstanding, increasing earnings per share and (theoretically) stock price.\nImplication: Dividend models undervalue companies that prefer buybacks over dividends.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#problem-3-growth-rate-assumptions",
+    "href": "module04.html#problem-3-growth-rate-assumptions",
+    "title": "5  Stock Valuation",
+    "section": "10.3 Problem 3: Growth Rate Assumptions",
+    "text": "10.3 Problem 3: Growth Rate Assumptions\nSmall changes in \\(g\\) dramatically affect valuation.\nExample: Using the Gordon Growth Model with \\(D_1 = \\$2\\), \\(R = 10\\%\\):\n\nIf \\(g = 4\\%\\): \\(P_0 = \\frac{\\$2}{0.10 - 0.04} = \\$33.33\\)\nIf \\(g = 5\\%\\): \\(P_0 = \\frac{\\$2}{0.10 - 0.05} = \\$40.00\\)\nIf \\(g = 6\\%\\): \\(P_0 = \\frac{\\$2}{0.10 - 0.06} = \\$50.00\\)\n\nA 1% change in growth rate changes valuation by 20-50%!\n\n\n\n\n\n\nWarningThe Danger of Overly Optimistic Growth Assumptions\n\n\n\nDuring the dot-com bubble (1999-2000), analysts used unrealistic growth rates to justify sky-high valuations. When growth didn’t materialize, stocks crashed 80-90%. Always stress-test your assumptions with conservative scenarios.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#the-pe-ratio",
+    "href": "module04.html#the-pe-ratio",
+    "title": "5  Stock Valuation",
+    "section": "11.1 The P/E Ratio",
+    "text": "11.1 The P/E Ratio\nThe Price-to-Earnings (P/E) Ratio compares a stock’s price to its earnings per share:\n\\[\\text{P/E Ratio} = \\frac{\\text{Price per Share}}{\\text{Earnings per Share (EPS)}}\\]\nInterpretation:\n\nHigh P/E: Investors expect high future growth (or the stock is overvalued)\nLow P/E: Investors expect low growth (or the stock is undervalued)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#example-tesla-vs.-toyota",
+    "href": "module04.html#example-tesla-vs.-toyota",
+    "title": "5  Stock Valuation",
+    "section": "11.2 Example: Tesla vs. Toyota",
+    "text": "11.2 Example: Tesla vs. Toyota\nTesla (TSLA):\n\nPrice: \\(\\$250\\) per share\nEPS: \\(\\$3.00\\)\nP/E Ratio: \\(\\frac{\\$250}{\\$3.00} = 83.3\\)\n\nToyota (TM):\n\nPrice: \\(\\$180\\) per share\nEPS: \\(\\$18.00\\)\nP/E Ratio: \\(\\frac{\\$180}{\\$18.00} = 10.0\\)\n\nQuestion: Why does Tesla trade at 8× Toyota’s P/E multiple?\nAnswer: Investors aren’t just buying a car company—they’re buying:\n\nGrowth potential: Tesla’s revenue is growing 30-50% annually vs. Toyota’s 5%\nTechnology: Autonomous driving, AI, energy storage\nBrand premium: Tesla is seen as an innovation leader\n\n\n\n\n\n\n\nNoteIn the News: The “Magnificent Seven” Premium\n\n\n\nIn 2024, the “Magnificent Seven” tech stocks (Apple, Microsoft, Nvidia, Amazon, Meta, Alphabet, Tesla) traded at an average P/E of 35× vs. 18× for the S&P 500. This “multiple expansion” reflects investor belief that these companies will dominate the AI era. Whether this premium is justified remains hotly debated.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#using-pe-for-valuation",
+    "href": "module04.html#using-pe-for-valuation",
+    "title": "5  Stock Valuation",
+    "section": "11.3 Using P/E for Valuation",
+    "text": "11.3 Using P/E for Valuation\nComparable Company Analysis:\n\nFind similar companies in the same industry\nCalculate their average P/E ratio\nApply that multiple to your company’s earnings\n\nExample: You’re valuing a regional bank with EPS of \\(\\$5.00\\). Comparable banks trade at an average P/E of 12×. Estimated value:\n\\[\\text{Price} = \\text{EPS} \\times \\text{P/E} = \\$5.00 \\times 12 = \\$60.00 \\text{ per share}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#other-common-multiples",
+    "href": "module04.html#other-common-multiples",
+    "title": "5  Stock Valuation",
+    "section": "11.4 Other Common Multiples",
+    "text": "11.4 Other Common Multiples\n\nPrice-to-Sales (P/S): Useful for unprofitable growth companies\nPrice-to-Book (P/B): Common for financial companies (banks, insurance)\nEV/EBITDA: Enterprise Value to Earnings Before Interest, Taxes, Depreciation, Amortization (accounts for debt)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#key-functions",
+    "href": "module04.html#key-functions",
+    "title": "5  Stock Valuation",
+    "section": "12.1 Key Functions",
+    "text": "12.1 Key Functions\n1. NPV for Multi-Stage Models\n=NPV(rate, value1, value2, ...) + value0\nExample: Discount the dividends and terminal value from our earlier two-stage model:\n=NPV(0.12, 2.40, 2.88, 3.456+51.84)\n2. PV for Perpetuities (Zero-Growth)\n=PV(rate, nper, pmt, [fv], [type])\nFor a perpetuity, use a very large nper (e.g., 1000):\n=PV(0.08, 1000, 5, 0, 0)\nThis approximates \\(\\frac{\\$5}{0.08} = \\$62.50\\)\n3. Building the Gordon Growth Model\nNo built-in function—use cell references:\n=D1/(R-g)\nWhere: - Cell B1 contains \\(D_1\\) - Cell B2 contains \\(R\\) - Cell B3 contains \\(g\\)\nFormula: =B1/(B2-B3)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#excel-template-structure",
+    "href": "module04.html#excel-template-structure",
+    "title": "5  Stock Valuation",
+    "section": "12.2 Excel Template Structure",
+    "text": "12.2 Excel Template Structure\nFor a two-stage model, organize your spreadsheet:\n\n\n\n\n\n\n\nInput Section\nValue\n\n\n\n\nCurrent Dividend (\\(D_0\\))\n\\(2.00 |\n| High Growth Rate (\\)g_1\\() | 20% |\n| High Growth Period (years) | 3 |\n| Stable Growth Rate (\\)g_2\\() | 5% |\n| Required Return (\\)R$)\n\n\n\n\n\n\n\n\n\n\n\nCalculation Section\nFormula\nResult\n\n\n\n\n\\(D_1\\)\n=B1*(1+B2)\n$2.40\n\n\n\\(D_2\\)\n=C1*(1+B2)\n$2.88\n\n\n\\(D_3\\)\n=C2*(1+B2)\n$3.456\n\n\n\\(D_4\\)\n=C3*(1+B4)\n\\(3.629 |\n| Terminal Value (\\)P_3$)\n\n\nPV of \\(D_1\\)\n=C1/(1+B5)^1\n$2.14\n\n\nPV of \\(D_2\\)\n=C2/(1+B5)^2\n$2.30\n\n\nPV of \\(D_3\\) + \\(P_3\\)\n=(C3+C8)/(1+B5)^3\n\\(39.35 |\n| **Stock Value (\\)P_0$)**",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#application-1-investment-decision-making",
+    "href": "module04.html#application-1-investment-decision-making",
+    "title": "5  Stock Valuation",
+    "section": "13.1 Application 1: Investment Decision-Making",
+    "text": "13.1 Application 1: Investment Decision-Making\nScenario: You’re considering buying Coca-Cola (KO) at \\(\\$60\\) per share. KO pays a \\(\\$1.84\\) dividend, and you expect 4% annual dividend growth. Your required return is 9%.\nAnalysis:\n\\[D_1 = \\$1.84 \\times 1.04 = \\$1.914\\]\n\\[P_0 = \\frac{\\$1.914}{0.09 - 0.04} = \\frac{\\$1.914}{0.05} = \\$38.28\\]\nDecision: At \\(\\$60\\), Coca-Cola appears overvalued by 57%. You should not buy unless you believe growth will exceed 4% or your required return should be lower.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#application-2-sector-rotation-strategy",
+    "href": "module04.html#application-2-sector-rotation-strategy",
+    "title": "5  Stock Valuation",
+    "section": "13.2 Application 2: Sector Rotation Strategy",
+    "text": "13.2 Application 2: Sector Rotation Strategy\nObservation: During economic expansions, growth stocks (high P/E, low dividends) outperform. During recessions, value stocks (low P/E, high dividends) outperform.\nStrategy:\n\nExpansion: Overweight tech stocks (Nvidia, Microsoft, Amazon)\nRecession: Overweight dividend aristocrats (Procter & Gamble, Johnson & Johnson, Coca-Cola)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#application-3-detecting-market-bubbles",
+    "href": "module04.html#application-3-detecting-market-bubbles",
+    "title": "5  Stock Valuation",
+    "section": "13.3 Application 3: Detecting Market Bubbles",
+    "text": "13.3 Application 3: Detecting Market Bubbles\nWarning Signs:\n\nP/E ratios far above historical averages\nInvestors justifying valuations with “new paradigm” arguments\nDividend yields near historic lows\n\nExample: In 2021, the median S&P 500 P/E reached 30× (vs. 16× historical average). Many stocks traded at 50-100× earnings with no dividends. When interest rates rose in 2022, these stocks crashed 50-80%.\n\n\n\n\n\n\nTipIn Practice: The “Fed Model”\n\n\n\nSome investors compare the S&P 500 earnings yield (\\(\\frac{E}{P}\\), the inverse of P/E) to the 10-year Treasury yield. When stocks yield less than bonds, it suggests stocks are overvalued. This model has limitations but provides a useful reality check.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#what-youve-learned",
+    "href": "module04.html#what-youve-learned",
+    "title": "5  Stock Valuation",
+    "section": "14.1 What You’ve Learned",
+    "text": "14.1 What You’ve Learned\n\nCommon stock represents residual ownership with uncertain cash flows\nThe Dividend Discount Model values stocks as the PV of future dividends\nThe Gordon Growth Model applies to mature, constant-growth companies\nMulti-stage models handle high-growth companies that eventually mature\nDividend models have limitations (non-dividend payers, buybacks, growth assumptions)\nP/E ratios and multiples provide relative valuation benchmarks\nExcel’s NPV and PV functions support stock valuation calculations",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#looking-ahead-module-5-risk-and-return",
+    "href": "module04.html#looking-ahead-module-5-risk-and-return",
+    "title": "5  Stock Valuation",
+    "section": "14.2 Looking Ahead: Module 5 (Risk and Return)",
+    "text": "14.2 Looking Ahead: Module 5 (Risk and Return)\nIn Module 5, we’ll answer a critical question: How do we determine the required return (\\(R\\)) used in stock valuation?\nYou’ll learn:\n\nHow to measure investment risk using standard deviation\nThe difference between systematic (market) risk and unsystematic (firm-specific) risk\nHow diversification reduces risk\nThe Capital Asset Pricing Model (CAPM) for estimating required returns\nHow Beta measures a stock’s sensitivity to market movements\n\nConnection: The \\(R\\) we’ve been using in the Gordon Growth Model comes from CAPM:\n\\[R = R_f + \\beta \\times (R_m - R_f)\\]\nWhere: - \\(R_f\\) = Risk-free rate (Treasury yield) - \\(\\beta\\) = Stock’s systematic risk - \\(R_m - R_f\\) = Market risk premium",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#connection-to-bonds",
+    "href": "module04.html#connection-to-bonds",
+    "title": "5  Stock Valuation",
+    "section": "14.3 Connection to Bonds",
+    "text": "14.3 Connection to Bonds\nBond valuation skills transfer directly to stock valuation:\n\nPreferred stock is valued like a perpetual bond\nDividend growth is analogous to coupon payments\nRequired return reflects risk, just like YTM for bonds\nInterest rate risk: When rates rise, both bond and stock prices fall",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#key-formulas-summary",
+    "href": "module04.html#key-formulas-summary",
+    "title": "5  Stock Valuation",
+    "section": "14.4 Key Formulas Summary",
+    "text": "14.4 Key Formulas Summary\nZero-Growth DDM (Preferred Stock):\n\\[P_0 = \\frac{D}{R}\\]\nGordon Growth Model:\n\\[P_0 = \\frac{D_1}{R - g}\\]\nRequired Return (from Gordon Growth Model):\n\\[R = \\frac{D_1}{P_0} + g\\]\nP/E Ratio:\n\\[\\text{P/E} = \\frac{\\text{Price per Share}}{\\text{EPS}}\\]\nMulti-Stage Model (Two-Stage Example):\n\\[P_0 = \\sum_{t=1}^{n} \\frac{D_t}{(1+R)^t} + \\frac{P_n}{(1+R)^n}\\]\nWhere \\(P_n = \\frac{D_{n+1}}{R - g}\\) (terminal value)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#excel-quick-reference",
+    "href": "module04.html#excel-quick-reference",
+    "title": "5  Stock Valuation",
+    "section": "14.5 Excel Quick Reference",
+    "text": "14.5 Excel Quick Reference\n\n\n\n\n\n\n\n\nTask\nFunction\nExample\n\n\n\n\nDiscount uneven dividends\n=NPV(rate, values)\n=NPV(0.12, 2.40, 2.88, 3.456)\n\n\nPerpetuity (preferred stock)\n=PV(rate, large_nper, pmt)\n=PV(0.08, 1000, 5)\n\n\nGordon Growth Model\n=D1/(R-g)\n=2/(0.10-0.05)\n\n\nTerminal Value\n=D_next/(R-g)\n=3.629/(0.12-0.05)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#practice-problems-preview",
+    "href": "module04.html#practice-problems-preview",
+    "title": "5  Stock Valuation",
+    "section": "14.6 Practice Problems Preview",
+    "text": "14.6 Practice Problems Preview\nIn the Excel Practice Problems, you’ll:\n\nValue preferred stocks using the zero-growth model\nApply the Gordon Growth Model to dividend-paying stocks\nBuild multi-stage valuation models\nCalculate P/E ratios and compare companies\nAnalyze how changes in growth rates and required returns affect stock prices\n\nTip: Start with Tier 1 (Guided Practice) to build confidence, then progress to Tier 2 (Application) and Tier 3 (Challenge) problems.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module04.html#need-help",
+    "href": "module04.html#need-help",
+    "title": "5  Stock Valuation",
+    "section": "14.7 Need Help?",
+    "text": "14.7 Need Help?\nUse the @@prep-finance-helper bot in BoodleBox. The bot has all module content in its Knowledge Bank and can:\n\nExplain concepts in different ways\nWalk through example problems step-by-step\nProvide additional practice problems\nHelp troubleshoot Excel formulas\n\nGood luck with Module 4! Stock valuation is where finance gets exciting—you’re now equipped to analyze the companies you see in the news every day.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html",
+    "href": "module05.html",
+    "title": "6  Risk and Return",
+    "section": "",
+    "text": "6.1 Module Overview\nIn the previous modules you learned how to value financial assets by discounting their expected cash flows. But a critical question remains: What discount rate should you use?\nThe answer depends on risk. Investors demand higher returns for taking on more risk. This fundamental principle—the risk-return tradeoff—is the foundation of modern finance.\nIn this module, you’ll learn:\nWhy this matters: Understanding risk and return is essential for:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#module-overview",
+    "href": "module05.html#module-overview",
+    "title": "6  Risk and Return",
+    "section": "",
+    "text": "How to measure historical investment returns (arithmetic vs. geometric averages)\nHow to quantify risk using variance and standard deviation\nWhy diversification reduces risk and what types of risk remain\nHow to measure systematic risk using Beta\nHow to estimate required returns using the Capital Asset Pricing Model (CAPM)\n\n\n\nCorporate finance: Determining the cost of equity capital for capital budgeting decisions\nInvestment management: Constructing efficient portfolios and evaluating performance\nPersonal finance: Making informed decisions about retirement accounts and asset allocation\n\n\nNote: This module builds directly on your bond and stock valuation skills from Modules 3-4. The discount rates you use in DCF models come from the risk-return principles you’ll learn here.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#measuring-historical-returns",
+    "href": "module05.html#measuring-historical-returns",
+    "title": "6  Risk and Return",
+    "section": "6.2 Measuring Historical Returns",
+    "text": "6.2 Measuring Historical Returns\nBefore we can understand the relationship between risk and return, we need to measure returns accurately.\n\n6.2.1 Total Return Calculation\nThe total return on an investment over a single period includes both capital gains (price appreciation) and income (dividends or interest):\n\\[R_t = \\frac{P_t - P_{t-1} + D_t}{P_{t-1}}\\]\nWhere: - \\(R_t\\) = Return in period \\(t\\) - \\(P_t\\) = Price at end of period \\(t\\) - \\(P_{t-1}\\) = Price at beginning of period \\(t\\) - \\(D_t\\) = Dividends or income received during period \\(t\\)\nExample: You bought Nvidia stock at $400 per share. One year later, it’s worth $500 and paid a $2 dividend. Your return is:\n\\[R = \\frac{500 - 400 + 2}{400} = \\frac{102}{400} = 0.255 = 25.5\\%\\]\n\nImportant: Total return includes BOTH price appreciation and income. Many investors mistakenly focus only on price changes and ignore dividends, which historically account for about 40% of stock market returns.\n\n\n\n6.2.2 Arithmetic Average Return\nWhen you have multiple periods of returns, the arithmetic average (also called the mean return) is simply the sum of returns divided by the number of periods:\n\\[\\bar{R} = \\frac{1}{n}\\sum_{i=1}^{n}R_i = \\frac{R_1 + R_2 + ... + R_n}{n}\\]\nExample: Tesla’s annual returns over five years were: 15%, -10%, 25%, 5%, 20%\n\\[\\bar{R} = \\frac{15\\% + (-10\\%) + 25\\% + 5\\% + 20\\%}{5} = \\frac{55\\%}{5} = 11\\%\\]\nThe arithmetic average is 11% per year.\n\n\n6.2.3 Geometric Average Return\nThe geometric average (also called the compound annual growth rate or CAGR) accounts for compounding and tells you the actual average annual return that would produce the same ending wealth:\n\\[\\bar{R}_{geometric} = \\left[(1+R_1)(1+R_2)...(1+R_n)\\right]^{1/n} - 1\\]\nUsing the same Tesla example:\n\\[\\bar{R}_{geometric} = \\left[(1.15)(0.90)(1.25)(1.05)(1.20)\\right]^{1/5} - 1\\]\n\\[= \\left[1.6266\\right]^{0.20} - 1 = 1.1024 - 1 = 0.1024 = 10.24\\%\\]\nThe geometric average is 10.24% per year.\n\nNote: The geometric average is always less than or equal to the arithmetic average (they’re equal only when returns are constant). The greater the volatility, the larger the difference between the two.\n\n\n\n6.2.4 Which Average Should You Use?\n\nArithmetic average: Best for estimating expected future returns in a single period. This is what you use in forward-looking models like CAPM.\nGeometric average: Best for measuring actual historical performance over multiple periods. This tells you what you actually earned.\n\nIn Practice: If you’re building a financial model to estimate next year’s expected return, use the arithmetic average. If you’re reporting “what did this investment actually earn over the past 10 years,” use the geometric average.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#measuring-risk",
+    "href": "module05.html#measuring-risk",
+    "title": "6  Risk and Return",
+    "section": "6.3 Measuring Risk",
+    "text": "6.3 Measuring Risk\nIn finance, risk means uncertainty about future returns. The more variable the returns, the riskier the investment.\n\n6.3.1 Variance and Standard Deviation\nThe most common measure of risk is standard deviation (\\(\\sigma\\)), which measures how much returns typically deviate from the average.\nStep 1: Calculate Variance (\\(\\sigma^2\\))\n\\[\\sigma^2 = \\frac{1}{n-1}\\sum_{i=1}^{n}(R_i - \\bar{R})^2\\]\nStep 2: Calculate Standard Deviation (\\(\\sigma\\))\n\\[\\sigma = \\sqrt{\\sigma^2}\\]\n\nTip: Standard deviation is in the same units as returns (percentages), making it easier to interpret than variance.\n\nExample: Apple’s returns over four years: 20%, 10%, 30%, -5%\nStep 1: Calculate arithmetic average: \\[\\bar{R} = \\frac{20\\% + 10\\% + 30\\% + (-5\\%)}{4} = \\frac{55\\%}{4} = 13.75\\%\\]\nStep 2: Calculate deviations from the mean: - Year 1: \\(20\\% - 13.75\\% = 6.25\\%\\) - Year 2: \\(10\\% - 13.75\\% = -3.75\\%\\) - Year 3: \\(30\\% - 13.75\\% = 16.25\\%\\) - Year 4: \\(-5\\% - 13.75\\% = -18.75\\%\\)\nStep 3: Square the deviations: - Year 1: \\((6.25\\%)^2 = 39.0625\\) - Year 2: \\((-3.75\\%)^2 = 14.0625\\) - Year 3: \\((16.25\\%)^2 = 264.0625\\) - Year 4: \\((-18.75\\%)^2 = 351.5625\\)\nStep 4: Calculate variance: \\[\\sigma^2 = \\frac{39.0625 + 14.0625 + 264.0625 + 351.5625}{4-1} = \\frac{668.75}{3} = 222.92\\]\nStep 5: Calculate standard deviation: \\[\\sigma = \\sqrt{222.92} = 14.93\\%\\]\nApple’s standard deviation is 14.93%.\n\n\n6.3.2 Interpreting Standard Deviation\nStandard deviation tells you the typical range of returns you can expect:\n\nLow standard deviation (5-10%): Relatively stable returns (e.g., utility stocks, bonds)\nModerate standard deviation (15-25%): Typical for large-cap stocks\nHigh standard deviation (30%+): Very volatile (e.g., small-cap stocks, cryptocurrencies)\n\nHistorical Context (1926-2025): - Large-cap stocks (S&P 500): Average return ≈ 10%, Standard deviation ≈ 20% - Small-cap stocks: Average return ≈ 12%, Standard deviation ≈ 30% - Long-term Treasury bonds: Average return ≈ 6%, Standard deviation ≈ 10% - Treasury bills (risk-free): Average return ≈ 3.5%, Standard deviation ≈ 3%\n\nImportant: Higher returns come with higher risk. There’s no such thing as a high-return, low-risk investment in efficient markets. If someone promises you one, it’s likely a scam.\n\n\n\n6.3.3 Historical Risk Premiums\nThe risk premium is the extra return investors demand for bearing risk:\n\\[\\text{Risk Premium} = E(R_{risky}) - R_f\\]\nWhere: - \\(E(R_{risky})\\) = Expected return on risky asset - \\(R_f\\) = Risk-free rate (typically Treasury bills)\nThe equity risk premium (stock market return minus risk-free rate) has historically averaged about 6-8% in the U.S.\nIn Practice (January 2026): With the 10-year Treasury yield around 4.5% and historical equity risk premium of 7%, we’d estimate the expected stock market return at:\n\\[E(R_{market}) = 4.5\\% + 7\\% = 11.5\\%\\]",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#the-power-of-diversification",
+    "href": "module05.html#the-power-of-diversification",
+    "title": "6  Risk and Return",
+    "section": "6.4 The Power of Diversification",
+    "text": "6.4 The Power of Diversification\nOne of the most important principles in finance: Diversification reduces risk without necessarily reducing expected return.\n\n6.4.1 Portfolio Expected Return\nThe expected return on a portfolio is simply the weighted average of the expected returns on individual assets:\n\\[E(R_p) = \\sum_{i=1}^{n}w_i \\times E(R_i)\\]\nWhere: - \\(w_i\\) = Weight (proportion) of asset \\(i\\) in the portfolio - \\(E(R_i)\\) = Expected return on asset \\(i\\) - \\(\\sum w_i = 1\\) (weights sum to 100%)\nExample: You invest 60% in Nvidia (expected return 18%) and 40% in Treasury bonds (expected return 5%):\n\\[E(R_p) = (0.60 \\times 18\\%) + (0.40 \\times 5\\%) = 10.8\\% + 2\\% = 12.8\\%\\]\n\nNote: Portfolio expected return is always a weighted average—you can’t create extra return through diversification alone.\n\n\n\n6.4.2 Portfolio Risk: The Diversification Effect\nHere’s where it gets interesting: Portfolio risk is NOT a weighted average of individual risks.\nIf two assets don’t move perfectly together (i.e., they’re not perfectly correlated), combining them reduces overall portfolio volatility.\nCorrelation coefficient (\\(\\rho\\)) measures how two assets move together: - \\(\\rho = +1\\): Perfect positive correlation (move together) - \\(\\rho = 0\\): No correlation (independent) - \\(\\rho = -1\\): Perfect negative correlation (move opposite)\nFor a two-asset portfolio:\n\\[\\sigma_p = \\sqrt{w_1^2\\sigma_1^2 + w_2^2\\sigma_2^2 + 2w_1w_2\\sigma_1\\sigma_2\\rho_{1,2}}\\]\nExample: You invest 50% in Tesla (\\(\\sigma = 40\\%\\)) and 50% in Procter & Gamble (\\(\\sigma = 15\\%\\)). The correlation between them is 0.3.\n\\[\\sigma_p = \\sqrt{(0.5)^2(40)^2 + (0.5)^2(15)^2 + 2(0.5)(0.5)(40)(15)(0.3)}\\]\n\\[= \\sqrt{400 + 56.25 + 90} = \\sqrt{546.25} = 23.37\\%\\]\nNotice: The portfolio standard deviation (23.37%) is less than the weighted average of the individual standard deviations:\n\\[\\text{Weighted average} = (0.5 \\times 40\\%) + (0.5 \\times 15\\%) = 27.5\\%\\]\nYou reduced risk from 27.5% to 23.37% through diversification!\n\nTip: The lower the correlation between assets, the greater the diversification benefit. This is why investors hold both stocks and bonds—they often move in opposite directions during market stress.\n\n\n\n6.4.3 Systematic vs. Unsystematic Risk\nNot all risk can be diversified away. We distinguish between two types:\n1. Unsystematic Risk (Firm-Specific Risk, Diversifiable Risk)\nRisk that affects only a specific company or industry: - CEO resignation - Product recall - Factory fire - Patent lawsuit - Competitor innovation\nThis risk CAN be eliminated through diversification. If you hold 30+ stocks across different industries, firm-specific events average out.\n2. Systematic Risk (Market Risk, Non-Diversifiable Risk)\nRisk that affects the entire market: - Recession - Interest rate changes - Inflation - Geopolitical events - Pandemic\nThis risk CANNOT be diversified away. No matter how many stocks you hold, you’re still exposed to market-wide movements.\n\nImportant: Because unsystematic risk can be eliminated through diversification, investors are NOT compensated for bearing it. You only earn a risk premium for bearing systematic risk.\n\nIn Practice: This is why professional investors focus on beta (systematic risk) rather than total volatility when evaluating stocks. A stock with high total volatility but low beta might actually be less risky in a diversified portfolio.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#beta-measuring-systematic-risk",
+    "href": "module05.html#beta-measuring-systematic-risk",
+    "title": "6  Risk and Return",
+    "section": "6.5 Beta: Measuring Systematic Risk",
+    "text": "6.5 Beta: Measuring Systematic Risk\n\n6.5.1 What Is Beta?\nBeta (\\(\\beta\\)) measures how much a stock moves relative to the overall market. It quantifies systematic risk.\n\\[\\beta_i = \\frac{\\text{Cov}(R_i, R_m)}{\\text{Var}(R_m)} = \\frac{\\sigma_i \\times \\rho_{i,m}}{\\sigma_m}\\]\nWhere: - \\(R_i\\) = Return on stock \\(i\\) - \\(R_m\\) = Return on the market (usually S&P 500) - \\(\\text{Cov}\\) = Covariance - \\(\\rho_{i,m}\\) = Correlation between stock \\(i\\) and market\nIntuitive interpretation: Beta tells you how much the stock moves when the market moves 1%.\n\n\n6.5.2 Interpreting Beta Values\n\n\n\n\n\n\n\n\nBeta\nInterpretation\nExample\n\n\n\n\n\\(\\beta = 1.0\\)\nMoves exactly with the market\nS&P 500 index fund\n\n\n\\(\\beta &gt; 1.0\\)\nMore volatile than market (aggressive)\nTechnology stocks, Tesla (\\(\\beta \\approx 2.0\\))\n\n\n\\(\\beta &lt; 1.0\\)\nLess volatile than market (defensive)\nUtility stocks, Procter & Gamble (\\(\\beta \\approx 0.5\\))\n\n\n\\(\\beta = 0\\)\nNo correlation with market\nRisk-free asset (Treasury bills)\n\n\n\\(\\beta &lt; 0\\)\nMoves opposite to market (rare)\nGold stocks (sometimes)\n\n\n\nExample: Nvidia has a beta of approximately 1.7 (as of January 2026).\nInterpretation: When the market goes up 10%, Nvidia tends to go up 17%. When the market falls 10%, Nvidia tends to fall 17%.\n\nWarning: Beta is estimated from historical data and can change over time. A company’s beta can shift as its business model evolves or market conditions change.\n\n\n\n6.5.3 Portfolio Beta\nThe beta of a portfolio is the weighted average of individual betas:\n\\[\\beta_p = \\sum_{i=1}^{n}w_i \\times \\beta_i\\]\nExample: You hold: - 40% Nvidia (\\(\\beta = 1.7\\)) - 30% Apple (\\(\\beta = 1.2\\)) - 30% Treasury bonds (\\(\\beta = 0\\))\n\\[\\beta_p = (0.40 \\times 1.7) + (0.30 \\times 1.2) + (0.30 \\times 0) = 0.68 + 0.36 + 0 = 1.04\\]\nYour portfolio beta is 1.04, meaning it moves roughly in line with the market.\nIn Practice: Portfolio managers adjust portfolio beta to match their market outlook: - Bullish on market: Increase beta above 1.0 (add aggressive stocks) - Bearish on market: Decrease beta below 1.0 (add defensive stocks or bonds)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#the-capital-asset-pricing-model-capm",
+    "href": "module05.html#the-capital-asset-pricing-model-capm",
+    "title": "6  Risk and Return",
+    "section": "6.6 The Capital Asset Pricing Model (CAPM)",
+    "text": "6.6 The Capital Asset Pricing Model (CAPM)\nThe Capital Asset Pricing Model (CAPM) is one of the most important models in finance. It tells you the required return on a stock based on its systematic risk (beta).\n\n6.6.1 The CAPM Formula\n\\[E(R_i) = R_f + \\beta_i \\times [E(R_m) - R_f]\\]\nWhere: - \\(E(R_i)\\) = Expected (required) return on stock \\(i\\) - \\(R_f\\) = Risk-free rate (Treasury bill rate) - \\(\\beta_i\\) = Beta of stock \\(i\\) - \\(E(R_m)\\) = Expected return on the market - \\([E(R_m) - R_f]\\) = Market risk premium\nInterpretation: The required return equals the risk-free rate plus a risk premium. The risk premium depends on: 1. How much risk you’re taking (\\(\\beta_i\\)) 2. The market price of risk (\\(E(R_m) - R_f\\))\nExample: Calculate the required return on Tesla stock.\nGiven: - Risk-free rate (\\(R_f\\)) = 4.5% (10-year Treasury) - Market return (\\(E(R_m)\\)) = 11% (historical average) - Tesla beta (\\(\\beta\\)) = 2.0\n\\[E(R_{Tesla}) = 4.5\\% + 2.0 \\times [11\\% - 4.5\\%]\\]\n\\[= 4.5\\% + 2.0 \\times 6.5\\% = 4.5\\% + 13\\% = 17.5\\%\\]\nInterpretation: Given Tesla’s high systematic risk (beta of 2.0), investors require a 17.5% annual return to compensate them for that risk.\n\nImportant: CAPM gives you the minimum return investors demand. This becomes your discount rate in DCF models. If a stock’s expected return is below its CAPM required return, it’s overvalued.\n\n\n\n6.6.2 The Security Market Line (SML)\nThe Security Market Line is a graphical representation of CAPM. It shows the relationship between beta and required return.\nKey properties: - Y-intercept: Risk-free rate (\\(R_f\\)) - Slope: Market risk premium (\\(E(R_m) - R_f\\)) - X-axis: Beta (\\(\\beta\\)) - Y-axis: Expected return (\\(E(R)\\))\nStocks plot on the SML based on their beta: - On the line: Fairly priced - Above the line: Undervalued (offering more return than required) - Below the line: Overvalued (offering less return than required)\nExample SML (with \\(R_f = 4.5\\%\\) and \\(E(R_m) = 11\\%\\)):\n\n\n\nBeta\nRequired Return\n\n\n\n\n0.0\n4.5%\n\n\n0.5\n7.75%\n\n\n1.0\n11.0%\n\n\n1.5\n14.25%\n\n\n2.0\n17.5%\n\n\n\n\n\n6.6.3 Using CAPM for Investment Decisions\nStep 1: Calculate required return using CAPM\nStep 2: Estimate expected return using: - Analyst forecasts - Dividend discount model - Historical averages\nStep 3: Compare: - If expected return &gt; required return: Stock is undervalued → BUY - If expected return &lt; required return: Stock is overvalued → SELL - If expected return = required return: Stock is fairly valued → HOLD\nExample: Should you invest in Apple?\nGiven: - Apple beta = 1.2 - Risk-free rate = 4.5% - Market return = 11% - Your analysis suggests Apple will return 13% next year\nStep 1: Calculate required return: \\[E(R_{Apple}) = 4.5\\% + 1.2 \\times [11\\% - 4.5\\%] = 4.5\\% + 7.8\\% = 12.3\\%\\]\nStep 2: Compare: - Expected return: 13% - Required return: 12.3% - Difference: 13% - 12.3% = +0.7%\nDecision: Apple is undervalued. It offers more return (13%) than required for its risk level (12.3%). BUY.\n\nTip: The difference between expected and required return is called alpha (\\(\\alpha\\)). Positive alpha means undervalued; negative alpha means overvalued. Active portfolio managers try to find positive-alpha stocks.\n\nIn Practice (January 2026): With the Federal Reserve holding rates steady and strong corporate earnings, many tech stocks are trading near their fair value according to CAPM. However, AI-related stocks like Nvidia show positive alpha due to exceptional growth prospects, while traditional retail stocks show negative alpha due to e-commerce disruption.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#excel-functions-for-risk-and-return",
+    "href": "module05.html#excel-functions-for-risk-and-return",
+    "title": "6  Risk and Return",
+    "section": "6.7 Excel Functions for Risk and Return",
+    "text": "6.7 Excel Functions for Risk and Return\nExcel provides powerful built-in functions for risk-return analysis:\n\n6.7.1 Return Calculations\nAVERAGE() - Arithmetic average return\n=AVERAGE(B2:B11)\nCalculates the arithmetic mean of returns in cells B2 through B11.\nGEOMEAN() - Geometric average return\n=(GEOMEAN(1+B2:B11)-1)\nNote: Add 1 to each return, calculate geometric mean, then subtract 1.\n\n\n6.7.2 Risk Calculations\nVAR.S() - Sample variance\n=VAR.S(B2:B11)\nCalculates variance using \\(n-1\\) in denominator (sample variance).\nSTDEV.S() - Sample standard deviation\n=STDEV.S(B2:B11)\nCalculates standard deviation using \\(n-1\\) in denominator.\n\nNote: Use VAR.S and STDEV.S (not VAR.P or STDEV.P) when working with historical sample data, which is almost always the case in finance.\n\n\n\n6.7.3 Portfolio Calculations\nSUMPRODUCT() - Portfolio expected return\n=SUMPRODUCT(weights, returns)\nMultiplies each weight by its return and sums the results.\nExample:\n=SUMPRODUCT(B2:B5, C2:C5)\nWhere B2:B5 contains weights and C2:C5 contains expected returns.\n\n\n6.7.4 Beta and Correlation\nCORREL() - Correlation coefficient\n=CORREL(stock_returns, market_returns)\nCalculates correlation between two return series.\nSLOPE() - Beta calculation\n=SLOPE(stock_returns, market_returns)\nCalculates beta by regressing stock returns on market returns.\nAlternative beta calculation:\n=COVARIANCE.S(stock_returns, market_returns) / VAR.S(market_returns)\n\n\n6.7.5 CAPM Calculation\nManual CAPM formula:\n=risk_free_rate + beta * (market_return - risk_free_rate)\nExample:\n=0.045 + 1.2 * (0.11 - 0.045)\nCalculates required return for a stock with beta 1.2, given \\(R_f = 4.5\\%\\) and \\(E(R_m) = 11\\%\\).\n\n\n6.7.6 Excel Sign Conventions\n\nImportant: Unlike bond and stock valuation where cash flows have signs (negative for outflows, positive for inflows), return calculations use unsigned percentages. A -10% return is simply entered as -0.10 or -10%, not as a negative cash flow.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#real-world-applications",
+    "href": "module05.html#real-world-applications",
+    "title": "6  Risk and Return",
+    "section": "6.8 Real-World Applications",
+    "text": "6.8 Real-World Applications\n\n6.8.1 Application 1: Cost of Equity Capital\nCorporate Use: Companies use CAPM to determine their cost of equity—the return shareholders require.\nExample: Microsoft is evaluating a new cloud computing project. Should they invest?\nGiven: - Project requires $500 million investment - Expected to generate $80 million per year forever - Microsoft’s beta = 0.9 - Risk-free rate = 4.5% - Market return = 11%\nStep 1: Calculate cost of equity using CAPM: \\[r_e = 4.5\\% + 0.9 \\times [11\\% - 4.5\\%] = 4.5\\% + 5.85\\% = 10.35\\%\\]\nStep 2: Calculate project NPV (perpetuity): \\[NPV = -500 + \\frac{80}{0.1035} = -500 + 772.95 = +272.95 \\text{ million}\\]\nDecision: Accept the project. It creates $273 million in shareholder value.\n\nNote: This connects directly to Module 1 (time value of money) and Module 2 (perpetuities). The discount rate comes from CAPM!\n\n\n\n6.8.2 Application 2: Portfolio Construction\nInvestment Use: Investors use risk-return principles to build efficient portfolios.\nExample: You’re 30 years old saving for retirement. Should you hold stocks or bonds?\nHistorical data: - Stocks: \\(E(R) = 11\\%\\), \\(\\sigma = 20\\%\\) - Bonds: \\(E(R) = 6\\%\\), \\(\\sigma = 10\\%\\) - Correlation = 0.2\n60/40 Portfolio (60% stocks, 40% bonds):\nExpected return: \\[E(R_p) = 0.60 \\times 11\\% + 0.40 \\times 6\\% = 6.6\\% + 2.4\\% = 9\\%\\]\nPortfolio risk: \\[\\sigma_p = \\sqrt{(0.6)^2(20)^2 + (0.4)^2(10)^2 + 2(0.6)(0.4)(20)(10)(0.2)}\\] \\[= \\sqrt{144 + 16 + 19.2} = \\sqrt{179.2} = 13.4\\%\\]\nAnalysis: The 60/40 portfolio offers 9% return with only 13.4% risk—much better than holding 100% stocks (11% return, 20% risk) if you’re moderately risk-averse.\nIn Practice: The traditional 60/40 stock/bond portfolio has been challenged in recent years due to rising interest rates affecting both stocks and bonds simultaneously. Modern portfolios increasingly include alternative assets (real estate, commodities, private equity) to enhance diversification.\n\n\n6.8.3 Application 3: Performance Evaluation\nInvestment Management Use: Evaluate whether a portfolio manager is adding value.\nExample: Your portfolio manager delivered 14% return last year. Good or bad?\nGiven: - Portfolio return = 14% - Portfolio beta = 1.3 - Risk-free rate = 4.5% - Market return = 12%\nStep 1: Calculate required return using CAPM: \\[E(R_p) = 4.5\\% + 1.3 \\times [12\\% - 4.5\\%] = 4.5\\% + 9.75\\% = 14.25\\%\\]\nStep 2: Calculate alpha: \\[\\alpha = \\text{Actual return} - \\text{Required return} = 14\\% - 14.25\\% = -0.25\\%\\]\nInterpretation: Negative alpha. The manager underperformed by 0.25% after adjusting for risk. You could have earned 14.25% by simply holding a portfolio with beta 1.3 (mix of index fund and leverage).\n\nWarning: Many investors are fooled by high returns without considering risk. A 20% return with beta 2.0 might actually be worse than a 12% return with beta 1.0 when risk-adjusted.\n\n\n\n6.8.4 Application 4: Market Timing and Economic Forecasting\nExample (January 2026 Context): The Federal Reserve has signaled potential rate cuts later in 2026 if inflation continues to moderate. How should this affect your portfolio?\nAnalysis: - Rate cuts typically boost stock prices (lower discount rates) - High-beta stocks (technology, consumer discretionary) benefit most - Low-beta stocks (utilities, consumer staples) benefit least\nStrategy: If you believe rate cuts are coming: 1. Increase portfolio beta by overweighting high-beta sectors 2. Reduce bond duration (bonds already priced in rate cuts) 3. Consider small-cap stocks (higher beta, more rate-sensitive)\nCurrent example: Many investors are overweighting AI-related stocks (Nvidia, Microsoft, Google) which have high betas but also high growth prospects. This is a bet that both the market will rise AND these companies will outperform.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#wrap-up",
+    "href": "module05.html#wrap-up",
+    "title": "6  Risk and Return",
+    "section": "6.9 Wrap-Up",
+    "text": "6.9 Wrap-Up\n\n6.9.1 What You’ve Learned\n✓ Historical returns: Arithmetic average (for forecasting) vs. geometric average (for performance measurement)\n✓ Risk measurement: Variance and standard deviation quantify return volatility\n✓ Diversification: Reduces unsystematic risk but not systematic risk\n✓ Beta: Measures systematic risk (sensitivity to market movements)\n✓ CAPM: Calculates required return based on systematic risk: \\(E(R_i) = R_f + \\beta_i[E(R_m) - R_f]\\)\n✓ Investment decisions: Compare expected return to CAPM required return\n✓ Excel functions: AVERAGE, GEOMEAN, STDEV.S, SLOPE for risk-return analysis\n\n\n6.9.2 Connection to Previous Modules\nBonds: Bond yields reflect risk premiums. Corporate bonds have higher yields than Treasuries because of default risk (systematic risk component).\nStocks: The discount rate in dividend discount models comes from CAPM. Higher-beta stocks require higher discount rates.\nTime Value of Money: The discount rate in all present value calculations should reflect the risk of the cash flows. CAPM tells you what that rate should be.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#key-formulas-summary",
+    "href": "module05.html#key-formulas-summary",
+    "title": "6  Risk and Return",
+    "section": "6.10 Key Formulas Summary",
+    "text": "6.10 Key Formulas Summary\nTotal Return: \\[R_t = \\frac{P_t - P_{t-1} + D_t}{P_{t-1}}\\]\nArithmetic Average Return: \\[\\bar{R} = \\frac{1}{n}\\sum_{i=1}^{n}R_i\\]\nGeometric Average Return: \\[\\bar{R}_{geometric} = \\left[(1+R_1)(1+R_2)...(1+R_n)\\right]^{1/n} - 1\\]\nVariance: \\[\\sigma^2 = \\frac{1}{n-1}\\sum_{i=1}^{n}(R_i - \\bar{R})^2\\]\nStandard Deviation: \\[\\sigma = \\sqrt{\\sigma^2}\\]\nPortfolio Expected Return: \\[E(R_p) = \\sum_{i=1}^{n}w_i \\times E(R_i)\\]\nPortfolio Standard Deviation (Two Assets): \\[\\sigma_p = \\sqrt{w_1^2\\sigma_1^2 + w_2^2\\sigma_2^2 + 2w_1w_2\\sigma_1\\sigma_2\\rho_{1,2}}\\]\nBeta: \\[\\beta_i = \\frac{\\text{Cov}(R_i, R_m)}{\\text{Var}(R_m)}\\]\nPortfolio Beta: \\[\\beta_p = \\sum_{i=1}^{n}w_i \\times \\beta_i\\]\nCapital Asset Pricing Model (CAPM): \\[E(R_i) = R_f + \\beta_i \\times [E(R_m) - R_f]\\]\nAlpha (Risk-Adjusted Performance): \\[\\alpha = R_{actual} - R_{required}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  },
+  {
+    "objectID": "module05.html#practice-recommendations",
+    "href": "module05.html#practice-recommendations",
+    "title": "6  Risk and Return",
+    "section": "6.11 Practice Recommendations",
+    "text": "6.11 Practice Recommendations\n\nMaster the Excel functions in Section 5.6—you’ll use them constantly in finance\nWork through the practice problems to build intuition for risk-return tradeoffs\nFollow real market data: Track betas and returns for stocks you’re interested in\nUse the @@prep-finance-helper bot in BoodleBox for additional practice and explanations\nConnect to previous modules: Notice how CAPM provides the discount rates you used in Modules 3-4\n\nReal-world practice: Go to Yahoo Finance, pick 5 stocks, download 5 years of monthly returns, and calculate: - Arithmetic and geometric average returns - Standard deviations - Betas (regress against S&P 500) - Required returns using CAPM - Whether each stock is over/undervalued\nThis hands-on practice will solidify your understanding far better than just reading examples.\n\nEnd of Risk and Return Lecture",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk and Return</span>"
+    ]
+  }
+]

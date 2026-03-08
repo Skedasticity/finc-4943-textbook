@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; The Time Value of Money (TVM) – Fundamentals of Business Finance</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./module02.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./module01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Time Value of Money (TVM)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of Business Finance</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of Business Finance</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Time Value of Money (TVM)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discounted Cash Flows and Annuities</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bond Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stock Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Risk and Return</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-core-intuition-why-time-matters" id="toc-the-core-intuition-why-time-matters" class="nav-link active" data-scroll-target="#the-core-intuition-why-time-matters"><span class="header-section-number">2.1</span> The Core Intuition: Why Time Matters</a>
+  <ul class="collapse">
+  <li><a href="#the-three-pillars-of-tvm" id="toc-the-three-pillars-of-tvm" class="nav-link" data-scroll-target="#the-three-pillars-of-tvm"><span class="header-section-number">2.1.1</span> The Three Pillars of TVM</a></li>
+  <li><a href="#understanding-the-discount-rate-interest-rate" id="toc-understanding-the-discount-rate-interest-rate" class="nav-link" data-scroll-target="#understanding-the-discount-rate-interest-rate"><span class="header-section-number">2.1.2</span> Understanding the Discount Rate (Interest Rate)</a></li>
+  </ul></li>
+  <li><a href="#the-magic-of-compounding" id="toc-the-magic-of-compounding" class="nav-link" data-scroll-target="#the-magic-of-compounding"><span class="header-section-number">2.2</span> The “Magic” of Compounding</a>
+  <ul class="collapse">
+  <li><a href="#simple-example" id="toc-simple-example" class="nav-link" data-scroll-target="#simple-example"><span class="header-section-number">2.2.1</span> Simple Example</a></li>
+  <li><a href="#the-power-of-time" id="toc-the-power-of-time" class="nav-link" data-scroll-target="#the-power-of-time"><span class="header-section-number">2.2.2</span> The Power of Time</a></li>
+  </ul></li>
+  <li><a href="#future-value-fv-vs.-present-value-pv" id="toc-future-value-fv-vs.-present-value-pv" class="nav-link" data-scroll-target="#future-value-fv-vs.-present-value-pv"><span class="header-section-number">2.3</span> Future Value (FV) vs.&nbsp;Present Value (PV)</a>
+  <ul class="collapse">
+  <li><a href="#the-basic-variables-and-notation" id="toc-the-basic-variables-and-notation" class="nav-link" data-scroll-target="#the-basic-variables-and-notation"><span class="header-section-number">2.3.1</span> The Basic Variables and Notation</a></li>
+  <li><a href="#visual-timeline" id="toc-visual-timeline" class="nav-link" data-scroll-target="#visual-timeline"><span class="header-section-number">2.3.2</span> Visual Timeline</a></li>
+  </ul></li>
+  <li><a href="#simple-vs.-compound-interest" id="toc-simple-vs.-compound-interest" class="nav-link" data-scroll-target="#simple-vs.-compound-interest"><span class="header-section-number">2.4</span> Simple vs.&nbsp;Compound Interest</a>
+  <ul class="collapse">
+  <li><a href="#simple-interest" id="toc-simple-interest" class="nav-link" data-scroll-target="#simple-interest"><span class="header-section-number">2.4.1</span> Simple Interest</a></li>
+  <li><a href="#compound-interest" id="toc-compound-interest" class="nav-link" data-scroll-target="#compound-interest"><span class="header-section-number">2.4.2</span> Compound Interest</a></li>
+  <li><a href="#which-one-is-used-in-modern-finance" id="toc-which-one-is-used-in-modern-finance" class="nav-link" data-scroll-target="#which-one-is-used-in-modern-finance"><span class="header-section-number">2.4.3</span> Which One is Used in Modern Finance?</a></li>
+  </ul></li>
+  <li><a href="#the-impact-of-compounding-frequency" id="toc-the-impact-of-compounding-frequency" class="nav-link" data-scroll-target="#the-impact-of-compounding-frequency"><span class="header-section-number">2.5</span> The Impact of Compounding Frequency</a>
+  <ul class="collapse">
+  <li><a href="#how-often-interest-is-calculated-matters" id="toc-how-often-interest-is-calculated-matters" class="nav-link" data-scroll-target="#how-often-interest-is-calculated-matters"><span class="header-section-number">2.5.1</span> How Often Interest is Calculated Matters</a></li>
+  <li><a href="#common-compounding-frequencies" id="toc-common-compounding-frequencies" class="nav-link" data-scroll-target="#common-compounding-frequencies"><span class="header-section-number">2.5.2</span> Common Compounding Frequencies</a></li>
+  <li><a href="#excel-adjustment-for-different-frequencies" id="toc-excel-adjustment-for-different-frequencies" class="nav-link" data-scroll-target="#excel-adjustment-for-different-frequencies"><span class="header-section-number">2.5.3</span> Excel Adjustment for Different Frequencies</a></li>
+  <li><a href="#apr-vs.-apy-what-banks-dont-always-make-clear" id="toc-apr-vs.-apy-what-banks-dont-always-make-clear" class="nav-link" data-scroll-target="#apr-vs.-apy-what-banks-dont-always-make-clear"><span class="header-section-number">2.5.4</span> APR vs.&nbsp;APY: What Banks Don’t Always Make Clear</a></li>
+  </ul></li>
+  <li><a href="#the-mathematical-foundation" id="toc-the-mathematical-foundation" class="nav-link" data-scroll-target="#the-mathematical-foundation"><span class="header-section-number">2.6</span> The Mathematical Foundation</a>
+  <ul class="collapse">
+  <li><a href="#future-value-formula" id="toc-future-value-formula" class="nav-link" data-scroll-target="#future-value-formula"><span class="header-section-number">2.6.1</span> Future Value Formula</a></li>
+  <li><a href="#present-value-formula" id="toc-present-value-formula" class="nav-link" data-scroll-target="#present-value-formula"><span class="header-section-number">2.6.2</span> Present Value Formula</a></li>
+  <li><a href="#the-relationship-between-pv-and-fv" id="toc-the-relationship-between-pv-and-fv" class="nav-link" data-scroll-target="#the-relationship-between-pv-and-fv"><span class="header-section-number">2.6.3</span> The Relationship Between PV and FV</a></li>
+  </ul></li>
+  <li><a href="#financial-mental-models-the-rule-of-72" id="toc-financial-mental-models-the-rule-of-72" class="nav-link" data-scroll-target="#financial-mental-models-the-rule-of-72"><span class="header-section-number">2.7</span> Financial Mental Models: The Rule of 72</a>
+  <ul class="collapse">
+  <li><a href="#quick-estimation-tool" id="toc-quick-estimation-tool" class="nav-link" data-scroll-target="#quick-estimation-tool"><span class="header-section-number">2.7.1</span> Quick Estimation Tool</a></li>
+  <li><a href="#verification" id="toc-verification" class="nav-link" data-scroll-target="#verification"><span class="header-section-number">2.7.2</span> Verification</a></li>
+  <li><a href="#why-it-works-the-math-behind-it" id="toc-why-it-works-the-math-behind-it" class="nav-link" data-scroll-target="#why-it-works-the-math-behind-it"><span class="header-section-number">2.7.3</span> Why It Works (The Math Behind It)</a></li>
+  <li><a href="#reverse-application" id="toc-reverse-application" class="nav-link" data-scroll-target="#reverse-application"><span class="header-section-number">2.7.4</span> Reverse Application</a></li>
+  <li><a href="#related-rules" id="toc-related-rules" class="nav-link" data-scroll-target="#related-rules"><span class="header-section-number">2.7.5</span> Related Rules</a></li>
+  <li><a href="#practical-applications" id="toc-practical-applications" class="nav-link" data-scroll-target="#practical-applications"><span class="header-section-number">2.7.6</span> Practical Applications</a></li>
+  </ul></li>
+  <li><a href="#moving-to-excel" id="toc-moving-to-excel" class="nav-link" data-scroll-target="#moving-to-excel"><span class="header-section-number">2.8</span> Moving to Excel</a>
+  <ul class="collapse">
+  <li><a href="#core-excel-tvm-functions" id="toc-core-excel-tvm-functions" class="nav-link" data-scroll-target="#core-excel-tvm-functions"><span class="header-section-number">2.8.1</span> Core Excel TVM Functions</a></li>
+  <li><a href="#important-excel-conventions-and-defaults" id="toc-important-excel-conventions-and-defaults" class="nav-link" data-scroll-target="#important-excel-conventions-and-defaults"><span class="header-section-number">2.8.2</span> Important Excel Conventions and Defaults</a></li>
+  <li><a href="#excel-function-examples" id="toc-excel-function-examples" class="nav-link" data-scroll-target="#excel-function-examples"><span class="header-section-number">2.8.3</span> Excel Function Examples</a></li>
+  </ul></li>
+  <li><a href="#preview-lump-sums-vs.-annuities" id="toc-preview-lump-sums-vs.-annuities" class="nav-link" data-scroll-target="#preview-lump-sums-vs.-annuities"><span class="header-section-number">2.9</span> Preview: Lump Sums vs.&nbsp;Annuities</a>
+  <ul class="collapse">
+  <li><a href="#whats-coming-in-module-2" id="toc-whats-coming-in-module-2" class="nav-link" data-scroll-target="#whats-coming-in-module-2"><span class="header-section-number">2.9.1</span> What’s Coming in Module 2</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">2.10</span> Key Takeaways</a></li>
+  <li><a href="#common-misconceptions-and-pitfalls" id="toc-common-misconceptions-and-pitfalls" class="nav-link" data-scroll-target="#common-misconceptions-and-pitfalls"><span class="header-section-number">2.11</span> Common Misconceptions and Pitfalls</a>
+  <ul class="collapse">
+  <li><a href="#misconception-1-compound-interest-is-only-slightly-better-than-simple-interest" id="toc-misconception-1-compound-interest-is-only-slightly-better-than-simple-interest" class="nav-link" data-scroll-target="#misconception-1-compound-interest-is-only-slightly-better-than-simple-interest"><span class="header-section-number">2.11.1</span> Misconception 1: “Compound interest is only slightly better than simple interest”</a></li>
+  <li><a href="#misconception-2-i-can-wait-a-few-years-to-start-saving-for-retirement" id="toc-misconception-2-i-can-wait-a-few-years-to-start-saving-for-retirement" class="nav-link" data-scroll-target="#misconception-2-i-can-wait-a-few-years-to-start-saving-for-retirement"><span class="header-section-number">2.11.2</span> Misconception 2: “I can wait a few years to start saving for retirement”</a></li>
+  <li><a href="#misconception-3-a-higher-apr-is-always-worse-for-borrowers" id="toc-misconception-3-a-higher-apr-is-always-worse-for-borrowers" class="nav-link" data-scroll-target="#misconception-3-a-higher-apr-is-always-worse-for-borrowers"><span class="header-section-number">2.11.3</span> Misconception 3: “A higher APR is always worse for borrowers”</a></li>
+  <li><a href="#misconception-4-present-value-and-future-value-are-just-different-names-for-the-same-thing" id="toc-misconception-4-present-value-and-future-value-are-just-different-names-for-the-same-thing" class="nav-link" data-scroll-target="#misconception-4-present-value-and-future-value-are-just-different-names-for-the-same-thing"><span class="header-section-number">2.11.4</span> Misconception 4: “Present value and future value are just different names for the same thing”</a></li>
+  <li><a href="#misconception-5-the-rule-of-72-is-just-a-rough-guess" id="toc-misconception-5-the-rule-of-72-is-just-a-rough-guess" class="nav-link" data-scroll-target="#misconception-5-the-rule-of-72-is-just-a-rough-guess"><span class="header-section-number">2.11.5</span> Misconception 5: “The Rule of 72 is just a rough guess”</a></li>
+  </ul></li>
+  <li><a href="#connecting-to-future-modules" id="toc-connecting-to-future-modules" class="nav-link" data-scroll-target="#connecting-to-future-modules"><span class="header-section-number">2.12</span> Connecting to Future Modules</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Time Value of Money (TVM)</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Welcome to the first module of Business Finance Foundations! In this module, we will explore one of the most fundamental concepts in finance: the <strong>Time Value of Money (TVM)</strong>. Understanding TVM is crucial because it underpins virtually every financial decision you’ll make, from personal savings to corporate investment analysis.</p>
+<section id="the-core-intuition-why-time-matters" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-core-intuition-why-time-matters"><span class="header-section-number">2.1</span> The Core Intuition: Why Time Matters</h2>
+<p>If I offered you $1,000 today or $1,000 one year from today, which would you choose?</p>
+<p>Almost everyone instinctively chooses the money today. But why? In finance, this isn’t just a preference; it’s a fundamental principle called the <strong>Time Value of Money (TVM)</strong>.</p>
+<section id="the-three-pillars-of-tvm" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="the-three-pillars-of-tvm"><span class="header-section-number">2.1.1</span> The Three Pillars of TVM</h3>
+<p><strong>1. Opportunity Cost: The “Earning Power” of Money</strong></p>
+<p><strong>Formal Definition:</strong> Opportunity cost represents the return you forgo by not having money available to invest today.</p>
+<p><strong>In practice:</strong> If you have $1,000 today, you could invest it in a savings account, bonds, or stocks and earn a return. By waiting a year to receive that $1,000, you lose the opportunity to grow that money during the waiting period.</p>
+<p><strong>Example:</strong> If you could earn 5% in a savings account, having $1,000 today means you’d have $1,050 in one year. Waiting to receive $1,000 next year costs you that $50 in potential earnings.</p>
+<p><strong>Real-World Application:</strong> This is why lottery winners often choose lump-sum payments over annuities, and why companies evaluate projects based on their opportunity cost of capital.</p>
+<hr>
+<p><strong>2. Inflation: The “Purchasing Power” Erosion</strong></p>
+<p><strong>Formal Definition:</strong> Inflation is the general increase in prices over time, which reduces the real purchasing power of money.</p>
+<p><strong>In practice:</strong> A dollar today buys more groceries, gas, or coffee than a dollar will next year because prices tend to rise over time.</p>
+<p><strong>Example:</strong> If inflation is 3% annually: - A $100 grocery basket today will cost $103 next year - Your $100 next year will only buy what $97.09 buys today - Over 10 years, that $100 will only have the purchasing power of about $74.41 in today’s terms</p>
+<p><strong>Historical Context:</strong> The U.S. has experienced average annual inflation of about 3% over the past century. During the 1970s, inflation reached double digits, dramatically illustrating how quickly purchasing power can erode.</p>
+<hr>
+<p><strong>3. Risk (Uncertainty): The “Will I Actually Get Paid?” Factor</strong></p>
+<p><strong>Formal Definition:</strong> Risk represents the probability that promised future cash flows may not materialize as expected.</p>
+<p><strong>In practice:</strong> There’s always some chance that the person or company promising to pay you in the future might not be able to deliver. They could go bankrupt, default, or circumstances could change. Money in your hand today has zero “default risk.”</p>
+<p><strong>Example:</strong> Would you rather have $1,000 today from a friend, or a promise that your friend will pay you $1,000 in 5 years? Even if you trust your friend, a lot can happen in 5 years—job loss, relocation, financial hardship. The promise carries risk.</p>
+<p><strong>Financial Markets Application:</strong> This is why U.S. Treasury bonds (backed by the government) pay lower interest rates than corporate bonds—Treasuries have virtually no default risk, while corporations might fail.</p>
+<hr>
+</section>
+<section id="understanding-the-discount-rate-interest-rate" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="understanding-the-discount-rate-interest-rate"><span class="header-section-number">2.1.2</span> Understanding the Discount Rate (Interest Rate)</h3>
+<p>The interest rate we use in TVM calculations isn’t arbitrary—it reflects these three components:</p>
+<p><strong>Discount Rate = Risk-Free Rate + Inflation Premium + Risk Premium</strong></p>
+<ul>
+<li><strong>Risk-Free Rate:</strong> The “pure” time value of money—what you’d earn with zero risk (typically approximated by U.S. Treasury securities, currently around 2-4%)</li>
+<li><strong>Inflation Premium:</strong> Compensation for expected loss of purchasing power (historically ~2-3% in the U.S.)</li>
+<li><strong>Risk Premium:</strong> Extra return demanded for bearing uncertainty (varies widely: 1-2% for high-quality corporate bonds, 5-8% for stocks, 10%+ for venture capital)</li>
+</ul>
+<p><strong>Example:</strong> If you’re evaluating a corporate bond investment: - Risk-free rate: 3% (what Treasury bonds pay) - Expected inflation: 2% - Corporate risk premium: 2% - <strong>Total discount rate: 7%</strong></p>
+<p>This is why riskier investments require higher returns—investors demand compensation for bearing additional uncertainty.</p>
+<blockquote class="blockquote">
+<p><strong>Deep Dive: The Risk-Free Rate</strong></p>
+<p>In theory, the risk-free rate represents the return on an investment with zero default risk and zero reinvestment risk. In practice, we use short-term U.S. Treasury bills as a proxy because: - The U.S. government can print money to pay debts (no default risk) - Treasury bills mature in less than one year (minimal interest rate risk)</p>
+<p>However, even Treasuries aren’t perfectly “risk-free”—they still carry inflation risk and the theoretical possibility of government default.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="the-magic-of-compounding" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-magic-of-compounding"><span class="header-section-number">2.2</span> The “Magic” of Compounding</h2>
+<p>Compounding is the process where your money earns interest, and then <em>that interest earns interest</em>. This creates exponential growth rather than linear growth.</p>
+<section id="simple-example" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="simple-example"><span class="header-section-number">2.2.1</span> Simple Example</h3>
+<p>Imagine you invest $100 at a 10% annual interest rate:</p>
+<ul>
+<li><strong>Year 1:</strong> You earn $10 in interest. Your total is $110.</li>
+<li><strong>Year 2:</strong> You don’t just earn interest on your original $100; you earn 10% on the full $110. You earn $11 in interest. Your total is $121.</li>
+<li><strong>Year 3:</strong> You earn 10% on $121 = $12.10. Your total is $133.10.</li>
+</ul>
+<p>Notice how the interest earned each year increases. That extra $1 in Year 2 and $2.10 in Year 3 is the result of compounding—earning interest on your interest.</p>
+</section>
+<section id="the-power-of-time" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="the-power-of-time"><span class="header-section-number">2.2.2</span> The Power of Time</h3>
+<p>This “interest on interest” effect is what allows small savings to grow into large sums over long periods. Consider this dramatic example:</p>
+<p><strong>$10,000 invested at 8% annual interest:</strong> - After 10 years: $21,589 - After 20 years: $46,610 - After 30 years: $100,627 - After 40 years: $217,245</p>
+<p>Notice that the growth accelerates over time. The fourth decade adds more than $116,000, while the first decade only adds about $11,500. This is the exponential nature of compounding.</p>
+<blockquote class="blockquote">
+<p><strong>Historical Example: Manhattan Island</strong></p>
+<p>The famous story of Manhattan being purchased for $24 in 1626 illustrates compounding’s power. If that $24 had been invested at 8% annual return, it would be worth over $200 trillion today—far more than Manhattan’s actual value. While this is a simplified example (finding 8% returns for 400 years is impossible), it demonstrates why starting early matters so much.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="future-value-fv-vs.-present-value-pv" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="future-value-fv-vs.-present-value-pv"><span class="header-section-number">2.3</span> Future Value (FV) vs.&nbsp;Present Value (PV)</h2>
+<p>In this module, we focus on two primary directions of calculation:</p>
+<ul>
+<li><strong>Future Value (FV):</strong> Moving money forward in time. “If I save $X today, what will it be worth in the future?”</li>
+<li><strong>Present Value (PV):</strong> Moving money backward in time (often called <strong>Discounting</strong>). “If I need $X in the future, what is it worth to me today?”</li>
+</ul>
+<section id="the-basic-variables-and-notation" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="the-basic-variables-and-notation"><span class="header-section-number">2.3.1</span> The Basic Variables and Notation</h3>
+<p>To solve any TVM problem, we work with these four core variables. We’ll use consistent notation throughout this course:</p>
+<ol type="1">
+<li><strong>PV (Present Value):</strong> The current value of money; what a sum is worth today</li>
+<li><strong>FV (Future Value):</strong> The value of money at a specific point in the future</li>
+<li><strong>r (Interest Rate):</strong> The percentage rate of return per period (also called discount rate). In Excel, this parameter is called <code>rate</code>.</li>
+<li><strong>n (Number of Periods):</strong> How long the money is invested or borrowed. In Excel, this parameter is called <code>nper</code>.</li>
+</ol>
+<p><strong>Key Principle:</strong> If you know any three of these variables, you can solve for the fourth. This is the foundation of all TVM calculations.</p>
+</section>
+<section id="visual-timeline" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="visual-timeline"><span class="header-section-number">2.3.2</span> Visual Timeline</h3>
+<pre><code>        PV                                    FV
+         |------------------------------------&gt;|
+       Today    n periods at rate r        Future
+    
+    Compounding: Move PV forward to find FV
+    Discounting: Move FV backward to find PV</code></pre>
+<hr>
+</section>
+</section>
+<section id="simple-vs.-compound-interest" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="simple-vs.-compound-interest"><span class="header-section-number">2.4</span> Simple vs.&nbsp;Compound Interest</h2>
+<section id="simple-interest" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="simple-interest"><span class="header-section-number">2.4.1</span> Simple Interest</h3>
+<p><strong>Definition:</strong> Interest is calculated only on the original principal amount. Interest earned in previous periods does not earn additional interest.</p>
+<p><strong>Formula:</strong> <span class="math display">\[\text{Simple Interest} = \text{Principal} \times \text{Rate} \times \text{Time}\]</span></p>
+<p><strong>Example:</strong> $1,000 at 10% simple interest for 5 years: - Year 1: Earn $100 (total: $1,100) - Year 2: Earn $100 (total: $1,200) - Year 3: Earn $100 (total: $1,300) - Year 4: Earn $100 (total: $1,400) - Year 5: Earn $100 (total: $1,500)</p>
+<p>Total interest earned: $500</p>
+<hr>
+</section>
+<section id="compound-interest" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="compound-interest"><span class="header-section-number">2.4.2</span> Compound Interest</h3>
+<p><strong>Definition:</strong> Interest is calculated on the principal plus all accumulated interest from previous periods. This creates “interest on interest.”</p>
+<p><strong>Formula:</strong> <span class="math display">\[FV = PV \times (1 + r)^n\]</span></p>
+<p><strong>Example:</strong> $1,000 at 10% compound interest for 5 years: - Year 1: Earn $100 on $1,000 (total: $1,100) - Year 2: Earn $110 on $1,100 (total: $1,210) - Year 3: Earn $121 on $1,210 (total: $1,331) - Year 4: Earn $133.10 on $1,331 (total: $1,464.10) - Year 5: Earn $146.41 on $1,464.10 (total: $1,610.51)</p>
+<p>Total interest earned: $610.51</p>
+<p><strong>The Difference:</strong> Compound interest earned $110.51 more than simple interest over just 5 years. Over longer periods, this difference becomes enormous.</p>
+</section>
+<section id="which-one-is-used-in-modern-finance" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="which-one-is-used-in-modern-finance"><span class="header-section-number">2.4.3</span> Which One is Used in Modern Finance?</h3>
+<p><strong>Compound interest</strong> is the standard in virtually all modern financial applications, including: - Savings accounts and CDs - Bonds and loans - Stock market returns - Retirement accounts - Mortgage calculations</p>
+<p>Simple interest is rarely used except in very short-term loans or specific legal contexts.</p>
+<hr>
+</section>
+</section>
+<section id="the-impact-of-compounding-frequency" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="the-impact-of-compounding-frequency"><span class="header-section-number">2.5</span> The Impact of Compounding Frequency</h2>
+<section id="how-often-interest-is-calculated-matters" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="how-often-interest-is-calculated-matters"><span class="header-section-number">2.5.1</span> How Often Interest is Calculated Matters</h3>
+<p><strong>Formal Definition:</strong> Compounding frequency refers to how many times per year interest is calculated and added to the principal.</p>
+<p><strong>In practice:</strong> The more frequently interest is calculated and added to your account, the more “interest on interest” you earn, even if the stated annual rate is the same.</p>
+</section>
+<section id="common-compounding-frequencies" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="common-compounding-frequencies"><span class="header-section-number">2.5.2</span> Common Compounding Frequencies</h3>
+<p>Here’s how $1,000 grows at 6% annual interest for 1 year under different compounding frequencies:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Frequency</th>
+<th>Times per Year (m)</th>
+<th>Formula</th>
+<th>Future Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Annual</td>
+<td>1</td>
+<td><span class="math inline">\(1,000 × (1.06)^1\)</span></td>
+<td>$1,060.00</td>
+</tr>
+<tr class="even">
+<td>Semi-annual</td>
+<td>2</td>
+<td><span class="math inline">\(1,000 × (1.03)^2\)</span></td>
+<td>$1,060.90</td>
+</tr>
+<tr class="odd">
+<td>Quarterly</td>
+<td>4</td>
+<td><span class="math inline">\(1,000 × (1.015)^4\)</span></td>
+<td>$1,061.36</td>
+</tr>
+<tr class="even">
+<td>Monthly</td>
+<td>12</td>
+<td><span class="math inline">\(1,000 × (1.005)^12\)</span></td>
+<td>$1,061.68</td>
+</tr>
+<tr class="odd">
+<td>Daily</td>
+<td>365</td>
+<td><span class="math inline">\(1,000 × (1 + 0.06/365)^365\)</span></td>
+<td>$1,061.83</td>
+</tr>
+<tr class="even">
+<td>Continuous</td>
+<td>∞</td>
+<td><span class="math inline">\(1,000 × e^{0.06}\)</span></td>
+<td>$1,061.84</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Insight:</strong> Notice that going from annual to monthly compounding adds $1.68, but going from monthly to daily only adds $0.15. The benefit of more frequent compounding diminishes as frequency increases. There’s a mathematical limit (continuous compounding) beyond which you can’t go.</p>
+</section>
+<section id="excel-adjustment-for-different-frequencies" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="excel-adjustment-for-different-frequencies"><span class="header-section-number">2.5.3</span> Excel Adjustment for Different Frequencies</h3>
+<p>When compounding is not annual, you must adjust <strong>both</strong> the rate and the number of periods:</p>
+<p><strong>Monthly compounding example:</strong> - Annual rate: 6% → Monthly rate: 6%/12 = 0.5% = 0.005 - Years: 5 → Months: 5 × 12 = 60</p>
+<p><strong>Excel formula:</strong></p>
+<pre class="excel"><code>=FV(0.06/12, 5*12, 0, -1000)</code></pre>
+<p><strong>Result:</strong> $1,348.85 (compared to $1,338.23 with annual compounding)</p>
+</section>
+<section id="apr-vs.-apy-what-banks-dont-always-make-clear" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="apr-vs.-apy-what-banks-dont-always-make-clear"><span class="header-section-number">2.5.4</span> APR vs.&nbsp;APY: What Banks Don’t Always Make Clear</h3>
+<p><strong>APR (Annual Percentage Rate):</strong> The stated annual rate before accounting for compounding frequency. This is the “nominal” rate.</p>
+<p><strong>APY (Annual Percentage Yield):</strong> The effective annual rate after accounting for compounding frequency. This is what you actually earn.</p>
+<p><strong>Formula:</strong> <span class="math display">\[APY = \left(1 + \frac{APR}{m}\right)^m - 1\]</span></p>
+<p>Where m = number of compounding periods per year</p>
+<p><strong>Example:</strong> - 6% APR compounded monthly - APY = (1 + 0.06/12)^12 - 1 = (1.005)^12 - 1 = 0.06168 = <strong>6.168%</strong></p>
+<p><strong>Why This Matters:</strong> When comparing savings accounts or credit cards, always compare APY, not APR. A 5.9% APR compounded daily might be better than a 6.0% APR compounded annually.</p>
+<p><strong>APY Comparison Table:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>APR</th>
+<th>Annual</th>
+<th>Quarterly</th>
+<th>Monthly</th>
+<th>Daily</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5%</td>
+<td>5.000%</td>
+<td>5.095%</td>
+<td>5.116%</td>
+<td>5.127%</td>
+</tr>
+<tr class="even">
+<td>6%</td>
+<td>6.000%</td>
+<td>6.136%</td>
+<td>6.168%</td>
+<td>6.183%</td>
+</tr>
+<tr class="odd">
+<td>7%</td>
+<td>7.000%</td>
+<td>7.186%</td>
+<td>7.229%</td>
+<td>7.250%</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Consumer Protection Note:</strong> The Truth in Lending Act requires lenders to disclose APY precisely because APR alone can be misleading. When shopping for savings accounts, always ask for the APY. When comparing credit cards, the APR matters less than your payment behavior, but APY shows the true cost if you carry a balance.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="the-mathematical-foundation" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="the-mathematical-foundation"><span class="header-section-number">2.6</span> The Mathematical Foundation</h2>
+<section id="future-value-formula" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="future-value-formula"><span class="header-section-number">2.6.1</span> Future Value Formula</h3>
+<p>The fundamental formula for calculating future value with compound interest is:</p>
+<p><span class="math display">\[FV = PV \times (1 + r)^n\]</span></p>
+<p>Where: - <span class="math inline">\(FV\)</span> = Future Value - <span class="math inline">\(PV\)</span> = Present Value - <span class="math inline">\(r\)</span> = Interest rate per period (as a decimal) - <span class="math inline">\(n\)</span> = Number of periods</p>
+<p><strong>Example:</strong> What will $5,000 be worth in 10 years at 7% annual interest?</p>
+<p><span class="math display">\[FV = 5,000 \times (1.07)^{10} = 5,000 \times 1.96715 = \$9,835.76\]</span></p>
+<hr>
+</section>
+<section id="present-value-formula" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="present-value-formula"><span class="header-section-number">2.6.2</span> Present Value Formula</h3>
+<p>To find present value (discounting), we rearrange the future value formula:</p>
+<p><span class="math display">\[PV = \frac{FV}{(1 + r)^n}\]</span></p>
+<p>This can also be written as:</p>
+<p><span class="math display">\[PV = FV \times (1 + r)^{-n}\]</span></p>
+<p><strong>Example:</strong> What is the present value of $10,000 to be received in 8 years if the discount rate is 6%?</p>
+<p><span class="math display">\[PV = \frac{10,000}{(1.06)^8} = \frac{10,000}{1.59385} = \$6,274.12\]</span></p>
+<p><strong>Interpretation:</strong> You should be willing to pay $6,274.12 today for the right to receive $10,000 in 8 years, assuming a 6% discount rate.</p>
+<hr>
+</section>
+<section id="the-relationship-between-pv-and-fv" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="the-relationship-between-pv-and-fv"><span class="header-section-number">2.6.3</span> The Relationship Between PV and FV</h3>
+<p>These formulas are inverses of each other: - <strong>Compounding</strong> (FV): Multiply by <span class="math inline">\((1 + r)^n\)</span> - <strong>Discounting</strong> (PV): Divide by <span class="math inline">\((1 + r)^n\)</span> (or multiply by <span class="math inline">\((1 + r)^{-n}\)</span>)</p>
+<p><strong>Key Insight:</strong> When interest rates are positive, PV is always less than FV. The higher the interest rate or the longer the time period, the greater the difference between PV and FV.</p>
+<hr>
+</section>
+</section>
+<section id="financial-mental-models-the-rule-of-72" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="financial-mental-models-the-rule-of-72"><span class="header-section-number">2.7</span> Financial Mental Models: The Rule of 72</h2>
+<section id="quick-estimation-tool" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="quick-estimation-tool"><span class="header-section-number">2.7.1</span> Quick Estimation Tool</h3>
+<p>The <strong>Rule of 72</strong> is a mental math shortcut used by financial professionals to estimate how long it takes for an investment to double at a given interest rate.</p>
+<p><strong>The Formula:</strong> <span class="math display">\[\text{Years to Double} \approx \frac{72}{\text{Interest Rate (as whole number)}}\]</span></p>
+<p><strong>Examples:</strong> - At 6% interest: 72 ÷ 6 = <strong>12 years</strong> to double - At 8% interest: 72 ÷ 8 = <strong>9 years</strong> to double - At 9% interest: 72 ÷ 9 = <strong>8 years</strong> to double - At 12% interest: 72 ÷ 12 = <strong>6 years</strong> to double</p>
+</section>
+<section id="verification" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="verification"><span class="header-section-number">2.7.2</span> Verification</h3>
+<p>Let’s verify the 8% example: <span class="math display">\[FV = PV \times (1.08)^9 = 1 \times 1.999 \approx 2.0\]</span></p>
+<p>The Rule of 72 predicted 9 years, and the actual calculation shows 1.999—remarkably accurate!</p>
+</section>
+<section id="why-it-works-the-math-behind-it" class="level3" data-number="2.7.3">
+<h3 data-number="2.7.3" class="anchored" data-anchor-id="why-it-works-the-math-behind-it"><span class="header-section-number">2.7.3</span> Why It Works (The Math Behind It)</h3>
+<p>The Rule of 72 is a linear approximation of the logarithmic formula for doubling time:</p>
+<p><span class="math display">\[n = \frac{\ln(2)}{\ln(1 + r)} \approx \frac{0.693}{r}\]</span></p>
+<p>When r is expressed as a percentage, 0.693 × 100 ≈ 69.3, but <strong>72 is used</strong> because it has more divisors (1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72), making mental math easier.</p>
+<p><strong>Accuracy:</strong> The Rule of 72 is remarkably accurate for interest rates between 6% and 10%. For rates outside this range, small errors accumulate, but it remains useful for quick estimates.</p>
+</section>
+<section id="reverse-application" class="level3" data-number="2.7.4">
+<h3 data-number="2.7.4" class="anchored" data-anchor-id="reverse-application"><span class="header-section-number">2.7.4</span> Reverse Application</h3>
+<p>You can also use the Rule of 72 in reverse: “If I want to double my money in 6 years, what return do I need?”</p>
+<p><span class="math display">\[\text{Required Rate} = \frac{72}{\text{Years}} = \frac{72}{6} = 12\%\]</span></p>
+</section>
+<section id="related-rules" class="level3" data-number="2.7.5">
+<h3 data-number="2.7.5" class="anchored" data-anchor-id="related-rules"><span class="header-section-number">2.7.5</span> Related Rules</h3>
+<blockquote class="blockquote">
+<p><strong>Deep Dive: Related Rules</strong></p>
+<ul>
+<li><strong>Rule of 115:</strong> Estimates when money <strong>triples</strong> (115 ÷ rate)
+<ul>
+<li>At 8%: 115 ÷ 8 ≈ 14.4 years to triple</li>
+</ul></li>
+<li><strong>Rule of 144:</strong> Estimates when money <strong>quadruples</strong> (144 ÷ rate)
+<ul>
+<li>At 8%: 144 ÷ 8 = 18 years to quadruple</li>
+</ul></li>
+</ul>
+<p>These are all linear approximations of exponential growth—handy for quick boardroom calculations when you don’t have a calculator.</p>
+</blockquote>
+</section>
+<section id="practical-applications" class="level3" data-number="2.7.6">
+<h3 data-number="2.7.6" class="anchored" data-anchor-id="practical-applications"><span class="header-section-number">2.7.6</span> Practical Applications</h3>
+<p><strong>Retirement Planning:</strong> “I have $100,000 in my 401(k) at age 40. If it grows at 9% annually, how much will I have at 64?” - 24 years ÷ 8 years per doubling (72÷9) = 3 doublings - $100,000 → $200,000 → $400,000 → $800,000 - Quick estimate: ~$800,000 (actual: $806,862)</p>
+<p><strong>Inflation Impact:</strong> “If inflation is 3%, how long until my purchasing power is cut in half?” - 72 ÷ 3 = 24 years - A dollar today will have the purchasing power of 50 cents in 24 years</p>
+<hr>
+</section>
+</section>
+<section id="moving-to-excel" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="moving-to-excel"><span class="header-section-number">2.8</span> Moving to Excel</h2>
+<p>While formulas are important for understanding the logic, in the business world, we use Excel to handle calculations efficiently and accurately. Excel simplifies these calculations into built-in financial functions.</p>
+<section id="core-excel-tvm-functions" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="core-excel-tvm-functions"><span class="header-section-number">2.8.1</span> Core Excel TVM Functions</h3>
+<ul>
+<li><code>=FV(rate, nper, pmt, [pv], [type])</code> — Calculate future value</li>
+<li><code>=PV(rate, nper, pmt, [fv], [type])</code> — Calculate present value</li>
+<li><code>=RATE(nper, pmt, pv, [fv], [type])</code> — Calculate interest rate</li>
+<li><code>=NPER(rate, pmt, pv, [fv], [type])</code> — Calculate number of periods</li>
+</ul>
+</section>
+<section id="important-excel-conventions-and-defaults" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="important-excel-conventions-and-defaults"><span class="header-section-number">2.8.2</span> Important Excel Conventions and Defaults</h3>
+<p><strong>1. Cash Flow Sign Convention</strong></p>
+<p>Excel uses a <strong>cash flow perspective</strong> where: - <strong>Negative numbers</strong> represent cash <strong>outflows</strong> (money leaving your pocket—investments, payments) - <strong>Positive numbers</strong> represent cash <strong>inflows</strong> (money coming to you—returns, receipts)</p>
+<p><strong>Example:</strong> If you invest $1,000 today at 5% for 10 years:</p>
+<pre class="excel"><code>=FV(0.05, 10, 0, -1000)</code></pre>
+<p>The -1000 represents money leaving your pocket today. The result will be positive (approximately $1,629), representing money coming back to you in the future.</p>
+<p><strong>2. Interest Rates as Decimals</strong></p>
+<p>Always enter interest rates as decimals: - 5% = 0.05 - 7.5% = 0.075 - 12% = 0.12</p>
+<p><strong>3. Period Consistency</strong></p>
+<p>Ensure your interest rate period matches your time period: - Annual rate (6%) with annual periods (10 years) ✓ - Monthly rate (0.5%) with monthly periods (120 months) ✓ - Annual rate (6%) with monthly periods (120 months) ✗ <strong>WRONG</strong></p>
+<p><strong>4. The [type] Parameter</strong></p>
+<p>The <code>[type]</code> parameter specifies when payments occur: - <strong>type = 0</strong> (or omitted): End of period (default) - <strong>type = 1</strong>: Beginning of period (annuity due)</p>
+<p><strong>For single lump-sum problems in this module, omit [type]</strong>; Excel defaults to end-of-period (type = 0). In Module 2 when we cover annuities, we’ll explicitly use type = 1 for annuity due situations (like rent payments made at the beginning of each month).</p>
+</section>
+<section id="excel-function-examples" class="level3" data-number="2.8.3">
+<h3 data-number="2.8.3" class="anchored" data-anchor-id="excel-function-examples"><span class="header-section-number">2.8.3</span> Excel Function Examples</h3>
+<p><strong>Example 1: Future Value</strong> You invest $2,000 today at 4% for 5 years. What will you have?</p>
+<pre class="excel"><code>=FV(0.04, 5, 0, -2000)</code></pre>
+<p><strong>Result:</strong> $2,433.31</p>
+<hr>
+<p><strong>Example 2: Present Value</strong> You need $25,000 in 10 years. How much must you invest today at 7%?</p>
+<pre class="excel"><code>=PV(0.07, 10, 0, -25000)</code></pre>
+<p><strong>Result:</strong> $12,715.64</p>
+<hr>
+<p><strong>Example 3: Interest Rate</strong> You invested $5,000 and it grew to $8,000 in 7 years. What was your annual return?</p>
+<pre class="excel"><code>=RATE(7, 0, -5000, 8000)</code></pre>
+<p><strong>Result:</strong> 0.0701 or 7.01%</p>
+<hr>
+<p><strong>Example 4: Number of Periods</strong> How long will it take $10,000 to grow to $20,000 at 6%?</p>
+<pre class="excel"><code>=NPER(0.06, 0, -10000, 20000)</code></pre>
+<p><strong>Result:</strong> 11.90 years</p>
+<p><strong>Verification with Rule of 72:</strong> 72 ÷ 6 = 12 years (very close!)</p>
+<hr>
+</section>
+</section>
+<section id="preview-lump-sums-vs.-annuities" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="preview-lump-sums-vs.-annuities"><span class="header-section-number">2.9</span> Preview: Lump Sums vs.&nbsp;Annuities</h2>
+<p>In this module, we’ve focused exclusively on <strong>lump sum</strong> problems—single amounts of money at specific points in time.</p>
+<p><strong>Lump Sum Examples:</strong> - Investing $5,000 today in a savings account - Receiving a $10,000 inheritance in 3 years - A bond’s final principal payment at maturity - Winning a lottery prize paid as a single amount</p>
+<section id="whats-coming-in-module-2" class="level3" data-number="2.9.1">
+<h3 data-number="2.9.1" class="anchored" data-anchor-id="whats-coming-in-module-2"><span class="header-section-number">2.9.1</span> What’s Coming in Module 2</h3>
+<p>In <strong>Module 2: Discounted Cash Flows</strong>, we’ll extend these concepts to <strong>annuities</strong>—regular, repeated payments over time.</p>
+<p><strong>Annuity Examples:</strong> - Monthly car payments ($350/month for 60 months) - Annual retirement account contributions ($6,000/year for 30 years) - Quarterly bond interest payments ($30/quarter for 10 years) - Mortgage payments ($1,500/month for 360 months)</p>
+<p><strong>The Connection:</strong> Annuities are just multiple lump sums strung together. Everything you’ve learned about PV and FV applies—we’ll just add the <strong>PMT (payment)</strong> parameter to our Excel functions.</p>
+<p><strong>Sneak Preview of Excel Functions for Annuities:</strong> - <code>=PV(rate, nper, pmt, [fv])</code> — We’ll use the PMT parameter to find present value of payment streams - <code>=PMT(rate, nper, pv, [fv])</code> — Solves for the payment amount (e.g., “What’s my monthly car payment?”) - <code>=FV(rate, nper, pmt, [pv])</code> — Future value of regular payments (e.g., “How much will my retirement account be worth?”)</p>
+<p><strong>Don’t worry about mastering these now</strong>—just know that the TVM foundation you’re building in Module 1 applies to all future modules. Once you understand how to move a single dollar through time, moving multiple dollars through time is just an extension of the same logic.</p>
+<hr>
+</section>
+</section>
+<section id="key-takeaways" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">2.10</span> Key Takeaways</h2>
+<p>By the end of this module, you should understand:</p>
+<p>✓ <strong>The three pillars of TVM:</strong> Money today is worth more than money tomorrow due to opportunity cost, inflation, and risk</p>
+<p>✓ <strong>Compounding creates exponential growth:</strong> “Interest on interest” is what allows small savings to grow into large sums over long periods</p>
+<p>✓ <strong>FV moves forward; PV discounts backward:</strong> These are inverse operations along the time continuum</p>
+<p>✓ <strong>The four core variables:</strong> PV, FV, r (rate), and n (periods)—know three, solve for the fourth</p>
+<p>✓ <strong>Excel functions streamline TVM work:</strong> Master FV, PV, RATE, and NPER with proper sign conventions</p>
+<p>✓ <strong>Compounding frequency matters:</strong> APY (effective rate) differs from APR (nominal rate) when compounding is more frequent than annual</p>
+<p>✓ <strong>The Rule of 72:</strong> A powerful mental shortcut for estimating doubling time (Years ≈ 72 ÷ Rate)</p>
+<p>✓ <strong>Discount rates reflect risk:</strong> Higher risk requires higher returns; the discount rate = risk-free rate + inflation premium + risk premium</p>
+<p>✓ <strong>Time is your most valuable asset:</strong> Starting early with small amounts beats starting late with large amounts due to the exponential nature of compounding</p>
+<hr>
+</section>
+<section id="common-misconceptions-and-pitfalls" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="common-misconceptions-and-pitfalls"><span class="header-section-number">2.11</span> Common Misconceptions and Pitfalls</h2>
+<section id="misconception-1-compound-interest-is-only-slightly-better-than-simple-interest" class="level3" data-number="2.11.1">
+<h3 data-number="2.11.1" class="anchored" data-anchor-id="misconception-1-compound-interest-is-only-slightly-better-than-simple-interest"><span class="header-section-number">2.11.1</span> Misconception 1: “Compound interest is only slightly better than simple interest”</h3>
+<p><strong>Reality:</strong> Over long periods, the difference is enormous. For $10,000 at 8% over 30 years: - Simple interest: $34,000 - Compound interest: $100,627 - <strong>Difference: $66,627</strong> (nearly 3x the original investment!)</p>
+</section>
+<section id="misconception-2-i-can-wait-a-few-years-to-start-saving-for-retirement" class="level3" data-number="2.11.2">
+<h3 data-number="2.11.2" class="anchored" data-anchor-id="misconception-2-i-can-wait-a-few-years-to-start-saving-for-retirement"><span class="header-section-number">2.11.2</span> Misconception 2: “I can wait a few years to start saving for retirement”</h3>
+<p><strong>Reality:</strong> Due to compounding, delaying even 5 years can cost you hundreds of thousands of dollars. The Rule of 72 shows why: each doubling period you miss is exponentially costly.</p>
+</section>
+<section id="misconception-3-a-higher-apr-is-always-worse-for-borrowers" class="level3" data-number="2.11.3">
+<h3 data-number="2.11.3" class="anchored" data-anchor-id="misconception-3-a-higher-apr-is-always-worse-for-borrowers"><span class="header-section-number">2.11.3</span> Misconception 3: “A higher APR is always worse for borrowers”</h3>
+<p><strong>Reality:</strong> You must compare APY, not APR. A 5.9% APR compounded daily might cost more than a 6.0% APR compounded annually.</p>
+</section>
+<section id="misconception-4-present-value-and-future-value-are-just-different-names-for-the-same-thing" class="level3" data-number="2.11.4">
+<h3 data-number="2.11.4" class="anchored" data-anchor-id="misconception-4-present-value-and-future-value-are-just-different-names-for-the-same-thing"><span class="header-section-number">2.11.4</span> Misconception 4: “Present value and future value are just different names for the same thing”</h3>
+<p><strong>Reality:</strong> They move in opposite directions. PV discounts future money to today; FV compounds present money to the future. They’re mathematical inverses.</p>
+</section>
+<section id="misconception-5-the-rule-of-72-is-just-a-rough-guess" class="level3" data-number="2.11.5">
+<h3 data-number="2.11.5" class="anchored" data-anchor-id="misconception-5-the-rule-of-72-is-just-a-rough-guess"><span class="header-section-number">2.11.5</span> Misconception 5: “The Rule of 72 is just a rough guess”</h3>
+<p><strong>Reality:</strong> For rates between 6-10%, the Rule of 72 is accurate to within a few months. It’s based on solid logarithmic mathematics, just simplified for mental calculation.</p>
+<hr>
+</section>
+</section>
+<section id="connecting-to-future-modules" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="connecting-to-future-modules"><span class="header-section-number">2.12</span> Connecting to Future Modules</h2>
+<p>The TVM concepts you’ve mastered in in this module are the foundation for everything that follows:</p>
+<p><strong>Discounted Cash Flows</strong> - Extends lump sums to annuities (regular payments) - Introduces perpetuities (payments that continue forever) - Applies TVM to loan amortization and retirement planning</p>
+<p><strong>Bond Valuation</strong> - Bonds are just a series of annuity payments (coupons) plus a lump sum (principal) - Bond prices move inversely with interest rates—now you understand why</p>
+<p><strong>Stock Valuation</strong> - Dividend discount models are PV calculations applied to uncertain future cash flows - The Gordon Growth Model is a perpetuity formula with growth</p>
+<p><strong>Risk and Return</strong> - Understanding how to measure investment risk using variance and standard deviation - Learning how the risk premium component of discount rates is determined - Applying the Capital Asset Pricing Model (CAPM) to estimate required returns based on systematic risk</p>
+<p><strong>Everything in finance is about moving cash flows through time.</strong> Master this, and you’ve mastered the language of finance.</p>
+<hr>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Fundamentals of Business Finance">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of Business Finance</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./module02.html" class="pagination-link" aria-label="Discounted Cash Flows and Annuities">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discounted Cash Flows and Annuities</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "The Time Value of Money (TVM)"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Welcome to the first module of Business Finance Foundations! In this module, we will explore one of the most fundamental concepts in finance: the **Time Value of Money (TVM)**. Understanding TVM is crucial because it underpins virtually every financial decision you'll make, from personal savings to corporate investment analysis.</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Core Intuition: Why Time Matters</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>If I offered you $1,000 today or $1,000 one year from today, which would you choose?</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>Almost everyone instinctively chooses the money today. But why? In finance, this isn't just a preference; it's a fundamental principle called the **Time Value of Money (TVM)**. </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Three Pillars of TVM</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>**1. Opportunity Cost: The "Earning Power" of Money**</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>**Formal Definition:** Opportunity cost represents the return you forgo by not having money available to invest today.</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>**In practice:** If you have $1,000 today, you could invest it in a savings account, bonds, or stocks and earn a return. By waiting a year to receive that $1,000, you lose the opportunity to grow that money during the waiting period.</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>**Example:** If you could earn 5% in a savings account, having $1,000 today means you'd have $1,050 in one year. Waiting to receive $1,000 next year costs you that $50 in potential earnings.</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>**Real-World Application:** This is why lottery winners often choose lump-sum payments over annuities, and why companies evaluate projects based on their opportunity cost of capital.</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>**2. Inflation: The "Purchasing Power" Erosion**</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>**Formal Definition:** Inflation is the general increase in prices over time, which reduces the real purchasing power of money.</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>**In practice:** A dollar today buys more groceries, gas, or coffee than a dollar will next year because prices tend to rise over time.</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>**Example:** If inflation is 3% annually:</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A $100 grocery basket today will cost $103 next year</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Your $100 next year will only buy what $97.09 buys today</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Over 10 years, that $100 will only have the purchasing power of about $74.41 in today's terms</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>**Historical Context:** The U.S. has experienced average annual inflation of about 3% over the past century. During the 1970s, inflation reached double digits, dramatically illustrating how quickly purchasing power can erode.</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>**3. Risk (Uncertainty): The "Will I Actually Get Paid?" Factor**</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>**Formal Definition:** Risk represents the probability that promised future cash flows may not materialize as expected.</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>**In practice:** There's always some chance that the person or company promising to pay you in the future might not be able to deliver. They could go bankrupt, default, or circumstances could change. Money in your hand today has zero "default risk."</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>**Example:** Would you rather have $1,000 today from a friend, or a promise that your friend will pay you $1,000 in 5 years? Even if you trust your friend, a lot can happen in 5 years—job loss, relocation, financial hardship. The promise carries risk.</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>**Financial Markets Application:** This is why U.S. Treasury bonds (backed by the government) pay lower interest rates than corporate bonds—Treasuries have virtually no default risk, while corporations might fail.</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### Understanding the Discount Rate (Interest Rate)</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>The interest rate we use in TVM calculations isn't arbitrary—it reflects these three components:</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>**Discount Rate = Risk-Free Rate + Inflation Premium + Risk Premium**</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Risk-Free Rate:** The "pure" time value of money—what you'd earn with zero risk (typically approximated by U.S. Treasury securities, currently around 2-4%)</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Inflation Premium:** Compensation for expected loss of purchasing power (historically ~2-3% in the U.S.)</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Risk Premium:** Extra return demanded for bearing uncertainty (varies widely: 1-2% for high-quality corporate bonds, 5-8% for stocks, 10%+ for venture capital)</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>**Example:** If you're evaluating a corporate bond investment:</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Risk-free rate: 3% (what Treasury bonds pay)</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expected inflation: 2%</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Corporate risk premium: 2%</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Total discount rate: 7%**</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>This is why riskier investments require higher returns—investors demand compensation for bearing additional uncertainty.</span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Deep Dive: The Risk-Free Rate**</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; In theory, the risk-free rate represents the return on an investment with zero default risk and zero reinvestment risk. In practice, we use short-term U.S. Treasury bills as a proxy because:</span></span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - The U.S. government can print money to pay debts (no default risk)</span></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - Treasury bills mature in less than one year (minimal interest rate risk)</span></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; However, even Treasuries aren't perfectly "risk-free"—they still carry inflation risk and the theoretical possibility of government default.</span></span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## The "Magic" of Compounding</span></span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>Compounding is the process where your money earns interest, and then *that interest earns interest*. This creates exponential growth rather than linear growth.</span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a><span class="fu">### Simple Example</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>Imagine you invest $100 at a 10% annual interest rate:</span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>**Year 1:** You earn $10 in interest. Your total is $110.</span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>**Year 2:** You don't just earn interest on your original $100; you earn 10% on the full $110. You earn $11 in interest. Your total is $121.</span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>**Year 3:** You earn 10% on $121 = $12.10. Your total is $133.10.</span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>Notice how the interest earned each year increases. That extra $1 in Year 2 and $2.10 in Year 3 is the result of compounding—earning interest on your interest.</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Power of Time</span></span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>This "interest on interest" effect is what allows small savings to grow into large sums over long periods. Consider this dramatic example:</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>**$10,000 invested at 8% annual interest:**</span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After 10 years: $21,589</span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After 20 years: $46,610</span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After 30 years: $100,627</span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After 40 years: $217,245</span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>Notice that the growth accelerates over time. The fourth decade adds more than $116,000, while the first decade only adds about $11,500. This is the exponential nature of compounding.</span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Historical Example: Manhattan Island**</span></span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The famous story of Manhattan being purchased for $24 in 1626 illustrates compounding's power. If that $24 had been invested at 8% annual return, it would be worth over $200 trillion today—far more than Manhattan's actual value. While this is a simplified example (finding 8% returns for 400 years is impossible), it demonstrates why starting early matters so much.</span></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Future Value (FV) vs. Present Value (PV)</span></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>In this module, we focus on two primary directions of calculation:</span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>**Future Value (FV):** Moving money forward in time. "If I save $X today, what will it be worth in the future?"</span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span>**Present Value (PV):** Moving money backward in time (often called **Discounting**). "If I need $X in the future, what is it worth to me today?"</span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Basic Variables and Notation</span></span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>To solve any TVM problem, we work with these four core variables. We'll use consistent notation throughout this course:</span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**PV (Present Value):** The current value of money; what a sum is worth today</span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**FV (Future Value):** The value of money at a specific point in the future</span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**r (Interest Rate):** The percentage rate of return per period (also called discount rate). In Excel, this parameter is called <span class="in">`rate`</span>.</span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**n (Number of Periods):** How long the money is invested or borrowed. In Excel, this parameter is called <span class="in">`nper`</span>.</span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>**Key Principle:** If you know any three of these variables, you can solve for the fourth. This is the foundation of all TVM calculations.</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visual Timeline</span></span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="in">        PV                                    FV</span></span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a><span class="in">         |------------------------------------&gt;|</span></span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a><span class="in">       Today    n periods at rate r        Future</span></span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a><span class="in">    Compounding: Move PV forward to find FV</span></span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a><span class="in">    Discounting: Move FV backward to find PV</span></span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## Simple vs. Compound Interest</span></span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a><span class="fu">### Simple Interest</span></span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>**Definition:** Interest is calculated only on the original principal amount. Interest earned in previous periods does not earn additional interest.</span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a>**Formula:** </span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>$$\text{Simple Interest} = \text{Principal} \times \text{Rate} \times \text{Time}$$</span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>**Example:** $1,000 at 10% simple interest for 5 years:</span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 1: Earn $100 (total: $1,100)</span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 2: Earn $100 (total: $1,200)</span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 3: Earn $100 (total: $1,300)</span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 4: Earn $100 (total: $1,400)</span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 5: Earn $100 (total: $1,500)</span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>Total interest earned: $500</span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a><span class="fu">### Compound Interest</span></span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a>**Definition:** Interest is calculated on the principal plus all accumulated interest from previous periods. This creates "interest on interest."</span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a>**Formula:**</span>
+<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a>$$FV = PV \times (1 + r)^n$$</span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a>**Example:** $1,000 at 10% compound interest for 5 years:</span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 1: Earn $100 on $1,000 (total: $1,100)</span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 2: Earn $110 on $1,100 (total: $1,210)</span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 3: Earn $121 on $1,210 (total: $1,331)</span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 4: Earn $133.10 on $1,331 (total: $1,464.10)</span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 5: Earn $146.41 on $1,464.10 (total: $1,610.51)</span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>Total interest earned: $610.51</span>
+<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a>**The Difference:** Compound interest earned $110.51 more than simple interest over just 5 years. Over longer periods, this difference becomes enormous.</span>
+<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a><span class="fu">### Which One is Used in Modern Finance?</span></span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a>**Compound interest** is the standard in virtually all modern financial applications, including:</span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Savings accounts and CDs</span>
+<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bonds and loans</span>
+<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stock market returns</span>
+<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Retirement accounts</span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mortgage calculations</span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a>Simple interest is rarely used except in very short-term loans or specific legal contexts.</span>
+<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Impact of Compounding Frequency</span></span>
+<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a><span class="fu">### How Often Interest is Calculated Matters</span></span>
+<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a>**Formal Definition:** Compounding frequency refers to how many times per year interest is calculated and added to the principal.</span>
+<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a>**In practice:** The more frequently interest is calculated and added to your account, the more "interest on interest" you earn, even if the stated annual rate is the same.</span>
+<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a><span class="fu">### Common Compounding Frequencies</span></span>
+<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a>Here's how $1,000 grows at 6% annual interest for 1 year under different compounding frequencies:</span>
+<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Frequency <span class="pp">|</span> Times per Year (m) <span class="pp">|</span> Formula <span class="pp">|</span> Future Value <span class="pp">|</span></span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a><span class="pp">|-----------|-------------------|---------|--------------|</span></span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Annual <span class="pp">|</span> 1 <span class="pp">|</span> $1,000 × (1.06)^1$ <span class="pp">|</span> $1,060.00 <span class="pp">|</span></span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Semi-annual <span class="pp">|</span> 2 <span class="pp">|</span> $1,000 × (1.03)^2$ <span class="pp">|</span> $1,060.90 <span class="pp">|</span></span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quarterly <span class="pp">|</span> 4 <span class="pp">|</span> $1,000 × (1.015)^4$ <span class="pp">|</span> $1,061.36 <span class="pp">|</span></span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Monthly <span class="pp">|</span> 12 <span class="pp">|</span> $1,000 × (1.005)^12$ <span class="pp">|</span> $1,061.68 <span class="pp">|</span></span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Daily <span class="pp">|</span> 365 <span class="pp">|</span> $1,000 × (1 + 0.06/365)^365$ <span class="pp">|</span> $1,061.83 <span class="pp">|</span></span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Continuous <span class="pp">|</span> ∞ <span class="pp">|</span> $1,000 × e^{0.06}$ <span class="pp">|</span> $1,061.84 <span class="pp">|</span></span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a>**Key Insight:** Notice that going from annual to monthly compounding adds $1.68, but going from monthly to daily only adds $0.15. The benefit of more frequent compounding diminishes as frequency increases. There's a mathematical limit (continuous compounding) beyond which you can't go.</span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a><span class="fu">### Excel Adjustment for Different Frequencies</span></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a>When compounding is not annual, you must adjust **both** the rate and the number of periods:</span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a>**Monthly compounding example:**</span>
+<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Annual rate: 6% → Monthly rate: 6%/12 = 0.5% = 0.005</span>
+<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Years: 5 → Months: 5 × 12 = 60</span>
+<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a>**Excel formula:**</span>
+<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a><span class="in">=FV(0.06/12, 5*12, 0, -1000)</span></span>
+<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a>**Result:** $1,348.85 (compared to $1,338.23 with annual compounding)</span>
+<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a><span class="fu">### APR vs. APY: What Banks Don't Always Make Clear</span></span>
+<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a>**APR (Annual Percentage Rate):** The stated annual rate before accounting for compounding frequency. This is the "nominal" rate.</span>
+<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a>**APY (Annual Percentage Yield):** The effective annual rate after accounting for compounding frequency. This is what you actually earn.</span>
+<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a>**Formula:**</span>
+<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a>$$APY = \left(1 + \frac{APR}{m}\right)^m - 1$$</span>
+<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a>Where m = number of compounding periods per year</span>
+<span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a>**Example:**</span>
+<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>6% APR compounded monthly</span>
+<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>APY = (1 + 0.06/12)^12 - 1 = (1.005)^12 - 1 = 0.06168 = **6.168%**</span>
+<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>**Why This Matters:** When comparing savings accounts or credit cards, always compare APY, not APR. A 5.9% APR compounded daily might be better than a 6.0% APR compounded annually.</span>
+<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a>**APY Comparison Table:**</span>
+<span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-253"><a href="#cb8-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> APR <span class="pp">|</span> Annual <span class="pp">|</span> Quarterly <span class="pp">|</span> Monthly <span class="pp">|</span> Daily <span class="pp">|</span></span>
+<span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a><span class="pp">|-----|--------|-----------|---------|-------|</span></span>
+<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 5% <span class="pp">|</span> 5.000% <span class="pp">|</span> 5.095% <span class="pp">|</span> 5.116% <span class="pp">|</span> 5.127% <span class="pp">|</span></span>
+<span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 6% <span class="pp">|</span> 6.000% <span class="pp">|</span> 6.136% <span class="pp">|</span> 6.168% <span class="pp">|</span> 6.183% <span class="pp">|</span></span>
+<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7% <span class="pp">|</span> 7.000% <span class="pp">|</span> 7.186% <span class="pp">|</span> 7.229% <span class="pp">|</span> 7.250% <span class="pp">|</span></span>
+<span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Consumer Protection Note:** The Truth in Lending Act requires lenders to disclose APY precisely because APR alone can be misleading. When shopping for savings accounts, always ask for the APY. When comparing credit cards, the APR matters less than your payment behavior, but APY shows the true cost if you carry a balance.</span></span>
+<span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-261"><a href="#cb8-261" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-262"><a href="#cb8-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Mathematical Foundation</span></span>
+<span id="cb8-264"><a href="#cb8-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-265"><a href="#cb8-265" aria-hidden="true" tabindex="-1"></a><span class="fu">### Future Value Formula</span></span>
+<span id="cb8-266"><a href="#cb8-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-267"><a href="#cb8-267" aria-hidden="true" tabindex="-1"></a>The fundamental formula for calculating future value with compound interest is:</span>
+<span id="cb8-268"><a href="#cb8-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-269"><a href="#cb8-269" aria-hidden="true" tabindex="-1"></a>$$FV = PV \times (1 + r)^n$$</span>
+<span id="cb8-270"><a href="#cb8-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-271"><a href="#cb8-271" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$FV$ = Future Value</span>
+<span id="cb8-273"><a href="#cb8-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$PV$ = Present Value</span>
+<span id="cb8-274"><a href="#cb8-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$r$ = Interest rate per period (as a decimal)</span>
+<span id="cb8-275"><a href="#cb8-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$n$ = Number of periods</span>
+<span id="cb8-276"><a href="#cb8-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a>**Example:** What will $5,000 be worth in 10 years at 7% annual interest?</span>
+<span id="cb8-278"><a href="#cb8-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-279"><a href="#cb8-279" aria-hidden="true" tabindex="-1"></a>$$FV = 5,000 \times (1.07)^{10} = 5,000 \times 1.96715 = \$9,835.76$$</span>
+<span id="cb8-280"><a href="#cb8-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-281"><a href="#cb8-281" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-282"><a href="#cb8-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-283"><a href="#cb8-283" aria-hidden="true" tabindex="-1"></a><span class="fu">### Present Value Formula</span></span>
+<span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a>To find present value (discounting), we rearrange the future value formula:</span>
+<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a>$$PV = \frac{FV}{(1 + r)^n}$$</span>
+<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a>This can also be written as:</span>
+<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a>$$PV = FV \times (1 + r)^{-n}$$</span>
+<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a>**Example:** What is the present value of $10,000 to be received in 8 years if the discount rate is 6%?</span>
+<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-295"><a href="#cb8-295" aria-hidden="true" tabindex="-1"></a>$$PV = \frac{10,000}{(1.06)^8} = \frac{10,000}{1.59385} = \$6,274.12$$</span>
+<span id="cb8-296"><a href="#cb8-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-297"><a href="#cb8-297" aria-hidden="true" tabindex="-1"></a>**Interpretation:** You should be willing to pay $6,274.12 today for the right to receive $10,000 in 8 years, assuming a 6% discount rate.</span>
+<span id="cb8-298"><a href="#cb8-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-299"><a href="#cb8-299" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-300"><a href="#cb8-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-301"><a href="#cb8-301" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Relationship Between PV and FV</span></span>
+<span id="cb8-302"><a href="#cb8-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-303"><a href="#cb8-303" aria-hidden="true" tabindex="-1"></a>These formulas are inverses of each other:</span>
+<span id="cb8-304"><a href="#cb8-304" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Compounding** (FV): Multiply by $(1 + r)^n$</span>
+<span id="cb8-305"><a href="#cb8-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Discounting** (PV): Divide by $(1 + r)^n$ (or multiply by $(1 + r)^{-n}$)</span>
+<span id="cb8-306"><a href="#cb8-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-307"><a href="#cb8-307" aria-hidden="true" tabindex="-1"></a>**Key Insight:** When interest rates are positive, PV is always less than FV. The higher the interest rate or the longer the time period, the greater the difference between PV and FV.</span>
+<span id="cb8-308"><a href="#cb8-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-309"><a href="#cb8-309" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-310"><a href="#cb8-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-311"><a href="#cb8-311" aria-hidden="true" tabindex="-1"></a><span class="fu">## Financial Mental Models: The Rule of 72</span></span>
+<span id="cb8-312"><a href="#cb8-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-313"><a href="#cb8-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quick Estimation Tool</span></span>
+<span id="cb8-314"><a href="#cb8-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-315"><a href="#cb8-315" aria-hidden="true" tabindex="-1"></a>The **Rule of 72** is a mental math shortcut used by financial professionals to estimate how long it takes for an investment to double at a given interest rate.</span>
+<span id="cb8-316"><a href="#cb8-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-317"><a href="#cb8-317" aria-hidden="true" tabindex="-1"></a>**The Formula:**</span>
+<span id="cb8-318"><a href="#cb8-318" aria-hidden="true" tabindex="-1"></a>$$\text{Years to Double} \approx \frac{72}{\text{Interest Rate (as whole number)}}$$</span>
+<span id="cb8-319"><a href="#cb8-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-320"><a href="#cb8-320" aria-hidden="true" tabindex="-1"></a>**Examples:**</span>
+<span id="cb8-321"><a href="#cb8-321" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At 6% interest: 72 ÷ 6 = **12 years** to double</span>
+<span id="cb8-322"><a href="#cb8-322" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At 8% interest: 72 ÷ 8 = **9 years** to double</span>
+<span id="cb8-323"><a href="#cb8-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At 9% interest: 72 ÷ 9 = **8 years** to double</span>
+<span id="cb8-324"><a href="#cb8-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At 12% interest: 72 ÷ 12 = **6 years** to double</span>
+<span id="cb8-325"><a href="#cb8-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-326"><a href="#cb8-326" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verification</span></span>
+<span id="cb8-327"><a href="#cb8-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-328"><a href="#cb8-328" aria-hidden="true" tabindex="-1"></a>Let's verify the 8% example:</span>
+<span id="cb8-329"><a href="#cb8-329" aria-hidden="true" tabindex="-1"></a>$$FV = PV \times (1.08)^9 = 1 \times 1.999 \approx 2.0$$</span>
+<span id="cb8-330"><a href="#cb8-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-331"><a href="#cb8-331" aria-hidden="true" tabindex="-1"></a>The Rule of 72 predicted 9 years, and the actual calculation shows 1.999—remarkably accurate!</span>
+<span id="cb8-332"><a href="#cb8-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-333"><a href="#cb8-333" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why It Works (The Math Behind It)</span></span>
+<span id="cb8-334"><a href="#cb8-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-335"><a href="#cb8-335" aria-hidden="true" tabindex="-1"></a>The Rule of 72 is a linear approximation of the logarithmic formula for doubling time:</span>
+<span id="cb8-336"><a href="#cb8-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-337"><a href="#cb8-337" aria-hidden="true" tabindex="-1"></a>$$n = \frac{\ln(2)}{\ln(1 + r)} \approx \frac{0.693}{r}$$</span>
+<span id="cb8-338"><a href="#cb8-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-339"><a href="#cb8-339" aria-hidden="true" tabindex="-1"></a>When r is expressed as a percentage, 0.693 × 100 ≈ 69.3, but **72 is used** because it has more divisors (1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72), making mental math easier.</span>
+<span id="cb8-340"><a href="#cb8-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-341"><a href="#cb8-341" aria-hidden="true" tabindex="-1"></a>**Accuracy:** The Rule of 72 is remarkably accurate for interest rates between 6% and 10%. For rates outside this range, small errors accumulate, but it remains useful for quick estimates.</span>
+<span id="cb8-342"><a href="#cb8-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-343"><a href="#cb8-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### Reverse Application</span></span>
+<span id="cb8-344"><a href="#cb8-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-345"><a href="#cb8-345" aria-hidden="true" tabindex="-1"></a>You can also use the Rule of 72 in reverse: "If I want to double my money in 6 years, what return do I need?"</span>
+<span id="cb8-346"><a href="#cb8-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-347"><a href="#cb8-347" aria-hidden="true" tabindex="-1"></a>$$\text{Required Rate} = \frac{72}{\text{Years}} = \frac{72}{6} = 12\%$$</span>
+<span id="cb8-348"><a href="#cb8-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-349"><a href="#cb8-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### Related Rules</span></span>
+<span id="cb8-350"><a href="#cb8-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-351"><a href="#cb8-351" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Deep Dive: Related Rules**</span></span>
+<span id="cb8-352"><a href="#cb8-352" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb8-353"><a href="#cb8-353" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - **Rule of 115:** Estimates when money **triples** (115 ÷ rate)</span></span>
+<span id="cb8-354"><a href="#cb8-354" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;   - At 8%: 115 ÷ 8 ≈ 14.4 years to triple</span></span>
+<span id="cb8-355"><a href="#cb8-355" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; - **Rule of 144:** Estimates when money **quadruples** (144 ÷ rate)</span></span>
+<span id="cb8-356"><a href="#cb8-356" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;   - At 8%: 144 ÷ 8 = 18 years to quadruple</span></span>
+<span id="cb8-357"><a href="#cb8-357" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb8-358"><a href="#cb8-358" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; These are all linear approximations of exponential growth—handy for quick boardroom calculations when you don't have a calculator.</span></span>
+<span id="cb8-359"><a href="#cb8-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-360"><a href="#cb8-360" aria-hidden="true" tabindex="-1"></a><span class="fu">### Practical Applications</span></span>
+<span id="cb8-361"><a href="#cb8-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-362"><a href="#cb8-362" aria-hidden="true" tabindex="-1"></a>**Retirement Planning:** "I have $100,000 in my 401(k) at age 40. If it grows at 9% annually, how much will I have at 64?"</span>
+<span id="cb8-363"><a href="#cb8-363" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>24 years ÷ 8 years per doubling (72÷9) = 3 doublings</span>
+<span id="cb8-364"><a href="#cb8-364" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$100,000 → $200,000 → $400,000 → $800,000</span>
+<span id="cb8-365"><a href="#cb8-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quick estimate: ~$800,000 (actual: $806,862)</span>
+<span id="cb8-366"><a href="#cb8-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-367"><a href="#cb8-367" aria-hidden="true" tabindex="-1"></a>**Inflation Impact:** "If inflation is 3%, how long until my purchasing power is cut in half?"</span>
+<span id="cb8-368"><a href="#cb8-368" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>72 ÷ 3 = 24 years</span>
+<span id="cb8-369"><a href="#cb8-369" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A dollar today will have the purchasing power of 50 cents in 24 years</span>
+<span id="cb8-370"><a href="#cb8-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-371"><a href="#cb8-371" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-372"><a href="#cb8-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-373"><a href="#cb8-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## Moving to Excel</span></span>
+<span id="cb8-374"><a href="#cb8-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-375"><a href="#cb8-375" aria-hidden="true" tabindex="-1"></a>While formulas are important for understanding the logic, in the business world, we use Excel to handle calculations efficiently and accurately. Excel simplifies these calculations into built-in financial functions.</span>
+<span id="cb8-376"><a href="#cb8-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-377"><a href="#cb8-377" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core Excel TVM Functions</span></span>
+<span id="cb8-378"><a href="#cb8-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-379"><a href="#cb8-379" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span><span class="in">`=FV(rate, nper, pmt, [pv], [type])`</span> — Calculate future value</span>
+<span id="cb8-380"><a href="#cb8-380" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span><span class="in">`=PV(rate, nper, pmt, [fv], [type])`</span> — Calculate present value</span>
+<span id="cb8-381"><a href="#cb8-381" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span><span class="in">`=RATE(nper, pmt, pv, [fv], [type])`</span> — Calculate interest rate</span>
+<span id="cb8-382"><a href="#cb8-382" aria-hidden="true" tabindex="-1"></a><span class="ss">*   </span><span class="in">`=NPER(rate, pmt, pv, [fv], [type])`</span> — Calculate number of periods</span>
+<span id="cb8-383"><a href="#cb8-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-384"><a href="#cb8-384" aria-hidden="true" tabindex="-1"></a><span class="fu">### Important Excel Conventions and Defaults</span></span>
+<span id="cb8-385"><a href="#cb8-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-386"><a href="#cb8-386" aria-hidden="true" tabindex="-1"></a>**1. Cash Flow Sign Convention**</span>
+<span id="cb8-387"><a href="#cb8-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-388"><a href="#cb8-388" aria-hidden="true" tabindex="-1"></a>Excel uses a **cash flow perspective** where:</span>
+<span id="cb8-389"><a href="#cb8-389" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Negative numbers** represent cash **outflows** (money leaving your pocket—investments, payments)</span>
+<span id="cb8-390"><a href="#cb8-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Positive numbers** represent cash **inflows** (money coming to you—returns, receipts)</span>
+<span id="cb8-391"><a href="#cb8-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-392"><a href="#cb8-392" aria-hidden="true" tabindex="-1"></a>**Example:** If you invest $1,000 today at 5% for 10 years:</span>
+<span id="cb8-393"><a href="#cb8-393" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb8-394"><a href="#cb8-394" aria-hidden="true" tabindex="-1"></a><span class="in">=FV(0.05, 10, 0, -1000)</span></span>
+<span id="cb8-395"><a href="#cb8-395" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-396"><a href="#cb8-396" aria-hidden="true" tabindex="-1"></a>The -1000 represents money leaving your pocket today. The result will be positive (approximately $1,629), representing money coming back to you in the future.</span>
+<span id="cb8-397"><a href="#cb8-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-398"><a href="#cb8-398" aria-hidden="true" tabindex="-1"></a>**2. Interest Rates as Decimals**</span>
+<span id="cb8-399"><a href="#cb8-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-400"><a href="#cb8-400" aria-hidden="true" tabindex="-1"></a>Always enter interest rates as decimals:</span>
+<span id="cb8-401"><a href="#cb8-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>5% = 0.05</span>
+<span id="cb8-402"><a href="#cb8-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>7.5% = 0.075</span>
+<span id="cb8-403"><a href="#cb8-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>12% = 0.12</span>
+<span id="cb8-404"><a href="#cb8-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-405"><a href="#cb8-405" aria-hidden="true" tabindex="-1"></a>**3. Period Consistency**</span>
+<span id="cb8-406"><a href="#cb8-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-407"><a href="#cb8-407" aria-hidden="true" tabindex="-1"></a>Ensure your interest rate period matches your time period:</span>
+<span id="cb8-408"><a href="#cb8-408" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Annual rate (6%) with annual periods (10 years) ✓</span>
+<span id="cb8-409"><a href="#cb8-409" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Monthly rate (0.5%) with monthly periods (120 months) ✓</span>
+<span id="cb8-410"><a href="#cb8-410" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Annual rate (6%) with monthly periods (120 months) ✗ **WRONG**</span>
+<span id="cb8-411"><a href="#cb8-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-412"><a href="#cb8-412" aria-hidden="true" tabindex="-1"></a>**4. The [type] Parameter**</span>
+<span id="cb8-413"><a href="#cb8-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-414"><a href="#cb8-414" aria-hidden="true" tabindex="-1"></a>The <span class="in">`[type]`</span> parameter specifies when payments occur:</span>
+<span id="cb8-415"><a href="#cb8-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**type = 0** (or omitted): End of period (default)</span>
+<span id="cb8-416"><a href="#cb8-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**type = 1**: Beginning of period (annuity due)</span>
+<span id="cb8-417"><a href="#cb8-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-418"><a href="#cb8-418" aria-hidden="true" tabindex="-1"></a>**For single lump-sum problems in this module, omit [type]**; Excel defaults to end-of-period (type = 0). In Module 2 when we cover annuities, we'll explicitly use type = 1 for annuity due situations (like rent payments made at the beginning of each month).</span>
+<span id="cb8-419"><a href="#cb8-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-420"><a href="#cb8-420" aria-hidden="true" tabindex="-1"></a><span class="fu">### Excel Function Examples</span></span>
+<span id="cb8-421"><a href="#cb8-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-422"><a href="#cb8-422" aria-hidden="true" tabindex="-1"></a>**Example 1: Future Value**</span>
+<span id="cb8-423"><a href="#cb8-423" aria-hidden="true" tabindex="-1"></a>You invest $2,000 today at 4% for 5 years. What will you have?</span>
+<span id="cb8-424"><a href="#cb8-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-425"><a href="#cb8-425" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb8-426"><a href="#cb8-426" aria-hidden="true" tabindex="-1"></a><span class="in">=FV(0.04, 5, 0, -2000)</span></span>
+<span id="cb8-427"><a href="#cb8-427" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-428"><a href="#cb8-428" aria-hidden="true" tabindex="-1"></a>**Result:** $2,433.31</span>
+<span id="cb8-429"><a href="#cb8-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-430"><a href="#cb8-430" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-431"><a href="#cb8-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-432"><a href="#cb8-432" aria-hidden="true" tabindex="-1"></a>**Example 2: Present Value**</span>
+<span id="cb8-433"><a href="#cb8-433" aria-hidden="true" tabindex="-1"></a>You need $25,000 in 10 years. How much must you invest today at 7%?</span>
+<span id="cb8-434"><a href="#cb8-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-435"><a href="#cb8-435" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb8-436"><a href="#cb8-436" aria-hidden="true" tabindex="-1"></a><span class="in">=PV(0.07, 10, 0, -25000)</span></span>
+<span id="cb8-437"><a href="#cb8-437" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-438"><a href="#cb8-438" aria-hidden="true" tabindex="-1"></a>**Result:** $12,715.64</span>
+<span id="cb8-439"><a href="#cb8-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-440"><a href="#cb8-440" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-441"><a href="#cb8-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-442"><a href="#cb8-442" aria-hidden="true" tabindex="-1"></a>**Example 3: Interest Rate**</span>
+<span id="cb8-443"><a href="#cb8-443" aria-hidden="true" tabindex="-1"></a>You invested $5,000 and it grew to $8,000 in 7 years. What was your annual return?</span>
+<span id="cb8-444"><a href="#cb8-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-445"><a href="#cb8-445" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb8-446"><a href="#cb8-446" aria-hidden="true" tabindex="-1"></a><span class="in">=RATE(7, 0, -5000, 8000)</span></span>
+<span id="cb8-447"><a href="#cb8-447" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-448"><a href="#cb8-448" aria-hidden="true" tabindex="-1"></a>**Result:** 0.0701 or 7.01%</span>
+<span id="cb8-449"><a href="#cb8-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-450"><a href="#cb8-450" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-451"><a href="#cb8-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-452"><a href="#cb8-452" aria-hidden="true" tabindex="-1"></a>**Example 4: Number of Periods**</span>
+<span id="cb8-453"><a href="#cb8-453" aria-hidden="true" tabindex="-1"></a>How long will it take $10,000 to grow to $20,000 at 6%?</span>
+<span id="cb8-454"><a href="#cb8-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-455"><a href="#cb8-455" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb8-456"><a href="#cb8-456" aria-hidden="true" tabindex="-1"></a><span class="in">=NPER(0.06, 0, -10000, 20000)</span></span>
+<span id="cb8-457"><a href="#cb8-457" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-458"><a href="#cb8-458" aria-hidden="true" tabindex="-1"></a>**Result:** 11.90 years</span>
+<span id="cb8-459"><a href="#cb8-459" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-460"><a href="#cb8-460" aria-hidden="true" tabindex="-1"></a>**Verification with Rule of 72:** 72 ÷ 6 = 12 years (very close!)</span>
+<span id="cb8-461"><a href="#cb8-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-462"><a href="#cb8-462" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-463"><a href="#cb8-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-464"><a href="#cb8-464" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preview: Lump Sums vs. Annuities</span></span>
+<span id="cb8-465"><a href="#cb8-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-466"><a href="#cb8-466" aria-hidden="true" tabindex="-1"></a>In this module, we've focused exclusively on **lump sum** problems—single amounts of money at specific points in time.</span>
+<span id="cb8-467"><a href="#cb8-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-468"><a href="#cb8-468" aria-hidden="true" tabindex="-1"></a>**Lump Sum Examples:**</span>
+<span id="cb8-469"><a href="#cb8-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Investing $5,000 today in a savings account</span>
+<span id="cb8-470"><a href="#cb8-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Receiving a $10,000 inheritance in 3 years</span>
+<span id="cb8-471"><a href="#cb8-471" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A bond's final principal payment at maturity</span>
+<span id="cb8-472"><a href="#cb8-472" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Winning a lottery prize paid as a single amount</span>
+<span id="cb8-473"><a href="#cb8-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-474"><a href="#cb8-474" aria-hidden="true" tabindex="-1"></a><span class="fu">### What's Coming in Module 2</span></span>
+<span id="cb8-475"><a href="#cb8-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-476"><a href="#cb8-476" aria-hidden="true" tabindex="-1"></a>In **Module 2: Discounted Cash Flows**, we'll extend these concepts to **annuities**—regular, repeated payments over time.</span>
+<span id="cb8-477"><a href="#cb8-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-478"><a href="#cb8-478" aria-hidden="true" tabindex="-1"></a>**Annuity Examples:**</span>
+<span id="cb8-479"><a href="#cb8-479" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Monthly car payments ($350/month for 60 months)</span>
+<span id="cb8-480"><a href="#cb8-480" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Annual retirement account contributions ($6,000/year for 30 years)</span>
+<span id="cb8-481"><a href="#cb8-481" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarterly bond interest payments ($30/quarter for 10 years)</span>
+<span id="cb8-482"><a href="#cb8-482" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mortgage payments ($1,500/month for 360 months)</span>
+<span id="cb8-483"><a href="#cb8-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-484"><a href="#cb8-484" aria-hidden="true" tabindex="-1"></a>**The Connection:** Annuities are just multiple lump sums strung together. Everything you've learned about PV and FV applies—we'll just add the **PMT (payment)** parameter to our Excel functions.</span>
+<span id="cb8-485"><a href="#cb8-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-486"><a href="#cb8-486" aria-hidden="true" tabindex="-1"></a>**Sneak Preview of Excel Functions for Annuities:**</span>
+<span id="cb8-487"><a href="#cb8-487" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`=PV(rate, nper, pmt, [fv])`</span> — We'll use the PMT parameter to find present value of payment streams</span>
+<span id="cb8-488"><a href="#cb8-488" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`=PMT(rate, nper, pv, [fv])`</span> — Solves for the payment amount (e.g., "What's my monthly car payment?")</span>
+<span id="cb8-489"><a href="#cb8-489" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`=FV(rate, nper, pmt, [pv])`</span> — Future value of regular payments (e.g., "How much will my retirement account be worth?")</span>
+<span id="cb8-490"><a href="#cb8-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-491"><a href="#cb8-491" aria-hidden="true" tabindex="-1"></a>**Don't worry about mastering these now**—just know that the TVM foundation you're building in Module 1 applies to all future modules. Once you understand how to move a single dollar through time, moving multiple dollars through time is just an extension of the same logic.</span>
+<span id="cb8-492"><a href="#cb8-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-493"><a href="#cb8-493" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-494"><a href="#cb8-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-495"><a href="#cb8-495" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Takeaways</span></span>
+<span id="cb8-496"><a href="#cb8-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-497"><a href="#cb8-497" aria-hidden="true" tabindex="-1"></a>By the end of this module, you should understand:</span>
+<span id="cb8-498"><a href="#cb8-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-499"><a href="#cb8-499" aria-hidden="true" tabindex="-1"></a>✓ **The three pillars of TVM:** Money today is worth more than money tomorrow due to opportunity cost, inflation, and risk</span>
+<span id="cb8-500"><a href="#cb8-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-501"><a href="#cb8-501" aria-hidden="true" tabindex="-1"></a>✓ **Compounding creates exponential growth:** "Interest on interest" is what allows small savings to grow into large sums over long periods</span>
+<span id="cb8-502"><a href="#cb8-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-503"><a href="#cb8-503" aria-hidden="true" tabindex="-1"></a>✓ **FV moves forward; PV discounts backward:** These are inverse operations along the time continuum</span>
+<span id="cb8-504"><a href="#cb8-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-505"><a href="#cb8-505" aria-hidden="true" tabindex="-1"></a>✓ **The four core variables:** PV, FV, r (rate), and n (periods)—know three, solve for the fourth</span>
+<span id="cb8-506"><a href="#cb8-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-507"><a href="#cb8-507" aria-hidden="true" tabindex="-1"></a>✓ **Excel functions streamline TVM work:** Master FV, PV, RATE, and NPER with proper sign conventions</span>
+<span id="cb8-508"><a href="#cb8-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-509"><a href="#cb8-509" aria-hidden="true" tabindex="-1"></a>✓ **Compounding frequency matters:** APY (effective rate) differs from APR (nominal rate) when compounding is more frequent than annual</span>
+<span id="cb8-510"><a href="#cb8-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-511"><a href="#cb8-511" aria-hidden="true" tabindex="-1"></a>✓ **The Rule of 72:** A powerful mental shortcut for estimating doubling time (Years ≈ 72 ÷ Rate)</span>
+<span id="cb8-512"><a href="#cb8-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-513"><a href="#cb8-513" aria-hidden="true" tabindex="-1"></a>✓ **Discount rates reflect risk:** Higher risk requires higher returns; the discount rate = risk-free rate + inflation premium + risk premium</span>
+<span id="cb8-514"><a href="#cb8-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-515"><a href="#cb8-515" aria-hidden="true" tabindex="-1"></a>✓ **Time is your most valuable asset:** Starting early with small amounts beats starting late with large amounts due to the exponential nature of compounding</span>
+<span id="cb8-516"><a href="#cb8-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-517"><a href="#cb8-517" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-518"><a href="#cb8-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-519"><a href="#cb8-519" aria-hidden="true" tabindex="-1"></a><span class="fu">## Common Misconceptions and Pitfalls</span></span>
+<span id="cb8-520"><a href="#cb8-520" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-521"><a href="#cb8-521" aria-hidden="true" tabindex="-1"></a><span class="fu">### Misconception 1: "Compound interest is only slightly better than simple interest"</span></span>
+<span id="cb8-522"><a href="#cb8-522" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-523"><a href="#cb8-523" aria-hidden="true" tabindex="-1"></a>**Reality:** Over long periods, the difference is enormous. For $10,000 at 8% over 30 years:</span>
+<span id="cb8-524"><a href="#cb8-524" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Simple interest: $34,000</span>
+<span id="cb8-525"><a href="#cb8-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compound interest: $100,627</span>
+<span id="cb8-526"><a href="#cb8-526" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Difference: $66,627** (nearly 3x the original investment!)</span>
+<span id="cb8-527"><a href="#cb8-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-528"><a href="#cb8-528" aria-hidden="true" tabindex="-1"></a><span class="fu">### Misconception 2: "I can wait a few years to start saving for retirement"</span></span>
+<span id="cb8-529"><a href="#cb8-529" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-530"><a href="#cb8-530" aria-hidden="true" tabindex="-1"></a>**Reality:** Due to compounding, delaying even 5 years can cost you hundreds of thousands of dollars. The Rule of 72 shows why: each doubling period you miss is exponentially costly.</span>
+<span id="cb8-531"><a href="#cb8-531" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-532"><a href="#cb8-532" aria-hidden="true" tabindex="-1"></a><span class="fu">### Misconception 3: "A higher APR is always worse for borrowers"</span></span>
+<span id="cb8-533"><a href="#cb8-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-534"><a href="#cb8-534" aria-hidden="true" tabindex="-1"></a>**Reality:** You must compare APY, not APR. A 5.9% APR compounded daily might cost more than a 6.0% APR compounded annually.</span>
+<span id="cb8-535"><a href="#cb8-535" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-536"><a href="#cb8-536" aria-hidden="true" tabindex="-1"></a><span class="fu">### Misconception 4: "Present value and future value are just different names for the same thing"</span></span>
+<span id="cb8-537"><a href="#cb8-537" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-538"><a href="#cb8-538" aria-hidden="true" tabindex="-1"></a>**Reality:** They move in opposite directions. PV discounts future money to today; FV compounds present money to the future. They're mathematical inverses.</span>
+<span id="cb8-539"><a href="#cb8-539" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-540"><a href="#cb8-540" aria-hidden="true" tabindex="-1"></a><span class="fu">### Misconception 5: "The Rule of 72 is just a rough guess"</span></span>
+<span id="cb8-541"><a href="#cb8-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-542"><a href="#cb8-542" aria-hidden="true" tabindex="-1"></a>**Reality:** For rates between 6-10%, the Rule of 72 is accurate to within a few months. It's based on solid logarithmic mathematics, just simplified for mental calculation.</span>
+<span id="cb8-543"><a href="#cb8-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-544"><a href="#cb8-544" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb8-545"><a href="#cb8-545" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-546"><a href="#cb8-546" aria-hidden="true" tabindex="-1"></a><span class="fu">## Connecting to Future Modules</span></span>
+<span id="cb8-547"><a href="#cb8-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-548"><a href="#cb8-548" aria-hidden="true" tabindex="-1"></a>The TVM concepts you've mastered in in this module are the foundation for everything that follows:</span>
+<span id="cb8-549"><a href="#cb8-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-550"><a href="#cb8-550" aria-hidden="true" tabindex="-1"></a>**Discounted Cash Flows**</span>
+<span id="cb8-551"><a href="#cb8-551" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Extends lump sums to annuities (regular payments)</span>
+<span id="cb8-552"><a href="#cb8-552" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Introduces perpetuities (payments that continue forever)</span>
+<span id="cb8-553"><a href="#cb8-553" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Applies TVM to loan amortization and retirement planning</span>
+<span id="cb8-554"><a href="#cb8-554" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-555"><a href="#cb8-555" aria-hidden="true" tabindex="-1"></a>**Bond Valuation**</span>
+<span id="cb8-556"><a href="#cb8-556" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bonds are just a series of annuity payments (coupons) plus a lump sum (principal)</span>
+<span id="cb8-557"><a href="#cb8-557" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bond prices move inversely with interest rates—now you understand why</span>
+<span id="cb8-558"><a href="#cb8-558" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-559"><a href="#cb8-559" aria-hidden="true" tabindex="-1"></a>**Stock Valuation**</span>
+<span id="cb8-560"><a href="#cb8-560" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dividend discount models are PV calculations applied to uncertain future cash flows</span>
+<span id="cb8-561"><a href="#cb8-561" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Gordon Growth Model is a perpetuity formula with growth</span>
+<span id="cb8-562"><a href="#cb8-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-563"><a href="#cb8-563" aria-hidden="true" tabindex="-1"></a>**Risk and Return**</span>
+<span id="cb8-564"><a href="#cb8-564" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understanding how to measure investment risk using variance and standard deviation</span>
+<span id="cb8-565"><a href="#cb8-565" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learning how the risk premium component of discount rates is determined</span>
+<span id="cb8-566"><a href="#cb8-566" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Applying the Capital Asset Pricing Model (CAPM) to estimate required returns based on systematic risk</span>
+<span id="cb8-567"><a href="#cb8-567" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-568"><a href="#cb8-568" aria-hidden="true" tabindex="-1"></a>**Everything in finance is about moving cash flows through time.** Master this, and you've mastered the language of finance.</span>
+<span id="cb8-569"><a href="#cb8-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-570"><a href="#cb8-570" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

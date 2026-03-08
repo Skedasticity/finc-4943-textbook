@@ -1,0 +1,526 @@
+---
+title: "Bond Valuation"
+---
+
+## Module Overview
+
+Now that you understand how to value single cash flows and streams of cash flows like annuities, you're ready to apply these skills to one of the most important financial instruments: **bonds**.
+
+A bond is essentially a loan you make to a borrower (a corporation or government). In return, the borrower promises to:
+1. Pay you regular interest payments (called **coupons**)
+2. Return your principal (called **par value** or **face value**) at maturity
+
+**Why bonds matter:** Bonds are the foundation of corporate finance and investment management. Companies issue bonds to raise capital, investors buy bonds for steady income, and bond prices signal market expectations about interest rates and economic conditions. Understanding bond valuation is essential for capital budgeting, cost of capital calculations, and portfolio management.
+
+---
+
+## Bond Basics: The Mechanics
+
+### What Is a Bond?
+
+Think of a bond as an IOU with specific terms:
+
+- **Par Value (Face Value):** The amount the bond will pay at maturity (typically $1,000)
+- **Coupon Rate:** The annual interest rate stated on the bond
+- **Coupon Payment:** The dollar amount of interest paid periodically (usually semi-annually)
+- **Maturity Date:** When the bond expires and par value is repaid
+- **Yield to Maturity (YTM):** The market's required return on the bond (the discount rate)
+
+### Example Bond
+
+Consider a **5-year, 6% annual coupon bond** with a $1,000 par value:
+
+- **Par Value:** $1,000
+- **Coupon Rate:** 6% per year
+- **Annual Coupon Payment:** $1,000 × 0.06 = $60
+- **Maturity:** 5 years
+- **Cash Flows:** You receive $60 at the end of each year for 5 years, plus $1,000 at year 5
+
+---
+
+## The Bond Valuation Formula
+
+A bond is simply a **combination of two cash flow patterns** you already know:
+
+1. An **annuity** (the coupon payments)
+2. A **lump sum** (the par value at maturity)
+
+### The Formula
+
+$$\text{Bond Price} = \text{PV of Coupons} + \text{PV of Par Value}$$
+
+$$P = C \times \left[\frac{1-(1+r)^{-n}}{r}\right] + \frac{F}{(1+r)^n}$$
+
+Where:
+- $P$ = Bond price (present value)
+- $C$ = Coupon payment per period
+- $r$ = Yield to maturity (YTM) per period (market interest rate)
+- $n$ = Number of periods until maturity
+- $F$ = Face (par) value
+
+### Worked Example
+
+**Given:**
+- Par value = $1,000
+- Coupon rate = 6% (annual)
+- Maturity = 5 years
+- Market YTM = 8%
+
+**Step 1: Calculate annual coupon payment**
+$$C = \$1,000 \times 0.06 = \$60$$
+
+**Step 2: Calculate PV of coupon payments (annuity)**
+$$PV_{\text{coupons}} = \$60 \times \left[\frac{1-(1.08)^{-5}}{0.08}\right] = \$60 \times 3.9927 = \$239.56$$
+
+**Step 3: Calculate PV of par value (lump sum)**
+$$PV_{\text{par}} = \frac{\$1,000}{(1.08)^5} = \frac{\$1,000}{1.4693} = \$680.58$$
+
+**Step 4: Add them together**
+$$\text{Bond Price} = \$239.56 + \$680.58 = \$920.14$$
+
+**Interpretation:** This bond is selling at a **discount** (below par value) because the market YTM (8%) is higher than the coupon rate (6%). Investors demand a higher return than the bond's coupon provides, so the price must fall to make up the difference.
+
+---
+
+## The Inverse Relationship: Interest Rates and Bond Prices
+
+### The Golden Rule of Bonds
+
+**When market interest rates rise, bond prices fall. When market interest rates fall, bond prices rise.**
+
+This is the most important concept in bond valuation.
+
+### Why This Happens
+
+Imagine you own a bond paying 6% when market rates are 6%—your bond is worth par value ($1,000). Now suppose market rates jump to 8%:
+
+- New bonds issued today pay 8%
+- Your bond still only pays 6%
+- No one will pay $1,000 for your 6% bond when they can buy a new 8% bond for $1,000
+- Your bond's price must **fall** to make its total return competitive with the 8% market rate
+
+**In practice:** This is why bond investors fear rising interest rates. If you bought a 30-year Treasury bond in 2020 when rates were 1.5%, and rates rose to 4.5% by 2023, your bond's market value dropped significantly—even though the bond itself is perfectly safe and will still pay you back at maturity.
+
+### Three Pricing Scenarios
+
+| **Relationship** | **Bond Price** | **Term** |
+|------------------|----------------|----------|
+| Coupon Rate > YTM | Price > Par | **Premium Bond** |
+| Coupon Rate = YTM | Price = Par | **Par Bond** |
+| Coupon Rate < YTM | Price < Par | **Discount Bond** |
+
+---
+
+## Semi-Annual Coupon Bonds
+
+Most bonds in the real world pay interest **semi-annually** (twice per year), not annually. This requires adjusting our formula.
+
+### Adjustments Needed
+
+1. **Divide the annual coupon payment by 2** to get the semi-annual payment
+2. **Divide the annual YTM by 2** to get the semi-annual rate
+3. **Multiply the years to maturity by 2** to get the number of semi-annual periods
+
+### Example: Semi-Annual Bond
+
+**Given:**
+- Par value = $1,000
+- Annual coupon rate = 6%
+- Maturity = 5 years
+- Annual YTM = 8%
+
+**Adjustments:**
+- Semi-annual coupon = ($1,000 × 0.06) ÷ 2 = $30
+- Semi-annual YTM = 0.08 ÷ 2 = 0.04
+- Number of periods = 5 × 2 = 10
+
+**Formula:**
+$$P = \$30 \times \left[\frac{1-(1.04)^{-10}}{0.04}\right] + \frac{\$1,000}{(1.04)^{10}}$$
+
+$$P = \$30 \times 8.1109 + \$675.56 = \$243.33 + \$675.56 = \$918.89$$
+
+**Note:** The semi-annual bond price ($918.89) is slightly lower than the annual bond price ($920.14) because compounding happens more frequently.
+
+---
+
+## Yield to Maturity (YTM)
+
+### What Is YTM?
+
+**Yield to Maturity** is the total return you'll earn if you:
+1. Buy the bond at its current market price
+2. Hold it until maturity
+3. Reinvest all coupon payments at the YTM rate
+
+YTM is the **discount rate that makes the present value of all bond cash flows equal to the current bond price**.
+
+### Why YTM Matters
+
+- YTM is the bond's **true rate of return**
+- It allows you to compare bonds with different coupons, maturities, and prices
+- It's the market's assessment of the bond's risk and return
+
+### Calculating YTM
+
+Unlike calculating bond price (where we know YTM and solve for price), calculating YTM requires solving for the rate when we know the price. This requires **trial and error** or Excel.
+
+**Formula (cannot be solved algebraically):**
+$$\text{Current Price} = \sum_{t=1}^{n} \frac{C}{(1+YTM)^t} + \frac{F}{(1+YTM)^n}$$
+
+**In practice:** Bond traders and portfolio managers constantly monitor YTM because it reflects changing market conditions. If a company's credit quality deteriorates, its bond YTM will rise (and price will fall) as investors demand higher returns for increased risk.
+
+---
+
+## Current Yield vs. Yield to Maturity
+
+### Current Yield
+
+**Current Yield** is a simpler measure that only considers the annual coupon income relative to the current price:
+
+$$\text{Current Yield} = \frac{\text{Annual Coupon Payment}}{\text{Current Bond Price}}$$
+
+### Example
+
+For our bond priced at $920.14 with a $60 annual coupon:
+$$\text{Current Yield} = \frac{\$60}{\$920.14} = 0.0652 = 6.52\%$$
+
+### Current Yield vs. YTM
+
+- **Current Yield** only measures coupon income (ignores capital gain/loss at maturity)
+- **YTM** measures total return (coupon income + capital gain/loss)
+- For discount bonds: YTM > Current Yield > Coupon Rate
+- For premium bonds: Coupon Rate > Current Yield > YTM
+- For par bonds: All three are equal
+
+---
+
+## Types of Bonds: Corporate Bonds
+
+### What Are Corporate Bonds?
+
+**Corporate bonds** are debt securities issued by companies to raise capital for operations, expansion, or acquisitions. When you buy a corporate bond, you're lending money to the company.
+
+### Key Features
+
+- **Default Risk:** Unlike government bonds, corporations can go bankrupt and fail to repay
+- **Credit Ratings:** Agencies like Standard & Poor's (S&P) and Moody's rate corporate bonds based on default risk
+- **Higher Yields:** Corporate bonds pay higher interest rates than government bonds to compensate for default risk
+
+### Credit Rating Scale
+
+| **S&P Rating** | **Moody's Rating** | **Category** | **Risk Level** |
+|----------------|-------------------|--------------|----------------|
+| AAA | Aaa | Investment Grade | Highest Quality |
+| AA | Aa | Investment Grade | High Quality |
+| A | A | Investment Grade | Upper-Medium Grade |
+| BBB | Baa | Investment Grade | Medium Grade |
+| BB | Ba | Speculative (Junk) | Speculative |
+| B | B | Speculative (Junk) | Highly Speculative |
+| CCC | Caa | Speculative (Junk) | Substantial Risk |
+| D | D | Default | In Default |
+
+### Investment Grade vs. Junk Bonds
+
+- **Investment Grade (BBB-/Baa3 or higher):** Lower risk, lower yields, suitable for conservative investors
+- **Junk Bonds (Below BBB-/Baa3):** Higher risk, higher yields, also called "high-yield bonds"
+
+### Bond Seniority
+
+Corporate bonds have different priority levels in case of bankruptcy:
+
+1. **Senior Secured Bonds:** Backed by specific collateral (highest priority)
+2. **Senior Unsecured Bonds:** Not backed by collateral but have priority over subordinated debt
+3. **Subordinated Bonds:** Lower priority, higher risk, higher yield
+
+**In practice:** During the 2008 financial crisis, many corporate bonds were downgraded from investment grade to junk status. Lehman Brothers' bonds, once rated A, became worthless when the firm collapsed. This demonstrates why credit risk matters—even bonds from major corporations can default.
+
+---
+
+## Types of Bonds: Government Bonds (Treasuries)
+
+### What Are Treasury Securities?
+
+**U.S. Treasury securities** are debt obligations issued by the federal government. They are considered the **safest investments in the world** because they're backed by the full faith and credit of the U.S. government.
+
+### Types of Treasuries
+
+#### 1. Treasury Bills (T-Bills)
+- **Maturity:** Less than 1 year (4, 8, 13, 26, or 52 weeks)
+- **Structure:** Sold at a discount, no coupon payments
+- **Example:** Buy a $1,000 T-Bill for $980, receive $1,000 at maturity
+
+#### 2. Treasury Notes (T-Notes)
+- **Maturity:** 2, 3, 5, 7, or 10 years
+- **Structure:** Pay semi-annual coupon interest
+- **Most Popular:** The 10-year Treasury note is the benchmark for mortgage rates and corporate bonds
+
+#### 3. Treasury Bonds (T-Bonds)
+- **Maturity:** 20 or 30 years
+- **Structure:** Pay semi-annual coupon interest
+- **Use:** Long-term savings, pension funds, insurance companies
+
+### Why Treasuries Matter
+
+1. **Risk-Free Rate:** Treasury yields represent the "risk-free rate" used in financial models
+2. **Benchmark:** All other bonds are priced relative to Treasuries
+3. **Economic Indicator:** Treasury yields signal market expectations about inflation and economic growth
+
+### The Yield Curve
+
+The **yield curve** plots Treasury yields against maturity:
+
+- **Normal Curve:** Longer maturities have higher yields (upward sloping)
+- **Inverted Curve:** Shorter maturities have higher yields (downward sloping)—often predicts recession
+- **Flat Curve:** Similar yields across maturities—signals economic uncertainty
+
+**In practice:** The 10-year Treasury yield is watched obsessively by financial markets. When it rises, mortgage rates increase, corporate borrowing becomes more expensive, and stock valuations often fall. When it falls, it signals investors are seeking safety or expecting economic weakness.
+
+---
+
+## Types of Bonds: Municipal Bonds
+
+### What Are Municipal Bonds?
+
+**Municipal bonds (munis)** are issued by state and local governments to finance public projects like schools, highways, water systems, and hospitals.
+
+### The Tax Advantage
+
+The key feature of municipal bonds is **tax-exempt interest**:
+
+- Interest income is exempt from **federal income tax**
+- Often exempt from **state and local taxes** if you live in the issuing state
+- This makes munis attractive to high-income investors in high tax brackets
+
+### Types of Municipal Bonds
+
+#### 1. General Obligation Bonds (GO Bonds)
+- Backed by the full taxing power of the issuing government
+- Considered safer
+- Lower yields
+
+#### 2. Revenue Bonds
+- Backed by revenue from a specific project (toll road, airport, water system)
+- Higher risk than GO bonds
+- Higher yields
+
+### Taxable Equivalent Yield
+
+To compare municipal bonds to taxable bonds, calculate the **taxable equivalent yield**:
+
+$$\text{Taxable Equivalent Yield} = \frac{\text{Tax-Free Yield}}{1 - \text{Tax Rate}}$$
+
+### Example
+
+You're in the 35% federal tax bracket and considering:
+- A municipal bond yielding 4% (tax-free)
+- A corporate bond yielding 6% (taxable)
+
+**Calculate taxable equivalent yield:**
+$$\text{TEY} = \frac{0.04}{1 - 0.35} = \frac{0.04}{0.65} = 0.0615 = 6.15\%$$
+
+**Interpretation:** The 4% muni bond is equivalent to a 6.15% taxable bond. Since the corporate bond only yields 6%, the muni bond is the better choice for this investor.
+
+### Who Should Buy Munis?
+
+- **High tax bracket investors:** The tax benefit is most valuable
+- **Low tax bracket investors:** Taxable bonds often provide better after-tax returns
+- **Tax-deferred accounts (IRAs, 401(k)s):** Never buy munis here—you lose the tax advantage
+
+**In practice:** After the 2017 Tax Cuts and Jobs Act lowered federal tax rates, municipal bonds became less attractive to some investors because the tax benefit decreased. This shows how tax policy directly impacts bond markets.
+
+---
+
+## Excel Functions for Bond Valuation
+
+Excel provides powerful built-in functions for bond calculations.
+
+### Function 1: =PV() for Bond Pricing
+
+**Syntax:**
+```
+=PV(rate, nper, pmt, [fv], [type])
+```
+
+**Example:** Price a 5-year, 6% annual coupon bond with $1,000 par value when YTM = 8%
+
+```
+=PV(0.08, 5, 60, 1000, 0)
+```
+
+**Result:** -$920.14 (negative because it's a cash outflow)
+
+**Note:** Always enter PMT and FV with the same sign (both positive or both negative) and PV will have the opposite sign.
+
+---
+
+### Function 2: =PRICE() for Bond Pricing
+
+**Syntax:**
+```
+=PRICE(settlement, maturity, rate, yld, redemption, frequency, [basis])
+```
+
+**Parameters:**
+- `settlement` = Purchase date
+- `maturity` = Maturity date
+- `rate` = Annual coupon rate
+- `yld` = Annual yield to maturity
+- `redemption` = Redemption value per $100 face value (usually 100)
+- `frequency` = Coupon payments per year (1 = annual, 2 = semi-annual)
+- `basis` = Day count convention (usually 0 or omitted)
+
+**Example:** Price a bond purchased on 1/15/2026, maturing 1/15/2031, 6% coupon, 8% YTM, semi-annual payments
+
+```
+=PRICE(DATE(2026,1,15), DATE(2031,1,15), 0.06, 0.08, 100, 2)
+```
+
+**Result:** 92.014 (meaning $920.14 per $1,000 face value)
+
+---
+
+### Function 3: =YIELD() for YTM Calculation
+
+**Syntax:**
+```
+=YIELD(settlement, maturity, rate, pr, redemption, frequency, [basis])
+```
+
+**Example:** Calculate YTM for a bond purchased at $920.14, 6% coupon, 5 years to maturity, semi-annual payments
+
+```
+=YIELD(DATE(2026,1,15), DATE(2031,1,15), 0.06, 92.014, 100, 2)
+```
+
+**Result:** 0.08 or 8%
+
+---
+
+### Function 4: =RATE() for YTM (Alternative Method)
+
+**Syntax:**
+```
+=RATE(nper, pmt, pv, [fv], [type])
+```
+
+**Example:** Calculate YTM for a bond priced at $920.14, paying $60 annually for 5 years, $1,000 par value
+
+```
+=RATE(5, 60, -920.14, 1000)
+```
+
+**Result:** 0.08 or 8%
+
+**Note:** For semi-annual bonds, multiply the result by 2 to get the annual YTM.
+
+---
+
+## Bond Pricing Relationships: Key Principles
+
+### Principle 1: Inverse Price-Yield Relationship
+- When YTM ↑, bond price ↓
+- When YTM ↓, bond price ↑
+
+### Principle 2: Longer Maturity = Greater Price Sensitivity
+- A 30-year bond's price changes more than a 5-year bond's price for the same change in YTM
+- This is called **interest rate risk** or **duration risk**
+
+### Principle 3: Lower Coupon = Greater Price Sensitivity
+- Zero-coupon bonds are most sensitive to interest rate changes
+- High-coupon bonds are less sensitive
+
+### Principle 4: Price Converges to Par at Maturity
+- As maturity approaches, bond price moves toward par value
+- At maturity, price = par value (regardless of coupon rate)
+
+**In practice:** This is why bond portfolio managers carefully match bond durations to their investment horizons. A pension fund with liabilities 20 years out will buy long-term bonds, while a money market fund needing liquidity will stick to short-term bonds.
+
+---
+
+## Real-World Applications
+
+### Application 1: Corporate Borrowing Decisions
+
+When a company decides to issue bonds, it must consider:
+- **Credit rating:** Better ratings = lower interest costs
+- **Maturity:** Longer maturity = more interest rate risk but locked-in rates
+- **Coupon structure:** Fixed vs. floating rate
+
+**Example:** In 2020, Apple issued $8.5 billion in bonds at historically low rates (some as low as 0.75%) to take advantage of the low-interest-rate environment, even though Apple has massive cash reserves.
+
+### Application 2: Investment Portfolio Construction
+
+Investors use bonds for:
+- **Income generation:** Steady coupon payments
+- **Capital preservation:** Less volatile than stocks
+- **Diversification:** Bonds often rise when stocks fall
+
+**Example:** A retiree might hold 60% stocks and 40% bonds, with the bonds providing stable income and reducing overall portfolio volatility.
+
+### Application 3: Economic Forecasting
+
+Bond markets signal economic expectations:
+- **Rising Treasury yields:** Expectations of economic growth and/or inflation
+- **Falling Treasury yields:** Expectations of economic slowdown or deflation
+- **Widening credit spreads:** Increasing concern about corporate defaults
+
+**Example:** In March 2020, Treasury yields plummeted as investors fled to safety during the COVID-19 pandemic, while corporate bond spreads widened dramatically as default risk increased.
+
+---
+
+## Wrap-Up
+
+### What You've Learned
+
+✓ Bonds are combinations of annuities (coupons) and lump sums (par value)  
+✓ Bond prices and interest rates move in opposite directions  
+✓ YTM is the true measure of a bond's return  
+✓ Corporate bonds carry default risk and are rated by credit agencies  
+✓ Treasury securities are risk-free and serve as market benchmarks  
+✓ Municipal bonds offer tax advantages for high-income investors  
+✓ Excel provides powerful functions for bond valuation  
+
+### Looking Ahead: Stock Valuation
+
+In the next module, we'll apply these valuation principles to **stocks**. Unlike bonds with fixed cash flows, stocks have uncertain dividends and no maturity date. You'll learn:
+
+- How to value stocks using dividend discount models
+- The difference between preferred and common stock
+- Why P/E ratios matter
+- How growth expectations affect stock prices
+
+### Connection to Risk and Return
+
+Understanding bond valuation is essential for Module 5, where we'll explore:
+
+- How bond yields reflect risk premiums
+- The relationship between bond duration and interest rate risk
+- Why diversification between stocks and bonds reduces portfolio risk
+- How to construct efficient portfolios using the risk-return tradeoff
+
+---
+
+## Key Formulas Summary
+
+**Bond Price (Annual Coupons):**
+$$P = C \times \left[\frac{1-(1+r)^{-n}}{r}\right] + \frac{F}{(1+r)^n}$$
+
+**Current Yield:**
+$$\text{Current Yield} = \frac{\text{Annual Coupon Payment}}{\text{Current Bond Price}}$$
+
+**Taxable Equivalent Yield:**
+$$\text{TEY} = \frac{\text{Tax-Free Yield}}{1 - \text{Tax Rate}}$$
+
+---
+
+## Practice Recommendations
+
+Before moving to the Concept Check questions and Excel problems:
+
+1. **Verify your understanding:** Can you explain why bond prices fall when interest rates rise?
+2. **Practice the mechanics:** Work through the bond pricing example by hand
+3. **Master Excel functions:** Try =PV() and =PRICE() with different inputs
+4. **Apply to real bonds:** Look up current Treasury yields at treasurydirect.gov
+5. **Compare bond types:** Calculate taxable equivalent yields for your tax bracket
+
+**Remember:** Bond valuation is a foundational skill for corporate finance, investment analysis, and portfolio management. The time you invest in mastering these concepts will pay dividends throughout your MBA program and career. I could have said "coupons" instead of dividends, but that would have been a terrible dad joke. 

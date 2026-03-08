@@ -1,0 +1,656 @@
+---
+title: "Risk and Return"
+---
+
+## Module Overview
+
+In the previous modules you learned how to value financial assets by discounting their expected cash flows. But a critical question remains: **What discount rate should you use?**
+
+The answer depends on **risk**. Investors demand higher returns for taking on more risk. This fundamental principle—the **risk-return tradeoff**—is the foundation of modern finance.
+
+**In this module, you'll learn:**
+
+1. How to measure historical investment returns (arithmetic vs. geometric averages)
+2. How to quantify risk using variance and standard deviation
+3. Why diversification reduces risk and what types of risk remain
+4. How to measure systematic risk using Beta
+5. How to estimate required returns using the Capital Asset Pricing Model (CAPM)
+
+**Why this matters:** Understanding risk and return is essential for:
+
+- **Corporate finance:** Determining the cost of equity capital for capital budgeting decisions
+- **Investment management:** Constructing efficient portfolios and evaluating performance
+- **Personal finance:** Making informed decisions about retirement accounts and asset allocation
+
+> **Note:** This module builds directly on your bond and stock valuation skills from Modules 3-4. The discount rates you use in DCF models come from the risk-return principles you'll learn here.
+
+---
+
+## Measuring Historical Returns
+
+Before we can understand the relationship between risk and return, we need to measure returns accurately.
+
+### Total Return Calculation
+
+The **total return** on an investment over a single period includes both capital gains (price appreciation) and income (dividends or interest):
+
+$$R_t = \frac{P_t - P_{t-1} + D_t}{P_{t-1}}$$
+
+Where:
+- $R_t$ = Return in period $t$
+- $P_t$ = Price at end of period $t$
+- $P_{t-1}$ = Price at beginning of period $t$
+- $D_t$ = Dividends or income received during period $t$
+
+**Example:** You bought Nvidia stock at $400 per share. One year later, it's worth $500 and paid a $2 dividend. Your return is:
+
+$$R = \frac{500 - 400 + 2}{400} = \frac{102}{400} = 0.255 = 25.5\%$$
+
+> **Important:** Total return includes BOTH price appreciation and income. Many investors mistakenly focus only on price changes and ignore dividends, which historically account for about 40% of stock market returns.
+
+### Arithmetic Average Return
+
+When you have multiple periods of returns, the **arithmetic average** (also called the mean return) is simply the sum of returns divided by the number of periods:
+
+$$\bar{R} = \frac{1}{n}\sum_{i=1}^{n}R_i = \frac{R_1 + R_2 + ... + R_n}{n}$$
+
+**Example:** Tesla's annual returns over five years were: 15%, -10%, 25%, 5%, 20%
+
+$$\bar{R} = \frac{15\% + (-10\%) + 25\% + 5\% + 20\%}{5} = \frac{55\%}{5} = 11\%$$
+
+The arithmetic average is **11% per year**.
+
+### Geometric Average Return
+
+The **geometric average** (also called the compound annual growth rate or CAGR) accounts for compounding and tells you the **actual** average annual return that would produce the same ending wealth:
+
+$$\bar{R}_{geometric} = \left[(1+R_1)(1+R_2)...(1+R_n)\right]^{1/n} - 1$$
+
+**Using the same Tesla example:**
+
+$$\bar{R}_{geometric} = \left[(1.15)(0.90)(1.25)(1.05)(1.20)\right]^{1/5} - 1$$
+
+$$= \left[1.6266\right]^{0.20} - 1 = 1.1024 - 1 = 0.1024 = 10.24\%$$
+
+The geometric average is **10.24% per year**.
+
+> **Note:** The geometric average is always less than or equal to the arithmetic average (they're equal only when returns are constant). The greater the volatility, the larger the difference between the two.
+
+### Which Average Should You Use?
+
+- **Arithmetic average:** Best for estimating **expected future returns** in a single period. This is what you use in forward-looking models like CAPM.
+- **Geometric average:** Best for measuring **actual historical performance** over multiple periods. This tells you what you actually earned.
+
+**In Practice:** If you're building a financial model to estimate next year's expected return, use the arithmetic average. If you're reporting "what did this investment actually earn over the past 10 years," use the geometric average.
+
+---
+
+## Measuring Risk
+
+In finance, **risk** means uncertainty about future returns. The more variable the returns, the riskier the investment.
+
+### Variance and Standard Deviation
+
+The most common measure of risk is **standard deviation** ($\sigma$), which measures how much returns typically deviate from the average.
+
+**Step 1: Calculate Variance** ($\sigma^2$)
+
+$$\sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(R_i - \bar{R})^2$$
+
+**Step 2: Calculate Standard Deviation** ($\sigma$)
+
+$$\sigma = \sqrt{\sigma^2}$$
+
+> **Tip:** Standard deviation is in the same units as returns (percentages), making it easier to interpret than variance.
+
+**Example:** Apple's returns over four years: 20%, 10%, 30%, -5%
+
+**Step 1:** Calculate arithmetic average:
+$$\bar{R} = \frac{20\% + 10\% + 30\% + (-5\%)}{4} = \frac{55\%}{4} = 13.75\%$$
+
+**Step 2:** Calculate deviations from the mean:
+- Year 1: $20\% - 13.75\% = 6.25\%$
+- Year 2: $10\% - 13.75\% = -3.75\%$
+- Year 3: $30\% - 13.75\% = 16.25\%$
+- Year 4: $-5\% - 13.75\% = -18.75\%$
+
+**Step 3:** Square the deviations:
+- Year 1: $(6.25\%)^2 = 39.0625$
+- Year 2: $(-3.75\%)^2 = 14.0625$
+- Year 3: $(16.25\%)^2 = 264.0625$
+- Year 4: $(-18.75\%)^2 = 351.5625$
+
+**Step 4:** Calculate variance:
+$$\sigma^2 = \frac{39.0625 + 14.0625 + 264.0625 + 351.5625}{4-1} = \frac{668.75}{3} = 222.92$$
+
+**Step 5:** Calculate standard deviation:
+$$\sigma = \sqrt{222.92} = 14.93\%$$
+
+Apple's standard deviation is **14.93%**.
+
+### Interpreting Standard Deviation
+
+Standard deviation tells you the **typical range** of returns you can expect:
+
+- **Low standard deviation (5-10%):** Relatively stable returns (e.g., utility stocks, bonds)
+- **Moderate standard deviation (15-25%):** Typical for large-cap stocks
+- **High standard deviation (30%+):** Very volatile (e.g., small-cap stocks, cryptocurrencies)
+
+**Historical Context (1926-2025):**
+- **Large-cap stocks (S&P 500):** Average return ≈ 10%, Standard deviation ≈ 20%
+- **Small-cap stocks:** Average return ≈ 12%, Standard deviation ≈ 30%
+- **Long-term Treasury bonds:** Average return ≈ 6%, Standard deviation ≈ 10%
+- **Treasury bills (risk-free):** Average return ≈ 3.5%, Standard deviation ≈ 3%
+
+> **Important:** Higher returns come with higher risk. There's no such thing as a high-return, low-risk investment in efficient markets. If someone promises you one, it's likely a scam.
+
+### Historical Risk Premiums
+
+The **risk premium** is the extra return investors demand for bearing risk:
+
+$$\text{Risk Premium} = E(R_{risky}) - R_f$$
+
+Where:
+- $E(R_{risky})$ = Expected return on risky asset
+- $R_f$ = Risk-free rate (typically Treasury bills)
+
+**The equity risk premium** (stock market return minus risk-free rate) has historically averaged about **6-8%** in the U.S.
+
+**In Practice (January 2026):** With the 10-year Treasury yield around 4.5% and historical equity risk premium of 7%, we'd estimate the expected stock market return at:
+
+$$E(R_{market}) = 4.5\% + 7\% = 11.5\%$$
+
+---
+
+## The Power of Diversification
+
+One of the most important principles in finance: **Diversification reduces risk without necessarily reducing expected return.**
+
+### Portfolio Expected Return
+
+The expected return on a portfolio is simply the weighted average of the expected returns on individual assets:
+
+$$E(R_p) = \sum_{i=1}^{n}w_i \times E(R_i)$$
+
+Where:
+- $w_i$ = Weight (proportion) of asset $i$ in the portfolio
+- $E(R_i)$ = Expected return on asset $i$
+- $\sum w_i = 1$ (weights sum to 100%)
+
+**Example:** You invest 60% in Nvidia (expected return 18%) and 40% in Treasury bonds (expected return 5%):
+
+$$E(R_p) = (0.60 \times 18\%) + (0.40 \times 5\%) = 10.8\% + 2\% = 12.8\%$$
+
+> **Note:** Portfolio expected return is always a weighted average—you can't create extra return through diversification alone.
+
+### Portfolio Risk: The Diversification Effect
+
+Here's where it gets interesting: **Portfolio risk is NOT a weighted average of individual risks.**
+
+If two assets don't move perfectly together (i.e., they're not perfectly correlated), combining them reduces overall portfolio volatility.
+
+**Correlation coefficient** ($\rho$) measures how two assets move together:
+- $\rho = +1$: Perfect positive correlation (move together)
+- $\rho = 0$: No correlation (independent)
+- $\rho = -1$: Perfect negative correlation (move opposite)
+
+**For a two-asset portfolio:**
+
+$$\sigma_p = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}$$
+
+**Example:** You invest 50% in Tesla ($\sigma = 40\%$) and 50% in Procter & Gamble ($\sigma = 15\%$). The correlation between them is 0.3.
+
+$$\sigma_p = \sqrt{(0.5)^2(40)^2 + (0.5)^2(15)^2 + 2(0.5)(0.5)(40)(15)(0.3)}$$
+
+$$= \sqrt{400 + 56.25 + 90} = \sqrt{546.25} = 23.37\%$$
+
+**Notice:** The portfolio standard deviation (23.37%) is **less than the weighted average** of the individual standard deviations:
+
+$$\text{Weighted average} = (0.5 \times 40\%) + (0.5 \times 15\%) = 27.5\%$$
+
+**You reduced risk from 27.5% to 23.37% through diversification!**
+
+> **Tip:** The lower the correlation between assets, the greater the diversification benefit. This is why investors hold both stocks and bonds—they often move in opposite directions during market stress.
+
+### Systematic vs. Unsystematic Risk
+
+Not all risk can be diversified away. We distinguish between two types:
+
+**1. Unsystematic Risk (Firm-Specific Risk, Diversifiable Risk)**
+
+Risk that affects only a specific company or industry:
+- CEO resignation
+- Product recall
+- Factory fire
+- Patent lawsuit
+- Competitor innovation
+
+**This risk CAN be eliminated through diversification.** If you hold 30+ stocks across different industries, firm-specific events average out.
+
+**2. Systematic Risk (Market Risk, Non-Diversifiable Risk)**
+
+Risk that affects the entire market:
+- Recession
+- Interest rate changes
+- Inflation
+- Geopolitical events
+- Pandemic
+
+**This risk CANNOT be diversified away.** No matter how many stocks you hold, you're still exposed to market-wide movements.
+
+> **Important:** Because unsystematic risk can be eliminated through diversification, investors are NOT compensated for bearing it. You only earn a risk premium for bearing systematic risk.
+
+**In Practice:** This is why professional investors focus on **beta** (systematic risk) rather than total volatility when evaluating stocks. A stock with high total volatility but low beta might actually be less risky in a diversified portfolio.
+
+---
+
+## Beta: Measuring Systematic Risk
+
+### What Is Beta?
+
+**Beta** ($\beta$) measures how much a stock moves relative to the overall market. It quantifies systematic risk.
+
+$$\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)} = \frac{\sigma_i \times \rho_{i,m}}{\sigma_m}$$
+
+Where:
+- $R_i$ = Return on stock $i$
+- $R_m$ = Return on the market (usually S&P 500)
+- $\text{Cov}$ = Covariance
+- $\rho_{i,m}$ = Correlation between stock $i$ and market
+
+**Intuitive interpretation:** Beta tells you how much the stock moves when the market moves 1%.
+
+### Interpreting Beta Values
+
+| Beta | Interpretation | Example |
+|------|----------------|---------|
+| $\beta = 1.0$ | Moves exactly with the market | S&P 500 index fund |
+| $\beta > 1.0$ | More volatile than market (aggressive) | Technology stocks, Tesla ($\beta \approx 2.0$) |
+| $\beta < 1.0$ | Less volatile than market (defensive) | Utility stocks, Procter & Gamble ($\beta \approx 0.5$) |
+| $\beta = 0$ | No correlation with market | Risk-free asset (Treasury bills) |
+| $\beta < 0$ | Moves opposite to market (rare) | Gold stocks (sometimes) |
+
+**Example:** Nvidia has a beta of approximately 1.7 (as of January 2026).
+
+**Interpretation:** When the market goes up 10%, Nvidia tends to go up 17%. When the market falls 10%, Nvidia tends to fall 17%.
+
+> **Warning:** Beta is estimated from historical data and can change over time. A company's beta can shift as its business model evolves or market conditions change.
+
+### Portfolio Beta
+
+The beta of a portfolio is the weighted average of individual betas:
+
+$$\beta_p = \sum_{i=1}^{n}w_i \times \beta_i$$
+
+**Example:** You hold:
+- 40% Nvidia ($\beta = 1.7$)
+- 30% Apple ($\beta = 1.2$)
+- 30% Treasury bonds ($\beta = 0$)
+
+$$\beta_p = (0.40 \times 1.7) + (0.30 \times 1.2) + (0.30 \times 0) = 0.68 + 0.36 + 0 = 1.04$$
+
+Your portfolio beta is **1.04**, meaning it moves roughly in line with the market.
+
+**In Practice:** Portfolio managers adjust portfolio beta to match their market outlook:
+- **Bullish on market:** Increase beta above 1.0 (add aggressive stocks)
+- **Bearish on market:** Decrease beta below 1.0 (add defensive stocks or bonds)
+
+---
+
+## The Capital Asset Pricing Model (CAPM)
+
+The **Capital Asset Pricing Model (CAPM)** is one of the most important models in finance. It tells you the **required return** on a stock based on its systematic risk (beta).
+
+### The CAPM Formula
+
+$$E(R_i) = R_f + \beta_i \times [E(R_m) - R_f]$$
+
+Where:
+- $E(R_i)$ = Expected (required) return on stock $i$
+- $R_f$ = Risk-free rate (Treasury bill rate)
+- $\beta_i$ = Beta of stock $i$
+- $E(R_m)$ = Expected return on the market
+- $[E(R_m) - R_f]$ = Market risk premium
+
+**Interpretation:** The required return equals the risk-free rate plus a risk premium. The risk premium depends on:
+1. How much risk you're taking ($\beta_i$)
+2. The market price of risk ($E(R_m) - R_f$)
+
+**Example:** Calculate the required return on Tesla stock.
+
+**Given:**
+- Risk-free rate ($R_f$) = 4.5% (10-year Treasury)
+- Market return ($E(R_m)$) = 11% (historical average)
+- Tesla beta ($\beta$) = 2.0
+
+$$E(R_{Tesla}) = 4.5\% + 2.0 \times [11\% - 4.5\%]$$
+
+$$= 4.5\% + 2.0 \times 6.5\% = 4.5\% + 13\% = 17.5\%$$
+
+**Interpretation:** Given Tesla's high systematic risk (beta of 2.0), investors require a **17.5% annual return** to compensate them for that risk.
+
+> **Important:** CAPM gives you the **minimum return** investors demand. This becomes your discount rate in DCF models. If a stock's expected return is below its CAPM required return, it's overvalued.
+
+### The Security Market Line (SML)
+
+The **Security Market Line** is a graphical representation of CAPM. It shows the relationship between beta and required return.
+
+**Key properties:**
+- **Y-intercept:** Risk-free rate ($R_f$)
+- **Slope:** Market risk premium ($E(R_m) - R_f$)
+- **X-axis:** Beta ($\beta$)
+- **Y-axis:** Expected return ($E(R)$)
+
+**Stocks plot on the SML based on their beta:**
+- **On the line:** Fairly priced
+- **Above the line:** Undervalued (offering more return than required)
+- **Below the line:** Overvalued (offering less return than required)
+
+**Example SML (with $R_f = 4.5\%$ and $E(R_m) = 11\%$):**
+
+| Beta | Required Return |
+|------|-----------------|
+| 0.0 | 4.5% |
+| 0.5 | 7.75% |
+| 1.0 | 11.0% |
+| 1.5 | 14.25% |
+| 2.0 | 17.5% |
+
+### Using CAPM for Investment Decisions
+
+**Step 1:** Calculate required return using CAPM
+
+**Step 2:** Estimate expected return using:
+- Analyst forecasts
+- Dividend discount model
+- Historical averages
+
+**Step 3:** Compare:
+- If **expected return > required return:** Stock is **undervalued** → BUY
+- If **expected return < required return:** Stock is **overvalued** → SELL
+- If **expected return = required return:** Stock is **fairly valued** → HOLD
+
+**Example:** Should you invest in Apple?
+
+**Given:**
+- Apple beta = 1.2
+- Risk-free rate = 4.5%
+- Market return = 11%
+- Your analysis suggests Apple will return 13% next year
+
+**Step 1:** Calculate required return:
+$$E(R_{Apple}) = 4.5\% + 1.2 \times [11\% - 4.5\%] = 4.5\% + 7.8\% = 12.3\%$$
+
+**Step 2:** Compare:
+- Expected return: 13%
+- Required return: 12.3%
+- Difference: 13% - 12.3% = **+0.7%**
+
+**Decision:** Apple is **undervalued**. It offers more return (13%) than required for its risk level (12.3%). **BUY.**
+
+> **Tip:** The difference between expected and required return is called **alpha** ($\alpha$). Positive alpha means undervalued; negative alpha means overvalued. Active portfolio managers try to find positive-alpha stocks.
+
+**In Practice (January 2026):** With the Federal Reserve holding rates steady and strong corporate earnings, many tech stocks are trading near their fair value according to CAPM. However, AI-related stocks like Nvidia show positive alpha due to exceptional growth prospects, while traditional retail stocks show negative alpha due to e-commerce disruption.
+
+---
+
+## Excel Functions for Risk and Return
+
+Excel provides powerful built-in functions for risk-return analysis:
+
+### Return Calculations
+
+**AVERAGE()** - Arithmetic average return
+```excel
+=AVERAGE(B2:B11)
+```
+Calculates the arithmetic mean of returns in cells B2 through B11.
+
+**GEOMEAN()** - Geometric average return
+```excel
+=(GEOMEAN(1+B2:B11)-1)
+```
+Note: Add 1 to each return, calculate geometric mean, then subtract 1.
+
+### Risk Calculations
+
+**VAR.S()** - Sample variance
+```excel
+=VAR.S(B2:B11)
+```
+Calculates variance using $n-1$ in denominator (sample variance).
+
+**STDEV.S()** - Sample standard deviation
+```excel
+=STDEV.S(B2:B11)
+```
+Calculates standard deviation using $n-1$ in denominator.
+
+> **Note:** Use VAR.S and STDEV.S (not VAR.P or STDEV.P) when working with historical sample data, which is almost always the case in finance.
+
+### Portfolio Calculations
+
+**SUMPRODUCT()** - Portfolio expected return
+```excel
+=SUMPRODUCT(weights, returns)
+```
+Multiplies each weight by its return and sums the results.
+
+**Example:**
+```excel
+=SUMPRODUCT(B2:B5, C2:C5)
+```
+Where B2:B5 contains weights and C2:C5 contains expected returns.
+
+### Beta and Correlation
+
+**CORREL()** - Correlation coefficient
+```excel
+=CORREL(stock_returns, market_returns)
+```
+Calculates correlation between two return series.
+
+**SLOPE()** - Beta calculation
+```excel
+=SLOPE(stock_returns, market_returns)
+```
+Calculates beta by regressing stock returns on market returns.
+
+**Alternative beta calculation:**
+```excel
+=COVARIANCE.S(stock_returns, market_returns) / VAR.S(market_returns)
+```
+
+### CAPM Calculation
+
+**Manual CAPM formula:**
+```excel
+=risk_free_rate + beta * (market_return - risk_free_rate)
+```
+
+**Example:**
+```excel
+=0.045 + 1.2 * (0.11 - 0.045)
+```
+Calculates required return for a stock with beta 1.2, given $R_f = 4.5\%$ and $E(R_m) = 11\%$.
+
+### Excel Sign Conventions
+
+> **Important:** Unlike bond and stock valuation where cash flows have signs (negative for outflows, positive for inflows), return calculations use **unsigned percentages**. A -10% return is simply entered as -0.10 or -10%, not as a negative cash flow.
+
+---
+
+## Real-World Applications
+
+### Application 1: Cost of Equity Capital
+
+**Corporate Use:** Companies use CAPM to determine their **cost of equity**—the return shareholders require.
+
+**Example:** Microsoft is evaluating a new cloud computing project. Should they invest?
+
+**Given:**
+- Project requires $500 million investment
+- Expected to generate $80 million per year forever
+- Microsoft's beta = 0.9
+- Risk-free rate = 4.5%
+- Market return = 11%
+
+**Step 1:** Calculate cost of equity using CAPM:
+$$r_e = 4.5\% + 0.9 \times [11\% - 4.5\%] = 4.5\% + 5.85\% = 10.35\%$$
+
+**Step 2:** Calculate project NPV (perpetuity):
+$$NPV = -500 + \frac{80}{0.1035} = -500 + 772.95 = +272.95 \text{ million}$$
+
+**Decision:** **Accept the project.** It creates $273 million in shareholder value.
+
+> **Note:** This connects directly to Module 1 (time value of money) and Module 2 (perpetuities). The discount rate comes from CAPM!
+
+### Application 2: Portfolio Construction
+
+**Investment Use:** Investors use risk-return principles to build efficient portfolios.
+
+**Example:** You're 30 years old saving for retirement. Should you hold stocks or bonds?
+
+**Historical data:**
+- Stocks: $E(R) = 11\%$, $\sigma = 20\%$
+- Bonds: $E(R) = 6\%$, $\sigma = 10\%$
+- Correlation = 0.2
+
+**60/40 Portfolio (60% stocks, 40% bonds):**
+
+Expected return:
+$$E(R_p) = 0.60 \times 11\% + 0.40 \times 6\% = 6.6\% + 2.4\% = 9\%$$
+
+Portfolio risk:
+$$\sigma_p = \sqrt{(0.6)^2(20)^2 + (0.4)^2(10)^2 + 2(0.6)(0.4)(20)(10)(0.2)}$$
+$$= \sqrt{144 + 16 + 19.2} = \sqrt{179.2} = 13.4\%$$
+
+**Analysis:** The 60/40 portfolio offers 9% return with only 13.4% risk—much better than holding 100% stocks (11% return, 20% risk) if you're moderately risk-averse.
+
+**In Practice:** The traditional 60/40 stock/bond portfolio has been challenged in recent years due to rising interest rates affecting both stocks and bonds simultaneously. Modern portfolios increasingly include alternative assets (real estate, commodities, private equity) to enhance diversification.
+
+### Application 3: Performance Evaluation
+
+**Investment Management Use:** Evaluate whether a portfolio manager is adding value.
+
+**Example:** Your portfolio manager delivered 14% return last year. Good or bad?
+
+**Given:**
+- Portfolio return = 14%
+- Portfolio beta = 1.3
+- Risk-free rate = 4.5%
+- Market return = 12%
+
+**Step 1:** Calculate required return using CAPM:
+$$E(R_p) = 4.5\% + 1.3 \times [12\% - 4.5\%] = 4.5\% + 9.75\% = 14.25\%$$
+
+**Step 2:** Calculate alpha:
+$$\alpha = \text{Actual return} - \text{Required return} = 14\% - 14.25\% = -0.25\%$$
+
+**Interpretation:** **Negative alpha.** The manager underperformed by 0.25% after adjusting for risk. You could have earned 14.25% by simply holding a portfolio with beta 1.3 (mix of index fund and leverage).
+
+> **Warning:** Many investors are fooled by high returns without considering risk. A 20% return with beta 2.0 might actually be worse than a 12% return with beta 1.0 when risk-adjusted.
+
+### Application 4: Market Timing and Economic Forecasting
+
+**Example (January 2026 Context):** The Federal Reserve has signaled potential rate cuts later in 2026 if inflation continues to moderate. How should this affect your portfolio?
+
+**Analysis:**
+- **Rate cuts** typically boost stock prices (lower discount rates)
+- **High-beta stocks** (technology, consumer discretionary) benefit most
+- **Low-beta stocks** (utilities, consumer staples) benefit least
+
+**Strategy:** If you believe rate cuts are coming:
+1. **Increase portfolio beta** by overweighting high-beta sectors
+2. **Reduce bond duration** (bonds already priced in rate cuts)
+3. **Consider small-cap stocks** (higher beta, more rate-sensitive)
+
+**Current example:** Many investors are overweighting AI-related stocks (Nvidia, Microsoft, Google) which have high betas but also high growth prospects. This is a bet that both the market will rise AND these companies will outperform.
+
+---
+
+## Wrap-Up
+
+### What You've Learned
+
+✓ **Historical returns:** Arithmetic average (for forecasting) vs. geometric average (for performance measurement)
+
+✓ **Risk measurement:** Variance and standard deviation quantify return volatility
+
+✓ **Diversification:** Reduces unsystematic risk but not systematic risk
+
+✓ **Beta:** Measures systematic risk (sensitivity to market movements)
+
+✓ **CAPM:** Calculates required return based on systematic risk: $E(R_i) = R_f + \beta_i[E(R_m) - R_f]$
+
+✓ **Investment decisions:** Compare expected return to CAPM required return
+
+✓ **Excel functions:** AVERAGE, GEOMEAN, STDEV.S, SLOPE for risk-return analysis
+
+### Connection to Previous Modules
+
+**Bonds:** Bond yields reflect risk premiums. Corporate bonds have higher yields than Treasuries because of default risk (systematic risk component).
+
+**Stocks:** The discount rate in dividend discount models comes from CAPM. Higher-beta stocks require higher discount rates.
+
+**Time Value of Money:** The discount rate in all present value calculations should reflect the risk of the cash flows. CAPM tells you what that rate should be.
+
+---
+
+## Key Formulas Summary
+
+**Total Return:**
+$$R_t = \frac{P_t - P_{t-1} + D_t}{P_{t-1}}$$
+
+**Arithmetic Average Return:**
+$$\bar{R} = \frac{1}{n}\sum_{i=1}^{n}R_i$$
+
+**Geometric Average Return:**
+$$\bar{R}_{geometric} = \left[(1+R_1)(1+R_2)...(1+R_n)\right]^{1/n} - 1$$
+
+**Variance:**
+$$\sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(R_i - \bar{R})^2$$
+
+**Standard Deviation:**
+$$\sigma = \sqrt{\sigma^2}$$
+
+**Portfolio Expected Return:**
+$$E(R_p) = \sum_{i=1}^{n}w_i \times E(R_i)$$
+
+**Portfolio Standard Deviation (Two Assets):**
+$$\sigma_p = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}$$
+
+**Beta:**
+$$\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}$$
+
+**Portfolio Beta:**
+$$\beta_p = \sum_{i=1}^{n}w_i \times \beta_i$$
+
+**Capital Asset Pricing Model (CAPM):**
+$$E(R_i) = R_f + \beta_i \times [E(R_m) - R_f]$$
+
+**Alpha (Risk-Adjusted Performance):**
+$$\alpha = R_{actual} - R_{required}$$
+
+---
+
+## Practice Recommendations
+
+1. **Master the Excel functions** in Section 5.6—you'll use them constantly in finance
+2. **Work through the practice problems** to build intuition for risk-return tradeoffs
+3. **Follow real market data:** Track betas and returns for stocks you're interested in
+4. **Use the @@prep-finance-helper bot** in BoodleBox for additional practice and explanations
+5. **Connect to previous modules:** Notice how CAPM provides the discount rates you used in Modules 3-4
+
+**Real-world practice:** Go to Yahoo Finance, pick 5 stocks, download 5 years of monthly returns, and calculate:
+- Arithmetic and geometric average returns
+- Standard deviations
+- Betas (regress against S&P 500)
+- Required returns using CAPM
+- Whether each stock is over/undervalued
+
+This hands-on practice will solidify your understanding far better than just reading examples.
+
+---
+
+**End of Risk and Return Lecture**

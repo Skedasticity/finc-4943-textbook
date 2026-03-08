@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Risk and Return – Fundamentals of Business Finance</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./module04.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./module05.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Risk and Return</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of Business Finance</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of Business Finance</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Time Value of Money (TVM)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Discounted Cash Flows and Annuities</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bond Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stock Valuation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./module05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Risk and Return</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#module-overview" id="toc-module-overview" class="nav-link active" data-scroll-target="#module-overview"><span class="header-section-number">6.1</span> Module Overview</a></li>
+  <li><a href="#measuring-historical-returns" id="toc-measuring-historical-returns" class="nav-link" data-scroll-target="#measuring-historical-returns"><span class="header-section-number">6.2</span> Measuring Historical Returns</a>
+  <ul class="collapse">
+  <li><a href="#total-return-calculation" id="toc-total-return-calculation" class="nav-link" data-scroll-target="#total-return-calculation"><span class="header-section-number">6.2.1</span> Total Return Calculation</a></li>
+  <li><a href="#arithmetic-average-return" id="toc-arithmetic-average-return" class="nav-link" data-scroll-target="#arithmetic-average-return"><span class="header-section-number">6.2.2</span> Arithmetic Average Return</a></li>
+  <li><a href="#geometric-average-return" id="toc-geometric-average-return" class="nav-link" data-scroll-target="#geometric-average-return"><span class="header-section-number">6.2.3</span> Geometric Average Return</a></li>
+  <li><a href="#which-average-should-you-use" id="toc-which-average-should-you-use" class="nav-link" data-scroll-target="#which-average-should-you-use"><span class="header-section-number">6.2.4</span> Which Average Should You Use?</a></li>
+  </ul></li>
+  <li><a href="#measuring-risk" id="toc-measuring-risk" class="nav-link" data-scroll-target="#measuring-risk"><span class="header-section-number">6.3</span> Measuring Risk</a>
+  <ul class="collapse">
+  <li><a href="#variance-and-standard-deviation" id="toc-variance-and-standard-deviation" class="nav-link" data-scroll-target="#variance-and-standard-deviation"><span class="header-section-number">6.3.1</span> Variance and Standard Deviation</a></li>
+  <li><a href="#interpreting-standard-deviation" id="toc-interpreting-standard-deviation" class="nav-link" data-scroll-target="#interpreting-standard-deviation"><span class="header-section-number">6.3.2</span> Interpreting Standard Deviation</a></li>
+  <li><a href="#historical-risk-premiums" id="toc-historical-risk-premiums" class="nav-link" data-scroll-target="#historical-risk-premiums"><span class="header-section-number">6.3.3</span> Historical Risk Premiums</a></li>
+  </ul></li>
+  <li><a href="#the-power-of-diversification" id="toc-the-power-of-diversification" class="nav-link" data-scroll-target="#the-power-of-diversification"><span class="header-section-number">6.4</span> The Power of Diversification</a>
+  <ul class="collapse">
+  <li><a href="#portfolio-expected-return" id="toc-portfolio-expected-return" class="nav-link" data-scroll-target="#portfolio-expected-return"><span class="header-section-number">6.4.1</span> Portfolio Expected Return</a></li>
+  <li><a href="#portfolio-risk-the-diversification-effect" id="toc-portfolio-risk-the-diversification-effect" class="nav-link" data-scroll-target="#portfolio-risk-the-diversification-effect"><span class="header-section-number">6.4.2</span> Portfolio Risk: The Diversification Effect</a></li>
+  <li><a href="#systematic-vs.-unsystematic-risk" id="toc-systematic-vs.-unsystematic-risk" class="nav-link" data-scroll-target="#systematic-vs.-unsystematic-risk"><span class="header-section-number">6.4.3</span> Systematic vs.&nbsp;Unsystematic Risk</a></li>
+  </ul></li>
+  <li><a href="#beta-measuring-systematic-risk" id="toc-beta-measuring-systematic-risk" class="nav-link" data-scroll-target="#beta-measuring-systematic-risk"><span class="header-section-number">6.5</span> Beta: Measuring Systematic Risk</a>
+  <ul class="collapse">
+  <li><a href="#what-is-beta" id="toc-what-is-beta" class="nav-link" data-scroll-target="#what-is-beta"><span class="header-section-number">6.5.1</span> What Is Beta?</a></li>
+  <li><a href="#interpreting-beta-values" id="toc-interpreting-beta-values" class="nav-link" data-scroll-target="#interpreting-beta-values"><span class="header-section-number">6.5.2</span> Interpreting Beta Values</a></li>
+  <li><a href="#portfolio-beta" id="toc-portfolio-beta" class="nav-link" data-scroll-target="#portfolio-beta"><span class="header-section-number">6.5.3</span> Portfolio Beta</a></li>
+  </ul></li>
+  <li><a href="#the-capital-asset-pricing-model-capm" id="toc-the-capital-asset-pricing-model-capm" class="nav-link" data-scroll-target="#the-capital-asset-pricing-model-capm"><span class="header-section-number">6.6</span> The Capital Asset Pricing Model (CAPM)</a>
+  <ul class="collapse">
+  <li><a href="#the-capm-formula" id="toc-the-capm-formula" class="nav-link" data-scroll-target="#the-capm-formula"><span class="header-section-number">6.6.1</span> The CAPM Formula</a></li>
+  <li><a href="#the-security-market-line-sml" id="toc-the-security-market-line-sml" class="nav-link" data-scroll-target="#the-security-market-line-sml"><span class="header-section-number">6.6.2</span> The Security Market Line (SML)</a></li>
+  <li><a href="#using-capm-for-investment-decisions" id="toc-using-capm-for-investment-decisions" class="nav-link" data-scroll-target="#using-capm-for-investment-decisions"><span class="header-section-number">6.6.3</span> Using CAPM for Investment Decisions</a></li>
+  </ul></li>
+  <li><a href="#excel-functions-for-risk-and-return" id="toc-excel-functions-for-risk-and-return" class="nav-link" data-scroll-target="#excel-functions-for-risk-and-return"><span class="header-section-number">6.7</span> Excel Functions for Risk and Return</a>
+  <ul class="collapse">
+  <li><a href="#return-calculations" id="toc-return-calculations" class="nav-link" data-scroll-target="#return-calculations"><span class="header-section-number">6.7.1</span> Return Calculations</a></li>
+  <li><a href="#risk-calculations" id="toc-risk-calculations" class="nav-link" data-scroll-target="#risk-calculations"><span class="header-section-number">6.7.2</span> Risk Calculations</a></li>
+  <li><a href="#portfolio-calculations" id="toc-portfolio-calculations" class="nav-link" data-scroll-target="#portfolio-calculations"><span class="header-section-number">6.7.3</span> Portfolio Calculations</a></li>
+  <li><a href="#beta-and-correlation" id="toc-beta-and-correlation" class="nav-link" data-scroll-target="#beta-and-correlation"><span class="header-section-number">6.7.4</span> Beta and Correlation</a></li>
+  <li><a href="#capm-calculation" id="toc-capm-calculation" class="nav-link" data-scroll-target="#capm-calculation"><span class="header-section-number">6.7.5</span> CAPM Calculation</a></li>
+  <li><a href="#excel-sign-conventions" id="toc-excel-sign-conventions" class="nav-link" data-scroll-target="#excel-sign-conventions"><span class="header-section-number">6.7.6</span> Excel Sign Conventions</a></li>
+  </ul></li>
+  <li><a href="#real-world-applications" id="toc-real-world-applications" class="nav-link" data-scroll-target="#real-world-applications"><span class="header-section-number">6.8</span> Real-World Applications</a>
+  <ul class="collapse">
+  <li><a href="#application-1-cost-of-equity-capital" id="toc-application-1-cost-of-equity-capital" class="nav-link" data-scroll-target="#application-1-cost-of-equity-capital"><span class="header-section-number">6.8.1</span> Application 1: Cost of Equity Capital</a></li>
+  <li><a href="#application-2-portfolio-construction" id="toc-application-2-portfolio-construction" class="nav-link" data-scroll-target="#application-2-portfolio-construction"><span class="header-section-number">6.8.2</span> Application 2: Portfolio Construction</a></li>
+  <li><a href="#application-3-performance-evaluation" id="toc-application-3-performance-evaluation" class="nav-link" data-scroll-target="#application-3-performance-evaluation"><span class="header-section-number">6.8.3</span> Application 3: Performance Evaluation</a></li>
+  <li><a href="#application-4-market-timing-and-economic-forecasting" id="toc-application-4-market-timing-and-economic-forecasting" class="nav-link" data-scroll-target="#application-4-market-timing-and-economic-forecasting"><span class="header-section-number">6.8.4</span> Application 4: Market Timing and Economic Forecasting</a></li>
+  </ul></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up"><span class="header-section-number">6.9</span> Wrap-Up</a>
+  <ul class="collapse">
+  <li><a href="#what-youve-learned" id="toc-what-youve-learned" class="nav-link" data-scroll-target="#what-youve-learned"><span class="header-section-number">6.9.1</span> What You’ve Learned</a></li>
+  <li><a href="#connection-to-previous-modules" id="toc-connection-to-previous-modules" class="nav-link" data-scroll-target="#connection-to-previous-modules"><span class="header-section-number">6.9.2</span> Connection to Previous Modules</a></li>
+  </ul></li>
+  <li><a href="#key-formulas-summary" id="toc-key-formulas-summary" class="nav-link" data-scroll-target="#key-formulas-summary"><span class="header-section-number">6.10</span> Key Formulas Summary</a></li>
+  <li><a href="#practice-recommendations" id="toc-practice-recommendations" class="nav-link" data-scroll-target="#practice-recommendations"><span class="header-section-number">6.11</span> Practice Recommendations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Risk and Return</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="module-overview" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="module-overview"><span class="header-section-number">6.1</span> Module Overview</h2>
+<p>In the previous modules you learned how to value financial assets by discounting their expected cash flows. But a critical question remains: <strong>What discount rate should you use?</strong></p>
+<p>The answer depends on <strong>risk</strong>. Investors demand higher returns for taking on more risk. This fundamental principle—the <strong>risk-return tradeoff</strong>—is the foundation of modern finance.</p>
+<p><strong>In this module, you’ll learn:</strong></p>
+<ol type="1">
+<li>How to measure historical investment returns (arithmetic vs.&nbsp;geometric averages)</li>
+<li>How to quantify risk using variance and standard deviation</li>
+<li>Why diversification reduces risk and what types of risk remain</li>
+<li>How to measure systematic risk using Beta</li>
+<li>How to estimate required returns using the Capital Asset Pricing Model (CAPM)</li>
+</ol>
+<p><strong>Why this matters:</strong> Understanding risk and return is essential for:</p>
+<ul>
+<li><strong>Corporate finance:</strong> Determining the cost of equity capital for capital budgeting decisions</li>
+<li><strong>Investment management:</strong> Constructing efficient portfolios and evaluating performance</li>
+<li><strong>Personal finance:</strong> Making informed decisions about retirement accounts and asset allocation</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> This module builds directly on your bond and stock valuation skills from Modules 3-4. The discount rates you use in DCF models come from the risk-return principles you’ll learn here.</p>
+</blockquote>
+<hr>
+</section>
+<section id="measuring-historical-returns" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="measuring-historical-returns"><span class="header-section-number">6.2</span> Measuring Historical Returns</h2>
+<p>Before we can understand the relationship between risk and return, we need to measure returns accurately.</p>
+<section id="total-return-calculation" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="total-return-calculation"><span class="header-section-number">6.2.1</span> Total Return Calculation</h3>
+<p>The <strong>total return</strong> on an investment over a single period includes both capital gains (price appreciation) and income (dividends or interest):</p>
+<p><span class="math display">\[R_t = \frac{P_t - P_{t-1} + D_t}{P_{t-1}}\]</span></p>
+<p>Where: - <span class="math inline">\(R_t\)</span> = Return in period <span class="math inline">\(t\)</span> - <span class="math inline">\(P_t\)</span> = Price at end of period <span class="math inline">\(t\)</span> - <span class="math inline">\(P_{t-1}\)</span> = Price at beginning of period <span class="math inline">\(t\)</span> - <span class="math inline">\(D_t\)</span> = Dividends or income received during period <span class="math inline">\(t\)</span></p>
+<p><strong>Example:</strong> You bought Nvidia stock at $400 per share. One year later, it’s worth $500 and paid a $2 dividend. Your return is:</p>
+<p><span class="math display">\[R = \frac{500 - 400 + 2}{400} = \frac{102}{400} = 0.255 = 25.5\%\]</span></p>
+<blockquote class="blockquote">
+<p><strong>Important:</strong> Total return includes BOTH price appreciation and income. Many investors mistakenly focus only on price changes and ignore dividends, which historically account for about 40% of stock market returns.</p>
+</blockquote>
+</section>
+<section id="arithmetic-average-return" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="arithmetic-average-return"><span class="header-section-number">6.2.2</span> Arithmetic Average Return</h3>
+<p>When you have multiple periods of returns, the <strong>arithmetic average</strong> (also called the mean return) is simply the sum of returns divided by the number of periods:</p>
+<p><span class="math display">\[\bar{R} = \frac{1}{n}\sum_{i=1}^{n}R_i = \frac{R_1 + R_2 + ... + R_n}{n}\]</span></p>
+<p><strong>Example:</strong> Tesla’s annual returns over five years were: 15%, -10%, 25%, 5%, 20%</p>
+<p><span class="math display">\[\bar{R} = \frac{15\% + (-10\%) + 25\% + 5\% + 20\%}{5} = \frac{55\%}{5} = 11\%\]</span></p>
+<p>The arithmetic average is <strong>11% per year</strong>.</p>
+</section>
+<section id="geometric-average-return" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="geometric-average-return"><span class="header-section-number">6.2.3</span> Geometric Average Return</h3>
+<p>The <strong>geometric average</strong> (also called the compound annual growth rate or CAGR) accounts for compounding and tells you the <strong>actual</strong> average annual return that would produce the same ending wealth:</p>
+<p><span class="math display">\[\bar{R}_{geometric} = \left[(1+R_1)(1+R_2)...(1+R_n)\right]^{1/n} - 1\]</span></p>
+<p><strong>Using the same Tesla example:</strong></p>
+<p><span class="math display">\[\bar{R}_{geometric} = \left[(1.15)(0.90)(1.25)(1.05)(1.20)\right]^{1/5} - 1\]</span></p>
+<p><span class="math display">\[= \left[1.6266\right]^{0.20} - 1 = 1.1024 - 1 = 0.1024 = 10.24\%\]</span></p>
+<p>The geometric average is <strong>10.24% per year</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> The geometric average is always less than or equal to the arithmetic average (they’re equal only when returns are constant). The greater the volatility, the larger the difference between the two.</p>
+</blockquote>
+</section>
+<section id="which-average-should-you-use" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="which-average-should-you-use"><span class="header-section-number">6.2.4</span> Which Average Should You Use?</h3>
+<ul>
+<li><strong>Arithmetic average:</strong> Best for estimating <strong>expected future returns</strong> in a single period. This is what you use in forward-looking models like CAPM.</li>
+<li><strong>Geometric average:</strong> Best for measuring <strong>actual historical performance</strong> over multiple periods. This tells you what you actually earned.</li>
+</ul>
+<p><strong>In Practice:</strong> If you’re building a financial model to estimate next year’s expected return, use the arithmetic average. If you’re reporting “what did this investment actually earn over the past 10 years,” use the geometric average.</p>
+<hr>
+</section>
+</section>
+<section id="measuring-risk" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="measuring-risk"><span class="header-section-number">6.3</span> Measuring Risk</h2>
+<p>In finance, <strong>risk</strong> means uncertainty about future returns. The more variable the returns, the riskier the investment.</p>
+<section id="variance-and-standard-deviation" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="variance-and-standard-deviation"><span class="header-section-number">6.3.1</span> Variance and Standard Deviation</h3>
+<p>The most common measure of risk is <strong>standard deviation</strong> (<span class="math inline">\(\sigma\)</span>), which measures how much returns typically deviate from the average.</p>
+<p><strong>Step 1: Calculate Variance</strong> (<span class="math inline">\(\sigma^2\)</span>)</p>
+<p><span class="math display">\[\sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(R_i - \bar{R})^2\]</span></p>
+<p><strong>Step 2: Calculate Standard Deviation</strong> (<span class="math inline">\(\sigma\)</span>)</p>
+<p><span class="math display">\[\sigma = \sqrt{\sigma^2}\]</span></p>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> Standard deviation is in the same units as returns (percentages), making it easier to interpret than variance.</p>
+</blockquote>
+<p><strong>Example:</strong> Apple’s returns over four years: 20%, 10%, 30%, -5%</p>
+<p><strong>Step 1:</strong> Calculate arithmetic average: <span class="math display">\[\bar{R} = \frac{20\% + 10\% + 30\% + (-5\%)}{4} = \frac{55\%}{4} = 13.75\%\]</span></p>
+<p><strong>Step 2:</strong> Calculate deviations from the mean: - Year 1: <span class="math inline">\(20\% - 13.75\% = 6.25\%\)</span> - Year 2: <span class="math inline">\(10\% - 13.75\% = -3.75\%\)</span> - Year 3: <span class="math inline">\(30\% - 13.75\% = 16.25\%\)</span> - Year 4: <span class="math inline">\(-5\% - 13.75\% = -18.75\%\)</span></p>
+<p><strong>Step 3:</strong> Square the deviations: - Year 1: <span class="math inline">\((6.25\%)^2 = 39.0625\)</span> - Year 2: <span class="math inline">\((-3.75\%)^2 = 14.0625\)</span> - Year 3: <span class="math inline">\((16.25\%)^2 = 264.0625\)</span> - Year 4: <span class="math inline">\((-18.75\%)^2 = 351.5625\)</span></p>
+<p><strong>Step 4:</strong> Calculate variance: <span class="math display">\[\sigma^2 = \frac{39.0625 + 14.0625 + 264.0625 + 351.5625}{4-1} = \frac{668.75}{3} = 222.92\]</span></p>
+<p><strong>Step 5:</strong> Calculate standard deviation: <span class="math display">\[\sigma = \sqrt{222.92} = 14.93\%\]</span></p>
+<p>Apple’s standard deviation is <strong>14.93%</strong>.</p>
+</section>
+<section id="interpreting-standard-deviation" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="interpreting-standard-deviation"><span class="header-section-number">6.3.2</span> Interpreting Standard Deviation</h3>
+<p>Standard deviation tells you the <strong>typical range</strong> of returns you can expect:</p>
+<ul>
+<li><strong>Low standard deviation (5-10%):</strong> Relatively stable returns (e.g., utility stocks, bonds)</li>
+<li><strong>Moderate standard deviation (15-25%):</strong> Typical for large-cap stocks</li>
+<li><strong>High standard deviation (30%+):</strong> Very volatile (e.g., small-cap stocks, cryptocurrencies)</li>
+</ul>
+<p><strong>Historical Context (1926-2025):</strong> - <strong>Large-cap stocks (S&amp;P 500):</strong> Average return ≈ 10%, Standard deviation ≈ 20% - <strong>Small-cap stocks:</strong> Average return ≈ 12%, Standard deviation ≈ 30% - <strong>Long-term Treasury bonds:</strong> Average return ≈ 6%, Standard deviation ≈ 10% - <strong>Treasury bills (risk-free):</strong> Average return ≈ 3.5%, Standard deviation ≈ 3%</p>
+<blockquote class="blockquote">
+<p><strong>Important:</strong> Higher returns come with higher risk. There’s no such thing as a high-return, low-risk investment in efficient markets. If someone promises you one, it’s likely a scam.</p>
+</blockquote>
+</section>
+<section id="historical-risk-premiums" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="historical-risk-premiums"><span class="header-section-number">6.3.3</span> Historical Risk Premiums</h3>
+<p>The <strong>risk premium</strong> is the extra return investors demand for bearing risk:</p>
+<p><span class="math display">\[\text{Risk Premium} = E(R_{risky}) - R_f\]</span></p>
+<p>Where: - <span class="math inline">\(E(R_{risky})\)</span> = Expected return on risky asset - <span class="math inline">\(R_f\)</span> = Risk-free rate (typically Treasury bills)</p>
+<p><strong>The equity risk premium</strong> (stock market return minus risk-free rate) has historically averaged about <strong>6-8%</strong> in the U.S.</p>
+<p><strong>In Practice (January 2026):</strong> With the 10-year Treasury yield around 4.5% and historical equity risk premium of 7%, we’d estimate the expected stock market return at:</p>
+<p><span class="math display">\[E(R_{market}) = 4.5\% + 7\% = 11.5\%\]</span></p>
+<hr>
+</section>
+</section>
+<section id="the-power-of-diversification" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="the-power-of-diversification"><span class="header-section-number">6.4</span> The Power of Diversification</h2>
+<p>One of the most important principles in finance: <strong>Diversification reduces risk without necessarily reducing expected return.</strong></p>
+<section id="portfolio-expected-return" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="portfolio-expected-return"><span class="header-section-number">6.4.1</span> Portfolio Expected Return</h3>
+<p>The expected return on a portfolio is simply the weighted average of the expected returns on individual assets:</p>
+<p><span class="math display">\[E(R_p) = \sum_{i=1}^{n}w_i \times E(R_i)\]</span></p>
+<p>Where: - <span class="math inline">\(w_i\)</span> = Weight (proportion) of asset <span class="math inline">\(i\)</span> in the portfolio - <span class="math inline">\(E(R_i)\)</span> = Expected return on asset <span class="math inline">\(i\)</span> - <span class="math inline">\(\sum w_i = 1\)</span> (weights sum to 100%)</p>
+<p><strong>Example:</strong> You invest 60% in Nvidia (expected return 18%) and 40% in Treasury bonds (expected return 5%):</p>
+<p><span class="math display">\[E(R_p) = (0.60 \times 18\%) + (0.40 \times 5\%) = 10.8\% + 2\% = 12.8\%\]</span></p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> Portfolio expected return is always a weighted average—you can’t create extra return through diversification alone.</p>
+</blockquote>
+</section>
+<section id="portfolio-risk-the-diversification-effect" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="portfolio-risk-the-diversification-effect"><span class="header-section-number">6.4.2</span> Portfolio Risk: The Diversification Effect</h3>
+<p>Here’s where it gets interesting: <strong>Portfolio risk is NOT a weighted average of individual risks.</strong></p>
+<p>If two assets don’t move perfectly together (i.e., they’re not perfectly correlated), combining them reduces overall portfolio volatility.</p>
+<p><strong>Correlation coefficient</strong> (<span class="math inline">\(\rho\)</span>) measures how two assets move together: - <span class="math inline">\(\rho = +1\)</span>: Perfect positive correlation (move together) - <span class="math inline">\(\rho = 0\)</span>: No correlation (independent) - <span class="math inline">\(\rho = -1\)</span>: Perfect negative correlation (move opposite)</p>
+<p><strong>For a two-asset portfolio:</strong></p>
+<p><span class="math display">\[\sigma_p = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}\]</span></p>
+<p><strong>Example:</strong> You invest 50% in Tesla (<span class="math inline">\(\sigma = 40\%\)</span>) and 50% in Procter &amp; Gamble (<span class="math inline">\(\sigma = 15\%\)</span>). The correlation between them is 0.3.</p>
+<p><span class="math display">\[\sigma_p = \sqrt{(0.5)^2(40)^2 + (0.5)^2(15)^2 + 2(0.5)(0.5)(40)(15)(0.3)}\]</span></p>
+<p><span class="math display">\[= \sqrt{400 + 56.25 + 90} = \sqrt{546.25} = 23.37\%\]</span></p>
+<p><strong>Notice:</strong> The portfolio standard deviation (23.37%) is <strong>less than the weighted average</strong> of the individual standard deviations:</p>
+<p><span class="math display">\[\text{Weighted average} = (0.5 \times 40\%) + (0.5 \times 15\%) = 27.5\%\]</span></p>
+<p><strong>You reduced risk from 27.5% to 23.37% through diversification!</strong></p>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> The lower the correlation between assets, the greater the diversification benefit. This is why investors hold both stocks and bonds—they often move in opposite directions during market stress.</p>
+</blockquote>
+</section>
+<section id="systematic-vs.-unsystematic-risk" class="level3" data-number="6.4.3">
+<h3 data-number="6.4.3" class="anchored" data-anchor-id="systematic-vs.-unsystematic-risk"><span class="header-section-number">6.4.3</span> Systematic vs.&nbsp;Unsystematic Risk</h3>
+<p>Not all risk can be diversified away. We distinguish between two types:</p>
+<p><strong>1. Unsystematic Risk (Firm-Specific Risk, Diversifiable Risk)</strong></p>
+<p>Risk that affects only a specific company or industry: - CEO resignation - Product recall - Factory fire - Patent lawsuit - Competitor innovation</p>
+<p><strong>This risk CAN be eliminated through diversification.</strong> If you hold 30+ stocks across different industries, firm-specific events average out.</p>
+<p><strong>2. Systematic Risk (Market Risk, Non-Diversifiable Risk)</strong></p>
+<p>Risk that affects the entire market: - Recession - Interest rate changes - Inflation - Geopolitical events - Pandemic</p>
+<p><strong>This risk CANNOT be diversified away.</strong> No matter how many stocks you hold, you’re still exposed to market-wide movements.</p>
+<blockquote class="blockquote">
+<p><strong>Important:</strong> Because unsystematic risk can be eliminated through diversification, investors are NOT compensated for bearing it. You only earn a risk premium for bearing systematic risk.</p>
+</blockquote>
+<p><strong>In Practice:</strong> This is why professional investors focus on <strong>beta</strong> (systematic risk) rather than total volatility when evaluating stocks. A stock with high total volatility but low beta might actually be less risky in a diversified portfolio.</p>
+<hr>
+</section>
+</section>
+<section id="beta-measuring-systematic-risk" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="beta-measuring-systematic-risk"><span class="header-section-number">6.5</span> Beta: Measuring Systematic Risk</h2>
+<section id="what-is-beta" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="what-is-beta"><span class="header-section-number">6.5.1</span> What Is Beta?</h3>
+<p><strong>Beta</strong> (<span class="math inline">\(\beta\)</span>) measures how much a stock moves relative to the overall market. It quantifies systematic risk.</p>
+<p><span class="math display">\[\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)} = \frac{\sigma_i \times \rho_{i,m}}{\sigma_m}\]</span></p>
+<p>Where: - <span class="math inline">\(R_i\)</span> = Return on stock <span class="math inline">\(i\)</span> - <span class="math inline">\(R_m\)</span> = Return on the market (usually S&amp;P 500) - <span class="math inline">\(\text{Cov}\)</span> = Covariance - <span class="math inline">\(\rho_{i,m}\)</span> = Correlation between stock <span class="math inline">\(i\)</span> and market</p>
+<p><strong>Intuitive interpretation:</strong> Beta tells you how much the stock moves when the market moves 1%.</p>
+</section>
+<section id="interpreting-beta-values" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="interpreting-beta-values"><span class="header-section-number">6.5.2</span> Interpreting Beta Values</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 51%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Beta</th>
+<th>Interpretation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\beta = 1.0\)</span></td>
+<td>Moves exactly with the market</td>
+<td>S&amp;P 500 index fund</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta &gt; 1.0\)</span></td>
+<td>More volatile than market (aggressive)</td>
+<td>Technology stocks, Tesla (<span class="math inline">\(\beta \approx 2.0\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\beta &lt; 1.0\)</span></td>
+<td>Less volatile than market (defensive)</td>
+<td>Utility stocks, Procter &amp; Gamble (<span class="math inline">\(\beta \approx 0.5\)</span>)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta = 0\)</span></td>
+<td>No correlation with market</td>
+<td>Risk-free asset (Treasury bills)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\beta &lt; 0\)</span></td>
+<td>Moves opposite to market (rare)</td>
+<td>Gold stocks (sometimes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong> Nvidia has a beta of approximately 1.7 (as of January 2026).</p>
+<p><strong>Interpretation:</strong> When the market goes up 10%, Nvidia tends to go up 17%. When the market falls 10%, Nvidia tends to fall 17%.</p>
+<blockquote class="blockquote">
+<p><strong>Warning:</strong> Beta is estimated from historical data and can change over time. A company’s beta can shift as its business model evolves or market conditions change.</p>
+</blockquote>
+</section>
+<section id="portfolio-beta" class="level3" data-number="6.5.3">
+<h3 data-number="6.5.3" class="anchored" data-anchor-id="portfolio-beta"><span class="header-section-number">6.5.3</span> Portfolio Beta</h3>
+<p>The beta of a portfolio is the weighted average of individual betas:</p>
+<p><span class="math display">\[\beta_p = \sum_{i=1}^{n}w_i \times \beta_i\]</span></p>
+<p><strong>Example:</strong> You hold: - 40% Nvidia (<span class="math inline">\(\beta = 1.7\)</span>) - 30% Apple (<span class="math inline">\(\beta = 1.2\)</span>) - 30% Treasury bonds (<span class="math inline">\(\beta = 0\)</span>)</p>
+<p><span class="math display">\[\beta_p = (0.40 \times 1.7) + (0.30 \times 1.2) + (0.30 \times 0) = 0.68 + 0.36 + 0 = 1.04\]</span></p>
+<p>Your portfolio beta is <strong>1.04</strong>, meaning it moves roughly in line with the market.</p>
+<p><strong>In Practice:</strong> Portfolio managers adjust portfolio beta to match their market outlook: - <strong>Bullish on market:</strong> Increase beta above 1.0 (add aggressive stocks) - <strong>Bearish on market:</strong> Decrease beta below 1.0 (add defensive stocks or bonds)</p>
+<hr>
+</section>
+</section>
+<section id="the-capital-asset-pricing-model-capm" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="the-capital-asset-pricing-model-capm"><span class="header-section-number">6.6</span> The Capital Asset Pricing Model (CAPM)</h2>
+<p>The <strong>Capital Asset Pricing Model (CAPM)</strong> is one of the most important models in finance. It tells you the <strong>required return</strong> on a stock based on its systematic risk (beta).</p>
+<section id="the-capm-formula" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="the-capm-formula"><span class="header-section-number">6.6.1</span> The CAPM Formula</h3>
+<p><span class="math display">\[E(R_i) = R_f + \beta_i \times [E(R_m) - R_f]\]</span></p>
+<p>Where: - <span class="math inline">\(E(R_i)\)</span> = Expected (required) return on stock <span class="math inline">\(i\)</span> - <span class="math inline">\(R_f\)</span> = Risk-free rate (Treasury bill rate) - <span class="math inline">\(\beta_i\)</span> = Beta of stock <span class="math inline">\(i\)</span> - <span class="math inline">\(E(R_m)\)</span> = Expected return on the market - <span class="math inline">\([E(R_m) - R_f]\)</span> = Market risk premium</p>
+<p><strong>Interpretation:</strong> The required return equals the risk-free rate plus a risk premium. The risk premium depends on: 1. How much risk you’re taking (<span class="math inline">\(\beta_i\)</span>) 2. The market price of risk (<span class="math inline">\(E(R_m) - R_f\)</span>)</p>
+<p><strong>Example:</strong> Calculate the required return on Tesla stock.</p>
+<p><strong>Given:</strong> - Risk-free rate (<span class="math inline">\(R_f\)</span>) = 4.5% (10-year Treasury) - Market return (<span class="math inline">\(E(R_m)\)</span>) = 11% (historical average) - Tesla beta (<span class="math inline">\(\beta\)</span>) = 2.0</p>
+<p><span class="math display">\[E(R_{Tesla}) = 4.5\% + 2.0 \times [11\% - 4.5\%]\]</span></p>
+<p><span class="math display">\[= 4.5\% + 2.0 \times 6.5\% = 4.5\% + 13\% = 17.5\%\]</span></p>
+<p><strong>Interpretation:</strong> Given Tesla’s high systematic risk (beta of 2.0), investors require a <strong>17.5% annual return</strong> to compensate them for that risk.</p>
+<blockquote class="blockquote">
+<p><strong>Important:</strong> CAPM gives you the <strong>minimum return</strong> investors demand. This becomes your discount rate in DCF models. If a stock’s expected return is below its CAPM required return, it’s overvalued.</p>
+</blockquote>
+</section>
+<section id="the-security-market-line-sml" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="the-security-market-line-sml"><span class="header-section-number">6.6.2</span> The Security Market Line (SML)</h3>
+<p>The <strong>Security Market Line</strong> is a graphical representation of CAPM. It shows the relationship between beta and required return.</p>
+<p><strong>Key properties:</strong> - <strong>Y-intercept:</strong> Risk-free rate (<span class="math inline">\(R_f\)</span>) - <strong>Slope:</strong> Market risk premium (<span class="math inline">\(E(R_m) - R_f\)</span>) - <strong>X-axis:</strong> Beta (<span class="math inline">\(\beta\)</span>) - <strong>Y-axis:</strong> Expected return (<span class="math inline">\(E(R)\)</span>)</p>
+<p><strong>Stocks plot on the SML based on their beta:</strong> - <strong>On the line:</strong> Fairly priced - <strong>Above the line:</strong> Undervalued (offering more return than required) - <strong>Below the line:</strong> Overvalued (offering less return than required)</p>
+<p><strong>Example SML (with <span class="math inline">\(R_f = 4.5\%\)</span> and <span class="math inline">\(E(R_m) = 11\%\)</span>):</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Beta</th>
+<th>Required Return</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.0</td>
+<td>4.5%</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>7.75%</td>
+</tr>
+<tr class="odd">
+<td>1.0</td>
+<td>11.0%</td>
+</tr>
+<tr class="even">
+<td>1.5</td>
+<td>14.25%</td>
+</tr>
+<tr class="odd">
+<td>2.0</td>
+<td>17.5%</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="using-capm-for-investment-decisions" class="level3" data-number="6.6.3">
+<h3 data-number="6.6.3" class="anchored" data-anchor-id="using-capm-for-investment-decisions"><span class="header-section-number">6.6.3</span> Using CAPM for Investment Decisions</h3>
+<p><strong>Step 1:</strong> Calculate required return using CAPM</p>
+<p><strong>Step 2:</strong> Estimate expected return using: - Analyst forecasts - Dividend discount model - Historical averages</p>
+<p><strong>Step 3:</strong> Compare: - If <strong>expected return &gt; required return:</strong> Stock is <strong>undervalued</strong> → BUY - If <strong>expected return &lt; required return:</strong> Stock is <strong>overvalued</strong> → SELL - If <strong>expected return = required return:</strong> Stock is <strong>fairly valued</strong> → HOLD</p>
+<p><strong>Example:</strong> Should you invest in Apple?</p>
+<p><strong>Given:</strong> - Apple beta = 1.2 - Risk-free rate = 4.5% - Market return = 11% - Your analysis suggests Apple will return 13% next year</p>
+<p><strong>Step 1:</strong> Calculate required return: <span class="math display">\[E(R_{Apple}) = 4.5\% + 1.2 \times [11\% - 4.5\%] = 4.5\% + 7.8\% = 12.3\%\]</span></p>
+<p><strong>Step 2:</strong> Compare: - Expected return: 13% - Required return: 12.3% - Difference: 13% - 12.3% = <strong>+0.7%</strong></p>
+<p><strong>Decision:</strong> Apple is <strong>undervalued</strong>. It offers more return (13%) than required for its risk level (12.3%). <strong>BUY.</strong></p>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> The difference between expected and required return is called <strong>alpha</strong> (<span class="math inline">\(\alpha\)</span>). Positive alpha means undervalued; negative alpha means overvalued. Active portfolio managers try to find positive-alpha stocks.</p>
+</blockquote>
+<p><strong>In Practice (January 2026):</strong> With the Federal Reserve holding rates steady and strong corporate earnings, many tech stocks are trading near their fair value according to CAPM. However, AI-related stocks like Nvidia show positive alpha due to exceptional growth prospects, while traditional retail stocks show negative alpha due to e-commerce disruption.</p>
+<hr>
+</section>
+</section>
+<section id="excel-functions-for-risk-and-return" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="excel-functions-for-risk-and-return"><span class="header-section-number">6.7</span> Excel Functions for Risk and Return</h2>
+<p>Excel provides powerful built-in functions for risk-return analysis:</p>
+<section id="return-calculations" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="return-calculations"><span class="header-section-number">6.7.1</span> Return Calculations</h3>
+<p><strong>AVERAGE()</strong> - Arithmetic average return</p>
+<pre class="excel"><code>=AVERAGE(B2:B11)</code></pre>
+<p>Calculates the arithmetic mean of returns in cells B2 through B11.</p>
+<p><strong>GEOMEAN()</strong> - Geometric average return</p>
+<pre class="excel"><code>=(GEOMEAN(1+B2:B11)-1)</code></pre>
+<p>Note: Add 1 to each return, calculate geometric mean, then subtract 1.</p>
+</section>
+<section id="risk-calculations" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="risk-calculations"><span class="header-section-number">6.7.2</span> Risk Calculations</h3>
+<p><strong>VAR.S()</strong> - Sample variance</p>
+<pre class="excel"><code>=VAR.S(B2:B11)</code></pre>
+<p>Calculates variance using <span class="math inline">\(n-1\)</span> in denominator (sample variance).</p>
+<p><strong>STDEV.S()</strong> - Sample standard deviation</p>
+<pre class="excel"><code>=STDEV.S(B2:B11)</code></pre>
+<p>Calculates standard deviation using <span class="math inline">\(n-1\)</span> in denominator.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> Use VAR.S and STDEV.S (not VAR.P or STDEV.P) when working with historical sample data, which is almost always the case in finance.</p>
+</blockquote>
+</section>
+<section id="portfolio-calculations" class="level3" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="portfolio-calculations"><span class="header-section-number">6.7.3</span> Portfolio Calculations</h3>
+<p><strong>SUMPRODUCT()</strong> - Portfolio expected return</p>
+<pre class="excel"><code>=SUMPRODUCT(weights, returns)</code></pre>
+<p>Multiplies each weight by its return and sums the results.</p>
+<p><strong>Example:</strong></p>
+<pre class="excel"><code>=SUMPRODUCT(B2:B5, C2:C5)</code></pre>
+<p>Where B2:B5 contains weights and C2:C5 contains expected returns.</p>
+</section>
+<section id="beta-and-correlation" class="level3" data-number="6.7.4">
+<h3 data-number="6.7.4" class="anchored" data-anchor-id="beta-and-correlation"><span class="header-section-number">6.7.4</span> Beta and Correlation</h3>
+<p><strong>CORREL()</strong> - Correlation coefficient</p>
+<pre class="excel"><code>=CORREL(stock_returns, market_returns)</code></pre>
+<p>Calculates correlation between two return series.</p>
+<p><strong>SLOPE()</strong> - Beta calculation</p>
+<pre class="excel"><code>=SLOPE(stock_returns, market_returns)</code></pre>
+<p>Calculates beta by regressing stock returns on market returns.</p>
+<p><strong>Alternative beta calculation:</strong></p>
+<pre class="excel"><code>=COVARIANCE.S(stock_returns, market_returns) / VAR.S(market_returns)</code></pre>
+</section>
+<section id="capm-calculation" class="level3" data-number="6.7.5">
+<h3 data-number="6.7.5" class="anchored" data-anchor-id="capm-calculation"><span class="header-section-number">6.7.5</span> CAPM Calculation</h3>
+<p><strong>Manual CAPM formula:</strong></p>
+<pre class="excel"><code>=risk_free_rate + beta * (market_return - risk_free_rate)</code></pre>
+<p><strong>Example:</strong></p>
+<pre class="excel"><code>=0.045 + 1.2 * (0.11 - 0.045)</code></pre>
+<p>Calculates required return for a stock with beta 1.2, given <span class="math inline">\(R_f = 4.5\%\)</span> and <span class="math inline">\(E(R_m) = 11\%\)</span>.</p>
+</section>
+<section id="excel-sign-conventions" class="level3" data-number="6.7.6">
+<h3 data-number="6.7.6" class="anchored" data-anchor-id="excel-sign-conventions"><span class="header-section-number">6.7.6</span> Excel Sign Conventions</h3>
+<blockquote class="blockquote">
+<p><strong>Important:</strong> Unlike bond and stock valuation where cash flows have signs (negative for outflows, positive for inflows), return calculations use <strong>unsigned percentages</strong>. A -10% return is simply entered as -0.10 or -10%, not as a negative cash flow.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="real-world-applications" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="real-world-applications"><span class="header-section-number">6.8</span> Real-World Applications</h2>
+<section id="application-1-cost-of-equity-capital" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="application-1-cost-of-equity-capital"><span class="header-section-number">6.8.1</span> Application 1: Cost of Equity Capital</h3>
+<p><strong>Corporate Use:</strong> Companies use CAPM to determine their <strong>cost of equity</strong>—the return shareholders require.</p>
+<p><strong>Example:</strong> Microsoft is evaluating a new cloud computing project. Should they invest?</p>
+<p><strong>Given:</strong> - Project requires $500 million investment - Expected to generate $80 million per year forever - Microsoft’s beta = 0.9 - Risk-free rate = 4.5% - Market return = 11%</p>
+<p><strong>Step 1:</strong> Calculate cost of equity using CAPM: <span class="math display">\[r_e = 4.5\% + 0.9 \times [11\% - 4.5\%] = 4.5\% + 5.85\% = 10.35\%\]</span></p>
+<p><strong>Step 2:</strong> Calculate project NPV (perpetuity): <span class="math display">\[NPV = -500 + \frac{80}{0.1035} = -500 + 772.95 = +272.95 \text{ million}\]</span></p>
+<p><strong>Decision:</strong> <strong>Accept the project.</strong> It creates $273 million in shareholder value.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> This connects directly to Module 1 (time value of money) and Module 2 (perpetuities). The discount rate comes from CAPM!</p>
+</blockquote>
+</section>
+<section id="application-2-portfolio-construction" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="application-2-portfolio-construction"><span class="header-section-number">6.8.2</span> Application 2: Portfolio Construction</h3>
+<p><strong>Investment Use:</strong> Investors use risk-return principles to build efficient portfolios.</p>
+<p><strong>Example:</strong> You’re 30 years old saving for retirement. Should you hold stocks or bonds?</p>
+<p><strong>Historical data:</strong> - Stocks: <span class="math inline">\(E(R) = 11\%\)</span>, <span class="math inline">\(\sigma = 20\%\)</span> - Bonds: <span class="math inline">\(E(R) = 6\%\)</span>, <span class="math inline">\(\sigma = 10\%\)</span> - Correlation = 0.2</p>
+<p><strong>60/40 Portfolio (60% stocks, 40% bonds):</strong></p>
+<p>Expected return: <span class="math display">\[E(R_p) = 0.60 \times 11\% + 0.40 \times 6\% = 6.6\% + 2.4\% = 9\%\]</span></p>
+<p>Portfolio risk: <span class="math display">\[\sigma_p = \sqrt{(0.6)^2(20)^2 + (0.4)^2(10)^2 + 2(0.6)(0.4)(20)(10)(0.2)}\]</span> <span class="math display">\[= \sqrt{144 + 16 + 19.2} = \sqrt{179.2} = 13.4\%\]</span></p>
+<p><strong>Analysis:</strong> The 60/40 portfolio offers 9% return with only 13.4% risk—much better than holding 100% stocks (11% return, 20% risk) if you’re moderately risk-averse.</p>
+<p><strong>In Practice:</strong> The traditional 60/40 stock/bond portfolio has been challenged in recent years due to rising interest rates affecting both stocks and bonds simultaneously. Modern portfolios increasingly include alternative assets (real estate, commodities, private equity) to enhance diversification.</p>
+</section>
+<section id="application-3-performance-evaluation" class="level3" data-number="6.8.3">
+<h3 data-number="6.8.3" class="anchored" data-anchor-id="application-3-performance-evaluation"><span class="header-section-number">6.8.3</span> Application 3: Performance Evaluation</h3>
+<p><strong>Investment Management Use:</strong> Evaluate whether a portfolio manager is adding value.</p>
+<p><strong>Example:</strong> Your portfolio manager delivered 14% return last year. Good or bad?</p>
+<p><strong>Given:</strong> - Portfolio return = 14% - Portfolio beta = 1.3 - Risk-free rate = 4.5% - Market return = 12%</p>
+<p><strong>Step 1:</strong> Calculate required return using CAPM: <span class="math display">\[E(R_p) = 4.5\% + 1.3 \times [12\% - 4.5\%] = 4.5\% + 9.75\% = 14.25\%\]</span></p>
+<p><strong>Step 2:</strong> Calculate alpha: <span class="math display">\[\alpha = \text{Actual return} - \text{Required return} = 14\% - 14.25\% = -0.25\%\]</span></p>
+<p><strong>Interpretation:</strong> <strong>Negative alpha.</strong> The manager underperformed by 0.25% after adjusting for risk. You could have earned 14.25% by simply holding a portfolio with beta 1.3 (mix of index fund and leverage).</p>
+<blockquote class="blockquote">
+<p><strong>Warning:</strong> Many investors are fooled by high returns without considering risk. A 20% return with beta 2.0 might actually be worse than a 12% return with beta 1.0 when risk-adjusted.</p>
+</blockquote>
+</section>
+<section id="application-4-market-timing-and-economic-forecasting" class="level3" data-number="6.8.4">
+<h3 data-number="6.8.4" class="anchored" data-anchor-id="application-4-market-timing-and-economic-forecasting"><span class="header-section-number">6.8.4</span> Application 4: Market Timing and Economic Forecasting</h3>
+<p><strong>Example (January 2026 Context):</strong> The Federal Reserve has signaled potential rate cuts later in 2026 if inflation continues to moderate. How should this affect your portfolio?</p>
+<p><strong>Analysis:</strong> - <strong>Rate cuts</strong> typically boost stock prices (lower discount rates) - <strong>High-beta stocks</strong> (technology, consumer discretionary) benefit most - <strong>Low-beta stocks</strong> (utilities, consumer staples) benefit least</p>
+<p><strong>Strategy:</strong> If you believe rate cuts are coming: 1. <strong>Increase portfolio beta</strong> by overweighting high-beta sectors 2. <strong>Reduce bond duration</strong> (bonds already priced in rate cuts) 3. <strong>Consider small-cap stocks</strong> (higher beta, more rate-sensitive)</p>
+<p><strong>Current example:</strong> Many investors are overweighting AI-related stocks (Nvidia, Microsoft, Google) which have high betas but also high growth prospects. This is a bet that both the market will rise AND these companies will outperform.</p>
+<hr>
+</section>
+</section>
+<section id="wrap-up" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="wrap-up"><span class="header-section-number">6.9</span> Wrap-Up</h2>
+<section id="what-youve-learned" class="level3" data-number="6.9.1">
+<h3 data-number="6.9.1" class="anchored" data-anchor-id="what-youve-learned"><span class="header-section-number">6.9.1</span> What You’ve Learned</h3>
+<p>✓ <strong>Historical returns:</strong> Arithmetic average (for forecasting) vs.&nbsp;geometric average (for performance measurement)</p>
+<p>✓ <strong>Risk measurement:</strong> Variance and standard deviation quantify return volatility</p>
+<p>✓ <strong>Diversification:</strong> Reduces unsystematic risk but not systematic risk</p>
+<p>✓ <strong>Beta:</strong> Measures systematic risk (sensitivity to market movements)</p>
+<p>✓ <strong>CAPM:</strong> Calculates required return based on systematic risk: <span class="math inline">\(E(R_i) = R_f + \beta_i[E(R_m) - R_f]\)</span></p>
+<p>✓ <strong>Investment decisions:</strong> Compare expected return to CAPM required return</p>
+<p>✓ <strong>Excel functions:</strong> AVERAGE, GEOMEAN, STDEV.S, SLOPE for risk-return analysis</p>
+</section>
+<section id="connection-to-previous-modules" class="level3" data-number="6.9.2">
+<h3 data-number="6.9.2" class="anchored" data-anchor-id="connection-to-previous-modules"><span class="header-section-number">6.9.2</span> Connection to Previous Modules</h3>
+<p><strong>Bonds:</strong> Bond yields reflect risk premiums. Corporate bonds have higher yields than Treasuries because of default risk (systematic risk component).</p>
+<p><strong>Stocks:</strong> The discount rate in dividend discount models comes from CAPM. Higher-beta stocks require higher discount rates.</p>
+<p><strong>Time Value of Money:</strong> The discount rate in all present value calculations should reflect the risk of the cash flows. CAPM tells you what that rate should be.</p>
+<hr>
+</section>
+</section>
+<section id="key-formulas-summary" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="key-formulas-summary"><span class="header-section-number">6.10</span> Key Formulas Summary</h2>
+<p><strong>Total Return:</strong> <span class="math display">\[R_t = \frac{P_t - P_{t-1} + D_t}{P_{t-1}}\]</span></p>
+<p><strong>Arithmetic Average Return:</strong> <span class="math display">\[\bar{R} = \frac{1}{n}\sum_{i=1}^{n}R_i\]</span></p>
+<p><strong>Geometric Average Return:</strong> <span class="math display">\[\bar{R}_{geometric} = \left[(1+R_1)(1+R_2)...(1+R_n)\right]^{1/n} - 1\]</span></p>
+<p><strong>Variance:</strong> <span class="math display">\[\sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(R_i - \bar{R})^2\]</span></p>
+<p><strong>Standard Deviation:</strong> <span class="math display">\[\sigma = \sqrt{\sigma^2}\]</span></p>
+<p><strong>Portfolio Expected Return:</strong> <span class="math display">\[E(R_p) = \sum_{i=1}^{n}w_i \times E(R_i)\]</span></p>
+<p><strong>Portfolio Standard Deviation (Two Assets):</strong> <span class="math display">\[\sigma_p = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}\]</span></p>
+<p><strong>Beta:</strong> <span class="math display">\[\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}\]</span></p>
+<p><strong>Portfolio Beta:</strong> <span class="math display">\[\beta_p = \sum_{i=1}^{n}w_i \times \beta_i\]</span></p>
+<p><strong>Capital Asset Pricing Model (CAPM):</strong> <span class="math display">\[E(R_i) = R_f + \beta_i \times [E(R_m) - R_f]\]</span></p>
+<p><strong>Alpha (Risk-Adjusted Performance):</strong> <span class="math display">\[\alpha = R_{actual} - R_{required}\]</span></p>
+<hr>
+</section>
+<section id="practice-recommendations" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="practice-recommendations"><span class="header-section-number">6.11</span> Practice Recommendations</h2>
+<ol type="1">
+<li><strong>Master the Excel functions</strong> in Section 5.6—you’ll use them constantly in finance</li>
+<li><strong>Work through the practice problems</strong> to build intuition for risk-return tradeoffs</li>
+<li><strong>Follow real market data:</strong> Track betas and returns for stocks you’re interested in</li>
+<li><strong>Use the @<span class="citation" data-cites="prep-finance-helper">@prep-finance-helper</span> bot</strong> in BoodleBox for additional practice and explanations</li>
+<li><strong>Connect to previous modules:</strong> Notice how CAPM provides the discount rates you used in Modules 3-4</li>
+</ol>
+<p><strong>Real-world practice:</strong> Go to Yahoo Finance, pick 5 stocks, download 5 years of monthly returns, and calculate: - Arithmetic and geometric average returns - Standard deviations - Betas (regress against S&amp;P 500) - Required returns using CAPM - Whether each stock is over/undervalued</p>
+<p>This hands-on practice will solidify your understanding far better than just reading examples.</p>
+<hr>
+<p><strong>End of Risk and Return Lecture</strong></p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./module04.html" class="pagination-link" aria-label="Stock Valuation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stock Valuation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Risk and Return"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Module Overview</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>In the previous modules you learned how to value financial assets by discounting their expected cash flows. But a critical question remains: **What discount rate should you use?**</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>The answer depends on **risk**. Investors demand higher returns for taking on more risk. This fundamental principle—the **risk-return tradeoff**—is the foundation of modern finance.</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>**In this module, you'll learn:**</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How to measure historical investment returns (arithmetic vs. geometric averages)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How to quantify risk using variance and standard deviation</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Why diversification reduces risk and what types of risk remain</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>How to measure systematic risk using Beta</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>How to estimate required returns using the Capital Asset Pricing Model (CAPM)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>**Why this matters:** Understanding risk and return is essential for:</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Corporate finance:** Determining the cost of equity capital for capital budgeting decisions</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Investment management:** Constructing efficient portfolios and evaluating performance</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Personal finance:** Making informed decisions about retirement accounts and asset allocation</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Note:** This module builds directly on your bond and stock valuation skills from Modules 3-4. The discount rates you use in DCF models come from the risk-return principles you'll learn here.</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Measuring Historical Returns</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>Before we can understand the relationship between risk and return, we need to measure returns accurately.</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### Total Return Calculation</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>The **total return** on an investment over a single period includes both capital gains (price appreciation) and income (dividends or interest):</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>$$R_t = \frac{P_t - P_{t-1} + D_t}{P_{t-1}}$$</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$R_t$ = Return in period $t$</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$P_t$ = Price at end of period $t$</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$P_{t-1}$ = Price at beginning of period $t$</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$D_t$ = Dividends or income received during period $t$</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>**Example:** You bought Nvidia stock at $400 per share. One year later, it's worth $500 and paid a $2 dividend. Your return is:</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>$$R = \frac{500 - 400 + 2}{400} = \frac{102}{400} = 0.255 = 25.5\%$$</span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Important:** Total return includes BOTH price appreciation and income. Many investors mistakenly focus only on price changes and ignore dividends, which historically account for about 40% of stock market returns.</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a><span class="fu">### Arithmetic Average Return</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>When you have multiple periods of returns, the **arithmetic average** (also called the mean return) is simply the sum of returns divided by the number of periods:</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>$$\bar{R} = \frac{1}{n}\sum_{i=1}^{n}R_i = \frac{R_1 + R_2 + ... + R_n}{n}$$</span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>**Example:** Tesla's annual returns over five years were: 15%, -10%, 25%, 5%, 20%</span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>$$\bar{R} = \frac{15\% + (-10\%) + 25\% + 5\% + 20\%}{5} = \frac{55\%}{5} = 11\%$$</span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>The arithmetic average is **11% per year**.</span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="fu">### Geometric Average Return</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>The **geometric average** (also called the compound annual growth rate or CAGR) accounts for compounding and tells you the **actual** average annual return that would produce the same ending wealth:</span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a>$$\bar{R}_{geometric} = \left<span class="co">[</span><span class="ot">(1+R_1)(1+R_2)...(1+R_n)\right</span><span class="co">]</span>^{1/n} - 1$$</span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a>**Using the same Tesla example:**</span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a>$$\bar{R}_{geometric} = \left<span class="co">[</span><span class="ot">(1.15)(0.90)(1.25)(1.05)(1.20)\right</span><span class="co">]</span>^{1/5} - 1$$</span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>$$= \left<span class="co">[</span><span class="ot">1.6266\right</span><span class="co">]</span>^{0.20} - 1 = 1.1024 - 1 = 0.1024 = 10.24\%$$</span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a>The geometric average is **10.24% per year**.</span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Note:** The geometric average is always less than or equal to the arithmetic average (they're equal only when returns are constant). The greater the volatility, the larger the difference between the two.</span></span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="fu">### Which Average Should You Use?</span></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Arithmetic average:** Best for estimating **expected future returns** in a single period. This is what you use in forward-looking models like CAPM.</span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Geometric average:** Best for measuring **actual historical performance** over multiple periods. This tells you what you actually earned.</span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>**In Practice:** If you're building a financial model to estimate next year's expected return, use the arithmetic average. If you're reporting "what did this investment actually earn over the past 10 years," use the geometric average.</span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="fu">## Measuring Risk</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a>In finance, **risk** means uncertainty about future returns. The more variable the returns, the riskier the investment.</span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variance and Standard Deviation</span></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a>The most common measure of risk is **standard deviation** ($\sigma$), which measures how much returns typically deviate from the average.</span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a>**Step 1: Calculate Variance** ($\sigma^2$)</span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a>$$\sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(R_i - \bar{R})^2$$</span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a>**Step 2: Calculate Standard Deviation** ($\sigma$)</span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a>$$\sigma = \sqrt{\sigma^2}$$</span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Tip:** Standard deviation is in the same units as returns (percentages), making it easier to interpret than variance.</span></span>
+<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a>**Example:** Apple's returns over four years: 20%, 10%, 30%, -5%</span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a>**Step 1:** Calculate arithmetic average:</span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a>$$\bar{R} = \frac{20\% + 10\% + 30\% + (-5\%)}{4} = \frac{55\%}{4} = 13.75\%$$</span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>**Step 2:** Calculate deviations from the mean:</span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 1: $20\% - 13.75\% = 6.25\%$</span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 2: $10\% - 13.75\% = -3.75\%$</span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 3: $30\% - 13.75\% = 16.25\%$</span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 4: $-5\% - 13.75\% = -18.75\%$</span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>**Step 3:** Square the deviations:</span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 1: $(6.25\%)^2 = 39.0625$</span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 2: $(-3.75\%)^2 = 14.0625$</span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 3: $(16.25\%)^2 = 264.0625$</span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Year 4: $(-18.75\%)^2 = 351.5625$</span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a>**Step 4:** Calculate variance:</span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a>$$\sigma^2 = \frac{39.0625 + 14.0625 + 264.0625 + 351.5625}{4-1} = \frac{668.75}{3} = 222.92$$</span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>**Step 5:** Calculate standard deviation:</span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>$$\sigma = \sqrt{222.92} = 14.93\%$$</span>
+<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a>Apple's standard deviation is **14.93%**.</span>
+<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpreting Standard Deviation</span></span>
+<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a>Standard deviation tells you the **typical range** of returns you can expect:</span>
+<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Low standard deviation (5-10%):** Relatively stable returns (e.g., utility stocks, bonds)</span>
+<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Moderate standard deviation (15-25%):** Typical for large-cap stocks</span>
+<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**High standard deviation (30%+):** Very volatile (e.g., small-cap stocks, cryptocurrencies)</span>
+<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a>**Historical Context (1926-2025):**</span>
+<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Large-cap stocks (S&amp;P 500):** Average return ≈ 10%, Standard deviation ≈ 20%</span>
+<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Small-cap stocks:** Average return ≈ 12%, Standard deviation ≈ 30%</span>
+<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Long-term Treasury bonds:** Average return ≈ 6%, Standard deviation ≈ 10%</span>
+<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Treasury bills (risk-free):** Average return ≈ 3.5%, Standard deviation ≈ 3%</span>
+<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Important:** Higher returns come with higher risk. There's no such thing as a high-return, low-risk investment in efficient markets. If someone promises you one, it's likely a scam.</span></span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a><span class="fu">### Historical Risk Premiums</span></span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a>The **risk premium** is the extra return investors demand for bearing risk:</span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a>$$\text{Risk Premium} = E(R_{risky}) - R_f$$</span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$E(R_{risky})$ = Expected return on risky asset</span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$R_f$ = Risk-free rate (typically Treasury bills)</span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a>**The equity risk premium** (stock market return minus risk-free rate) has historically averaged about **6-8%** in the U.S.</span>
+<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a>**In Practice (January 2026):** With the 10-year Treasury yield around 4.5% and historical equity risk premium of 7%, we'd estimate the expected stock market return at:</span>
+<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a>$$E(R_{market}) = 4.5\% + 7\% = 11.5\%$$</span>
+<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Power of Diversification</span></span>
+<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a>One of the most important principles in finance: **Diversification reduces risk without necessarily reducing expected return.**</span>
+<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a><span class="fu">### Portfolio Expected Return</span></span>
+<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a>The expected return on a portfolio is simply the weighted average of the expected returns on individual assets:</span>
+<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>$$E(R_p) = \sum_{i=1}^{n}w_i \times E(R_i)$$</span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$w_i$ = Weight (proportion) of asset $i$ in the portfolio</span>
+<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$E(R_i)$ = Expected return on asset $i$</span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\sum w_i = 1$ (weights sum to 100%)</span>
+<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a>**Example:** You invest 60% in Nvidia (expected return 18%) and 40% in Treasury bonds (expected return 5%):</span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a>$$E(R_p) = (0.60 \times 18\%) + (0.40 \times 5\%) = 10.8\% + 2\% = 12.8\%$$</span>
+<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Note:** Portfolio expected return is always a weighted average—you can't create extra return through diversification alone.</span></span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a><span class="fu">### Portfolio Risk: The Diversification Effect</span></span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>Here's where it gets interesting: **Portfolio risk is NOT a weighted average of individual risks.**</span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a>If two assets don't move perfectly together (i.e., they're not perfectly correlated), combining them reduces overall portfolio volatility.</span>
+<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>**Correlation coefficient** ($\rho$) measures how two assets move together:</span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\rho = +1$: Perfect positive correlation (move together)</span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\rho = 0$: No correlation (independent)</span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\rho = -1$: Perfect negative correlation (move opposite)</span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a>**For a two-asset portfolio:**</span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a>$$\sigma_p = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}$$</span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a>**Example:** You invest 50% in Tesla ($\sigma = 40\%$) and 50% in Procter &amp; Gamble ($\sigma = 15\%$). The correlation between them is 0.3.</span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>$$\sigma_p = \sqrt{(0.5)^2(40)^2 + (0.5)^2(15)^2 + 2(0.5)(0.5)(40)(15)(0.3)}$$</span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a>$$= \sqrt{400 + 56.25 + 90} = \sqrt{546.25} = 23.37\%$$</span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a>**Notice:** The portfolio standard deviation (23.37%) is **less than the weighted average** of the individual standard deviations:</span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>$$\text{Weighted average} = (0.5 \times 40\%) + (0.5 \times 15\%) = 27.5\%$$</span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a>**You reduced risk from 27.5% to 23.37% through diversification!**</span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Tip:** The lower the correlation between assets, the greater the diversification benefit. This is why investors hold both stocks and bonds—they often move in opposite directions during market stress.</span></span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a><span class="fu">### Systematic vs. Unsystematic Risk</span></span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>Not all risk can be diversified away. We distinguish between two types:</span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>**1. Unsystematic Risk (Firm-Specific Risk, Diversifiable Risk)**</span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>Risk that affects only a specific company or industry:</span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CEO resignation</span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Product recall</span>
+<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Factory fire</span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Patent lawsuit</span>
+<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Competitor innovation</span>
+<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>**This risk CAN be eliminated through diversification.** If you hold 30+ stocks across different industries, firm-specific events average out.</span>
+<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a>**2. Systematic Risk (Market Risk, Non-Diversifiable Risk)**</span>
+<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a>Risk that affects the entire market:</span>
+<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Recession</span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interest rate changes</span>
+<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Inflation</span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Geopolitical events</span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pandemic</span>
+<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a>**This risk CANNOT be diversified away.** No matter how many stocks you hold, you're still exposed to market-wide movements.</span>
+<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Important:** Because unsystematic risk can be eliminated through diversification, investors are NOT compensated for bearing it. You only earn a risk premium for bearing systematic risk.</span></span>
+<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a>**In Practice:** This is why professional investors focus on **beta** (systematic risk) rather than total volatility when evaluating stocks. A stock with high total volatility but low beta might actually be less risky in a diversified portfolio.</span>
+<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beta: Measuring Systematic Risk</span></span>
+<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### What Is Beta?</span></span>
+<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a>**Beta** ($\beta$) measures how much a stock moves relative to the overall market. It quantifies systematic risk.</span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>$$\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)} = \frac{\sigma_i \times \rho_{i,m}}{\sigma_m}$$</span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$R_i$ = Return on stock $i$</span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$R_m$ = Return on the market (usually S&amp;P 500)</span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\text{Cov}$ = Covariance</span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\rho_{i,m}$ = Correlation between stock $i$ and market</span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a>**Intuitive interpretation:** Beta tells you how much the stock moves when the market moves 1%.</span>
+<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpreting Beta Values</span></span>
+<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Beta <span class="pp">|</span> Interpretation <span class="pp">|</span> Example <span class="pp">|</span></span>
+<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------------|---------|</span></span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\beta = 1.0$ <span class="pp">|</span> Moves exactly with the market <span class="pp">|</span> S&amp;P 500 index fund <span class="pp">|</span></span>
+<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\beta &gt; 1.0$ <span class="pp">|</span> More volatile than market (aggressive) <span class="pp">|</span> Technology stocks, Tesla ($\beta \approx 2.0$) <span class="pp">|</span></span>
+<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\beta &lt; 1.0$ <span class="pp">|</span> Less volatile than market (defensive) <span class="pp">|</span> Utility stocks, Procter &amp; Gamble ($\beta \approx 0.5$) <span class="pp">|</span></span>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\beta = 0$ <span class="pp">|</span> No correlation with market <span class="pp">|</span> Risk-free asset (Treasury bills) <span class="pp">|</span></span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\beta &lt; 0$ <span class="pp">|</span> Moves opposite to market (rare) <span class="pp">|</span> Gold stocks (sometimes) <span class="pp">|</span></span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a>**Example:** Nvidia has a beta of approximately 1.7 (as of January 2026).</span>
+<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a>**Interpretation:** When the market goes up 10%, Nvidia tends to go up 17%. When the market falls 10%, Nvidia tends to fall 17%.</span>
+<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Warning:** Beta is estimated from historical data and can change over time. A company's beta can shift as its business model evolves or market conditions change.</span></span>
+<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### Portfolio Beta</span></span>
+<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a>The beta of a portfolio is the weighted average of individual betas:</span>
+<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a>$$\beta_p = \sum_{i=1}^{n}w_i \times \beta_i$$</span>
+<span id="cb12-284"><a href="#cb12-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-285"><a href="#cb12-285" aria-hidden="true" tabindex="-1"></a>**Example:** You hold:</span>
+<span id="cb12-286"><a href="#cb12-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>40% Nvidia ($\beta = 1.7$)</span>
+<span id="cb12-287"><a href="#cb12-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>30% Apple ($\beta = 1.2$)</span>
+<span id="cb12-288"><a href="#cb12-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>30% Treasury bonds ($\beta = 0$)</span>
+<span id="cb12-289"><a href="#cb12-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-290"><a href="#cb12-290" aria-hidden="true" tabindex="-1"></a>$$\beta_p = (0.40 \times 1.7) + (0.30 \times 1.2) + (0.30 \times 0) = 0.68 + 0.36 + 0 = 1.04$$</span>
+<span id="cb12-291"><a href="#cb12-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-292"><a href="#cb12-292" aria-hidden="true" tabindex="-1"></a>Your portfolio beta is **1.04**, meaning it moves roughly in line with the market.</span>
+<span id="cb12-293"><a href="#cb12-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-294"><a href="#cb12-294" aria-hidden="true" tabindex="-1"></a>**In Practice:** Portfolio managers adjust portfolio beta to match their market outlook:</span>
+<span id="cb12-295"><a href="#cb12-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bullish on market:** Increase beta above 1.0 (add aggressive stocks)</span>
+<span id="cb12-296"><a href="#cb12-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bearish on market:** Decrease beta below 1.0 (add defensive stocks or bonds)</span>
+<span id="cb12-297"><a href="#cb12-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-298"><a href="#cb12-298" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-299"><a href="#cb12-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-300"><a href="#cb12-300" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Capital Asset Pricing Model (CAPM)</span></span>
+<span id="cb12-301"><a href="#cb12-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-302"><a href="#cb12-302" aria-hidden="true" tabindex="-1"></a>The **Capital Asset Pricing Model (CAPM)** is one of the most important models in finance. It tells you the **required return** on a stock based on its systematic risk (beta).</span>
+<span id="cb12-303"><a href="#cb12-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-304"><a href="#cb12-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### The CAPM Formula</span></span>
+<span id="cb12-305"><a href="#cb12-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-306"><a href="#cb12-306" aria-hidden="true" tabindex="-1"></a>$$E(R_i) = R_f + \beta_i \times <span class="co">[</span><span class="ot">E(R_m) - R_f</span><span class="co">]</span>$$</span>
+<span id="cb12-307"><a href="#cb12-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-308"><a href="#cb12-308" aria-hidden="true" tabindex="-1"></a>Where:</span>
+<span id="cb12-309"><a href="#cb12-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$E(R_i)$ = Expected (required) return on stock $i$</span>
+<span id="cb12-310"><a href="#cb12-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$R_f$ = Risk-free rate (Treasury bill rate)</span>
+<span id="cb12-311"><a href="#cb12-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\beta_i$ = Beta of stock $i$</span>
+<span id="cb12-312"><a href="#cb12-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$E(R_m)$ = Expected return on the market</span>
+<span id="cb12-313"><a href="#cb12-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$<span class="co">[</span><span class="ot">E(R_m) - R_f</span><span class="co">]</span>$ = Market risk premium</span>
+<span id="cb12-314"><a href="#cb12-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-315"><a href="#cb12-315" aria-hidden="true" tabindex="-1"></a>**Interpretation:** The required return equals the risk-free rate plus a risk premium. The risk premium depends on:</span>
+<span id="cb12-316"><a href="#cb12-316" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How much risk you're taking ($\beta_i$)</span>
+<span id="cb12-317"><a href="#cb12-317" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The market price of risk ($E(R_m) - R_f$)</span>
+<span id="cb12-318"><a href="#cb12-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-319"><a href="#cb12-319" aria-hidden="true" tabindex="-1"></a>**Example:** Calculate the required return on Tesla stock.</span>
+<span id="cb12-320"><a href="#cb12-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-321"><a href="#cb12-321" aria-hidden="true" tabindex="-1"></a>**Given:**</span>
+<span id="cb12-322"><a href="#cb12-322" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Risk-free rate ($R_f$) = 4.5% (10-year Treasury)</span>
+<span id="cb12-323"><a href="#cb12-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Market return ($E(R_m)$) = 11% (historical average)</span>
+<span id="cb12-324"><a href="#cb12-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tesla beta ($\beta$) = 2.0</span>
+<span id="cb12-325"><a href="#cb12-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-326"><a href="#cb12-326" aria-hidden="true" tabindex="-1"></a>$$E(R_{Tesla}) = 4.5\% + 2.0 \times <span class="co">[</span><span class="ot">11\% - 4.5\%</span><span class="co">]</span>$$</span>
+<span id="cb12-327"><a href="#cb12-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-328"><a href="#cb12-328" aria-hidden="true" tabindex="-1"></a>$$= 4.5\% + 2.0 \times 6.5\% = 4.5\% + 13\% = 17.5\%$$</span>
+<span id="cb12-329"><a href="#cb12-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-330"><a href="#cb12-330" aria-hidden="true" tabindex="-1"></a>**Interpretation:** Given Tesla's high systematic risk (beta of 2.0), investors require a **17.5% annual return** to compensate them for that risk.</span>
+<span id="cb12-331"><a href="#cb12-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-332"><a href="#cb12-332" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Important:** CAPM gives you the **minimum return** investors demand. This becomes your discount rate in DCF models. If a stock's expected return is below its CAPM required return, it's overvalued.</span></span>
+<span id="cb12-333"><a href="#cb12-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-334"><a href="#cb12-334" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Security Market Line (SML)</span></span>
+<span id="cb12-335"><a href="#cb12-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-336"><a href="#cb12-336" aria-hidden="true" tabindex="-1"></a>The **Security Market Line** is a graphical representation of CAPM. It shows the relationship between beta and required return.</span>
+<span id="cb12-337"><a href="#cb12-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-338"><a href="#cb12-338" aria-hidden="true" tabindex="-1"></a>**Key properties:**</span>
+<span id="cb12-339"><a href="#cb12-339" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Y-intercept:** Risk-free rate ($R_f$)</span>
+<span id="cb12-340"><a href="#cb12-340" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Slope:** Market risk premium ($E(R_m) - R_f$)</span>
+<span id="cb12-341"><a href="#cb12-341" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**X-axis:** Beta ($\beta$)</span>
+<span id="cb12-342"><a href="#cb12-342" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Y-axis:** Expected return ($E(R)$)</span>
+<span id="cb12-343"><a href="#cb12-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-344"><a href="#cb12-344" aria-hidden="true" tabindex="-1"></a>**Stocks plot on the SML based on their beta:**</span>
+<span id="cb12-345"><a href="#cb12-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**On the line:** Fairly priced</span>
+<span id="cb12-346"><a href="#cb12-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Above the line:** Undervalued (offering more return than required)</span>
+<span id="cb12-347"><a href="#cb12-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Below the line:** Overvalued (offering less return than required)</span>
+<span id="cb12-348"><a href="#cb12-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-349"><a href="#cb12-349" aria-hidden="true" tabindex="-1"></a>**Example SML (with $R_f = 4.5\%$ and $E(R_m) = 11\%$):**</span>
+<span id="cb12-350"><a href="#cb12-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-351"><a href="#cb12-351" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Beta <span class="pp">|</span> Required Return <span class="pp">|</span></span>
+<span id="cb12-352"><a href="#cb12-352" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|-----------------|</span></span>
+<span id="cb12-353"><a href="#cb12-353" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0.0 <span class="pp">|</span> 4.5% <span class="pp">|</span></span>
+<span id="cb12-354"><a href="#cb12-354" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0.5 <span class="pp">|</span> 7.75% <span class="pp">|</span></span>
+<span id="cb12-355"><a href="#cb12-355" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1.0 <span class="pp">|</span> 11.0% <span class="pp">|</span></span>
+<span id="cb12-356"><a href="#cb12-356" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1.5 <span class="pp">|</span> 14.25% <span class="pp">|</span></span>
+<span id="cb12-357"><a href="#cb12-357" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2.0 <span class="pp">|</span> 17.5% <span class="pp">|</span></span>
+<span id="cb12-358"><a href="#cb12-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-359"><a href="#cb12-359" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using CAPM for Investment Decisions</span></span>
+<span id="cb12-360"><a href="#cb12-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-361"><a href="#cb12-361" aria-hidden="true" tabindex="-1"></a>**Step 1:** Calculate required return using CAPM</span>
+<span id="cb12-362"><a href="#cb12-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-363"><a href="#cb12-363" aria-hidden="true" tabindex="-1"></a>**Step 2:** Estimate expected return using:</span>
+<span id="cb12-364"><a href="#cb12-364" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analyst forecasts</span>
+<span id="cb12-365"><a href="#cb12-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dividend discount model</span>
+<span id="cb12-366"><a href="#cb12-366" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Historical averages</span>
+<span id="cb12-367"><a href="#cb12-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-368"><a href="#cb12-368" aria-hidden="true" tabindex="-1"></a>**Step 3:** Compare:</span>
+<span id="cb12-369"><a href="#cb12-369" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If **expected return &gt; required return:** Stock is **undervalued** → BUY</span>
+<span id="cb12-370"><a href="#cb12-370" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If **expected return &lt; required return:** Stock is **overvalued** → SELL</span>
+<span id="cb12-371"><a href="#cb12-371" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If **expected return = required return:** Stock is **fairly valued** → HOLD</span>
+<span id="cb12-372"><a href="#cb12-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-373"><a href="#cb12-373" aria-hidden="true" tabindex="-1"></a>**Example:** Should you invest in Apple?</span>
+<span id="cb12-374"><a href="#cb12-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a>**Given:**</span>
+<span id="cb12-376"><a href="#cb12-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Apple beta = 1.2</span>
+<span id="cb12-377"><a href="#cb12-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Risk-free rate = 4.5%</span>
+<span id="cb12-378"><a href="#cb12-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Market return = 11%</span>
+<span id="cb12-379"><a href="#cb12-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Your analysis suggests Apple will return 13% next year</span>
+<span id="cb12-380"><a href="#cb12-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-381"><a href="#cb12-381" aria-hidden="true" tabindex="-1"></a>**Step 1:** Calculate required return:</span>
+<span id="cb12-382"><a href="#cb12-382" aria-hidden="true" tabindex="-1"></a>$$E(R_{Apple}) = 4.5\% + 1.2 \times <span class="co">[</span><span class="ot">11\% - 4.5\%</span><span class="co">]</span> = 4.5\% + 7.8\% = 12.3\%$$</span>
+<span id="cb12-383"><a href="#cb12-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-384"><a href="#cb12-384" aria-hidden="true" tabindex="-1"></a>**Step 2:** Compare:</span>
+<span id="cb12-385"><a href="#cb12-385" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expected return: 13%</span>
+<span id="cb12-386"><a href="#cb12-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Required return: 12.3%</span>
+<span id="cb12-387"><a href="#cb12-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Difference: 13% - 12.3% = **+0.7%**</span>
+<span id="cb12-388"><a href="#cb12-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-389"><a href="#cb12-389" aria-hidden="true" tabindex="-1"></a>**Decision:** Apple is **undervalued**. It offers more return (13%) than required for its risk level (12.3%). **BUY.**</span>
+<span id="cb12-390"><a href="#cb12-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-391"><a href="#cb12-391" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Tip:** The difference between expected and required return is called **alpha** ($\alpha$). Positive alpha means undervalued; negative alpha means overvalued. Active portfolio managers try to find positive-alpha stocks.</span></span>
+<span id="cb12-392"><a href="#cb12-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-393"><a href="#cb12-393" aria-hidden="true" tabindex="-1"></a>**In Practice (January 2026):** With the Federal Reserve holding rates steady and strong corporate earnings, many tech stocks are trading near their fair value according to CAPM. However, AI-related stocks like Nvidia show positive alpha due to exceptional growth prospects, while traditional retail stocks show negative alpha due to e-commerce disruption.</span>
+<span id="cb12-394"><a href="#cb12-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-395"><a href="#cb12-395" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-396"><a href="#cb12-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-397"><a href="#cb12-397" aria-hidden="true" tabindex="-1"></a><span class="fu">## Excel Functions for Risk and Return</span></span>
+<span id="cb12-398"><a href="#cb12-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-399"><a href="#cb12-399" aria-hidden="true" tabindex="-1"></a>Excel provides powerful built-in functions for risk-return analysis:</span>
+<span id="cb12-400"><a href="#cb12-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-401"><a href="#cb12-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Return Calculations</span></span>
+<span id="cb12-402"><a href="#cb12-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-403"><a href="#cb12-403" aria-hidden="true" tabindex="-1"></a>**AVERAGE()** - Arithmetic average return</span>
+<span id="cb12-404"><a href="#cb12-404" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-405"><a href="#cb12-405" aria-hidden="true" tabindex="-1"></a><span class="in">=AVERAGE(B2:B11)</span></span>
+<span id="cb12-406"><a href="#cb12-406" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-407"><a href="#cb12-407" aria-hidden="true" tabindex="-1"></a>Calculates the arithmetic mean of returns in cells B2 through B11.</span>
+<span id="cb12-408"><a href="#cb12-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-409"><a href="#cb12-409" aria-hidden="true" tabindex="-1"></a>**GEOMEAN()** - Geometric average return</span>
+<span id="cb12-410"><a href="#cb12-410" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-411"><a href="#cb12-411" aria-hidden="true" tabindex="-1"></a><span class="in">=(GEOMEAN(1+B2:B11)-1)</span></span>
+<span id="cb12-412"><a href="#cb12-412" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-413"><a href="#cb12-413" aria-hidden="true" tabindex="-1"></a>Note: Add 1 to each return, calculate geometric mean, then subtract 1.</span>
+<span id="cb12-414"><a href="#cb12-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-415"><a href="#cb12-415" aria-hidden="true" tabindex="-1"></a><span class="fu">### Risk Calculations</span></span>
+<span id="cb12-416"><a href="#cb12-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-417"><a href="#cb12-417" aria-hidden="true" tabindex="-1"></a>**VAR.S()** - Sample variance</span>
+<span id="cb12-418"><a href="#cb12-418" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-419"><a href="#cb12-419" aria-hidden="true" tabindex="-1"></a><span class="in">=VAR.S(B2:B11)</span></span>
+<span id="cb12-420"><a href="#cb12-420" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-421"><a href="#cb12-421" aria-hidden="true" tabindex="-1"></a>Calculates variance using $n-1$ in denominator (sample variance).</span>
+<span id="cb12-422"><a href="#cb12-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-423"><a href="#cb12-423" aria-hidden="true" tabindex="-1"></a>**STDEV.S()** - Sample standard deviation</span>
+<span id="cb12-424"><a href="#cb12-424" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-425"><a href="#cb12-425" aria-hidden="true" tabindex="-1"></a><span class="in">=STDEV.S(B2:B11)</span></span>
+<span id="cb12-426"><a href="#cb12-426" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-427"><a href="#cb12-427" aria-hidden="true" tabindex="-1"></a>Calculates standard deviation using $n-1$ in denominator.</span>
+<span id="cb12-428"><a href="#cb12-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-429"><a href="#cb12-429" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Note:** Use VAR.S and STDEV.S (not VAR.P or STDEV.P) when working with historical sample data, which is almost always the case in finance.</span></span>
+<span id="cb12-430"><a href="#cb12-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-431"><a href="#cb12-431" aria-hidden="true" tabindex="-1"></a><span class="fu">### Portfolio Calculations</span></span>
+<span id="cb12-432"><a href="#cb12-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-433"><a href="#cb12-433" aria-hidden="true" tabindex="-1"></a>**SUMPRODUCT()** - Portfolio expected return</span>
+<span id="cb12-434"><a href="#cb12-434" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-435"><a href="#cb12-435" aria-hidden="true" tabindex="-1"></a><span class="in">=SUMPRODUCT(weights, returns)</span></span>
+<span id="cb12-436"><a href="#cb12-436" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-437"><a href="#cb12-437" aria-hidden="true" tabindex="-1"></a>Multiplies each weight by its return and sums the results.</span>
+<span id="cb12-438"><a href="#cb12-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-439"><a href="#cb12-439" aria-hidden="true" tabindex="-1"></a>**Example:**</span>
+<span id="cb12-440"><a href="#cb12-440" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-441"><a href="#cb12-441" aria-hidden="true" tabindex="-1"></a><span class="in">=SUMPRODUCT(B2:B5, C2:C5)</span></span>
+<span id="cb12-442"><a href="#cb12-442" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-443"><a href="#cb12-443" aria-hidden="true" tabindex="-1"></a>Where B2:B5 contains weights and C2:C5 contains expected returns.</span>
+<span id="cb12-444"><a href="#cb12-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-445"><a href="#cb12-445" aria-hidden="true" tabindex="-1"></a><span class="fu">### Beta and Correlation</span></span>
+<span id="cb12-446"><a href="#cb12-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-447"><a href="#cb12-447" aria-hidden="true" tabindex="-1"></a>**CORREL()** - Correlation coefficient</span>
+<span id="cb12-448"><a href="#cb12-448" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-449"><a href="#cb12-449" aria-hidden="true" tabindex="-1"></a><span class="in">=CORREL(stock_returns, market_returns)</span></span>
+<span id="cb12-450"><a href="#cb12-450" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-451"><a href="#cb12-451" aria-hidden="true" tabindex="-1"></a>Calculates correlation between two return series.</span>
+<span id="cb12-452"><a href="#cb12-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-453"><a href="#cb12-453" aria-hidden="true" tabindex="-1"></a>**SLOPE()** - Beta calculation</span>
+<span id="cb12-454"><a href="#cb12-454" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-455"><a href="#cb12-455" aria-hidden="true" tabindex="-1"></a><span class="in">=SLOPE(stock_returns, market_returns)</span></span>
+<span id="cb12-456"><a href="#cb12-456" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-457"><a href="#cb12-457" aria-hidden="true" tabindex="-1"></a>Calculates beta by regressing stock returns on market returns.</span>
+<span id="cb12-458"><a href="#cb12-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-459"><a href="#cb12-459" aria-hidden="true" tabindex="-1"></a>**Alternative beta calculation:**</span>
+<span id="cb12-460"><a href="#cb12-460" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-461"><a href="#cb12-461" aria-hidden="true" tabindex="-1"></a><span class="in">=COVARIANCE.S(stock_returns, market_returns) / VAR.S(market_returns)</span></span>
+<span id="cb12-462"><a href="#cb12-462" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-463"><a href="#cb12-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-464"><a href="#cb12-464" aria-hidden="true" tabindex="-1"></a><span class="fu">### CAPM Calculation</span></span>
+<span id="cb12-465"><a href="#cb12-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-466"><a href="#cb12-466" aria-hidden="true" tabindex="-1"></a>**Manual CAPM formula:**</span>
+<span id="cb12-467"><a href="#cb12-467" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-468"><a href="#cb12-468" aria-hidden="true" tabindex="-1"></a><span class="in">=risk_free_rate + beta * (market_return - risk_free_rate)</span></span>
+<span id="cb12-469"><a href="#cb12-469" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-470"><a href="#cb12-470" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-471"><a href="#cb12-471" aria-hidden="true" tabindex="-1"></a>**Example:**</span>
+<span id="cb12-472"><a href="#cb12-472" aria-hidden="true" tabindex="-1"></a><span class="in">```excel</span></span>
+<span id="cb12-473"><a href="#cb12-473" aria-hidden="true" tabindex="-1"></a><span class="in">=0.045 + 1.2 * (0.11 - 0.045)</span></span>
+<span id="cb12-474"><a href="#cb12-474" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-475"><a href="#cb12-475" aria-hidden="true" tabindex="-1"></a>Calculates required return for a stock with beta 1.2, given $R_f = 4.5\%$ and $E(R_m) = 11\%$.</span>
+<span id="cb12-476"><a href="#cb12-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-477"><a href="#cb12-477" aria-hidden="true" tabindex="-1"></a><span class="fu">### Excel Sign Conventions</span></span>
+<span id="cb12-478"><a href="#cb12-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-479"><a href="#cb12-479" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Important:** Unlike bond and stock valuation where cash flows have signs (negative for outflows, positive for inflows), return calculations use **unsigned percentages**. A -10% return is simply entered as -0.10 or -10%, not as a negative cash flow.</span></span>
+<span id="cb12-480"><a href="#cb12-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-481"><a href="#cb12-481" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-482"><a href="#cb12-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-483"><a href="#cb12-483" aria-hidden="true" tabindex="-1"></a><span class="fu">## Real-World Applications</span></span>
+<span id="cb12-484"><a href="#cb12-484" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-485"><a href="#cb12-485" aria-hidden="true" tabindex="-1"></a><span class="fu">### Application 1: Cost of Equity Capital</span></span>
+<span id="cb12-486"><a href="#cb12-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-487"><a href="#cb12-487" aria-hidden="true" tabindex="-1"></a>**Corporate Use:** Companies use CAPM to determine their **cost of equity**—the return shareholders require.</span>
+<span id="cb12-488"><a href="#cb12-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-489"><a href="#cb12-489" aria-hidden="true" tabindex="-1"></a>**Example:** Microsoft is evaluating a new cloud computing project. Should they invest?</span>
+<span id="cb12-490"><a href="#cb12-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-491"><a href="#cb12-491" aria-hidden="true" tabindex="-1"></a>**Given:**</span>
+<span id="cb12-492"><a href="#cb12-492" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Project requires $500 million investment</span>
+<span id="cb12-493"><a href="#cb12-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expected to generate $80 million per year forever</span>
+<span id="cb12-494"><a href="#cb12-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Microsoft's beta = 0.9</span>
+<span id="cb12-495"><a href="#cb12-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Risk-free rate = 4.5%</span>
+<span id="cb12-496"><a href="#cb12-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Market return = 11%</span>
+<span id="cb12-497"><a href="#cb12-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-498"><a href="#cb12-498" aria-hidden="true" tabindex="-1"></a>**Step 1:** Calculate cost of equity using CAPM:</span>
+<span id="cb12-499"><a href="#cb12-499" aria-hidden="true" tabindex="-1"></a>$$r_e = 4.5\% + 0.9 \times <span class="co">[</span><span class="ot">11\% - 4.5\%</span><span class="co">]</span> = 4.5\% + 5.85\% = 10.35\%$$</span>
+<span id="cb12-500"><a href="#cb12-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-501"><a href="#cb12-501" aria-hidden="true" tabindex="-1"></a>**Step 2:** Calculate project NPV (perpetuity):</span>
+<span id="cb12-502"><a href="#cb12-502" aria-hidden="true" tabindex="-1"></a>$$NPV = -500 + \frac{80}{0.1035} = -500 + 772.95 = +272.95 \text{ million}$$</span>
+<span id="cb12-503"><a href="#cb12-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-504"><a href="#cb12-504" aria-hidden="true" tabindex="-1"></a>**Decision:** **Accept the project.** It creates $273 million in shareholder value.</span>
+<span id="cb12-505"><a href="#cb12-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-506"><a href="#cb12-506" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Note:** This connects directly to Module 1 (time value of money) and Module 2 (perpetuities). The discount rate comes from CAPM!</span></span>
+<span id="cb12-507"><a href="#cb12-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-508"><a href="#cb12-508" aria-hidden="true" tabindex="-1"></a><span class="fu">### Application 2: Portfolio Construction</span></span>
+<span id="cb12-509"><a href="#cb12-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-510"><a href="#cb12-510" aria-hidden="true" tabindex="-1"></a>**Investment Use:** Investors use risk-return principles to build efficient portfolios.</span>
+<span id="cb12-511"><a href="#cb12-511" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-512"><a href="#cb12-512" aria-hidden="true" tabindex="-1"></a>**Example:** You're 30 years old saving for retirement. Should you hold stocks or bonds?</span>
+<span id="cb12-513"><a href="#cb12-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-514"><a href="#cb12-514" aria-hidden="true" tabindex="-1"></a>**Historical data:**</span>
+<span id="cb12-515"><a href="#cb12-515" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stocks: $E(R) = 11\%$, $\sigma = 20\%$</span>
+<span id="cb12-516"><a href="#cb12-516" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bonds: $E(R) = 6\%$, $\sigma = 10\%$</span>
+<span id="cb12-517"><a href="#cb12-517" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Correlation = 0.2</span>
+<span id="cb12-518"><a href="#cb12-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-519"><a href="#cb12-519" aria-hidden="true" tabindex="-1"></a>**60/40 Portfolio (60% stocks, 40% bonds):**</span>
+<span id="cb12-520"><a href="#cb12-520" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-521"><a href="#cb12-521" aria-hidden="true" tabindex="-1"></a>Expected return:</span>
+<span id="cb12-522"><a href="#cb12-522" aria-hidden="true" tabindex="-1"></a>$$E(R_p) = 0.60 \times 11\% + 0.40 \times 6\% = 6.6\% + 2.4\% = 9\%$$</span>
+<span id="cb12-523"><a href="#cb12-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-524"><a href="#cb12-524" aria-hidden="true" tabindex="-1"></a>Portfolio risk:</span>
+<span id="cb12-525"><a href="#cb12-525" aria-hidden="true" tabindex="-1"></a>$$\sigma_p = \sqrt{(0.6)^2(20)^2 + (0.4)^2(10)^2 + 2(0.6)(0.4)(20)(10)(0.2)}$$</span>
+<span id="cb12-526"><a href="#cb12-526" aria-hidden="true" tabindex="-1"></a>$$= \sqrt{144 + 16 + 19.2} = \sqrt{179.2} = 13.4\%$$</span>
+<span id="cb12-527"><a href="#cb12-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-528"><a href="#cb12-528" aria-hidden="true" tabindex="-1"></a>**Analysis:** The 60/40 portfolio offers 9% return with only 13.4% risk—much better than holding 100% stocks (11% return, 20% risk) if you're moderately risk-averse.</span>
+<span id="cb12-529"><a href="#cb12-529" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-530"><a href="#cb12-530" aria-hidden="true" tabindex="-1"></a>**In Practice:** The traditional 60/40 stock/bond portfolio has been challenged in recent years due to rising interest rates affecting both stocks and bonds simultaneously. Modern portfolios increasingly include alternative assets (real estate, commodities, private equity) to enhance diversification.</span>
+<span id="cb12-531"><a href="#cb12-531" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-532"><a href="#cb12-532" aria-hidden="true" tabindex="-1"></a><span class="fu">### Application 3: Performance Evaluation</span></span>
+<span id="cb12-533"><a href="#cb12-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-534"><a href="#cb12-534" aria-hidden="true" tabindex="-1"></a>**Investment Management Use:** Evaluate whether a portfolio manager is adding value.</span>
+<span id="cb12-535"><a href="#cb12-535" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-536"><a href="#cb12-536" aria-hidden="true" tabindex="-1"></a>**Example:** Your portfolio manager delivered 14% return last year. Good or bad?</span>
+<span id="cb12-537"><a href="#cb12-537" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-538"><a href="#cb12-538" aria-hidden="true" tabindex="-1"></a>**Given:**</span>
+<span id="cb12-539"><a href="#cb12-539" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Portfolio return = 14%</span>
+<span id="cb12-540"><a href="#cb12-540" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Portfolio beta = 1.3</span>
+<span id="cb12-541"><a href="#cb12-541" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Risk-free rate = 4.5%</span>
+<span id="cb12-542"><a href="#cb12-542" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Market return = 12%</span>
+<span id="cb12-543"><a href="#cb12-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-544"><a href="#cb12-544" aria-hidden="true" tabindex="-1"></a>**Step 1:** Calculate required return using CAPM:</span>
+<span id="cb12-545"><a href="#cb12-545" aria-hidden="true" tabindex="-1"></a>$$E(R_p) = 4.5\% + 1.3 \times <span class="co">[</span><span class="ot">12\% - 4.5\%</span><span class="co">]</span> = 4.5\% + 9.75\% = 14.25\%$$</span>
+<span id="cb12-546"><a href="#cb12-546" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-547"><a href="#cb12-547" aria-hidden="true" tabindex="-1"></a>**Step 2:** Calculate alpha:</span>
+<span id="cb12-548"><a href="#cb12-548" aria-hidden="true" tabindex="-1"></a>$$\alpha = \text{Actual return} - \text{Required return} = 14\% - 14.25\% = -0.25\%$$</span>
+<span id="cb12-549"><a href="#cb12-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-550"><a href="#cb12-550" aria-hidden="true" tabindex="-1"></a>**Interpretation:** **Negative alpha.** The manager underperformed by 0.25% after adjusting for risk. You could have earned 14.25% by simply holding a portfolio with beta 1.3 (mix of index fund and leverage).</span>
+<span id="cb12-551"><a href="#cb12-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-552"><a href="#cb12-552" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Warning:** Many investors are fooled by high returns without considering risk. A 20% return with beta 2.0 might actually be worse than a 12% return with beta 1.0 when risk-adjusted.</span></span>
+<span id="cb12-553"><a href="#cb12-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-554"><a href="#cb12-554" aria-hidden="true" tabindex="-1"></a><span class="fu">### Application 4: Market Timing and Economic Forecasting</span></span>
+<span id="cb12-555"><a href="#cb12-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-556"><a href="#cb12-556" aria-hidden="true" tabindex="-1"></a>**Example (January 2026 Context):** The Federal Reserve has signaled potential rate cuts later in 2026 if inflation continues to moderate. How should this affect your portfolio?</span>
+<span id="cb12-557"><a href="#cb12-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-558"><a href="#cb12-558" aria-hidden="true" tabindex="-1"></a>**Analysis:**</span>
+<span id="cb12-559"><a href="#cb12-559" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Rate cuts** typically boost stock prices (lower discount rates)</span>
+<span id="cb12-560"><a href="#cb12-560" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**High-beta stocks** (technology, consumer discretionary) benefit most</span>
+<span id="cb12-561"><a href="#cb12-561" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Low-beta stocks** (utilities, consumer staples) benefit least</span>
+<span id="cb12-562"><a href="#cb12-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-563"><a href="#cb12-563" aria-hidden="true" tabindex="-1"></a>**Strategy:** If you believe rate cuts are coming:</span>
+<span id="cb12-564"><a href="#cb12-564" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Increase portfolio beta** by overweighting high-beta sectors</span>
+<span id="cb12-565"><a href="#cb12-565" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Reduce bond duration** (bonds already priced in rate cuts)</span>
+<span id="cb12-566"><a href="#cb12-566" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Consider small-cap stocks** (higher beta, more rate-sensitive)</span>
+<span id="cb12-567"><a href="#cb12-567" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-568"><a href="#cb12-568" aria-hidden="true" tabindex="-1"></a>**Current example:** Many investors are overweighting AI-related stocks (Nvidia, Microsoft, Google) which have high betas but also high growth prospects. This is a bet that both the market will rise AND these companies will outperform.</span>
+<span id="cb12-569"><a href="#cb12-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-570"><a href="#cb12-570" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-571"><a href="#cb12-571" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-572"><a href="#cb12-572" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wrap-Up</span></span>
+<span id="cb12-573"><a href="#cb12-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-574"><a href="#cb12-574" aria-hidden="true" tabindex="-1"></a><span class="fu">### What You've Learned</span></span>
+<span id="cb12-575"><a href="#cb12-575" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-576"><a href="#cb12-576" aria-hidden="true" tabindex="-1"></a>✓ **Historical returns:** Arithmetic average (for forecasting) vs. geometric average (for performance measurement)</span>
+<span id="cb12-577"><a href="#cb12-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-578"><a href="#cb12-578" aria-hidden="true" tabindex="-1"></a>✓ **Risk measurement:** Variance and standard deviation quantify return volatility</span>
+<span id="cb12-579"><a href="#cb12-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-580"><a href="#cb12-580" aria-hidden="true" tabindex="-1"></a>✓ **Diversification:** Reduces unsystematic risk but not systematic risk</span>
+<span id="cb12-581"><a href="#cb12-581" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-582"><a href="#cb12-582" aria-hidden="true" tabindex="-1"></a>✓ **Beta:** Measures systematic risk (sensitivity to market movements)</span>
+<span id="cb12-583"><a href="#cb12-583" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-584"><a href="#cb12-584" aria-hidden="true" tabindex="-1"></a>✓ **CAPM:** Calculates required return based on systematic risk: $E(R_i) = R_f + \beta_i<span class="co">[</span><span class="ot">E(R_m) - R_f</span><span class="co">]</span>$</span>
+<span id="cb12-585"><a href="#cb12-585" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-586"><a href="#cb12-586" aria-hidden="true" tabindex="-1"></a>✓ **Investment decisions:** Compare expected return to CAPM required return</span>
+<span id="cb12-587"><a href="#cb12-587" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-588"><a href="#cb12-588" aria-hidden="true" tabindex="-1"></a>✓ **Excel functions:** AVERAGE, GEOMEAN, STDEV.S, SLOPE for risk-return analysis</span>
+<span id="cb12-589"><a href="#cb12-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-590"><a href="#cb12-590" aria-hidden="true" tabindex="-1"></a><span class="fu">### Connection to Previous Modules</span></span>
+<span id="cb12-591"><a href="#cb12-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-592"><a href="#cb12-592" aria-hidden="true" tabindex="-1"></a>**Bonds:** Bond yields reflect risk premiums. Corporate bonds have higher yields than Treasuries because of default risk (systematic risk component).</span>
+<span id="cb12-593"><a href="#cb12-593" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-594"><a href="#cb12-594" aria-hidden="true" tabindex="-1"></a>**Stocks:** The discount rate in dividend discount models comes from CAPM. Higher-beta stocks require higher discount rates.</span>
+<span id="cb12-595"><a href="#cb12-595" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-596"><a href="#cb12-596" aria-hidden="true" tabindex="-1"></a>**Time Value of Money:** The discount rate in all present value calculations should reflect the risk of the cash flows. CAPM tells you what that rate should be.</span>
+<span id="cb12-597"><a href="#cb12-597" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-598"><a href="#cb12-598" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-599"><a href="#cb12-599" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-600"><a href="#cb12-600" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Formulas Summary</span></span>
+<span id="cb12-601"><a href="#cb12-601" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-602"><a href="#cb12-602" aria-hidden="true" tabindex="-1"></a>**Total Return:**</span>
+<span id="cb12-603"><a href="#cb12-603" aria-hidden="true" tabindex="-1"></a>$$R_t = \frac{P_t - P_{t-1} + D_t}{P_{t-1}}$$</span>
+<span id="cb12-604"><a href="#cb12-604" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-605"><a href="#cb12-605" aria-hidden="true" tabindex="-1"></a>**Arithmetic Average Return:**</span>
+<span id="cb12-606"><a href="#cb12-606" aria-hidden="true" tabindex="-1"></a>$$\bar{R} = \frac{1}{n}\sum_{i=1}^{n}R_i$$</span>
+<span id="cb12-607"><a href="#cb12-607" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-608"><a href="#cb12-608" aria-hidden="true" tabindex="-1"></a>**Geometric Average Return:**</span>
+<span id="cb12-609"><a href="#cb12-609" aria-hidden="true" tabindex="-1"></a>$$\bar{R}_{geometric} = \left<span class="co">[</span><span class="ot">(1+R_1)(1+R_2)...(1+R_n)\right</span><span class="co">]</span>^{1/n} - 1$$</span>
+<span id="cb12-610"><a href="#cb12-610" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-611"><a href="#cb12-611" aria-hidden="true" tabindex="-1"></a>**Variance:**</span>
+<span id="cb12-612"><a href="#cb12-612" aria-hidden="true" tabindex="-1"></a>$$\sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(R_i - \bar{R})^2$$</span>
+<span id="cb12-613"><a href="#cb12-613" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-614"><a href="#cb12-614" aria-hidden="true" tabindex="-1"></a>**Standard Deviation:**</span>
+<span id="cb12-615"><a href="#cb12-615" aria-hidden="true" tabindex="-1"></a>$$\sigma = \sqrt{\sigma^2}$$</span>
+<span id="cb12-616"><a href="#cb12-616" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-617"><a href="#cb12-617" aria-hidden="true" tabindex="-1"></a>**Portfolio Expected Return:**</span>
+<span id="cb12-618"><a href="#cb12-618" aria-hidden="true" tabindex="-1"></a>$$E(R_p) = \sum_{i=1}^{n}w_i \times E(R_i)$$</span>
+<span id="cb12-619"><a href="#cb12-619" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-620"><a href="#cb12-620" aria-hidden="true" tabindex="-1"></a>**Portfolio Standard Deviation (Two Assets):**</span>
+<span id="cb12-621"><a href="#cb12-621" aria-hidden="true" tabindex="-1"></a>$$\sigma_p = \sqrt{w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\sigma_1\sigma_2\rho_{1,2}}$$</span>
+<span id="cb12-622"><a href="#cb12-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-623"><a href="#cb12-623" aria-hidden="true" tabindex="-1"></a>**Beta:**</span>
+<span id="cb12-624"><a href="#cb12-624" aria-hidden="true" tabindex="-1"></a>$$\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}$$</span>
+<span id="cb12-625"><a href="#cb12-625" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-626"><a href="#cb12-626" aria-hidden="true" tabindex="-1"></a>**Portfolio Beta:**</span>
+<span id="cb12-627"><a href="#cb12-627" aria-hidden="true" tabindex="-1"></a>$$\beta_p = \sum_{i=1}^{n}w_i \times \beta_i$$</span>
+<span id="cb12-628"><a href="#cb12-628" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-629"><a href="#cb12-629" aria-hidden="true" tabindex="-1"></a>**Capital Asset Pricing Model (CAPM):**</span>
+<span id="cb12-630"><a href="#cb12-630" aria-hidden="true" tabindex="-1"></a>$$E(R_i) = R_f + \beta_i \times <span class="co">[</span><span class="ot">E(R_m) - R_f</span><span class="co">]</span>$$</span>
+<span id="cb12-631"><a href="#cb12-631" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-632"><a href="#cb12-632" aria-hidden="true" tabindex="-1"></a>**Alpha (Risk-Adjusted Performance):**</span>
+<span id="cb12-633"><a href="#cb12-633" aria-hidden="true" tabindex="-1"></a>$$\alpha = R_{actual} - R_{required}$$</span>
+<span id="cb12-634"><a href="#cb12-634" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-635"><a href="#cb12-635" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-636"><a href="#cb12-636" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-637"><a href="#cb12-637" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Recommendations</span></span>
+<span id="cb12-638"><a href="#cb12-638" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-639"><a href="#cb12-639" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Master the Excel functions** in Section 5.6—you'll use them constantly in finance</span>
+<span id="cb12-640"><a href="#cb12-640" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Work through the practice problems** to build intuition for risk-return tradeoffs</span>
+<span id="cb12-641"><a href="#cb12-641" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Follow real market data:** Track betas and returns for stocks you're interested in</span>
+<span id="cb12-642"><a href="#cb12-642" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Use the @@prep-finance-helper bot** in BoodleBox for additional practice and explanations</span>
+<span id="cb12-643"><a href="#cb12-643" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Connect to previous modules:** Notice how CAPM provides the discount rates you used in Modules 3-4</span>
+<span id="cb12-644"><a href="#cb12-644" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-645"><a href="#cb12-645" aria-hidden="true" tabindex="-1"></a>**Real-world practice:** Go to Yahoo Finance, pick 5 stocks, download 5 years of monthly returns, and calculate:</span>
+<span id="cb12-646"><a href="#cb12-646" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Arithmetic and geometric average returns</span>
+<span id="cb12-647"><a href="#cb12-647" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Standard deviations</span>
+<span id="cb12-648"><a href="#cb12-648" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Betas (regress against S&amp;P 500)</span>
+<span id="cb12-649"><a href="#cb12-649" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Required returns using CAPM</span>
+<span id="cb12-650"><a href="#cb12-650" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether each stock is over/undervalued</span>
+<span id="cb12-651"><a href="#cb12-651" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-652"><a href="#cb12-652" aria-hidden="true" tabindex="-1"></a>This hands-on practice will solidify your understanding far better than just reading examples.</span>
+<span id="cb12-653"><a href="#cb12-653" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-654"><a href="#cb12-654" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-655"><a href="#cb12-655" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-656"><a href="#cb12-656" aria-hidden="true" tabindex="-1"></a>**End of Risk and Return Lecture**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

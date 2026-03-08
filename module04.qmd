@@ -1,0 +1,535 @@
+---
+title: "Stock Valuation"
+---
+
+## Module Overview
+
+In the previous module we valued bonds—debt instruments with contractually promised cash flows. In Module 4, we shift to **equity securities (stocks)**—ownership claims with uncertain future cash flows and no maturity date.
+
+**Key Difference:** Bondholders have a legal claim to fixed payments. Stockholders have a residual claim on whatever is left after all other obligations are met. This uncertainty makes stock valuation both more challenging and more interesting.
+
+**What You'll Learn:**
+
+- The fundamental characteristics of common and preferred stock
+- How to value stocks using the Dividend Discount Model (DDM)
+- The Gordon Growth Model for constant-growth stocks
+- Multi-stage growth models for high-growth companies
+- Relative valuation using P/E ratios and multiples
+- Excel techniques for stock valuation
+
+**Connection to Previous Modules:**
+
+- **Discounted Cash Flows:** Stock valuation is DCF applied to uncertain equity cash flows
+- **Bonds:** Preferred stock behaves like a perpetual bond
+- **Risk & Return:** We'll learn how to calculate the required return ($R$) using CAPM
+
+---
+
+# 1. Common Stock Characteristics
+
+## What Is Common Stock?
+
+Common stock represents **residual ownership** in a corporation. When you buy a share of Apple or Tesla, you become a part-owner of that company.
+
+**Key Rights and Features:**
+
+1. **Voting Rights:** Elect the board of directors (typically 1 vote per share)
+2. **Residual Claim:** Last in line during bankruptcy (after employees, suppliers, bondholders)
+3. **Dividends:** Discretionary payments—management decides whether and how much to pay
+4. **Capital Gains:** Profit from selling the stock at a higher price than you paid
+5. **Limited Liability:** You can only lose your investment, not more
+
+## Stockholders vs. Bondholders
+
+| Feature | Bondholders | Stockholders |
+|---------|-------------|--------------|
+| **Claim Type** | Fixed contractual claim | Residual claim |
+| **Payment Priority** | Paid first | Paid last |
+| **Maturity** | Fixed maturity date | No maturity (perpetual) |
+| **Return** | Interest (coupon) | Dividends + Capital Gains |
+| **Risk** | Lower risk | Higher risk |
+| **Voting Rights** | None | Yes |
+
+::: {.callout-note}
+### The Risk-Return Tradeoff
+Because stockholders bear more risk than bondholders, they demand higher expected returns. Historically, stocks have returned ~10% annually while bonds have returned ~5-6%. This "equity risk premium" compensates investors for the uncertainty of stock ownership.
+:::
+
+---
+
+# 2. The Dividend Discount Model (DDM)
+
+## The Fundamental Principle
+
+The value of any financial asset equals the present value of its expected future cash flows. For stocks, those cash flows are **dividends**.
+
+If you hold a stock forever, the only cash you receive are dividend payments. Therefore:
+
+$$P_0 = \sum_{t=1}^{\infty} \frac{D_t}{(1+R)^t}$$
+
+Where:
+
+- $P_0$ = Stock price today
+- $D_t$ = Dividend expected at time $t$
+- $R$ = Required rate of return (discount rate)
+
+**The Challenge:** Unlike bonds with known coupon payments, we must *forecast* future dividends, which are uncertain and discretionary.
+
+## Zero-Growth Model (Preferred Stock)
+
+The simplest case: dividends remain constant forever. This applies to **preferred stock**, which pays a fixed dividend like a perpetual bond.
+
+$$P_0 = \frac{D}{R}$$
+
+**Example:** A preferred stock pays a $\$5$ annual dividend. If your required return is 8%, what is the stock worth?
+
+$$P_0 = \frac{\$5}{0.08} = \$62.50$$
+
+::: {.callout-tip}
+### In Practice: Preferred Stock
+Preferred stock is a hybrid security—it has characteristics of both bonds (fixed payments) and stocks (no maturity, dividends can be suspended). Companies like banks and utilities issue preferred stock to raise capital without diluting common shareholders' voting rights.
+:::
+
+---
+
+# 3. The Gordon Growth Model (Constant Growth)
+
+## The Formula
+
+For companies that pay dividends growing at a constant rate ($g$) forever:
+
+$$P_0 = \frac{D_1}{R - g}$$
+
+Where:
+
+- $D_1$ = Dividend expected next year
+- $R$ = Required rate of return
+- $g$ = Constant growth rate of dividends
+
+**Critical Assumptions:**
+
+1. $R > g$ (required return must exceed growth rate, or the formula breaks)
+2. Growth rate is constant forever
+3. The company pays dividends
+
+## Example: Valuing a Mature Dividend Stock
+
+**Apple Inc. (AAPL)** currently pays an annual dividend of $\$0.96$ per share. Analysts expect Apple's dividends to grow at 5% per year indefinitely. If your required return is 10%, what is Apple's stock worth?
+
+**Given:**
+
+- $D_0 = \$0.96$ (current dividend)
+- $g = 5\% = 0.05$
+- $R = 10\% = 0.10$
+
+**Step 1:** Calculate next year's dividend:
+
+$$D_1 = D_0 \times (1 + g) = \$0.96 \times 1.05 = \$1.008$$
+
+**Step 2:** Apply the Gordon Growth Model:
+
+$$P_0 = \frac{D_1}{R - g} = \frac{\$1.008}{0.10 - 0.05} = \frac{\$1.008}{0.05} = \$20.16$$
+
+**Interpretation:** Based on this model, Apple's intrinsic value is $\$20.16$ per share. If Apple trades at $\$180$ in the market, either:
+
+1. Our assumptions are wrong (growth rate too low, required return too high), or
+2. The market is pricing in factors beyond just dividends (like share buybacks and future growth)
+
+::: {.callout-important}
+### In the News: Apple's Capital Return Strategy
+Apple is one of the world's largest dividend payers, returning over $\$100$ billion annually to shareholders through dividends and buybacks. While Apple's dividend yield is modest (~0.5%), the company's massive cash flow generation makes it a favorite among income-focused investors. The Gordon Growth Model works well for Apple because it's a mature company with stable, predictable cash flows.
+:::
+
+## Solving for Required Return
+
+We can rearrange the Gordon Growth Model to solve for the required return:
+
+$$R = \frac{D_1}{P_0} + g$$
+
+This shows that the required return has two components:
+
+1. **Dividend Yield:** $\frac{D_1}{P_0}$ (current income)
+2. **Capital Gains Yield:** $g$ (expected price appreciation)
+
+---
+
+# 4. Multi-Stage Growth Models
+
+## The Problem with Constant Growth
+
+Most exciting stocks don't grow at a constant rate forever. High-growth companies like **Nvidia (NVDA)** or **Tesla (TSLA)** experience periods of rapid expansion before eventually maturing.
+
+**Multi-Stage Growth Model:** Combines a period of high growth with eventual transition to stable, mature growth.
+
+## The Three-Step Process
+
+1. **Forecast dividends during the high-growth period** (typically 3-5 years)
+2. **Calculate the terminal value** at the end of high growth using the Gordon Growth Model
+3. **Discount everything back to today** using the required return
+
+## Example: Two-Stage Growth Model
+
+**Scenario:** A tech company just paid a $\$2.00$ dividend. For the next 3 years, dividends will grow at 20% per year. After year 3, growth will slow to 5% forever. Your required return is 12%. What is the stock worth?
+
+**Given:**
+
+- $D_0 = \$2.00$
+- High growth rate: $g_1 = 20\%$ for 3 years
+- Stable growth rate: $g_2 = 5\%$ forever after year 3
+- $R = 12\%$
+
+**Step 1:** Forecast dividends during high-growth period:
+
+$$D_1 = \$2.00 \times 1.20 = \$2.40$$
+$$D_2 = \$2.40 \times 1.20 = \$2.88$$
+$$D_3 = \$2.88 \times 1.20 = \$3.456$$
+
+**Step 2:** Calculate the terminal value at $t=3$:
+
+First, find $D_4$ (first dividend in stable growth phase):
+
+$$D_4 = D_3 \times (1 + g_2) = \$3.456 \times 1.05 = \$3.629$$
+
+Then apply Gordon Growth Model at $t=3$:
+
+$$P_3 = \frac{D_4}{R - g_2} = \frac{\$3.629}{0.12 - 0.05} = \frac{\$3.629}{0.07} = \$51.84$$
+
+**Step 3:** Discount all cash flows to present:
+
+$$P_0 = \frac{D_1}{(1+R)^1} + \frac{D_2}{(1+R)^2} + \frac{D_3}{(1+R)^3} + \frac{P_3}{(1+R)^3}$$
+
+$$P_0 = \frac{\$2.40}{1.12} + \frac{\$2.88}{1.12^2} + \frac{\$3.456}{1.12^3} + \frac{\$51.84}{1.12^3}$$
+
+$$P_0 = \$2.14 + \$2.30 + \$2.46 + \$36.89 = \$43.79$$
+
+**Answer:** The stock is worth $\$43.79$ today.
+
+::: {.callout-important}
+### In the News: Nvidia (NVDA) and the AI Boom
+Nvidia is the poster child for multi-stage growth. In 2023-2024, NVDA experienced explosive growth (revenue up 200%+) driven by AI chip demand. Analysts use multi-stage models to value Nvidia:
+
+- **Stage 1 (2024-2027):** 30-50% annual growth as AI infrastructure buildout continues
+- **Stage 2 (2028-2032):** 15-20% growth as market matures
+- **Stage 3 (2033+):** 5-7% stable growth matching GDP
+
+If you used a constant growth model for Nvidia, you'd either:
+1. Undervalue it (using mature growth rate), or
+2. Get a nonsensical result (using 30% growth forever violates $R > g$)
+
+This is why Wall Street analysts use sophisticated multi-stage models for high-growth tech stocks.
+:::
+
+---
+
+# 5. Limitations of Dividend-Based Valuation
+
+## Problem 1: Many Companies Don't Pay Dividends
+
+**Example:** **Amazon (AMZN)** has never paid a dividend. Does that mean Amazon is worthless? Of course not!
+
+**Solution:** For non-dividend-paying stocks, we use:
+
+1. **Free Cash Flow (FCF) models:** Value the company based on cash available to all investors
+2. **Relative valuation:** Compare to similar companies using multiples
+
+## Problem 2: Share Buybacks
+
+Many companies return cash to shareholders through **share repurchases** rather than dividends.
+
+**Example:** **Meta (META)** announced a $\$50$ billion buyback program in 2024. Buybacks reduce shares outstanding, increasing earnings per share and (theoretically) stock price.
+
+**Implication:** Dividend models undervalue companies that prefer buybacks over dividends.
+
+## Problem 3: Growth Rate Assumptions
+
+Small changes in $g$ dramatically affect valuation.
+
+**Example:** Using the Gordon Growth Model with $D_1 = \$2$, $R = 10\%$:
+
+- If $g = 4\%$: $P_0 = \frac{\$2}{0.10 - 0.04} = \$33.33$
+- If $g = 5\%$: $P_0 = \frac{\$2}{0.10 - 0.05} = \$40.00$
+- If $g = 6\%$: $P_0 = \frac{\$2}{0.10 - 0.06} = \$50.00$
+
+A 1% change in growth rate changes valuation by 20-50%!
+
+::: {.callout-warning}
+### The Danger of Overly Optimistic Growth Assumptions
+During the dot-com bubble (1999-2000), analysts used unrealistic growth rates to justify sky-high valuations. When growth didn't materialize, stocks crashed 80-90%. Always stress-test your assumptions with conservative scenarios.
+:::
+
+---
+
+# 6. Relative Valuation Using Multiples
+
+## The P/E Ratio
+
+The **Price-to-Earnings (P/E) Ratio** compares a stock's price to its earnings per share:
+
+$$\text{P/E Ratio} = \frac{\text{Price per Share}}{\text{Earnings per Share (EPS)}}$$
+
+**Interpretation:**
+
+- **High P/E:** Investors expect high future growth (or the stock is overvalued)
+- **Low P/E:** Investors expect low growth (or the stock is undervalued)
+
+## Example: Tesla vs. Toyota
+
+**Tesla (TSLA):**
+
+- Price: $\$250$ per share
+- EPS: $\$3.00$
+- P/E Ratio: $\frac{\$250}{\$3.00} = 83.3$
+
+**Toyota (TM):**
+
+- Price: $\$180$ per share
+- EPS: $\$18.00$
+- P/E Ratio: $\frac{\$180}{\$18.00} = 10.0$
+
+**Question:** Why does Tesla trade at 8× Toyota's P/E multiple?
+
+**Answer:** Investors aren't just buying a car company—they're buying:
+
+1. **Growth potential:** Tesla's revenue is growing 30-50% annually vs. Toyota's 5%
+2. **Technology:** Autonomous driving, AI, energy storage
+3. **Brand premium:** Tesla is seen as an innovation leader
+
+::: {.callout-note}
+### In the News: The "Magnificent Seven" Premium
+In 2024, the "Magnificent Seven" tech stocks (Apple, Microsoft, Nvidia, Amazon, Meta, Alphabet, Tesla) traded at an average P/E of 35× vs. 18× for the S&P 500. This "multiple expansion" reflects investor belief that these companies will dominate the AI era. Whether this premium is justified remains hotly debated.
+:::
+
+## Using P/E for Valuation
+
+**Comparable Company Analysis:**
+
+1. Find similar companies in the same industry
+2. Calculate their average P/E ratio
+3. Apply that multiple to your company's earnings
+
+**Example:** You're valuing a regional bank with EPS of $\$5.00$. Comparable banks trade at an average P/E of 12×. Estimated value:
+
+$$\text{Price} = \text{EPS} \times \text{P/E} = \$5.00 \times 12 = \$60.00 \text{ per share}$$
+
+## Other Common Multiples
+
+- **Price-to-Sales (P/S):** Useful for unprofitable growth companies
+- **Price-to-Book (P/B):** Common for financial companies (banks, insurance)
+- **EV/EBITDA:** Enterprise Value to Earnings Before Interest, Taxes, Depreciation, Amortization (accounts for debt)
+
+---
+
+# 7. Excel Functions for Stock Valuation
+
+## Key Functions
+
+**1. NPV for Multi-Stage Models**
+
+```excel
+=NPV(rate, value1, value2, ...) + value0
+```
+
+**Example:** Discount the dividends and terminal value from our earlier two-stage model:
+
+```excel
+=NPV(0.12, 2.40, 2.88, 3.456+51.84)
+```
+
+**2. PV for Perpetuities (Zero-Growth)**
+
+```excel
+=PV(rate, nper, pmt, [fv], [type])
+```
+
+For a perpetuity, use a very large `nper` (e.g., 1000):
+
+```excel
+=PV(0.08, 1000, 5, 0, 0)
+```
+
+This approximates $\frac{\$5}{0.08} = \$62.50$
+
+**3. Building the Gordon Growth Model**
+
+No built-in function—use cell references:
+
+```excel
+=D1/(R-g)
+```
+
+Where:
+- Cell B1 contains $D_1$
+- Cell B2 contains $R$
+- Cell B3 contains $g$
+
+Formula: `=B1/(B2-B3)`
+
+## Excel Template Structure
+
+For a two-stage model, organize your spreadsheet:
+
+| **Input Section** | **Value** |
+|-------------------|-----------|
+| Current Dividend ($D_0$) | $2.00 |
+| High Growth Rate ($g_1$) | 20% |
+| High Growth Period (years) | 3 |
+| Stable Growth Rate ($g_2$) | 5% |
+| Required Return ($R$) | 12% |
+
+| **Calculation Section** | **Formula** | **Result** |
+|-------------------------|-------------|------------|
+| $D_1$ | `=B1*(1+B2)` | $2.40 |
+| $D_2$ | `=C1*(1+B2)` | $2.88 |
+| $D_3$ | `=C2*(1+B2)` | $3.456 |
+| $D_4$ | `=C3*(1+B4)` | $3.629 |
+| Terminal Value ($P_3$) | `=C7/(B5-B4)` | $51.84 |
+| PV of $D_1$ | `=C1/(1+B5)^1` | $2.14 |
+| PV of $D_2$ | `=C2/(1+B5)^2` | $2.30 |
+| PV of $D_3$ + $P_3$ | `=(C3+C8)/(1+B5)^3` | $39.35 |
+| **Stock Value ($P_0$)** | `=SUM(C9:C11)` | **$43.79** |
+
+---
+
+# 8. Real-World Applications
+
+## Application 1: Investment Decision-Making
+
+**Scenario:** You're considering buying **Coca-Cola (KO)** at $\$60$ per share. KO pays a $\$1.84$ dividend, and you expect 4% annual dividend growth. Your required return is 9%.
+
+**Analysis:**
+
+$$D_1 = \$1.84 \times 1.04 = \$1.914$$
+
+$$P_0 = \frac{\$1.914}{0.09 - 0.04} = \frac{\$1.914}{0.05} = \$38.28$$
+
+**Decision:** At $\$60$, Coca-Cola appears **overvalued** by 57%. You should not buy unless you believe growth will exceed 4% or your required return should be lower.
+
+## Application 2: Sector Rotation Strategy
+
+**Observation:** During economic expansions, growth stocks (high P/E, low dividends) outperform. During recessions, value stocks (low P/E, high dividends) outperform.
+
+**Strategy:**
+
+- **Expansion:** Overweight tech stocks (Nvidia, Microsoft, Amazon)
+- **Recession:** Overweight dividend aristocrats (Procter & Gamble, Johnson & Johnson, Coca-Cola)
+
+## Application 3: Detecting Market Bubbles
+
+**Warning Signs:**
+
+1. P/E ratios far above historical averages
+2. Investors justifying valuations with "new paradigm" arguments
+3. Dividend yields near historic lows
+
+**Example:** In 2021, the median S&P 500 P/E reached 30× (vs. 16× historical average). Many stocks traded at 50-100× earnings with no dividends. When interest rates rose in 2022, these stocks crashed 50-80%.
+
+::: {.callout-tip}
+### In Practice: The "Fed Model"
+Some investors compare the S&P 500 earnings yield ($\frac{E}{P}$, the inverse of P/E) to the 10-year Treasury yield. When stocks yield less than bonds, it suggests stocks are overvalued. This model has limitations but provides a useful reality check.
+:::
+
+---
+
+# Module 4 Wrap-Up
+
+## What You've Learned
+
+- Common stock represents residual ownership with uncertain cash flows
+- The Dividend Discount Model values stocks as the PV of future dividends
+- The Gordon Growth Model applies to mature, constant-growth companies
+- Multi-stage models handle high-growth companies that eventually mature
+- Dividend models have limitations (non-dividend payers, buybacks, growth assumptions)
+- P/E ratios and multiples provide relative valuation benchmarks
+- Excel's NPV and PV functions support stock valuation calculations
+
+## Looking Ahead: Module 5 (Risk and Return)
+
+In Module 5, we'll answer a critical question: **How do we determine the required return ($R$) used in stock valuation?**
+
+You'll learn:
+
+- How to measure investment risk using standard deviation
+- The difference between systematic (market) risk and unsystematic (firm-specific) risk
+- How diversification reduces risk
+- The Capital Asset Pricing Model (CAPM) for estimating required returns
+- How Beta measures a stock's sensitivity to market movements
+
+**Connection:** The $R$ we've been using in the Gordon Growth Model comes from CAPM:
+
+$$R = R_f + \beta \times (R_m - R_f)$$
+
+Where:
+- $R_f$ = Risk-free rate (Treasury yield)
+- $\beta$ = Stock's systematic risk
+- $R_m - R_f$ = Market risk premium
+
+## Connection to Bonds
+
+Bond valuation skills transfer directly to stock valuation:
+
+- **Preferred stock** is valued like a perpetual bond
+- **Dividend growth** is analogous to coupon payments
+- **Required return** reflects risk, just like YTM for bonds
+- **Interest rate risk:** When rates rise, both bond and stock prices fall
+
+## Key Formulas Summary
+
+**Zero-Growth DDM (Preferred Stock):**
+
+$$P_0 = \frac{D}{R}$$
+
+**Gordon Growth Model:**
+
+$$P_0 = \frac{D_1}{R - g}$$
+
+**Required Return (from Gordon Growth Model):**
+
+$$R = \frac{D_1}{P_0} + g$$
+
+**P/E Ratio:**
+
+$$\text{P/E} = \frac{\text{Price per Share}}{\text{EPS}}$$
+
+**Multi-Stage Model (Two-Stage Example):**
+
+$$P_0 = \sum_{t=1}^{n} \frac{D_t}{(1+R)^t} + \frac{P_n}{(1+R)^n}$$
+
+Where $P_n = \frac{D_{n+1}}{R - g}$ (terminal value)
+
+---
+
+## Excel Quick Reference
+
+| **Task** | **Function** | **Example** |
+|----------|--------------|-------------|
+| Discount uneven dividends | `=NPV(rate, values)` | `=NPV(0.12, 2.40, 2.88, 3.456)` |
+| Perpetuity (preferred stock) | `=PV(rate, large_nper, pmt)` | `=PV(0.08, 1000, 5)` |
+| Gordon Growth Model | `=D1/(R-g)` | `=2/(0.10-0.05)` |
+| Terminal Value | `=D_next/(R-g)` | `=3.629/(0.12-0.05)` |
+
+---
+
+## Practice Problems Preview
+
+In the Excel Practice Problems, you'll:
+
+1. Value preferred stocks using the zero-growth model
+2. Apply the Gordon Growth Model to dividend-paying stocks
+3. Build multi-stage valuation models
+4. Calculate P/E ratios and compare companies
+5. Analyze how changes in growth rates and required returns affect stock prices
+
+**Tip:** Start with Tier 1 (Guided Practice) to build confidence, then progress to Tier 2 (Application) and Tier 3 (Challenge) problems.
+
+---
+
+## Need Help?
+
+Use the **@@prep-finance-helper** bot in BoodleBox. The bot has all module content in its Knowledge Bank and can:
+
+- Explain concepts in different ways
+- Walk through example problems step-by-step
+- Provide additional practice problems
+- Help troubleshoot Excel formulas
+
+Good luck with Module 4! Stock valuation is where finance gets exciting—you're now equipped to analyze the companies you see in the news every day.

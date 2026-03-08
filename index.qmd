@@ -1,0 +1,25 @@
+---
+title: "Fundamentals of Business Finance"
+subtitle: "FINC 4943"
+author: "William McCumber"
+---
+
+# Welcome
+
+This textbook introduces you to fundamental concepts and equations necessary to understand business finance at a graduate level.
+
+## Course Overview
+
+This course covers five key modules in financial theory and analysis, providing both theoretical foundations and practical applications.
+
+## How to Use This Textbook
+
+Each module contains:
+
+-   Core concepts and theory
+-   Practical examples in Excel
+-   Applications to real-world financial problems
+
+## Modules
+
+The textbook is organized into five modules, each building on previous concepts to develop your financial modeling skills.

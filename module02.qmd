@@ -1,0 +1,234 @@
+---
+title: "Discounted Cash Flows and Annuities"
+---
+
+## Moving Beyond Lump Sums
+
+In Module 1, we focused on **lump sums**—single cash flows occurring at a specific point in time. However, most financial decisions involve multiple cash flows. Whether analyzing a business's monthly revenue, a series of car payments, or retirement savings contributions, you are dealing with **Discounted Cash Flows (DCF)**.
+
+The core principle remains unchanged: to compare or aggregate cash flows occurring at different times, you must move them to the same point in time (usually the present) using a discount rate.
+
+> **In Practice: The "Valuation" Mindset**
+>
+> In finance, the value of *any* financial asset—a stock, a bond, or an entire company—is simply the present value of all the cash it is expected to generate in the future. If you can forecast the cash flows and choose an appropriate discount rate, you can calculate the "fair" price of anything. This is why DCF analysis is the foundation of investment banking, private equity, and corporate finance.
+
+---
+
+## Defining Annuities
+
+An **annuity** is a series of equal payments occurring at fixed intervals for a specified number of periods. Annuities simplify valuation because the equal payment structure allows us to use closed-form formulas rather than valuing each cash flow individually.
+
+### The Two Types of Annuities
+
+1. **Ordinary Annuity:** Payments occur at the **end** of each period. This is the default assumption in finance (e.g., most corporate bond interest payments, mortgage payments).
+
+2. **Annuity Due:** Payments occur at the **beginning** of each period (e.g., rent payments, lease payments, insurance premiums).
+
+### Mathematical Intuition
+
+The Present Value of an annuity is the sum of the present values of each individual payment. Rather than discounting each payment separately, we use a formula that captures this sum efficiently.
+
+**Ordinary Annuity Formula:**
+
+$$PV = PMT \times \left[ \frac{1 - (1 + r)^{-n}}{r} \right]$$
+
+Where:
+- $PMT$ = the payment amount per period
+- $r$ = the discount rate per period
+- $n$ = the number of periods
+
+**Future Value of an Ordinary Annuity:**
+
+$$FV = PMT \times \left[ \frac{(1 + r)^{n} - 1}{r} \right]$$
+
+**Annuity Due Adjustment:**
+
+Because payments occur one period earlier, an Annuity Due is worth more than an Ordinary Annuity:
+
+$$PV_{due} = PV_{ordinary} \times (1 + r)$$
+
+$$FV_{due} = FV_{ordinary} \times (1 + r)$$
+
+> **In Practice: Why Timing Matters**
+>
+> Consider rent versus a car loan. Rent is typically an **Annuity Due** (you pay at the start of the month to secure housing for that month). A car loan is typically an **Ordinary Annuity** (you drive for a month, then make the payment at month's end). Because money has time value, an Annuity Due is always worth more than an identical Ordinary Annuity—you receive (or pay) the money sooner, which means one less period of discounting.
+
+---
+
+## Perpetuities: The "Forever" Cash Flow
+
+A **perpetuity** is an annuity that continues forever. While "forever" sounds theoretical, it is a vital concept for valuing preferred stocks, real estate with stable rental income, and established companies with predictable cash flows.
+
+**The Formula:**
+
+$$PV = \frac{PMT}{r}$$
+
+This elegant formula emerges from the ordinary annuity formula as $n \to \infty$. The $(1 + r)^{-n}$ term approaches zero, leaving us with $\frac{PMT}{r}$.
+
+### Growing Perpetuity
+
+When cash flows grow at a constant rate $g$ forever, we use the **Growing Perpetuity Formula**:
+
+$$PV = \frac{PMT}{r - g}$$
+
+**Critical constraint:** $g < r$. If the growth rate equals or exceeds the discount rate, the formula breaks down, reflecting the economic reality that no entity can grow faster than the economy indefinitely.
+
+> **In Practice: Real-World Perpetuities**
+>
+> The most famous example is the **British Consol**, a bond issued by the UK government that has no maturity date and pays interest forever. In corporate finance, we use the perpetuity formula to calculate the "Terminal Value" of a company—the value of all cash flows beyond a 5 or 10-year forecast horizon. For example, if a company is expected to generate $10 million in free cash flow annually starting in Year 6, and your discount rate is 10%, the present value of all those future cash flows is $\frac{10,000,000}{0.10} = \$100,000,000$ (as of Year 5), which you then discount back to today.
+
+---
+
+## Excel Functions for Annuities
+
+In Module 1, we used `=PV()` and `=FV()` for lump sums. In Module 2, we introduce the `PMT` (payment) argument to handle annuities.
+
+### The Five Variables
+
+Most DCF problems involve five variables. If you know any four, Excel can solve for the fifth:
+
+1. **Rate ($r$):** The interest rate per period
+2. **Nper ($n$):** The total number of payment periods
+3. **PV:** The present value (current worth)
+4. **FV:** The future value (value at the end)
+5. **PMT:** The constant payment made each period
+
+### Essential Excel Functions
+
+**To find the payment:**
+```
+=PMT(rate, nper, pv, [fv], [type])
+```
+
+**To find the number of periods:**
+```
+=NPER(rate, pmt, pv, [fv], [type])
+```
+
+**To find the interest rate:**
+```
+=RATE(nper, pmt, pv, [fv], [type])
+```
+
+**To find the present value:**
+```
+=PV(rate, nper, pmt, [fv], [type])
+```
+
+**To find the future value:**
+```
+=FV(rate, nper, pmt, [pv], [type])
+```
+
+**Note on [type]:**
+- Use `0` (or omit) for an **Ordinary Annuity** (payments at end of period)
+- Use `1` for an **Annuity Due** (payments at beginning of period)
+
+> **In Practice: The Sign Convention (Again!)**
+>
+> Excel treats these as cash inflows and outflows. If you are calculating the payment for a $30,000 car loan at 6% annual interest for 5 years, the PV is $+30,000$ (money coming to you from the lender), and the resulting PMT will be negative (money leaving your pocket each month). The formula would be: `=PMT(0.06/12, 5*12, 30000, 0, 0)`. If you enter both PV and PMT as positive, Excel will return an error or nonsensical result because it violates the cash flow direction logic.
+
+---
+
+## Loan Amortization
+
+A loan amortization schedule breaks down each payment into its **principal** and **interest** components. This is critical for understanding how loans work and for tax purposes (interest is often tax-deductible).
+
+### The Mechanics
+
+Each payment is constant (assuming a fixed-rate loan), but the composition changes:
+- **Interest portion** = Outstanding balance × Periodic interest rate
+- **Principal portion** = Total payment − Interest portion
+- **New balance** = Previous balance − Principal portion
+
+Over time, the interest portion decreases and the principal portion increases, because you owe less with each payment.
+
+### Excel Implementation
+
+You can build an amortization schedule using:
+- `=PMT()` to calculate the constant payment
+- `=IPMT(rate, per, nper, pv)` to calculate interest for a specific period
+- `=PPMT(rate, per, nper, pv)` to calculate principal for a specific period
+
+> **In Practice: The True Cost of Borrowing**
+>
+> Consider a $300,000 mortgage at 4% annual interest for 30 years. Your monthly payment is $1,432.25. Over 30 years, you will pay $515,609 total—meaning you paid $215,609 in interest alone. Understanding amortization helps you see why making extra principal payments early in the loan dramatically reduces total interest paid, because you're reducing the balance on which future interest is calculated.
+
+---
+
+## Uneven Cash Flows and Net Present Value (NPV)
+
+Not all cash flows are equal. When payments vary from period to period, we cannot use the simple annuity formulas. Instead, we use the **Net Present Value (NPV)** approach, which sums the present value of each individual cash flow.
+
+**Mathematical Formula:**
+
+$$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1 + r)^t}$$
+
+Where $CF_t$ is the cash flow in period $t$.
+
+### Excel Function
+
+```
+=NPV(rate, value1, [value2], ...)
+```
+
+**Crucial Warning:** The Excel `=NPV()` function assumes the first value in your range occurs at the **end of Period 1**, not at Time 0. If you have a cash flow at **Time 0** (today)—such as an initial investment—you must exclude it from the NPV function and add it separately:
+
+```
+=Initial_Investment + NPV(rate, future_cash_flows)
+```
+
+Since initial investments are typically cash outflows, they are negative:
+
+```
+=-100000 + NPV(0.10, C2:C6)
+```
+
+> **In Practice: Capital Budgeting Decisions**
+>
+> Suppose you're evaluating a project that requires a $500,000 investment today and will generate cash flows of $150,000, $200,000, $180,000, $120,000, and $100,000 over the next five years. If your required return is 12%, the NPV is:
+>
+> `=-500000 + NPV(0.12, {150000, 200000, 180000, 120000, 100000})` = $48,610
+>
+> A positive NPV means the project creates value and should be accepted. A negative NPV means it destroys value and should be rejected. This is the foundation of corporate investment decisions.
+
+---
+
+## Common Pitfalls to Avoid
+
+### 1. Rate/Period Mismatch
+
+**The most common error in DCF analysis.** If payments are monthly, your rate **must** be monthly and your periods **must** be in months.
+
+- Annual rate of 12% with monthly payments → Use $r = 0.12/12 = 0.01$ and $n = years \times 12$
+- Quarterly payments → Use $r = annual\ rate / 4$ and $n = years \times 4$
+
+### 2. Annuity Due Toggle
+
+Forgetting to change the `[type]` argument to `1` in Excel when payments occur at the beginning of the period. This is especially common with rent and lease problems.
+
+### 3. NPV Time Zero Error
+
+Using `=NPV()` for all cash flows including the initial investment. Remember: Excel's NPV function assumes the first cash flow is at the end of Period 1.
+
+### 4. Perpetuity Growth Constraint
+
+When using the Growing Perpetuity formula $PV = \frac{PMT}{r - g}$, the growth rate $g$ must be less than the discount rate $r$. If $g \geq r$, the formula produces nonsensical results (negative or infinite values).
+
+### 5. Sign Convention Errors
+
+Mixing up cash inflows and outflows. Be consistent: money you receive is positive, money you pay is negative (or vice versa, as long as you're consistent).
+
+---
+
+## Connecting to Future Modules
+
+In this module, we have mastered how to value streams of cash flows using annuities, perpetuities, and NPV for uneven cash flows.
+
+- In **Bond Valuation**, we will apply these DCF techniques to value government and corporate debt. A bond is simply an annuity (coupon payments) plus a lump sum (par value at maturity).
+
+- In **Stock Valuation**, we will use perpetuities and growing perpetuities to determine the intrinsic value of equity using dividend discount models.
+
+- In **Risk and Return**, we will finally learn how to determine the "correct" discount rate ($r$) to use in all these calculations based on the risk of the investment.
+
+The DCF framework you've learned here is the foundation of all valuation in finance. Master these mechanics now, and the rest of the course will build naturally on this foundation.
