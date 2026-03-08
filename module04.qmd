@@ -25,7 +25,7 @@ In the previous module we valued bonds—debt instruments with contractually pro
 
 ---
 
-# 1. Common Stock Characteristics
+# Common Stock Characteristics
 
 ## What Is Common Stock?
 
@@ -57,7 +57,7 @@ Because stockholders bear more risk than bondholders, they demand higher expecte
 
 ---
 
-# 2. The Dividend Discount Model (DDM)
+# The Dividend Discount Model (DDM)
 
 ## The Fundamental Principle
 
@@ -92,7 +92,7 @@ Preferred stock is a hybrid security—it has characteristics of both bonds (fix
 
 ---
 
-# 3. The Gordon Growth Model (Constant Growth)
+# The Gordon Growth Model (Constant Growth)
 
 ## The Formula
 
@@ -153,7 +153,7 @@ This shows that the required return has two components:
 
 ---
 
-# 4. Multi-Stage Growth Models
+# Multi-Stage Growth Models
 
 ## The Problem with Constant Growth
 
@@ -221,7 +221,7 @@ This is why Wall Street analysts use sophisticated multi-stage models for high-g
 
 ---
 
-# 5. Limitations of Dividend-Based Valuation
+# Limitations of Dividend-Based Valuation
 
 ## Problem 1: Many Companies Don't Pay Dividends
 
@@ -259,7 +259,7 @@ During the dot-com bubble (1999-2000), analysts used unrealistic growth rates to
 
 ---
 
-# 6. Relative Valuation Using Multiples
+# Relative Valuation Using Multiples
 
 ## The P/E Ratio
 
@@ -319,7 +319,7 @@ $$\text{Price} = \text{EPS} \times \text{P/E} = \$5.00 \times 12 = \$60.00 \text
 
 ---
 
-# 7. Excel Functions for Stock Valuation
+# Excel Functions for Stock Valuation
 
 ## Key Functions
 
@@ -390,7 +390,7 @@ For a two-stage model, organize your spreadsheet:
 
 ---
 
-# 8. Real-World Applications
+# Real-World Applications
 
 ## Application 1: Investment Decision-Making
 
@@ -430,7 +430,7 @@ Some investors compare the S&P 500 earnings yield ($\frac{E}{P}$, the inverse of
 
 ---
 
-# Module 4 Wrap-Up
+# Wrap-Up
 
 ## What You've Learned
 
@@ -442,9 +442,9 @@ Some investors compare the S&P 500 earnings yield ($\frac{E}{P}$, the inverse of
 - P/E ratios and multiples provide relative valuation benchmarks
 - Excel's NPV and PV functions support stock valuation calculations
 
-## Looking Ahead: Module 5 (Risk and Return)
+## Looking Ahead: Risk and Return
 
-In Module 5, we'll answer a critical question: **How do we determine the required return ($R$) used in stock valuation?**
+In Risk and Return, we'll answer a critical question: **How do we determine the required return ($R$) used in stock valuation?**
 
 You'll learn:
 

@@ -670,11 +670,11 @@
     ]
   },
   {
-    "objectID": "module04.html#looking-ahead-module-5-risk-and-return",
-    "href": "module04.html#looking-ahead-module-5-risk-and-return",
+    "objectID": "module04.html#looking-ahead-risk-and-return",
+    "href": "module04.html#looking-ahead-risk-and-return",
     "title": "5  Stock Valuation",
-    "section": "14.2 Looking Ahead: Module 5 (Risk and Return)",
-    "text": "14.2 Looking Ahead: Module 5 (Risk and Return)\nIn Module 5, we’ll answer a critical question: How do we determine the required return (\\(R\\)) used in stock valuation?\nYou’ll learn:\n\nHow to measure investment risk using standard deviation\nThe difference between systematic (market) risk and unsystematic (firm-specific) risk\nHow diversification reduces risk\nThe Capital Asset Pricing Model (CAPM) for estimating required returns\nHow Beta measures a stock’s sensitivity to market movements\n\nConnection: The \\(R\\) we’ve been using in the Gordon Growth Model comes from CAPM:\n\\[R = R_f + \\beta \\times (R_m - R_f)\\]\nWhere: - \\(R_f\\) = Risk-free rate (Treasury yield) - \\(\\beta\\) = Stock’s systematic risk - \\(R_m - R_f\\) = Market risk premium",
+    "section": "14.2 Looking Ahead: Risk and Return",
+    "text": "14.2 Looking Ahead: Risk and Return\nIn Risk and Return, we’ll answer a critical question: How do we determine the required return (\\(R\\)) used in stock valuation?\nYou’ll learn:\n\nHow to measure investment risk using standard deviation\nThe difference between systematic (market) risk and unsystematic (firm-specific) risk\nHow diversification reduces risk\nThe Capital Asset Pricing Model (CAPM) for estimating required returns\nHow Beta measures a stock’s sensitivity to market movements\n\nConnection: The \\(R\\) we’ve been using in the Gordon Growth Model comes from CAPM:\n\\[R = R_f + \\beta \\times (R_m - R_f)\\]\nWhere: - \\(R_f\\) = Risk-free rate (Treasury yield) - \\(\\beta\\) = Stock’s systematic risk - \\(R_m - R_f\\) = Market risk premium",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stock Valuation</span>"
     ]
